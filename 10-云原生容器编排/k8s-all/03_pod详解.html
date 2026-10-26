@@ -1,0 +1,4026 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>03_pod详解 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04_pod控制器详解.html" />
+    
+    
+    <link rel="prev" href="02_k8s资源清单.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../01-linux核心基础/0.html">
+            
+                <a href="../../01-linux核心基础/0.html">
+            
+                    
+                    01-linux 核心基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                <a href="../../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                    
+                    01_Linux云计算运维工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../01-linux核心基础/02_运维基础重要概念.html">
+            
+                <a href="../../01-linux核心基础/02_运维基础重要概念.html">
+            
+                    
+                    02_运维基础重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../01-linux核心基础/03_计算机基础.html">
+            
+                <a href="../../01-linux核心基础/03_计算机基础.html">
+            
+                    
+                    03_计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../01-linux核心基础/04_操作系统基础.html">
+            
+                <a href="../../01-linux核心基础/04_操作系统基础.html">
+            
+                    
+                    04_操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../01-linux核心基础/05_Linux系统搭建.html">
+            
+                <a href="../../01-linux核心基础/05_Linux系统搭建.html">
+            
+                    
+                    05_Linux系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../01-linux核心基础/06_vmware安装Linux.html">
+            
+                <a href="../../01-linux核心基础/06_vmware安装Linux.html">
+            
+                    
+                    06_vmware安装Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../01-linux核心基础/07_Linux快速入门.html">
+            
+                <a href="../../01-linux核心基础/07_Linux快速入门.html">
+            
+                    
+                    07_Linux快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                <a href="../../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                    
+                    08_linux文件管理篇一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                <a href="../../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                    
+                    09_linux文件管理篇二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../01-linux核心基础/10_linux用户管理.html">
+            
+                <a href="../../01-linux核心基础/10_linux用户管理.html">
+            
+                    
+                    10_linux用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../01-linux核心基础/11_远程连接linux.html">
+            
+                <a href="../../01-linux核心基础/11_远程连接linux.html">
+            
+                    
+                    11_远程连接linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../01-linux核心基础/12_linux权限管理.html">
+            
+                <a href="../../01-linux核心基础/12_linux权限管理.html">
+            
+                    
+                    12_linux权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../01-linux核心基础/13_linux基础服务管理.html">
+            
+                <a href="../../01-linux核心基础/13_linux基础服务管理.html">
+            
+                    
+                    13_linux基础服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                <a href="../../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                    
+                    14_linux进程与资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                <a href="../../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                    
+                    15_YUM与开源项目（Web运维）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../../01-linux核心基础/16_计算机网络.html">
+            
+                <a href="../../01-linux核心基础/16_计算机网络.html">
+            
+                    
+                    16_计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                <a href="../../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                    
+                    17_如果让你来设计网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                <a href="../../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                    
+                    18_OSI模型与TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../../01-linux核心基础/19_Vmware网络配置.html">
+            
+                <a href="../../01-linux核心基础/19_Vmware网络配置.html">
+            
+                    
+                    19_Vmware网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../../01-linux核心基础/20_centos网络配置.html">
+            
+                <a href="../../01-linux核心基础/20_centos网络配置.html">
+            
+                    
+                    20_centos网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../02-系统核心服务/00.html">
+            
+                <a href="../../02-系统核心服务/00.html">
+            
+                    
+                    02-系统核心服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../02-系统核心服务/3-0-Linux重要命令.html">
+            
+                <a href="../../02-系统核心服务/3-0-Linux重要命令.html">
+            
+                    
+                    3-0-Linux重要命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-系统核心服务/3-1-软件包管理.html">
+            
+                <a href="../../02-系统核心服务/3-1-软件包管理.html">
+            
+                    
+                    3-1-软件包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../02-系统核心服务/3-10-黄金web架构之LAMP.html">
+            
+                <a href="../../02-系统核心服务/3-10-黄金web架构之LAMP.html">
+            
+                    
+                    3-10-黄金web架构之LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../02-系统核心服务/3-11-磁盘管理.html">
+            
+                <a href="../../02-系统核心服务/3-11-磁盘管理.html">
+            
+                    
+                    3-11-磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../02-系统核心服务/3-12-磁盘管理二.html">
+            
+                <a href="../../02-系统核心服务/3-12-磁盘管理二.html">
+            
+                    
+                    3-12-磁盘管理二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../02-系统核心服务/3-13-Raid磁盘冗余阵列.html">
+            
+                <a href="../../02-系统核心服务/3-13-Raid磁盘冗余阵列.html">
+            
+                    
+                    3-13-Raid磁盘冗余阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../02-系统核心服务/3-14-lvm逻辑卷管理.html">
+            
+                <a href="../../02-系统核心服务/3-14-lvm逻辑卷管理.html">
+            
+                    
+                    3-14-lvm逻辑卷管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../02-系统核心服务/3-15-通配符和特殊符号.html">
+            
+                <a href="../../02-系统核心服务/3-15-通配符和特殊符号.html">
+            
+                    
+                    3-15-通配符和特殊符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../02-系统核心服务/3-16-正则表达式和三剑客.html">
+            
+                <a href="../../02-系统核心服务/3-16-正则表达式和三剑客.html">
+            
+                    
+                    3-16-正则表达式和三剑客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../02-系统核心服务/3-17-sed精讲.html">
+            
+                <a href="../../02-系统核心服务/3-17-sed精讲.html">
+            
+                    
+                    3-17-sed精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../02-系统核心服务/3-18-1-awk进阶.html">
+            
+                <a href="../../02-系统核心服务/3-18-1-awk进阶.html">
+            
+                    
+                    3-18-1-awk进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../02-系统核心服务/3-18-awk精讲.html">
+            
+                <a href="../../02-系统核心服务/3-18-awk精讲.html">
+            
+                    
+                    3-18-awk精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../02-系统核心服务/3-19-正则练习题.html">
+            
+                <a href="../../02-系统核心服务/3-19-正则练习题.html">
+            
+                    
+                    3-19-正则练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../02-系统核心服务/3-2-yum精讲.html">
+            
+                <a href="../../02-系统核心服务/3-2-yum精讲.html">
+            
+                    
+                    3-2-yum精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../02-系统核心服务/3-20-sed练习题.html">
+            
+                <a href="../../02-系统核心服务/3-20-sed练习题.html">
+            
+                    
+                    3-20-sed练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../02-系统核心服务/3-21-awk练习题.html">
+            
+                <a href="../../02-系统核心服务/3-21-awk练习题.html">
+            
+                    
+                    3-21-awk练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../../02-系统核心服务/3-22-什么是Shell.html">
+            
+                <a href="../../02-系统核心服务/3-22-什么是Shell.html">
+            
+                    
+                    3-22-什么是Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../../02-系统核心服务/3-23-Shell快速入门.html">
+            
+                <a href="../../02-系统核心服务/3-23-Shell快速入门.html">
+            
+                    
+                    3-23-Shell快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../../02-系统核心服务/3-3-SSH远程安全登录.html">
+            
+                <a href="../../02-系统核心服务/3-3-SSH远程安全登录.html">
+            
+                    
+                    3-3-SSH远程安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../../02-系统核心服务/3-4-Rsync数据同步服务.html">
+            
+                <a href="../../02-系统核心服务/3-4-Rsync数据同步服务.html">
+            
+                    
+                    3-4-Rsync数据同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../../02-系统核心服务/3-5-Inotify实时数据同步.html">
+            
+                <a href="../../02-系统核心服务/3-5-Inotify实时数据同步.html">
+            
+                    
+                    3-5-Inotify实时数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../../02-系统核心服务/3-6-文件共享服务之FTP.html">
+            
+                <a href="../../02-系统核心服务/3-6-文件共享服务之FTP.html">
+            
+                    
+                    3-6-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../../02-系统核心服务/3-7-文件共享服务之Samba.html">
+            
+                <a href="../../02-系统核心服务/3-7-文件共享服务之Samba.html">
+            
+                    
+                    3-7-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../../02-系统核心服务/3-8文件共享服务之NFS.html">
+            
+                <a href="../../02-系统核心服务/3-8文件共享服务之NFS.html">
+            
+                    
+                    3-8文件共享服务之NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../../02-系统核心服务/3-9-域名管理系统之DNS.html">
+            
+                <a href="../../02-系统核心服务/3-9-域名管理系统之DNS.html">
+            
+                    
+                    3-9-域名管理系统之DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../03-网站集群架构/0.html">
+            
+                <a href="../../03-网站集群架构/0.html">
+            
+                    
+                    03-网站集群架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                <a href="../../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                    
+                    00-淘宝网的十年架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../03-网站集群架构/01-综合架构开篇.html">
+            
+                <a href="../../03-网站集群架构/01-综合架构开篇.html">
+            
+                    
+                    01-综合架构开篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../03-网站集群架构/02-综合架构环境准备.html">
+            
+                <a href="../../03-网站集群架构/02-综合架构环境准备.html">
+            
+                    
+                    02-综合架构环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                <a href="../../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                    
+                    03-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                <a href="../../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                    
+                    04-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../03-网站集群架构/05-备份工具rsync.html">
+            
+                <a href="../../03-网站集群架构/05-备份工具rsync.html">
+            
+                    
+                    05-备份工具rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../03-网站集群架构/06-备份任务实战.html">
+            
+                <a href="../../03-网站集群架构/06-备份任务实战.html">
+            
+                    
+                    06-备份任务实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                <a href="../../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                    
+                    07-共享存储服务NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../03-网站集群架构/08-实时同步数据.html">
+            
+                <a href="../../03-网站集群架构/08-实时同步数据.html">
+            
+                    
+                    08-实时同步数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../../03-网站集群架构/09-SSH安全登录.html">
+            
+                <a href="../../03-网站集群架构/09-SSH安全登录.html">
+            
+                    
+                    09-SSH安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../../03-网站集群架构/10--SSH进阶.html">
+            
+                <a href="../../03-网站集群架构/10--SSH进阶.html">
+            
+                    
+                    10--SSH进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                <a href="../../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                    
+                    11-运维自动化Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                <a href="../../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                    
+                    12-Ansible-playbook剧本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                <a href="../../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                    
+                    13-Ansible-playbook剧本进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../../03-网站集群架构/14-ansible-role角色.html">
+            
+                <a href="../../03-网站集群架构/14-ansible-role角色.html">
+            
+                    
+                    14-ansible-role角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../../03-网站集群架构/20-用户访问网站原理.html">
+            
+                <a href="../../03-网站集群架构/20-用户访问网站原理.html">
+            
+                    
+                    20-用户访问网站原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                <a href="../../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                    
+                    21-静态资源加速cdn篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../../03-网站集群架构/22-web通信协议篇.html">
+            
+                <a href="../../03-网站集群架构/22-web通信协议篇.html">
+            
+                    
+                    22-web通信协议篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                <a href="../../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                    
+                    23-1-nginx虚拟主机实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../../03-网站集群架构/23-nginx基础篇.html">
+            
+                <a href="../../03-网站集群架构/23-nginx基础篇.html">
+            
+                    
+                    23-nginx基础篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../../03-网站集群架构/24-nginx高级篇.html">
+            
+                <a href="../../03-网站集群架构/24-nginx高级篇.html">
+            
+                    
+                    24-nginx高级篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                <a href="../../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                    
+                    25-LNMP黄金架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../../03-网站集群架构/26-网站集群拆分.html">
+            
+                <a href="../../03-网站集群架构/26-网站集群拆分.html">
+            
+                    
+                    26-网站集群拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                <a href="../../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                    
+                    27-1-负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                <a href="../../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                    
+                    27-高性能负载均衡集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../../03-网站集群架构/28-HTTPS.html">
+            
+                <a href="../../03-网站集群架构/28-HTTPS.html">
+            
+                    
+                    28-HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                <a href="../../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                    
+                    29-keepalived高可用性负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../../03-网站集群架构/30-部署Python网站.html">
+            
+                <a href="../../03-网站集群架构/30-部署Python网站.html">
+            
+                    
+                    30-部署Python网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../../03-网站集群架构/31-jumpserver实战.html">
+            
+                <a href="../../03-网站集群架构/31-jumpserver实战.html">
+            
+                    
+                    31-jumpserver实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../../03-网站集群架构/32-期中综合架构验收.html">
+            
+                <a href="../../03-网站集群架构/32-期中综合架构验收.html">
+            
+                    
+                    32-期中综合架构验收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../04-shell编程/0.html">
+            
+                <a href="../../04-shell编程/0.html">
+            
+                    
+                    04-shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../04-shell编程/01-shell基础概述.html">
+            
+                <a href="../../04-shell编程/01-shell基础概述.html">
+            
+                    
+                    01-Shell基础概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../04-shell编程/02-shell变量.html">
+            
+                <a href="../../04-shell编程/02-shell变量.html">
+            
+                    
+                    02-Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../04-shell编程/03-条件判断.html">
+            
+                <a href="../../04-shell编程/03-条件判断.html">
+            
+                    
+                    03-条件判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../04-shell编程/04-流程控制之if.html">
+            
+                <a href="../../04-shell编程/04-流程控制之if.html">
+            
+                    
+                    04-流程控制之if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../04-shell编程/05-流程控制之case.html">
+            
+                <a href="../../04-shell编程/05-流程控制之case.html">
+            
+                    
+                    05-流程控制之case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../04-shell编程/06-流程控制之for循环结构.html">
+            
+                <a href="../../04-shell编程/06-流程控制之for循环结构.html">
+            
+                    
+                    06-流程控制之for循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../04-shell编程/07-流程控制之while循环.html">
+            
+                <a href="../../04-shell编程/07-流程控制之while循环.html">
+            
+                    
+                    07-流程控制之while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../04-shell编程/08-循环控制.html">
+            
+                <a href="../../04-shell编程/08-循环控制.html">
+            
+                    
+                    08-循环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../04-shell编程/09-shell函数.html">
+            
+                <a href="../../04-shell编程/09-shell函数.html">
+            
+                    
+                    09-Shell函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../04-shell编程/10-shell数组.html">
+            
+                <a href="../../04-shell编程/10-shell数组.html">
+            
+                    
+                    10-Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../04-shell编程/脚本练习题库.html">
+            
+                <a href="../../04-shell编程/脚本练习题库.html">
+            
+                    
+                    脚本练习题库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../05-监控系统/00.html">
+            
+                <a href="../../05-监控系统/00.html">
+            
+                    
+                    05-监控系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../05-监控系统/00-监控系统.html">
+            
+                <a href="../../05-监控系统/00-监控系统.html">
+            
+                    
+                    00-监控系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../05-监控系统/01-监控体系理论.html">
+            
+                <a href="../../05-监控系统/01-监控体系理论.html">
+            
+                    
+                    01-监控体系理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../05-监控系统/02-zabbix安装部署.html">
+            
+                <a href="../../05-监控系统/02-zabbix安装部署.html">
+            
+                    
+                    02-zabbix安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                <a href="../../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                    
+                    03-zabbix如何监控服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../05-监控系统/04-1-微信报警.html">
+            
+                <a href="../../05-监控系统/04-1-微信报警.html">
+            
+                    
+                    04-1-微信报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../05-监控系统/04-2-钉钉报警.html">
+            
+                <a href="../../05-监控系统/04-2-钉钉报警.html">
+            
+                    
+                    04-2-钉钉报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../05-监控系统/04-自定义监控项.html">
+            
+                <a href="../../05-监控系统/04-自定义监控项.html">
+            
+                    
+                    04-自定义监控项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../05-监控系统/05-自定义监控模板.html">
+            
+                <a href="../../05-监控系统/05-自定义监控模板.html">
+            
+                    
+                    05-自定义监控模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../05-监控系统/06-1-nginx监控.html">
+            
+                <a href="../../05-监控系统/06-1-nginx监控.html">
+            
+                    
+                    06-1-nginx监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../05-监控系统/06-2-php监控.html">
+            
+                <a href="../../05-监控系统/06-2-php监控.html">
+            
+                    
+                    06-2-php监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../../05-监控系统/06-3-mysql监控.html">
+            
+                <a href="../../05-监控系统/06-3-mysql监控.html">
+            
+                    
+                    06-3-mysql监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../../05-监控系统/06-4-redis监控.html">
+            
+                <a href="../../05-监控系统/06-4-redis监控.html">
+            
+                    
+                    06-4-redis监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../../05-监控系统/06-5-tomcat监控.html">
+            
+                <a href="../../05-监控系统/06-5-tomcat监控.html">
+            
+                    
+                    06-5-tomcat监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                <a href="../../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                    
+                    06-6-模拟登录之web监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../../05-监控系统/06-zabbix监控核心服务.html">
+            
+                <a href="../../05-监控系统/06-zabbix监控核心服务.html">
+            
+                    
+                    06-zabbix监控核心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                <a href="../../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                    
+                    07-1-zabbix-agent修改主动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../../05-监控系统/07-2-zabbix自动发现.html">
+            
+                <a href="../../05-监控系统/07-2-zabbix自动发现.html">
+            
+                    
+                    07-2-zabbix自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../../05-监控系统/07-3-zabbix自动注册.html">
+            
+                <a href="../../05-监控系统/07-3-zabbix自动注册.html">
+            
+                    
+                    07-3-zabbix自动注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../../05-监控系统/07-zabbix工作模式.html">
+            
+                <a href="../../05-监控系统/07-zabbix工作模式.html">
+            
+                    
+                    07-zabbix工作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../../05-监控系统/08-zabbix分布式proxy.html">
+            
+                <a href="../../05-监控系统/08-zabbix分布式proxy.html">
+            
+                    
+                    08-zabbix分布式proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../06-敏捷开发流水线/00.html">
+            
+                <a href="../../06-敏捷开发流水线/00.html">
+            
+                    
+                    06-敏捷开发流水线
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                <a href="../../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                    
+                    00-版本控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../06-敏捷开发流水线/01-git工具.html">
+            
+                <a href="../../06-敏捷开发流水线/01-git工具.html">
+            
+                    
+                    01-git工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                <a href="../../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                    
+                    02-git与gitee码云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                <a href="../../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                    
+                    03-gitlab私有仓库搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../06-敏捷开发流水线/04-jenkins.html">
+            
+                <a href="../../06-敏捷开发流水线/04-jenkins.html">
+            
+                    
+                    04-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                <a href="../../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                    
+                    05-jenkins结合远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                <a href="../../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                    
+                    06-自动化发布静态页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                <a href="../../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                    
+                    07-SonarQube代码质量扫描工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                <a href="../../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                    
+                    08-jenkins发布Java项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                <a href="../../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                    
+                    09-jenkins流水线pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../07-数据库运维/00.html">
+            
+                <a href="../../07-数据库运维/00.html">
+            
+                    
+                    07-数据库运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../07-数据库运维/02-1-数据库基础知识.html">
+            
+                <a href="../../07-数据库运维/02-1-数据库基础知识.html">
+            
+                    
+                    02-1-数据库基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../07-数据库运维/02-10-主从复制高级.html">
+            
+                <a href="../../07-数据库运维/02-10-主从复制高级.html">
+            
+                    
+                    02-10-主从复制高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                <a href="../../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                    
+                    02-11-高可用集群MHA方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../07-数据库运维/02-2-mysql基础实践.html">
+            
+                <a href="../../07-数据库运维/02-2-mysql基础实践.html">
+            
+                    
+                    02-2-mysql基础实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                <a href="../../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                    
+                    02-3-mysql运维核心基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../07-数据库运维/02-4-SQL语句一.html">
+            
+                <a href="../../07-数据库运维/02-4-SQL语句一.html">
+            
+                    
+                    02-4-SQL语句一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../07-数据库运维/02-5-SQL语句二.html">
+            
+                <a href="../../07-数据库运维/02-5-SQL语句二.html">
+            
+                    
+                    02-5-SQL语句二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../../07-数据库运维/02-6-mysql备份方案.html">
+            
+                <a href="../../07-数据库运维/02-6-mysql备份方案.html">
+            
+                    
+                    02-6-mysql备份方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../../07-数据库运维/02-7-mysql备份实战.html">
+            
+                <a href="../../07-数据库运维/02-7-mysql备份实战.html">
+            
+                    
+                    02-7-mysql备份实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                <a href="../../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                    
+                    02-8-xtrabackup备份工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../../07-数据库运维/02-9-主从复制架构.html">
+            
+                <a href="../../07-数据库运维/02-9-主从复制架构.html">
+            
+                    
+                    02-9-主从复制架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../../07-数据库运维/02-DBA之路.html">
+            
+                <a href="../../07-数据库运维/02-DBA之路.html">
+            
+                    
+                    02-DBA之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../08-缓存redis/00.html">
+            
+                <a href="../../08-缓存redis/00.html">
+            
+                    
+                    08-缓存 redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../08-缓存redis/01-redis部署与数据类型.html">
+            
+                <a href="../../08-缓存redis/01-redis部署与数据类型.html">
+            
+                    
+                    01-redis部署与数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../08-缓存redis/02-redis数据类型篇.html">
+            
+                <a href="../../08-缓存redis/02-redis数据类型篇.html">
+            
+                    
+                    02-redis数据类型篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../08-缓存redis/03-redis数据持久化篇.html">
+            
+                <a href="../../08-缓存redis/03-redis数据持久化篇.html">
+            
+                    
+                    03-redis数据持久化篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../08-缓存redis/04-redis安全篇.html">
+            
+                <a href="../../08-缓存redis/04-redis安全篇.html">
+            
+                    
+                    04-redis安全篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../08-缓存redis/05-redis主从复制篇.html">
+            
+                <a href="../../08-缓存redis/05-redis主从复制篇.html">
+            
+                    
+                    05-redis主从复制篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                <a href="../../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                    
+                    06-redis高可用哨兵篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                <a href="../../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                    
+                    07-reids分片技术cluster篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../08-缓存redis/08-redis自动化安装.html">
+            
+                <a href="../../08-缓存redis/08-redis自动化安装.html">
+            
+                    
+                    08-redis自动化安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../08-缓存redis/09-redis实战技巧.html">
+            
+                <a href="../../08-缓存redis/09-redis实战技巧.html">
+            
+                    
+                    09-redis实战技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../09-java运维/00.html">
+            
+                <a href="../../09-java运维/00.html">
+            
+                    
+                    09-java 运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../09-java运维/01-Tomcat.html">
+            
+                <a href="../../09-java运维/01-Tomcat.html">
+            
+                    
+                    01-Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../00.html">
+            
+                <a href="../00.html">
+            
+                    
+                    10-云原生容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../docker-all/00.html">
+            
+                <a href="../docker-all/00.html">
+            
+                    
+                    docker-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../docker-all/01_docker技术详解.html">
+            
+                <a href="../docker-all/01_docker技术详解.html">
+            
+                    
+                    01_docker技术详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../docker-all/02_docker安装部署.html">
+            
+                <a href="../docker-all/02_docker安装部署.html">
+            
+                    
+                    02_docker安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../docker-all/03_docker存储与网络.html">
+            
+                <a href="../docker-all/03_docker存储与网络.html">
+            
+                    
+                    03_docker存储与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../docker-all/04_dockerfile构建镜像.html">
+            
+                <a href="../docker-all/04_dockerfile构建镜像.html">
+            
+                    
+                    04_dockerfile构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../docker-all/05-企业级私有仓库Harbor.html">
+            
+                <a href="../docker-all/05-企业级私有仓库Harbor.html">
+            
+                    
+                    05-企业级私有仓库Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../docker-all/06-docker网络模式.html">
+            
+                <a href="../docker-all/06-docker网络模式.html">
+            
+                    
+                    06-docker网络模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.7" data-path="../docker-all/07-docker容器单机编排.html">
+            
+                <a href="../docker-all/07-docker容器单机编排.html">
+            
+                    
+                    07-docker容器单机编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.8" data-path="../docker-all/08-docker容器跨主机通信.html">
+            
+                <a href="../docker-all/08-docker容器跨主机通信.html">
+            
+                    
+                    08-docker容器跨主机通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.9" data-path="../docker-all/09-docker综合应用.html">
+            
+                <a href="../docker-all/09-docker综合应用.html">
+            
+                    
+                    09-docker综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.10" data-path="../docker-all/10-容器化部署案例.html">
+            
+                <a href="../docker-all/10-容器化部署案例.html">
+            
+                    
+                    10-容器化部署案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.11" data-path="../docker-all/11-容器监控方案.html">
+            
+                <a href="../docker-all/11-容器监控方案.html">
+            
+                    
+                    11-容器监控方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../iptables/00.html">
+            
+                <a href="../iptables/00.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../iptables/00-iptables防火墙安全.html">
+            
+                <a href="../iptables/00-iptables防火墙安全.html">
+            
+                    
+                    00-iptables防火墙安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../iptables/01-iptables命令.html">
+            
+                <a href="../iptables/01-iptables命令.html">
+            
+                    
+                    01-iptables命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../kvm-all/00.html">
+            
+                <a href="../kvm-all/00.html">
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../kvm-all/01-kvm虚拟化实践.html">
+            
+                <a href="../kvm-all/01-kvm虚拟化实践.html">
+            
+                    
+                    01-kvm虚拟化实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../kvm-all/02-kvm进阶实践.html">
+            
+                <a href="../kvm-all/02-kvm进阶实践.html">
+            
+                    
+                    02-kvm进阶实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    k8s-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" data-path="00_k8s容器编排系统.html">
+            
+                <a href="00_k8s容器编排系统.html">
+            
+                    
+                    00_k8s容器编排系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.2" data-path="01_kubeadm安装k8s集群.html">
+            
+                <a href="01_kubeadm安装k8s集群.html">
+            
+                    
+                    01_kubeadm安装k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.3" data-path="02_k8s资源清单.html">
+            
+                <a href="02_k8s资源清单.html">
+            
+                    
+                    02_k8s资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.4.4" data-path="03_pod详解.html">
+            
+                <a href="03_pod详解.html">
+            
+                    
+                    03_pod详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.5" data-path="04_pod控制器详解.html">
+            
+                <a href="04_pod控制器详解.html">
+            
+                    
+                    04_pod控制器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.6" data-path="05-k8s网络.html">
+            
+                <a href="05-k8s网络.html">
+            
+                    
+                    05-k8s网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.7" data-path="06-k8s数据持久化.html">
+            
+                <a href="06-k8s数据持久化.html">
+            
+                    
+                    06-k8s数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.8" data-path="07-k8s配置文件管理.html">
+            
+                <a href="07-k8s配置文件管理.html">
+            
+                    
+                    07-k8s配置文件管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.9" data-path="08-dashboard.html">
+            
+                <a href="08-dashboard.html">
+            
+                    
+                    08-dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.10" data-path="09-prometheus.html">
+            
+                <a href="09-prometheus.html">
+            
+                    
+                    09-prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../11-mongodb/0.html">
+            
+                <a href="../../11-mongodb/0.html">
+            
+                    
+                    11-mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../11-mongodb/01-mongodb安装.html">
+            
+                <a href="../../11-mongodb/01-mongodb安装.html">
+            
+                    
+                    01-mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../11-mongodb/02-mongodb增删改查.html">
+            
+                <a href="../../11-mongodb/02-mongodb增删改查.html">
+            
+                    
+                    02-mongodb增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                <a href="../../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                    
+                    03-mongodb基于角色的访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../11-mongodb/04-副本集replicaSet.html">
+            
+                <a href="../../11-mongodb/04-副本集replicaSet.html">
+            
+                    
+                    04-副本集replicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../11-mongodb/05-mongodb备份恢复.html">
+            
+                <a href="../../11-mongodb/05-mongodb备份恢复.html">
+            
+                    
+                    05-mongodb备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../12-zookeeper/0.html">
+            
+                <a href="../../12-zookeeper/0.html">
+            
+                    
+                    12-zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../12-zookeeper/01-zookeeper.html">
+            
+                <a href="../../12-zookeeper/01-zookeeper.html">
+            
+                    
+                    01-zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../12-zookeeper/02-zk实践操作.html">
+            
+                <a href="../../12-zookeeper/02-zk实践操作.html">
+            
+                    
+                    02-zk实践操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                <a href="../../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                    
+                    03-python-API开发zk客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../13-kafka/0.html">
+            
+                <a href="../../13-kafka/0.html">
+            
+                    
+                    13-kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../13-kafka/01-kafka基础.html">
+            
+                <a href="../../13-kafka/01-kafka基础.html">
+            
+                    
+                    01-kafka基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../13-kafka/02-kafka集群.html">
+            
+                <a href="../../13-kafka/02-kafka集群.html">
+            
+                    
+                    02-kafka集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../14-ELK/0.html">
+            
+                <a href="../../14-ELK/0.html">
+            
+                    
+                    14-ELK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../14-ELK/01-elasticSearch.html">
+            
+                <a href="../../14-ELK/01-elasticSearch.html">
+            
+                    
+                    01-elasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../14-ELK/02-ES集群.html">
+            
+                <a href="../../14-ELK/02-ES集群.html">
+            
+                    
+                    02-ES集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../14-ELK/03-ES进阶.html">
+            
+                <a href="../../14-ELK/03-ES进阶.html">
+            
+                    
+                    03-ES进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../../14-ELK/04-ES备份恢复.html">
+            
+                <a href="../../14-ELK/04-ES备份恢复.html">
+            
+                    
+                    04-ES备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../../14-ELK/05-EBLK日志收集方案.html">
+            
+                <a href="../../14-ELK/05-EBLK日志收集方案.html">
+            
+                    
+                    05-EBLK日志收集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../../14-ELK/06-ELK收集主流应用日志.html">
+            
+                <a href="../../14-ELK/06-ELK收集主流应用日志.html">
+            
+                    
+                    06-ELK收集主流应用日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../../14-ELK/07-filebeat实战.html">
+            
+                <a href="../../14-ELK/07-filebeat实战.html">
+            
+                    
+                    07-filebeat实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../15-阿里云/0.html">
+            
+                <a href="../../15-阿里云/0.html">
+            
+                    
+                    15-阿里云
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../15-阿里云/01-阿里云实战.html">
+            
+                <a href="../../15-阿里云/01-阿里云实战.html">
+            
+                    
+                    01-阿里云实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../15-阿里云/02-阿里云数据库RDS.html">
+            
+                <a href="../../15-阿里云/02-阿里云数据库RDS.html">
+            
+                    
+                    02-阿里云数据库RDS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                <a href="../../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                    
+                    03-阿里云负载均衡SLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../../15-阿里云/04-阿里云NAS.html">
+            
+                <a href="../../15-阿里云/04-阿里云NAS.html">
+            
+                    
+                    04-阿里云NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../../15-阿里云/05-阿里云Redis.html">
+            
+                <a href="../../15-阿里云/05-阿里云Redis.html">
+            
+                    
+                    05-阿里云Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../../15-阿里云/06-ACK.html">
+            
+                <a href="../../15-阿里云/06-ACK.html">
+            
+                    
+                    06-ACK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                <a href="../../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                    
+                    07-阿里云ACK实践部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                <a href="../../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                    
+                    08-阿里云ACK部署mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >03_pod详解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="03pod&#x8BE6;&#x89E3;"><a name="03pod&#x8BE6;&#x89E3;" class="plugin-anchor" href="#03pod&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>03_pod&#x8BE6;&#x89E3;</h1>
+<h1 id="pod&#x662F;&#x4EC0;&#x4E48;"><a name="pod&#x662F;&#x4EC0;&#x4E48;" class="plugin-anchor" href="#pod&#x662F;&#x4EC0;&#x4E48;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="www.yuchaoit.cn">Pod&#x662F;&#x4EC0;&#x4E48;</a></h1>
+<p>Pod&#x662F;Kubernetes&#x521B;&#x5EFA;&#x6216;&#x90E8;&#x7F72;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x3002;&#x4E00;&#x4E2A;Pod&#x5C01;&#x88C5;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#xFF08;container&#xFF09;&#x3001;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#xFF08;volume&#xFF09;&#x3001;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7F51;&#x7EDC;IP&#x4EE5;&#x53CA;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65B9;&#x5F0F;&#x7684;&#x7B56;&#x7565;&#x9009;&#x9879;&#x3002;</p>
+<p>Pod&#x4F7F;&#x7528;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ul>
+<li>Pod&#x4E2D;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x3002;&#x8FD9;&#x662F;Kubernetes&#x6700;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;Pod&#x89C6;&#x4E3A;&#x5355;&#x4E2A;&#x5C01;&#x88C5;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x4F46;&#x662F;Kubernetes&#x662F;&#x76F4;&#x63A5;&#x7BA1;&#x7406;Pod&#x800C;&#x4E0D;&#x662F;&#x5BB9;&#x5668;&#x3002;</li>
+<li>Pod&#x4E2D;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x9700;&#x8981;&#x8026;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x5DE5;&#x4F5C;&#x3001;&#x9700;&#x8981;&#x5171;&#x4EAB;&#x8D44;&#x6E90;&#x7684;&#x5BB9;&#x5668;&#x3002;&#x901A;&#x5E38;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#x4E0B;&#x5E94;&#x7528;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x4E3B;&#x5BB9;&#x5668;&#x548C;&#x51E0;&#x4E2A;&#x8F85;&#x52A9;&#x5BB9;&#x5668;&#xFF08;SideCar Container&#xFF09;&#xFF0C;&#x5982;<a href="https://support.huaweicloud.com/basics-cce/kubernetes_0006.html#kubernetes_0006__fig347141918551" target="_blank">&#x56FE;1</a>&#x6240;&#x793A;&#xFF0C;&#x4F8B;&#x5982;&#x4E3B;&#x5BB9;&#x5668;&#x4E3A;&#x4E00;&#x4E2A;web&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x76EE;&#x5F55;&#x4E0B;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x6587;&#x4EF6;&#x670D;&#x52A1;&#xFF0C;&#x800C;&#x8F85;&#x52A9;&#x5BB9;&#x5668;&#x5468;&#x671F;&#x6027;&#x7684;&#x4ECE;&#x5916;&#x90E8;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x5B58;&#x5230;&#x8FD9;&#x4E2A;&#x56FA;&#x5B9A;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</li>
+</ul>
+<p><img src="../../2024-linux/zh-cn_image_0258392378.png" alt="img"></p>
+<p>&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#x5F88;&#x5C11;&#x76F4;&#x63A5;&#x521B;&#x5EFA;Pod&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528;Kubernetes&#x4E2D;&#x79F0;&#x4E3A;Controller&#x7684;&#x62BD;&#x8C61;&#x5C42;&#x6765;&#x7BA1;&#x7406;Pod&#x5B9E;&#x4F8B;&#xFF0C;&#x4F8B;&#x5982;Deployment&#x548C;Job&#x3002;</p>
+<p>Controller&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x591A;&#x4E2A;Pod&#xFF0C;&#x63D0;&#x4F9B;&#x526F;&#x672C;&#x7BA1;&#x7406;&#x3001;&#x6EDA;&#x52A8;&#x5347;&#x7EA7;&#x548C;&#x81EA;&#x6108;&#x80FD;&#x529B;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#xFF0C;Controller&#x4F1A;&#x4F7F;&#x7528;Pod Template&#x6765;&#x521B;&#x5EFA;&#x76F8;&#x5E94;&#x7684;Pod&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;pod"><a name="&#x521B;&#x5EFA;pod" class="plugin-anchor" href="#&#x521B;&#x5EFA;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;Pod</h2>
+<p>kubernetes&#x4E2D;&#x8D44;&#x6E90;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;YAML&#x63CF;&#x8FF0;&#xFF08;&#x5982;&#x679C;&#x60A8;&#x5BF9;YAML&#x683C;&#x5F0F;&#x4E0D;&#x4E86;&#x89E3;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://support.huaweicloud.com/devg-cci/cci_05_1001.html" target="_blank">YAML&#x8BED;&#x6CD5;</a>&#xFF09;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;JSON</p>
+<pre><code>https://support.huaweicloud.com/devg-cci/cci_05_1001.html
+</code></pre><p>&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;nginx&#x7684;Pod&#xFF0C;&#x8FD9;&#x4E2A;Pod&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;container-0&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x4F7F;&#x7528;nginx:alpine&#x955C;&#x50CF;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x4E3A;100m core CPU&#x3001;200Mi&#x5185;&#x5B58;&#x3002;</p>
+<pre><code class="lang-yaml">apiVersion: v1                      # Kubernetes&#x7684;API Version
+kind: Pod                           # Kubernetes&#x7684;&#x8D44;&#x6E90;&#x7C7B;&#x578B;
+metadata:
+  name: nginx                       # Pod&#x7684;&#x540D;&#x79F0;
+spec:                               # Pod&#x7684;&#x5177;&#x4F53;&#x89C4;&#x683C;&#xFF08;specification&#xFF09;
+  containers:
+  - image: nginx:alpine             # &#x4F7F;&#x7528;&#x7684;&#x955C;&#x50CF;&#x4E3A; nginx:alpine
+    name: container-0               # &#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;
+    resources:                      # &#x7533;&#x8BF7;&#x5BB9;&#x5668;&#x6240;&#x9700;&#x7684;&#x8D44;&#x6E90;
+      limits:
+        cpu: 100m
+        memory: 200Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+  #imagePullSecrets:                 # &#x62C9;&#x53D6;&#x955C;&#x50CF;&#x4F7F;&#x7528;&#x7684;&#x8BC1;&#x4E66;&#xFF0C;&#x5728;CCE&#x4E0A;&#x5FC5;&#x987B;&#x4E3A;default-secret
+ # - name: default-secret
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x9762;YAML&#x7684;&#x6CE8;&#x91CA;&#xFF0C;YAML&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x4E3B;&#x8981;&#x4E3A;&#x5982;&#x4E0B;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li><strong>metadata</strong>&#xFF1A;&#x4E00;&#x4E9B;&#x540D;&#x79F0;/&#x6807;&#x7B7E;/namespace&#x7B49;&#x4FE1;&#x606F;&#x3002;</li>
+<li><strong>spec</strong>&#xFF1A;Pod&#x5B9E;&#x9645;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x955C;&#x50CF;&#xFF0C;volume&#x7B49;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x53BB;&#x67E5;&#x8BE2;Kubernetes&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x60A8;&#x4F1A;&#x770B;&#x5230;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;<strong>status</strong>&#x5B57;&#x6BB5;&#xFF0C;status&#x63CF;&#x8FF0;kubernetes&#x8D44;&#x6E90;&#x7684;&#x5B9E;&#x9645;&#x72B6;&#x6001;&#xFF0C;&#x521B;&#x5EFA;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x3002;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x662F;&#x4E00;&#x4E2A;&#x6700;&#x5C0F;&#x96C6;&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#x540E;&#x9762;&#x4F1A;&#x9010;&#x6B65;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>Pod&#x5B9A;&#x4E49;&#x597D;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;kubectl&#x521B;&#x5EFA;&#xFF0C;&#x5982;&#x679C;&#x4E0A;&#x9762;YAML&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E3A;nginx.yaml&#xFF0C;&#x5219;&#x521B;&#x5EFA;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;-f&#x8868;&#x793A;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x3002;</p>
+<pre><code>[root@k8s-master-10 ~]#kubectl create -f cce-pod.yaml 
+pod/nginx created
+
+[root@k8s-master-10 ~]#kubectl get pod
+NAME                         READY   STATUS    RESTARTS   AGE
+dep-nginx-779c7fd666-cvg8v   1/1     Running   0          34m
+nginx                        1/1     Running   0          12s
+yuchao-nginx                 1/1     Running   0          19h
+[root@k8s-master-10 ~]#
+</code></pre><h2 id="pod&#x72B6;&#x6001;&#x67E5;&#x770B;"><a name="pod&#x72B6;&#x6001;&#x67E5;&#x770B;" class="plugin-anchor" href="#pod&#x72B6;&#x6001;&#x67E5;&#x770B;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x72B6;&#x6001;&#x67E5;&#x770B;</h2>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6B64;&#x5904;nginx&#x8FD9;&#x4E2A;Pod&#x7684;&#x72B6;&#x6001;&#x4E3A;Running&#xFF0C;&#x8868;&#x793A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#xFF1B;READY&#x4E3A;1/1&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x4E2A;Pod&#x4E2D;&#x6709;1&#x4E2A;&#x5BB9;&#x5668;&#xFF0C;&#x5176;&#x4E2D;1&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x72B6;&#x6001;&#x4E3A;Ready&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;kubectl get&#x547D;&#x4EE4;&#x67E5;&#x8BE2;&#x5177;&#x4F53;Pod&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;-o yaml&#x8868;&#x793A;&#x4EE5;YAML&#x683C;&#x5F0F;&#x8FD4;&#x56DE;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-o json&#xFF0C;&#x4EE5;JSON&#x683C;&#x5F0F;&#x8FD4;&#x56DE;&#x3002;</p>
+<pre><code>$ kubectl get pod nginx -o yaml
+$ kubectl get pod nginx -o json
+</code></pre><h2 id="pod&#x8BE6;&#x60C5;&#x67E5;&#x770B;"><a name="pod&#x8BE6;&#x60C5;&#x67E5;&#x770B;" class="plugin-anchor" href="#pod&#x8BE6;&#x60C5;&#x67E5;&#x770B;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x8BE6;&#x60C5;&#x67E5;&#x770B;</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl describe pod nginx
+
+&#x5E38;&#x7528;&#x6765;&#x67E5;&#x770B;&#x8D44;&#x6E90;&#x521B;&#x5EFA;&#x4E8B;&#x4EF6;
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  92s   default-scheduler  Successfully assigned default/nginx to k8s-node-12
+  Normal  Pulled     92s   kubelet            Container image &quot;nginx:alpine&quot; already present on machine
+  Normal  Created    92s   kubelet            Created container container-0
+  Normal  Started    92s   kubelet            Started container container-0
+</code></pre><p>&#x5220;&#x9664;pod&#x65F6;&#xFF0C;Kubernetes&#x7EC8;&#x6B62;Pod&#x4E2D;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x3002; Kubernetes&#x5411;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;SIGTERM&#x4FE1;&#x53F7;&#x5E76;&#x7B49;&#x5F85;&#x4E00;&#x5B9A;&#x7684;&#x79D2;&#x6570;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;30&#xFF09;&#x8BA9;&#x5BB9;&#x5668;&#x6B63;&#x5E38;&#x5173;&#x95ED;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5B83;&#x6CA1;&#x6709;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x5185;&#x5173;&#x95ED;&#xFF0C;Kubernetes&#x4F1A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;SIGKILL&#x4FE1;&#x53F7;&#x6740;&#x6B7B;&#x8BE5;&#x8FDB;&#x7A0B;&#x3002;</p>
+<h2 id="pod&#x505C;&#x6B62;&#x5220;&#x9664;"><a name="pod&#x505C;&#x6B62;&#x5220;&#x9664;" class="plugin-anchor" href="#pod&#x505C;&#x6B62;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x505C;&#x6B62;&#x5220;&#x9664;</h2>
+<p>Pod&#x7684;&#x505C;&#x6B62;&#x4E0E;&#x5220;&#x9664;&#x6709;&#x591A;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;&#x6309;&#x540D;&#x79F0;&#x5220;&#x9664;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<h3 id="&#x4E00;&#x6B21;&#x6027;&#x5220;&#x9664;&#x591A;&#x4E2A;pod&#x3002;"><a name="&#x4E00;&#x6B21;&#x6027;&#x5220;&#x9664;&#x591A;&#x4E2A;pod&#x3002;" class="plugin-anchor" href="#&#x4E00;&#x6B21;&#x6027;&#x5220;&#x9664;&#x591A;&#x4E2A;pod&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x6B21;&#x6027;&#x5220;&#x9664;&#x591A;&#x4E2A;pod&#x3002;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl delete pod nginx yuchao-nginx
+pod &quot;nginx&quot; deleted
+pod &quot;yuchao-nginx&quot; deleted
+</code></pre><h3 id="&#x6E05;&#x7406;&#x5F53;&#x524D;namespace&#x4E0B;&#x6240;&#x6709;&#x7684;pod&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;default"><a name="&#x6E05;&#x7406;&#x5F53;&#x524D;namespace&#x4E0B;&#x6240;&#x6709;&#x7684;pod&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;default" class="plugin-anchor" href="#&#x6E05;&#x7406;&#x5F53;&#x524D;namespace&#x4E0B;&#x6240;&#x6709;&#x7684;pod&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;default"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E05;&#x7406;&#x5F53;&#x524D;namespace&#x4E0B;&#x6240;&#x6709;&#x7684;pod&#xFF0C;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;default</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl describe pod dep-nginx-779c7fd666-cvg8v |grep -i ^namespace
+Namespace:    default
+
+# --all&#x53C2;&#x6570;&#xFF0C;&#x5371;&#x9669;&#x547D;&#x4EE4;&#xFF01;
+[root@k8s-master-10 ~]#kubectl delete pod --all
+pod &quot;dep-nginx-779c7fd666-cvg8v&quot; deleted
+</code></pre><h3 id="&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x5220;&#x9664;pod"><a name="&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x5220;&#x9664;pod" class="plugin-anchor" href="#&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x5220;&#x9664;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x5220;&#x9664;pod</h3>
+<pre><code>kubectl delete pod -l name=www.yuchaoit.cn
+</code></pre><h1 id="pod&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="pod&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="plugin-anchor" href="#pod&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h1>
+<p>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x662F;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x73AF;&#x5883;&#x4E2D;&#x8BBE;&#x5B9A;&#x7684;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x3002;</p>
+<p>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E3A;&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x6781;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x521B;&#x5EFA;&#x5BB9;&#x5668;&#x65F6;&#x4E3A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#xFF0C;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x8BFB;&#x53D6;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x4ECE;&#x800C;&#x505A;&#x5230;&#x7075;&#x6D3B;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x90FD;&#x91CD;&#x65B0;&#x7F16;&#x5199;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5236;&#x4F5C;&#x955C;&#x50CF;&#x3002;</p>
+<p>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x914D;&#x7F6E;spec.containers.env&#x5B57;&#x6BB5;&#x5373;&#x53EF;&#x3002;</p>
+<pre><code>[root@k8s-master-10 ~]#kubectl explain pod.spec.containers.env
+
+# &#x67E5;&#x770B;&#x5173;&#x4E8E;&#x5BB9;&#x5668;&#x8D44;&#x6E90;&#x7684;cpu&#x9650;&#x5236;
+[root@k8s-master-10 ~]#kubectl explain pod.spec.containers.resources.limits.cpu
+
+# &#x5B98;&#x7F51;pod&#x9650;&#x5236;cpu&#x8D44;&#x6E90;
+https://kubernetes.io/zh-cn/docs/tasks/configure-pod-container/assign-cpu-resource/
+</code></pre><p>&#x6D4B;&#x8BD5;yaml</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: yuchao-nginx
+spec:
+    containers:
+    - image: nginx:alpine
+      name: container-0
+      resources:
+        limits:
+          cpu: 100m
+          memory: 200Mi
+        requests:
+          cpu: 100m
+          memory: 200Mi
+      env:                            # &#x73AF;&#x5883;&#x53D8;&#x91CF;
+      - name: env_name
+        value: env_www.yuchaoit.cn
+  #  imagePullSecrets:
+  #  - name: default-secret
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;pod"><a name="&#x521B;&#x5EFA;pod" class="plugin-anchor" href="#&#x521B;&#x5EFA;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;pod</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl create -f env-pod.yaml 
+pod/yuchao-nginx created
+[root@k8s-master-10 ~]#
+</code></pre><h2 id="&#x67E5;&#x770B;pod&#x5185;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x67E5;&#x770B;pod&#x5185;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="plugin-anchor" href="#&#x67E5;&#x770B;pod&#x5185;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;pod&#x5185;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl exec -it yuchao-nginx -- env
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+HOSTNAME=yuchao-nginx
+TERM=xterm
+env_name=env_www.yuchaoit.cn
+KUBERNETES_SERVICE_HOST=10.1.0.1
+KUBERNETES_SERVICE_PORT=443
+KUBERNETES_SERVICE_PORT_HTTPS=443
+KUBERNETES_PORT=tcp://10.1.0.1:443
+KUBERNETES_PORT_443_TCP=tcp://10.1.0.1:443
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+KUBERNETES_PORT_443_TCP_PORT=443
+KUBERNETES_PORT_443_TCP_ADDR=10.1.0.1
+NGINX_VERSION=1.21.5
+NJS_VERSION=0.7.1
+PKG_RELEASE=1
+HOME=/root
+</code></pre><p>&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x8FD8;&#x53EF;&#x4EE5;&#x5F15;&#x7528;ConfigMap&#x548C;Secret&#xFF0C;&#x5177;&#x4F53;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BF7;&#x53C2;&#x89C1;<a href="https://support.huaweicloud.com/basics-cce/kubernetes_0020.html#kubernetes_0020__section18458337406" target="_blank">&#x5728;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x5F15;&#x7528;ConfigMap</a>&#x548C;<a href="https://support.huaweicloud.com/basics-cce/kubernetes_0021.html#kubernetes_0021__section66761159194018" target="_blank">&#x5728;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x5F15;&#x7528;Secret</a>&#x3002;</p>
+<h1 id="&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x547D;&#x4EE4;"><a name="&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x547D;&#x4EE4;" class="plugin-anchor" href="#&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="www.yuchaoit.cn">&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x547D;&#x4EE4;</a></h1>
+<p>&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x5C31;&#x662F;&#x542F;&#x52A8;&#x4E3B;&#x8FDB;&#x7A0B;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x542F;&#x52A8;&#x4E3B;&#x8FDB;&#x7A0B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x6BD4;&#x5982;MySQL&#x7C7B;&#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;&#x3001;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x8FD9;&#x4E9B;&#x5DE5;&#x4F5C;&#x8981;&#x5728;&#x6700;&#x7EC8;&#x7684;MySQL&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;&#x4E4B;&#x524D;&#x505A;&#x5B8C;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5236;&#x4F5C;&#x955C;&#x50CF;&#x65F6;&#x901A;&#x8FC7;&#x5728;Dockerfile&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;ENTRYPOINT&#x6216;CMD&#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x7684;Dockerfile&#x4E2D;&#x8BBE;&#x7F6E;&#x4E86;<strong>ENTRYPOINT [&quot;curl&quot;, &quot;www.yuchaoit.cn&quot;]</strong>&#x547D;&#x4EE4;&#xFF0C;&#x5176;&#x5C06;&#x4F1A;&#x5728;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x914D;&#x7F6E;Pod&#x7684;containers.command&#x53C2;&#x6570;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x662F;list&#x7C7B;&#x578B;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x540E;&#x9762;&#x5747;&#x4E3A;&#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: mynginx
+  namespace: chaoge-linux # &#x5355;&#x72EC;&#x5F00;&#x4E00;&#x4E2A;ns&#x73AF;&#x5883;
+spec:
+  containers:
+  - image: nginx:alpine
+    name: container-0
+    resources:
+      limits:
+        cpu: 100m
+        memory: 200Mi
+      requests:
+        cpu: 100m
+        memory: 200Mi
+    command:                     # &#x542F;&#x52A8;&#x547D;&#x4EE4;
+    - curl
+    - &quot;www.yuchaoit.cn&quot;
+ # imagePullSecrets:
+  # - name: default-secret
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;namespace&#x4E0B;&#x7684;pod"><a name="&#x521B;&#x5EFA;namespace&#x4E0B;&#x7684;pod" class="plugin-anchor" href="#&#x521B;&#x5EFA;namespace&#x4E0B;&#x7684;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;namespace&#x4E0B;&#x7684;pod</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl create ns chaoge-linux
+namespace/chaoge-linux created
+
+[root@k8s-master-10 ~]#kubectl create -f cmd-pod.yaml 
+pod/mynginx created
+[root@k8s-master-10 ~]#
+</code></pre><h2 id="&#x67E5;&#x770B;ns&#x4E0B;&#x7684;pod"><a name="&#x67E5;&#x770B;ns&#x4E0B;&#x7684;pod" class="plugin-anchor" href="#&#x67E5;&#x770B;ns&#x4E0B;&#x7684;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;ns&#x4E0B;&#x7684;pod</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl get pods -n chaoge-linux 
+NAME      READY   STATUS             RESTARTS   AGE
+mynginx   0/1     CrashLoopBackOff   4          2m12s
+[root@k8s-master-10 ~]#
+
+&#x53D1;&#x73B0;&#x548B;&#x6302;&#x4E86;&#xFF1F;
+</code></pre><h2 id="&#x67E5;&#x770B;pod&#x4E8B;&#x4EF6;"><a name="&#x67E5;&#x770B;pod&#x4E8B;&#x4EF6;" class="plugin-anchor" href="#&#x67E5;&#x770B;pod&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;pod&#x4E8B;&#x4EF6;</h2>
+<pre><code>Events:
+  Type     Reason     Age                   From               Message
+  ----     ------     ----                  ----               -------
+  Normal   Scheduled  2m37s                 default-scheduler  Successfully assigned chaoge-linux/mynginx to k8s-node-12
+  Normal   Pulled     61s (x5 over 2m37s)   kubelet            Container image &quot;nginx:alpine&quot; already present on machine
+  Normal   Created    61s (x5 over 2m37s)   kubelet            Created container container-0
+  Normal   Started    61s (x5 over 2m36s)   kubelet            Started container container-0
+  Warning  BackOff    60s (x10 over 2m35s)  kubelet            Back-off restarting failed container
+
+
+
+[root@k8s-master-10 ~]#kubectl describe pod mynginx -n chaoge-linux
+</code></pre><h2 id="&#x67E5;&#x770B;pod&#x65E5;&#x5FD7;"><a name="&#x67E5;&#x770B;pod&#x65E5;&#x5FD7;" class="plugin-anchor" href="#&#x67E5;&#x770B;pod&#x65E5;&#x5FD7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;pod&#x65E5;&#x5FD7;</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl -n chaoge-linux logs mynginx |grep &#x4E8E;&#x8D85;
+    &lt;title itemprop=&quot;name&quot;&gt;&#x4E8E;&#x8D85;&#x5E26;&#x4F60;&#x5B66;linux&lt;/title&gt;
+            &lt;h1 class=&quot;center-text glitch&quot; data-text=&quot;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x5E26;&#x4F60;&#x5B66;linux&quot;&gt;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x5E26;&#x4F60;&#x5B66;linux&lt;/h1&gt;
+                        &lt;h1 class=&quot;site-title&quot;&gt;&lt;a href=&quot;http://yuchaoit.cn:8090&quot;&gt;&#x4E8E;&#x8D85;&#x5E26;&#x4F60;&#x5B66;linux&lt;/a&gt;&lt;/h1&gt;
+            &lt;h1 class=&quot;site-title&quot;&gt;&lt;a href=&quot;http://yuchaoit.cn:8090&quot;&gt;&#x4E8E;&#x8D85;&#x5E26;&#x4F60;&#x5B66;linux&lt;/a&gt;&lt;/h1&gt;
+        &lt;p style=&quot;text-align: center; color: #333; font-weight: 900; font-family: &apos;Ubuntu&apos;, sans-serif; letter-spacing: 1.5px&quot;&gt;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x5E26;&#x4F60;&#x5B66;linux&lt;/p&gt;
+        &quot;sitename&quot;: &quot;&#x4E8E;&#x8D85;&#x5E26;&#x4F60;&#x5B66;linux&quot;,
+[root@k8s-master-10 ~]#
+
+
+# &#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x4E86;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x975E;&#x662F;&#x542F;&#x52A8;nginx&#x4E86;&#xFF0C;&#x5220;&#x9664;&#x8BE5;pod&#x5373;&#x53EF;&#x3002;
+
+[root@k8s-master-10 ~]#kubectl -n chaoge-linux delete pod mynginx 
+pod &quot;mynginx&quot; deleted
+</code></pre><h1 id="1pod&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x539F;&#x7406;"><a name="1pod&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x539F;&#x7406;" class="plugin-anchor" href="#1pod&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.pod&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;&#x539F;&#x7406;</h1>
+<h2 id="pause&#x5BB9;&#x5668;"><a name="pause&#x5BB9;&#x5668;" class="plugin-anchor" href="#pause&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>pause&#x5BB9;&#x5668;</h2>
+<pre><code>https://jimmysong.io/kubernetes-handbook/concepts/pause-container.html
+
+
+&#x50CF; Pod &#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#xFF0C;&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x4E2A;&#x903B;&#x8F91;&#x6982;&#x5FF5;&#x3002;&#x90A3;&#x5728;&#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x5B83;&#x7A76;&#x7ADF;&#x662F;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x7684;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x89E3;&#x91CA;&#x7684;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;
+
+&#x65E2;&#x7136;&#x8BF4; Pod &#x8981;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6838;&#x5FC3;&#x5C31;&#x5728;&#x4E8E;&#x5982;&#x4F55;&#x8BA9;&#x4E00;&#x4E2A; Pod &#x91CC;&#x7684;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x6700;&#x9AD8;&#x6548;&#x7684;&#x5171;&#x4EAB;&#x67D0;&#x4E9B;&#x8D44;&#x6E90;&#x548C;&#x6570;&#x636E;&#x3002;
+
+&#x56E0;&#x4E3A;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x539F;&#x672C;&#x662F;&#x88AB; Linux Namespace &#x548C; cgroups &#x9694;&#x5F00;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x73B0;&#x5728;&#x5B9E;&#x9645;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x662F;&#x600E;&#x4E48;&#x53BB;&#x6253;&#x7834;&#x8FD9;&#x4E2A;&#x9694;&#x79BB;&#xFF0C;&#x7136;&#x540E;&#x5171;&#x4EAB;&#x67D0;&#x4E9B;&#x4E8B;&#x60C5;&#x548C;&#x67D0;&#x4E9B;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x5C31;&#x662F; Pod &#x7684;&#x8BBE;&#x8BA1;&#x8981;&#x89E3;&#x51B3;&#x7684;&#x6838;&#x5FC3;&#x95EE;&#x9898;&#x6240;&#x5728;&#x3002;
+
+&#x6240;&#x4EE5;&#x8BF4;&#x5177;&#x4F53;&#x7684;&#x89E3;&#x6CD5;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x7F51;&#x7EDC;&#x548C;&#x5B58;&#x50A8;&#x3002;
+
+Pause &#x5BB9;&#x5668;&#x5C31;&#x662F;&#x4E3A;&#x89E3;&#x51B3; Pod &#x4E2D;&#x7684;&#x7F51;&#x7EDC;&#x95EE;&#x9898;&#x800C;&#x751F;&#x7684;&#x3002;
+
+kubernetes &#x4E2D;&#x7684; pause &#x5BB9;&#x5668;&#x4E3B;&#x8981;&#x4E3A;&#x6BCF;&#x4E2A;&#x4E1A;&#x52A1;&#x5BB9;&#x5668;&#x63D0;&#x4F9B;&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;
+
+&#x5728; pod &#x4E2D;&#x62C5;&#x4EFB; Linux &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x5171;&#x4EAB;&#x7684;&#x57FA;&#x7840;&#xFF1B;
+
+&#x542F;&#x7528; pid &#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x5F00;&#x542F; init &#x8FDB;&#x7A0B;&#x3002;
+</code></pre><p><img src="../../2024-linux/image-20220906171448834.png" alt="image-20220906171448834"></p>
+<h2 id="pod&#x5185;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;"><a name="pod&#x5185;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;" class="plugin-anchor" href="#pod&#x5185;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x5185;&#x5171;&#x4EAB;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;</h2>
+<pre><code>1.pod&#x5185;&#x7684;&#x6240;&#x6709;&#x5BB9;&#x5668;&#xFF0C;&#x90FD;&#x901A;&#x8FC7;container&#x6A21;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;pause&#x5BB9;&#x5668;&#x7684;&#x7F51;&#x7EDC;&#x7A7A;&#x95F4;
+2.&#x5BB9;&#x5668;&#x770B;&#x5230;&#x7684;&#x7F51;&#x7EDC;&#x73AF;&#x5883;&#xFF0C;&#x5C31;&#x662F;&#x6839;&#x5BB9;&#x5668;&#x7684;&#x73AF;&#x5883;
+3.pod&#x5185;&#x7684;&#x4E00;&#x7EC4;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8D70;localhost&#x901A;&#x4FE1;
+4.pod&#x5185;&#x7684;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x4E0D;&#x80FD;&#x91CD;&#x590D;&#x7528;&#x540C;&#x4E00;&#x7AEF;&#x53E3;
+5.pod&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x4EE3;&#x8868;&#x4E86;&#x5185;&#x90E8;&#x7684;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x751F;&#x547D;&#x5468;&#x671F;
+</code></pre><h2 id="&#x67E5;&#x770B;pod&#x5185;&#x5BB9;&#x5668;&#x7684;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x770B;pod&#x5185;&#x5BB9;&#x5668;&#x7684;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x67E5;&#x770B;pod&#x5185;&#x5BB9;&#x5668;&#x7684;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;pod&#x5185;&#x5BB9;&#x5668;&#x7684;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;</h2>
+<pre><code>[root@k8s-node-11 ~]#docker inspect 2c3 |grep -i networkmode
+            &quot;NetworkMode&quot;: &quot;container:403fbe24581c63631b036f4d7f0b9b372b8e24e3c675943c87eee11ccdc8780e&quot;,
+[root@k8s-node-11 ~]#
+</code></pre><h2 id="&#x67E5;&#x770B;pod&#x5185;&#x5171;&#x4EAB;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;"><a name="&#x67E5;&#x770B;pod&#x5185;&#x5171;&#x4EAB;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;" class="plugin-anchor" href="#&#x67E5;&#x770B;pod&#x5185;&#x5171;&#x4EAB;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;pod&#x5185;&#x5171;&#x4EAB;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</h2>
+<pre><code>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x7684;pod&#x5185;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x662F;&#x9694;&#x79BB;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;
+&#x5982;&#x679C;&#x8981;&#x8BA9;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x5171;&#x4EAB;&#x6587;&#x4EF6;&#x6570;&#x636E;&#xFF0C;&#x57FA;&#x4E8E;volume&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#xFF0C;&#x7136;&#x540E;&#x5206;&#x522B;&#x8FDB;&#x884C;volumeMounts&#x6302;&#x8F7D;&#x5373;&#x53EF;&#x3002;
+</code></pre><h3 id="pod&#x5185;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x5BB9;&#x5668;"><a name="pod&#x5185;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x5BB9;&#x5668;" class="plugin-anchor" href="#pod&#x5185;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x5185;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x5BB9;&#x5668;</h3>
+<p>&#x63D0;&#x793A;&#x4FE1;&#x606F;</p>
+<pre><code># &#x6307;&#x5B9A;&#x8282;&#x70B9;&#x8FD0;&#x884C;pod
+[root@k8s-master-10 ~]#kubectl explain pod.spec.nodeName
+KIND:     Pod
+VERSION:  v1
+
+FIELD:    nodeName &lt;string&gt;
+
+DESCRIPTION:
+     NodeName is a request to schedule this pod onto a specific node. If it is
+     non-empty, the scheduler simply schedules this pod onto that node, assuming
+     that it fits resource requirements.
+[root@k8s-master-10 ~]#
+
+# pod&#x6570;&#x636E;&#x6620;&#x5C04;&#x7ED9;&#x5BBF;&#x4E3B;&#x673A;
+https://kubernetes.io/zh-cn/docs/concepts/storage/volumes/#hostpath
+</code></pre><p>yaml</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: two-nginx
+  namespace: yuchao-linux # &#x5355;&#x72EC;&#x5F00;&#x4E00;&#x4E2A;ns&#x73AF;&#x5883;
+spec:
+  nodeName: k8s-node-12
+
+  volumes:
+  - name: nginx-log
+    hostPath:
+      path: /var/log/nginx/
+
+  containers:
+  - name: nginx-two
+    image: nginx:alpine
+    volumeMounts:
+      - name: nginx-log
+        mountPath: /var/log/nginx/
+
+  - name: tail-log
+    image: busybox
+    args: [/bin/sh,-c,&apos;tail -f /var/log/nginx/access.log&apos;]
+    volumeMounts:
+      - name: nginx-log
+        mountPath: /var/log/nginx/
+</code></pre>
+<h3 id="&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;pod"><a name="&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;pod" class="plugin-anchor" href="#&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;pod</h3>
+<p><img src="../../2024-linux/image-20220906193611022.png" alt="image-20220906193611022"></p>
+<pre><code>[root@k8s-master-10 ~]#kubectl create ns yuchao-linux
+namespace/yuchao-linux created
+[root@k8s-master-10 ~]#kubectl create -f tail-nginx.yml 
+pod/two-nginx created
+[root@k8s-master-10 ~]#
+
+
+[root@k8s-master-10 ~]#kubectl -n yuchao-linux get po -o wide
+NAME        READY   STATUS    RESTARTS   AGE   IP         NODE          NOMINATED NODE   READINESS GATES
+two-nginx   2/2     Running   0          89m   10.2.2.8   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+</code></pre><h3 id="&#x8FDB;&#x5165;pod&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5BB9;&#x5668;"><a name="&#x8FDB;&#x5165;pod&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5BB9;&#x5668;" class="plugin-anchor" href="#&#x8FDB;&#x5165;pod&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDB;&#x5165;pod&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x5BB9;&#x5668;</h3>
+<p>&#x6CE8;&#x610F;&#x8BED;&#x6CD5;</p>
+<pre><code>[root@k8s-master-10 ~]#kubectl -n yuchao-linux exec -it two-nginx  -c nginx-two -- sh
+
+
+[root@k8s-master-10 ~]#kubectl -n yuchao-linux exec -it two-nginx  -c tail-log -- sh
+</code></pre><h3 id="&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;&#x4E0B;&#x7684;&#x65E5;&#x5FD7;&#x8BBF;&#x95EE;&#x4E0E;&#x6620;&#x5C04;"><a name="&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;&#x4E0B;&#x7684;&#x65E5;&#x5FD7;&#x8BBF;&#x95EE;&#x4E0E;&#x6620;&#x5C04;" class="plugin-anchor" href="#&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;&#x4E0B;&#x7684;&#x65E5;&#x5FD7;&#x8BBF;&#x95EE;&#x4E0E;&#x6620;&#x5C04;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x89E3;&#x591A;&#x5BB9;&#x5668;&#x4E0B;&#x7684;&#x65E5;&#x5FD7;&#x8BBF;&#x95EE;&#x4E0E;&#x6620;&#x5C04;</h3>
+<p><img src="../../2024-linux/image-20220906193129408.png" alt="image-20220906193129408"></p>
+<h1 id="2pod&#x751F;&#x547D;&#x5468;&#x671F;"><a name="2pod&#x751F;&#x547D;&#x5468;&#x671F;" class="plugin-anchor" href="#2pod&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.pod&#x751F;&#x547D;&#x5468;&#x671F;</h1>
+<h2 id="pod&#x72B6;&#x6001;&#x4E0E;&#x751F;&#x547D;&#x5468;&#x671F;"><a name="pod&#x72B6;&#x6001;&#x4E0E;&#x751F;&#x547D;&#x5468;&#x671F;" class="plugin-anchor" href="#pod&#x72B6;&#x6001;&#x4E0E;&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>pod&#x72B6;&#x6001;&#x4E0E;&#x751F;&#x547D;&#x5468;&#x671F;</h2>
+<h2 id="21-pod&#x8FD0;&#x884C;&#x72B6;&#x6001;"><a name="21-pod&#x8FD0;&#x884C;&#x72B6;&#x6001;" class="plugin-anchor" href="#21-pod&#x8FD0;&#x884C;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 pod&#x8FD0;&#x884C;&#x72B6;&#x6001;</h2>
+<p><img src="../../2024-linux/image-20220906203105869.png" alt="image-20220906203105869"></p>
+<p><a href="www.yuchaoit.cn">Pod&#x7684;&#x72B6;&#x6001;&#x5982;&#x4E0B;&#x8868;&#x6240;&#x793A;&#xFF1A;</a></p>
+<table>
+<thead>
+<tr>
+<th>&#x72B6;&#x6001;&#x503C;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pending</td>
+<td>API Server&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x8BE5;Pod&#xFF0C;&#x7B49;&#x5F85;&#x8C03;&#x5EA6;&#x5668;&#x8C03;&#x5EA6;</td>
+</tr>
+<tr>
+<td>ContainerCreating</td>
+<td>&#x62C9;&#x53D6;&#x955C;&#x50CF;&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x4E2D;</td>
+</tr>
+<tr>
+<td>Running</td>
+<td>Pod&#x5185;&#x5BB9;&#x5668;&#x5747;&#x5DF2;&#x521B;&#x5EFA;&#xFF0C;&#x4E14;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x5904;&#x4E8E;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x3001;&#x6B63;&#x5728;&#x542F;&#x52A8;&#x72B6;&#x6001;&#x6216;&#x6B63;&#x5728;&#x91CD;&#x542F;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>Succeeded\</td>
+<td>Completed</td>
+<td>Pod&#x5185;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x5747;&#x5DF2;&#x6210;&#x529F;&#x6267;&#x884C;&#x9000;&#x51FA;&#xFF0C;&#x4E14;&#x4E0D;&#x518D;&#x91CD;&#x542F;</td>
+</tr>
+<tr>
+<td>Failed\</td>
+<td>Error</td>
+<td>Pod&#x5185;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x5747;&#x5DF2;&#x9000;&#x51FA;&#xFF0C;&#x4F46;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x9000;&#x51FA;&#x4E3A;&#x5931;&#x8D25;&#x72B6;&#x6001;</td>
+</tr>
+<tr>
+<td>CrashLoopBackOff</td>
+<td>Pod&#x5185;&#x6709;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x5931;&#x8D25;&#xFF0C;&#x6BD4;&#x5982;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E22;&#x5931;&#x5BFC;&#x81F4;&#x4E3B;&#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x5931;&#x8D25;</td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td>&#x7531;&#x4E8E;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x8BE5;Pod&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x80FD;&#x7531;&#x4E8E;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x4E0D;&#x7545;&#x5BFC;&#x81F4;</td>
+</tr>
+</tbody>
+</table>
+<pre><code>pending&#xFF0C;pod&#x5DF2;&#x7ECF;&#x88AB;k8s&#x7EC4;&#x4EF6;&#x786E;&#x8BA4;&#x5904;&#x7406;&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;&#x3001;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x8FD8;&#x5728;&#x521B;&#x5EFA;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x7B49;&#x5F85;&#x65F6;&#x95F4;&#x5305;&#x62EC;pod&#x521B;&#x5EFA;&#x3001;&#x6216;&#x8005;&#x955C;&#x50CF;&#x62C9;&#x53D6;&#x65F6;&#x95F4;&#x3002;
+
+running&#x3001;pod&#x5DF2;&#x7ECF;&#x8FD0;&#x884C;&#x5230;&#x4E86;&#x5177;&#x4F53;Node&#x4E0A;&#xFF0C;&#x4E14;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x90FD;&#x88AB;&#x521B;&#x5EFA;&#x597D;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x8FD8;&#x5728;&#x8FD0;&#x884C;&#x4E2D;&#x90FD;&#x662F;running&#x3002;
+
+succeeded &#x3001;pod&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5BB9;&#x5668;&#x90FD;&#x5DF2;&#x6210;&#x529F;&#x7EC8;&#x6B62;&#x3001;&#x4E14;&#x4E0D;&#x4F1A;&#x518D;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x4E86;&#x3002;
+
+Failed&#x3001;pod&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x90FD;&#x9000;&#x51FA;&#x4E86;&#x3001;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x975E;&#x6B63;&#x5E38;&#x72B6;&#x6001;&#x7ED3;&#x675F;&#xFF0C;&#x5F02;&#x5E38;&#x6302;&#x4E86;&#xFF0C;&#x9000;&#x51FA;&#x7801;&#x975E;0&#x3002;
+
+Unknown&#x3001;&#x5982;&#x7F51;&#x7EDC;&#x95EE;&#x9898;&#xFF0C;&#x5BFC;&#x81F4;&#x7684;pod&#x72B6;&#x6001;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x3002;
+</code></pre><h2 id="22-&#x5BB9;&#x5668;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;"><a name="22-&#x5BB9;&#x5668;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;" class="plugin-anchor" href="#22-&#x5BB9;&#x5668;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x5BB9;&#x5668;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</h2>
+<p>Kubernetes&#x63D0;&#x4F9B;&#x4E86;<a href="https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/" target="_blank">&#x5BB9;&#x5668;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</a>&#xFF0C;&#x5728;&#x5BB9;&#x5668;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x7279;&#x5B9A;&#x9636;&#x6BB5;&#x6267;&#x884C;&#x8C03;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x5BB9;&#x5668;&#x5728;&#x505C;&#x6B62;&#x524D;&#x5E0C;&#x671B;&#x6267;&#x884C;&#x67D0;&#x9879;&#x64CD;&#x4F5C;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6CE8;&#x518C;&#x76F8;&#x5E94;&#x7684;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x3002;&#x76EE;&#x524D;&#x63D0;&#x4F9B;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<ul>
+<li>&#x542F;&#x52A8;&#x540E;&#x5904;&#x7406;&#xFF08;PostStart&#xFF09;&#xFF1A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x89E6;&#x53D1;&#x3002;</li>
+<li>&#x505C;&#x6B62;&#x524D;&#x5904;&#x7406;&#xFF08;PreStop&#xFF09;&#xFF1A;&#x5BB9;&#x5668;&#x505C;&#x6B62;&#x524D;&#x89E6;&#x53D1;&#x3002;</li>
+</ul>
+<p>&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x53EA;&#x9700;&#x914D;&#x7F6E;Pod&#x7684;lifecycle.postStart&#x6216;lifecycle.preStop&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="../../2024-linux/image-20220906204928768.png" alt="image-20220906204928768"></p>
+<h2 id="23-pod&#x751F;&#x547D;&#x5468;&#x671F;&#x5B8C;&#x6574;&#x793A;&#x610F;"><a name="23-pod&#x751F;&#x547D;&#x5468;&#x671F;&#x5B8C;&#x6574;&#x793A;&#x610F;" class="plugin-anchor" href="#23-pod&#x751F;&#x547D;&#x5468;&#x671F;&#x5B8C;&#x6574;&#x793A;&#x610F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 pod&#x751F;&#x547D;&#x5468;&#x671F;&#x5B8C;&#x6574;&#x793A;&#x610F;</h2>
+<p><img src="../../2024-linux/image-20220906205352738.png" alt="image-20220906205352738"></p>
+<h3 id="&#x6587;&#x5B57;&#x8BE6;&#x89E3;pod&#x751F;&#x547D;&#x5468;&#x671F;"><a name="&#x6587;&#x5B57;&#x8BE6;&#x89E3;pod&#x751F;&#x547D;&#x5468;&#x671F;" class="plugin-anchor" href="#&#x6587;&#x5B57;&#x8BE6;&#x89E3;pod&#x751F;&#x547D;&#x5468;&#x671F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x5B57;&#x8BE6;&#x89E3;pod&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<pre><code>init container
+1.&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;&#x5C31;&#x662F;&#x6307;&#xFF0C;&#x4E3B;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x4E4B;&#x524D;&#x505A;&#x4E00;&#x4E9B;&#x51C6;&#x5907;&#x73AF;&#x5883;&#x521D;&#x59CB;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x4E24;&#x4E2A;&#x5BB9;&#x5668;&#x90FD;&#x7528;&#x5230;&#x4E86;volume&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x7528;init&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x76EE;&#x5F55;&#x6388;&#x6743;&#x4FEE;&#x6539;&#x3002;
+
+2. &#x4F8B;&#x5982;&#x4E1A;&#x52A1;&#x5BB9;&#x5668;&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;init&#x5BB9;&#x5668;&#x5148;&#x5C1D;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#xFF0C;&#x786E;&#x8BA4;&#x6B63;&#x5E38;&#x540E;&#x518D;&#x542F;&#x52A8;&#x4E1A;&#x52A1;&#x5BB9;&#x5668;&#x3002;
+
+
+# &#x94A9;&#x5B50;&#x5B57;&#x6BB5;&#x67E5;&#x8BE2;
+[root@k8s-master-10 ~]#kubectl explain pod.spec.containers.lifecycle
+
+poststart&#xFF1A;&#x5728;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x65F6;&#x95F4;&#x6709;&#x9650;&#xFF0C;&#x5426;&#x5219;&#x5BB9;&#x5668;&#x4E0D;&#x4F1A;&#x8FDB;&#x5165;running&#x72B6;&#x6001;
+prestop&#xFF1A;&#x5728;&#x5BB9;&#x5668;&#x505C;&#x6B62;&#x524D;&#x6267;&#x884C;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x4F18;&#x96C5;&#x7684;&#x5173;&#x95ED;&#x5BB9;&#x5668;&#xFF0C;&#x73AF;&#x5883;&#x6E05;&#x7406;&#x3002;
+
+
+# &#x5BB9;&#x5668;&#x5B58;&#x6D3B;&#x3001;&#x5C31;&#x7EEA;&#x63A2;&#x9488;
+liveness probe&#xFF1A;&#x7528;&#x4E8E;&#x63A2;&#x6D4B;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x5E94;&#x7528;&#x662F;&#x5426;&#x8FD8;&#x8FD0;&#x884C;&#x4E2D;&#xFF0C;&#x5982;&#x4E00;&#x4E2A;http&#x670D;&#x52A1;&#x3002;
+
+readiness probe&#xFF1A;&#x7528;&#x4E8E;&#x63A2;&#x6D4B;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x5E94;&#x7528;&#x662F;&#x5426;&#x5C31;&#x7EEA;&#xFF0C;&#x53EF;&#x4EE5;&#x5E72;&#x6D3B;&#x4E86;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x6269;&#x5BB9;pod&#x540E;&#xFF0C;&#x5F97;&#x786E;&#x4FDD;pod&#x91CC;&#x7684;&#x7A0B;&#x5E8F;&#x5B8C;&#x5168;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;&#xFF0C;&#x5C31;&#x7EEA;&#x540E;&#x624D;&#x5E94;&#x8BE5;&#x5C06;&#x6D41;&#x91CF;&#x7EB7;&#x53D1;&#x7ED9;&#x65B0;pod&#x3002;
+</code></pre><h3 id="init&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;"><a name="init&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;" class="plugin-anchor" href="#init&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>init&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;</h3>
+<pre><code>https://jimmysong.io/kubernetes-handbook/concepts/init-containers.html
+</code></pre><h3 id="pause&#x5BB9;&#x5668;"><a name="pause&#x5BB9;&#x5668;" class="plugin-anchor" href="#pause&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>pause&#x5BB9;&#x5668;</h3>
+<pre><code>https://jimmysong.io/kubernetes-handbook/concepts/pause-container.html
+</code></pre><h1 id="3pod&#x5982;&#x4F55;&#x5C01;&#x88C5;&#x5BB9;&#x5668;"><a name="3pod&#x5982;&#x4F55;&#x5C01;&#x88C5;&#x5BB9;&#x5668;" class="plugin-anchor" href="#3pod&#x5982;&#x4F55;&#x5C01;&#x88C5;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>3.pod&#x5982;&#x4F55;&#x5C01;&#x88C5;&#x5BB9;&#x5668;</h1>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x77E5;&#x9053;pod&#x662F;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x3001;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x62BD;&#x8C61;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x4E2D;&#x8BE5;&#x5982;&#x4F55;&#x8003;&#x8651;&#xFF0C;&#x4E00;&#x4E2A;pod&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x3001;&#x8FD8;&#x662F;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#xFF1F;</p>
+<h2 id="&#x56FE;&#x89E3;pod&#x90E8;&#x7F72;&#x601D;&#x8DEF;"><a name="&#x56FE;&#x89E3;pod&#x90E8;&#x7F72;&#x601D;&#x8DEF;" class="plugin-anchor" href="#&#x56FE;&#x89E3;pod&#x90E8;&#x7F72;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x89E3;POD&#x90E8;&#x7F72;&#x601D;&#x8DEF;</h2>
+<p><img src="../../2024-linux/image-20220907143255022.png" alt="image-20220907143255022"></p>
+<p>&#x5F88;&#x660E;&#x663E;&#xFF0C;&#x5E94;&#x7528;&#x548C;&#x6570;&#x636E;&#x5E93;&#x7ED1;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x8981;&#x5347;&#x7EA7;&#xFF0C;&#x8981;&#x8FC1;&#x79FB;&#xFF0C;&#x7275;&#x4E00;&#x53D1;&#x52A8;&#x5168;&#x8EAB;&#x3002;</p>
+<p>&#x62C6;&#x5F00;&#x5E94;&#x7528;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x8981;&#x7075;&#x6D3B;&#x5730;&#x591A;&#x3002;</p>
+<p><img src="../../2024-linux/image-20220907143715518.png" alt="image-20220907143715518"></p>
+<h2 id="&#x5C0F;&#x7ED3;"><a name="&#x5C0F;&#x7ED3;" class="plugin-anchor" href="#&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C0F;&#x7ED3;</h2>
+<pre><code>&#x5F53;&#x5BB9;&#x5668;&#x4E0E;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x9700;&#x8981;&#x8054;&#x5408;&#x53D1;&#x5E03;&#xFF0C;&#x6BD4;&#x8F83;&#x5BC6;&#x5207;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;POD&#x91CC;
+&#x5982;nignx&#x3001;php/python
+&#x4F46;php/python &#x548C;mysql&#x5FC5;&#x7136;&#x662F;&#x8981;&#x5206;&#x5F00;&#x653E;&#x7684;
+
+&#x601D;&#x8003;POD&#x5728;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x4E0B;&#x7684;&#x6269;&#x7F29;&#x5BB9;&#xFF0C;&#x5408;&#x7406;&#x6027;&#x5373;&#x53EF;&#x3002;
+</code></pre><h1 id="4&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;"><a name="4&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;" class="plugin-anchor" href="#4&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;</h1>
+<pre><code>&#x5173;&#x4E8E;emptyDir&#x63D0;&#x793A;
+
+
+emptyDir&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E0E;&#x6240;&#x5C5E;&#x7684;pod&#x76F8;&#x540C;&#x3002;pod&#x5220;&#x9664;&#x65F6;&#xFF0C;&#x5176;emptyDir&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4E5F;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;
+
+emptyDir&#x7C7B;&#x578B;&#x7684;volume&#x5728;pod&#x5206;&#x914D;&#x5230;node&#x4E0A;&#x65F6;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;kubernetes&#x4F1A;&#x5728;node&#x4E0A;&#x81EA;&#x52A8;&#x5206;&#x914D; &#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x9700;&#x6307;&#x5B9A;&#x5BBF;&#x4E3B;&#x673A;node&#x4E0A;&#x5BF9;&#x5E94;&#x7684;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#x3002;
+
+emptyDir Volume&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x67D0;&#x4E9B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65E0;&#x9700;&#x6C38;&#x4E45;&#x4FDD;&#x5B58;&#x7684;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#xFF0C;&#x591A;&#x4E2A;&#x5BB9;&#x5668;&#x7684;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x7B49;&#x3002;
+</code></pre><h2 id="yaml"><a name="yaml" class="plugin-anchor" href="#yaml"><i class="fa fa-link" aria-hidden="true"></i></a>yaml</h2>
+<p>&#x5229;&#x7528;&#x521D;&#x59CB;&#x5316;&#x5BB9;&#x5668;&#xFF0C;&#x5728;nginx&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x524D;&#xFF0C;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x9996;&#x9875;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-init
+  namespace: yuchaoit
+  labels:
+    app: myapp
+spec:
+  nodeName: k8s-node-12
+  volumes:
+    - name: nginx-index
+      emptyDir: {}
+
+  initContainers:
+    - name: init 
+      image: busybox
+      args: [/bin/sh,-c,&quot;echo &apos;k8s yuchaoit.cn 666&apos; &gt; /usr/share/nginx/html/index.html&quot;]
+      volumeMounts:
+        - name: nginx-index
+          mountPath: &quot;/usr/share/nginx/html&quot;
+
+  containers:
+    - name: nginx-app
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: nginx-index
+          mountPath: &quot;/usr/share/nginx/html&quot;
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;nginx-init&#x5BB9;&#x5668;"><a name="&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;nginx-init&#x5BB9;&#x5668;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;nginx-init&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;nginx-init&#x5BB9;&#x5668;</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl create ns yuchaoit
+namespace/yuchaoit created
+
+[root@k8s-master-10 ~]#kubectl create -f init-nginx.yml 
+pod/nginx-init created
+
+[root@k8s-master-10 ~]#kubectl create -f init-nginx.yml 
+pod/nginx-init created
+[root@k8s-master-10 ~]#kubectl get po -n yuchaoit -w
+NAME         READY   STATUS    RESTARTS   AGE
+nginx-init   1/1     Running   0          5s
+
+
+
+[root@k8s-master-10 ~]#kubectl get po -n yuchaoit -owide
+NAME         READY   STATUS    RESTARTS   AGE   IP          NODE          NOMINATED NODE   READINESS GATES
+nginx-init   1/1     Running   0          18s   10.2.2.10   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+[root@k8s-master-10 ~]#
+[root@k8s-master-10 ~]#
+[root@k8s-master-10 ~]#curl 10.2.2.10
+k8s yuchaoit.cn 666
+</code></pre><h1 id="5pod&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;"><a name="5pod&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;" class="plugin-anchor" href="#5pod&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a>5.pod&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</h1>
+<h2 id="poststart"><a name="poststart" class="plugin-anchor" href="#poststart"><i class="fa fa-link" aria-hidden="true"></i></a>postStart</h2>
+<p>&#x542F;&#x52A8;&#x540E;&#x5904;&#x7406;&#xFF08;PostStart&#xFF09;&#xFF1A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x89E6;&#x53D1;&#x3002;</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-hook
+  namespace: yuchaoit
+  labels:
+    app: myapp-hook
+spec:
+  nodeName: k8s-node-12
+
+
+  containers:
+    - name: nginx-hook
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+      lifecycle:
+        postStart:
+          exec:
+            command: [/bin/sh,-c,&apos;echo k8s www.yuchaoit.cn 666 &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+</code></pre>
+<h3 id="&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;pod&#x4EE5;&#x53CA;&#x94A9;&#x5B50;&#x6548;&#x679C;"><a name="&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;pod&#x4EE5;&#x53CA;&#x94A9;&#x5B50;&#x6548;&#x679C;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;pod&#x4EE5;&#x53CA;&#x94A9;&#x5B50;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x3001;&#x8BBF;&#x95EE;pod&#x4EE5;&#x53CA;&#x94A9;&#x5B50;&#x6548;&#x679C;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl delete -f poststart-pod.yml 
+pod &quot;nginx-hook&quot; deleted
+
+
+
+[root@k8s-master-10 ~]#kubectl create -f poststart-pod.yml 
+pod/nginx-hook created
+
+[root@k8s-master-10 ~]#kubectl -n yuchaoit get po -w
+NAME         READY   STATUS    RESTARTS   AGE
+nginx-hook   1/1     Running   0          4s
+nginx-init   1/1     Running   0          3h52m
+</code></pre><p>&#x8BBF;&#x95EE;</p>
+<pre><code>[root@k8s-master-10 ~]#curl 10.2.2.12
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+&lt;style&gt;
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.&lt;/p&gt;
+
+&lt;p&gt;For online documentation and support please refer to
+&lt;a href=&quot;http://nginx.org/&quot;&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+Commercial support is available at
+&lt;a href=&quot;http://nginx.com/&quot;&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Thank you for using nginx.&lt;/em&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+k8s www.yuchaoit.cn 666
+
+
+# k8s&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x91CD;&#x542F;pod&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x53EA;&#x80FD;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;
+- &#x57FA;&#x4E8E;yaml&#xFF0C;&#x91CD;&#x65B0;replace&#xFF0C;&#x8FBE;&#x5230;&#x91CD;&#x542F;
+-  &#x57FA;&#x4E8E;deployment&#xFF0C;&#x8FDB;&#x884C;scale&#x8C03;&#x6574;replicaset&#x526F;&#x672C;&#x6570;&#x91CF;&#xFF0C;&#x5BF9;pod&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x8C03;&#x6574;&#xFF0C;&#x5B9E;&#x73B0;&#x91CD;&#x542F;
+-  &#x5220;&#x9664;&#x91CD;&#x5EFA;pod
+</code></pre><h2 id="prestop"><a name="prestop" class="plugin-anchor" href="#prestop"><i class="fa fa-link" aria-hidden="true"></i></a>prestop</h2>
+<p>&#x5C06;nginx&#x65E5;&#x5FD7;&#xFF0C;&#x6302;&#x8F7D;&#x5230;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x9000;&#x51FA;pod&#xFF0C;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x53D8;&#x5316;&#x3002;</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-hook-pre
+  namespace: yuchaoit
+  labels:
+    app: myapp-hook-pre
+spec:
+  nodeName: k8s-node-12
+
+  volumes:
+    - name: nginxlog
+      hostPath:
+        path: /var/log/nginx/
+
+
+  containers:
+    - name: nginx-hook-pre
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+      lifecycle:
+        postStart:
+          exec:
+            command: [/bin/sh,-c,&apos;echo k8s www.yuchaoit.cn 666 &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+
+        preStop:
+          exec:
+            command: [/bin/sh,-c,&apos;echo &#x518D;&#x89C1;&#x5427;&#x60A8;&#xFF01;&#x8D85;&#x54E5;&#x6253;&#x5361;&#x4E0B;&#x73ED;&#x4E86;&#xFF01;www.yuchaoit.cn &gt;&gt; /var/log/nginx/prestop-test.log&apos;]
+      volumeMounts:
+        - name: nginxlog
+          mountPath: /var/log/nginx/
+</code></pre>
+<h3 id="&#x521B;&#x5EFA;&#x8BBF;&#x95EE;"><a name="&#x521B;&#x5EFA;&#x8BBF;&#x95EE;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x8BBF;&#x95EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8BBF;&#x95EE;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl create -f prestop-pod.yml 
+pod/nginx-hook-pre created
+
+
+[root@k8s-master-10 ~]#kubectl -n yuchaoit get po -owide
+NAME             READY   STATUS    RESTARTS   AGE    IP          NODE          NOMINATED NODE   READINESS GATES
+nginx-hook       1/1     Running   0          10m    10.2.2.12   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-hook-pre   1/1     Running   0          5s     10.2.2.14   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-init       1/1     Running   0          4h3m   10.2.2.10   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+</code></pre><h3 id="&#x5E72;&#x6389;&#x505C;&#x6B62;pod"><a name="&#x5E72;&#x6389;&#x505C;&#x6B62;pod" class="plugin-anchor" href="#&#x5E72;&#x6389;&#x505C;&#x6B62;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E72;&#x6389;&#x505C;&#x6B62;pod</h3>
+<p><img src="../../2024-linux/image-20220907190504681.png" alt="image-20220907190504681"></p>
+<h1 id="6pod&#x5065;&#x5EB7;&#x63A2;&#x9488;"><a name="6pod&#x5065;&#x5EB7;&#x63A2;&#x9488;" class="plugin-anchor" href="#6pod&#x5065;&#x5EB7;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>6.Pod&#x5065;&#x5EB7;&#x63A2;&#x9488;</h1>
+<p>Kubernetes&#x63D0;&#x4F9B;&#x4E86;&#x81EA;&#x6108;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x5177;&#x4F53;&#x5C31;&#x662F;&#x80FD;&#x611F;&#x77E5;&#x5230;&#x5BB9;&#x5668;&#x5D29;&#x6E83;&#xFF0C;&#x7136;&#x540E;&#x80FD;&#x591F;&#x91CD;&#x542F;&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x6709;&#x65F6;&#x5019;&#x4F8B;&#x5982;Java&#x7A0B;&#x5E8F;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x4E86;&#xFF0C;&#x7A0B;&#x5E8F;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;JVM&#x8FDB;&#x7A0B;&#x5374;&#x662F;&#x4E00;&#x76F4;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x79CD;&#x5E94;&#x7528;&#x672C;&#x8EAB;&#x4E1A;&#x52A1;&#x51FA;&#x4E86;&#x95EE;&#x9898;&#x7684;&#x60C5;&#x51B5;&#xFF0C;Kubernetes&#x63D0;&#x4F9B;&#x4E86;Liveness Probe&#x673A;&#x5236;&#xFF0C;&#x901A;&#x8FC7;&#x68C0;&#x6D4B;&#x5BB9;&#x5668;&#x54CD;&#x5E94;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x6765;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x91CD;&#x542F;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x79CD;&#x5F88;&#x597D;&#x7684;&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x6BEB;&#x65E0;&#x7591;&#x95EE;&#xFF0C;&#x6BCF;&#x4E2A;Pod&#x6700;&#x597D;&#x90FD;&#x5B9A;&#x4E49;Liveness Probe&#xFF0C;&#x5426;&#x5219;Kubernetes&#x65E0;&#x6CD5;&#x611F;&#x77E5;Pod&#x662F;&#x5426;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x3002;</p>
+<p>Kubernetes&#x652F;&#x6301;&#x5982;&#x4E0B;&#x4E09;&#x79CD;&#x63A2;&#x6D4B;&#x673A;&#x5236;&#x3002;</p>
+<ul>
+<li>HTTP GET&#xFF1A;&#x5411;&#x5BB9;&#x5668;&#x53D1;&#x9001;HTTP GET&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x679C;Probe&#x6536;&#x5230;2xx&#x6216;3xx&#xFF0C;&#x8BF4;&#x660E;&#x5BB9;&#x5668;&#x662F;&#x5065;&#x5EB7;&#x7684;&#x3002;</li>
+<li>TCP Socket&#xFF1A;&#x5C1D;&#x8BD5;&#x4E0E;&#x5BB9;&#x5668;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x5EFA;&#x7ACB;&#xFF0C;&#x8BF4;&#x660E;&#x5BB9;&#x5668;&#x662F;&#x5065;&#x5EB7;&#x7684;&#x3002;</li>
+<li>Exec&#xFF1A;Probe&#x6267;&#x884C;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x5E76;&#x68C0;&#x67E5;&#x547D;&#x4EE4;&#x9000;&#x51FA;&#x7684;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x72B6;&#x6001;&#x7801;&#x4E3A;0&#x5219;&#x8BF4;&#x660E;&#x5BB9;&#x5668;&#x662F;&#x5065;&#x5EB7;&#x7684;&#x3002;</li>
+</ul>
+<p>&#x4E0E;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x5BF9;&#x5E94;&#x7684;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#xFF08;Readiness Probe&#xFF09;&#xFF0C;&#x5C06;&#x5728;<a href="https://support.huaweicloud.com/basics-cce/kubernetes_0026.html" target="_blank">&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#xFF08;Readiness Probe&#xFF09;</a>&#x4E2D;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h2 id="&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x3001;liveness-probe"><a name="&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x3001;liveness-probe" class="plugin-anchor" href="#&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x3001;liveness-probe"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x3001;liveness probe</h2>
+<p><img src="../../2024-linux/livenessprobe.webp" alt="img"></p>
+<pre><code>&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x5BB9;&#x5668;&#x5185;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x5426;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x4E2D;&#x3001;&#x5982;&#x679C;&#x5E94;&#x7528;&#x90FD;&#x65E0;&#x6CD5;&#x63D0;&#x4F9B;&#x8BBF;&#x95EE;&#xFF0C;&#x5BB9;&#x5668;&#x4E5F;&#x6CA1;&#x610F;&#x4E49;&#x4E86;&#x3001;
+&#x5F53;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x5224;&#x65AD;&#x5E94;&#x7528;&#x4E0D;&#x6B63;&#x786E;&#x65F6;&#xFF0C;&#x5C31;&#x91CD;&#x542F;pod&#x3002;
+</code></pre><h2 id="&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x3001;&#x63A2;&#x9488;"><a name="&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x3001;&#x63A2;&#x9488;" class="plugin-anchor" href="#&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x3001;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x547D;&#x4EE4;&#x3001;&#x63A2;&#x9488;</h2>
+<p>&#x67E5;&#x8BE2;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x7684;&#x53C2;&#x6570;</p>
+<p><code>[root@k8s-master-10 ~]#kubectl explain pod.spec.containers.livenessProbe</code></p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-pod
+  namespace: yuchaoit
+  labels:
+    app: myapp-hook-pre
+spec:
+  nodeName: k8s-node-12
+
+  volumes:
+    - name: nginx-html
+      hostPath:
+        path: /usr/share/nginx/html
+
+
+  containers:
+    - name: nginx-liveness
+      image: nginx:alpine
+      imagePullPolicy: IfNotPresent
+      lifecycle:
+        postStart:
+          exec:
+            command: [/bin/sh,-c,&apos;echo k8s www.yuchaoit.cn 666 &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+        preStop:
+          exec:
+            command: [/bin/sh,-c,&apos;echo &#x518D;&#x89C1;&#x5427;&#x60A8;&#xFF01;&#x8D85;&#x54E5;&#x6253;&#x5361;&#x4E0B;&#x73ED;&#x4E86;&#xFF01;www.yuchaoit.cn &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+
+      livenessProbe:
+        exec:
+          command:
+            - cat
+            - /usr/share/nginx/html/index.html
+        initialDelaySeconds: 3
+        periodSeconds: 1
+      volumeMounts:
+        - name: nginx-html
+          mountPath: /usr/share/nginx/html
+</code></pre>
+<h3 id="&#x63A2;&#x9488;&#x53C2;&#x6570;&#x89E3;&#x91CA;"><a name="&#x63A2;&#x9488;&#x53C2;&#x6570;&#x89E3;&#x91CA;" class="plugin-anchor" href="#&#x63A2;&#x9488;&#x53C2;&#x6570;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A2;&#x9488;&#x53C2;&#x6570;&#x89E3;&#x91CA;</h3>
+<pre><code>      livenessProbe:    # &#x5B58;&#x6D3B;&#x6027;&#x63A2;&#x9488;
+        exec:                # &#x4F60;&#x60F3;&#x548B;&#x63A2;
+          command:    # &#x6267;&#x884C;&#x4EC0;&#x4E48;&#x547D;&#x4EE4;&#xFF0C;&#x4E14;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7801;&#x662F;0&#xFF0C;&#x975E;0&#x5C31;&#x662F;&#x9519;&#x8BEF;
+            - cat
+            - /usr/share/nginx/html/index.html
+        initialDelaySeconds: 3    # &#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x63A2;&#x9488;&#x7684;&#x65F6;&#x5019;&#x7B49;&#x5F85;3&#x79D2;
+        periodSeconds: 1            # &#x6BCF;&#x9694;3&#x79D2;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#xFF0C;&#x9ED8;&#x8BA4;10&#x79D2;&#xFF0C;&#x6700;&#x5C0F;1s
+</code></pre><h3 id="&#x8FD0;&#x884C;&#x63A2;&#x9488;pod"><a name="&#x8FD0;&#x884C;&#x63A2;&#x9488;pod" class="plugin-anchor" href="#&#x8FD0;&#x884C;&#x63A2;&#x9488;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x884C;&#x63A2;&#x9488;pod</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl create -f liveness-pod.yml 
+pod/liveness-pod created
+[root@k8s-master-10 ~]#kubectl -n yuchaoit get po -owide
+NAME             READY   STATUS    RESTARTS   AGE     IP          NODE          NOMINATED NODE   READINESS GATES
+liveness-pod     1/1     Running   0          8s      10.2.2.18   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-hook       1/1     Running   0          40m     10.2.2.12   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-hook-pre   1/1     Running   0          12m     10.2.2.17   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-init       1/1     Running   0          4h33m   10.2.2.10   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+</code></pre><h3 id="&#x67E5;&#x770B;&#x63A2;&#x9488;pod&#x72B6;&#x6001;"><a name="&#x67E5;&#x770B;&#x63A2;&#x9488;pod&#x72B6;&#x6001;" class="plugin-anchor" href="#&#x67E5;&#x770B;&#x63A2;&#x9488;pod&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x63A2;&#x9488;pod&#x72B6;&#x6001;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl -n yuchaoit get po -owide
+</code></pre><p><img src="../../2024-linux/image-20220907193307551.png" alt="image-20220907193307551"></p>
+<h2 id="http-get&#x63A2;&#x9488;"><a name="http-get&#x63A2;&#x9488;" class="plugin-anchor" href="#http-get&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP GET&#x63A2;&#x9488;</h2>
+<p>yaml</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-http-pod
+  namespace: yuchaoit
+  labels:
+    app: myapp-hook-pre
+spec:
+  nodeName: k8s-node-12
+
+  volumes:
+    - name: nginx-html
+      hostPath:
+        path: /usr/share/nginx/html
+
+
+  containers:
+    - name: nginx-liveness
+      image: nginx:alpine
+      imagePullPolicy: IfNotPresent
+      lifecycle:
+        postStart:
+          exec:
+            command: [/bin/sh,-c,&apos;echo k8s www.yuchaoit.cn 666 &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+        preStop:
+          exec:
+            command: [/bin/sh,-c,&apos;echo &#x518D;&#x89C1;&#x5427;&#x60A8;&#xFF01;&#x8D85;&#x54E5;&#x6253;&#x5361;&#x4E0B;&#x73ED;&#x4E86;&#xFF01;www.yuchaoit.cn &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+
+      livenessProbe:
+        #exec:
+        #  command:
+        #   - cat
+        #    - /usr/share/nginx/html/index.html
+
+        httpGet:
+          path: /index.html
+          port: 80
+
+        initialDelaySeconds: 3
+        periodSeconds: 1
+      volumeMounts:
+        - name: nginx-html
+          mountPath: /usr/share/nginx/html
+</code></pre>
+<h3 id="&#x68C0;&#x67E5;httpget&#x63A2;&#x9488;&#x7ED3;&#x679C;"><a name="&#x68C0;&#x67E5;httpget&#x63A2;&#x9488;&#x7ED3;&#x679C;" class="plugin-anchor" href="#&#x68C0;&#x67E5;httpget&#x63A2;&#x9488;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x68C0;&#x67E5;httpGet&#x63A2;&#x9488;&#x7ED3;&#x679C;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl -n yuchaoit get po -owide
+NAME                READY   STATUS    RESTARTS   AGE     IP          NODE          NOMINATED NODE   READINESS GATES
+liveness-http-pod   1/1     Running   0          6s      10.2.2.19   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+liveness-pod        1/1     Running   0          8m33s   10.2.2.18   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-hook          1/1     Running   0          49m     10.2.2.12   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-hook-pre      1/1     Running   0          20m     10.2.2.17   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+nginx-init          1/1     Running   0          4h41m   10.2.2.10   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+</code></pre><p><img src="../../2024-linux/image-20220907193854625.png" alt="image-20220907193854625"></p>
+<h3 id="&#x53C2;&#x6570;&#x89E3;&#x91CA;"><a name="&#x53C2;&#x6570;&#x89E3;&#x91CA;" class="plugin-anchor" href="#&#x53C2;&#x6570;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#x89E3;&#x91CA;</h3>
+<p>&#x5982;&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;Probe&#x5F80;&#x5BB9;&#x5668;&#x7684;80&#x7AEF;&#x53E3;&#x53D1;&#x9001;HTTP GET&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x679C;&#x8BF7;&#x6C42;&#x4E0D;&#x6210;&#x529F;&#xFF0C;Kubernetes&#x4F1A;&#x91CD;&#x542F;&#x5BB9;&#x5668;&#x3002;</p>
+<pre><code>      livenessProbe:
+        #exec:
+        #  command:
+        #   - cat
+        #    - /usr/share/nginx/html/index.html
+
+        httpGet:    # &#x57FA;&#x4E8E;http&#x8BF7;&#x6C42;&#x63A2;&#x9488;
+          path: /index.html        # &#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF0C;&#x5728;200~400&#x90FD;&#x7B97;&#x662F;&#x6B63;&#x5E38;&#x7684;
+          port: 80    # &#x8BF7;&#x6C42;&#x7AEF;&#x53E3;
+
+        initialDelaySeconds: 3
+        periodSeconds: 1
+</code></pre><p>&#x53EF;&#x4EE5;&#x770B;&#x5230;Pod&#x5F53;&#x524D;&#x72B6;&#x6001;&#x662F;Running&#xFF0C;Restart Count&#x4E3A;0&#xFF0C;&#x8BF4;&#x660E;&#x6CA1;&#x6709;&#x91CD;&#x542F;&#x3002;&#x5982;&#x679C;Restart Count&#x4E0D;&#x4E3A;0&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x91CD;&#x542F;&#x3002;</p>
+<h2 id="&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x7ED3;&#x679C;&#x53C2;&#x6570;"><a name="&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x7ED3;&#x679C;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x7ED3;&#x679C;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x7ED3;&#x679C;&#x53C2;&#x6570;</h2>
+<p>&#x8FD9;&#x4E00;&#x884C;&#x8868;&#x793A;Liveness Probe&#x7684;&#x5177;&#x4F53;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF0C;&#x5176;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>delay&#xFF1A;&#x5EF6;&#x8FDF;&#xFF0C;delay=0s&#xFF0C;&#x8868;&#x793A;&#x5728;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x7ACB;&#x5373;&#x5F00;&#x59CB;&#x63A2;&#x6D4B;&#xFF0C;&#x6CA1;&#x6709;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;</li>
+<li>timeout&#xFF1A;&#x8D85;&#x65F6;&#xFF0C;timeout=1s&#xFF0C;&#x8868;&#x793A;&#x5BB9;&#x5668;&#x5FC5;&#x987B;&#x5728;1s&#x5185;&#x8FDB;&#x884C;&#x54CD;&#x5E94;&#xFF0C;&#x5426;&#x5219;&#x8FD9;&#x6B21;&#x63A2;&#x6D4B;&#x8BB0;&#x4F5C;&#x5931;&#x8D25;</li>
+<li>period&#xFF1A;&#x5468;&#x671F;&#xFF0C;period=10s&#xFF0C;&#x8868;&#x793A;&#x6BCF;10s&#x63A2;&#x6D4B;&#x4E00;&#x6B21;&#x5BB9;&#x5668;</li>
+<li>success&#xFF1A;&#x6210;&#x529F;&#xFF0C;#success=1&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x7EED;1&#x6B21;&#x6210;&#x529F;&#x540E;&#x8BB0;&#x4F5C;&#x6210;&#x529F;</li>
+<li>failure&#xFF1A;&#x5931;&#x8D25;&#xFF0C;#failure=3&#xFF0C;&#x8868;&#x793A;&#x8FDE;&#x7EED;3&#x6B21;&#x5931;&#x8D25;&#x540E;&#x4F1A;&#x91CD;&#x542F;&#x5BB9;&#x5668;</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#x8868;&#x793A;&#xFF1A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x7ACB;&#x5373;&#x8FDB;&#x884C;&#x63A2;&#x6D4B;&#xFF0C;&#x5982;&#x679C;1s&#x5185;&#x5BB9;&#x5668;&#x6CA1;&#x6709;&#x7ED9;&#x51FA;&#x56DE;&#x5E94;&#x5219;&#x8BB0;&#x4F5C;&#x63A2;&#x6D4B;&#x5931;&#x8D25;&#x3002;&#x6BCF;&#x6B21;&#x95F4;&#x9694;10s&#x8FDB;&#x884C;&#x4E00;&#x6B21;&#x63A2;&#x6D4B;&#xFF0C;&#x5728;&#x63A2;&#x6D4B;&#x8FDE;&#x7EED;&#x5931;&#x8D25;3&#x6B21;&#x540E;&#x91CD;&#x542F;&#x5BB9;&#x5668;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x662F;&#x521B;&#x5EFA;&#x65F6;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x914D;&#x7F6E;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<p><img src="../../2024-linux/image-20220907194327415.png" alt="image-20220907194327415"></p>
+<p>initialDelaySeconds&#x4E00;&#x822C;&#x8981;&#x8BBE;&#x7F6E;&#x5927;&#x4E8E;0&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#x5BB9;&#x5668;&#x867D;&#x7136;&#x542F;&#x52A8;&#x6210;&#x529F;&#xFF0C;&#x4F46;&#x5E94;&#x7528;&#x5C31;&#x7EEA;&#x4E5F;&#x9700;&#x8981;&#x4E00;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x9700;&#x8981;&#x7B49;&#x5C31;&#x7EEA;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;probe&#x7ECF;&#x5E38;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x53E6;&#x5916;failureThreshold&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x591A;&#x6B21;&#x5FAA;&#x73AF;&#x63A2;&#x6D4B;&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x4E2D;&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#x7684;&#x7A0B;&#x5E8F;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x591A;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x8FD9;&#x4E00;&#x70B9;&#x5728;&#x5F00;&#x53D1;&#x5E94;&#x7528;&#x65F6;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x3002;</p>
+<h3 id="&#x914D;&#x7F6E;&#x6709;&#x6548;&#x7684;liveness-probe"><a name="&#x914D;&#x7F6E;&#x6709;&#x6548;&#x7684;liveness-probe" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x6709;&#x6548;&#x7684;liveness-probe"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x6709;&#x6548;&#x7684;Liveness Probe</h3>
+<ul>
+<li><p>Liveness Probe&#x5E94;&#x8BE5;&#x68C0;&#x67E5;&#x4EC0;&#x4E48;</p>
+<p>&#x4E00;&#x4E2A;&#x597D;&#x7684;Liveness Probe&#x5E94;&#x8BE5;&#x68C0;&#x67E5;&#x5E94;&#x7528;&#x5185;&#x90E8;&#x6240;&#x6709;&#x5173;&#x952E;&#x90E8;&#x5206;&#x662F;&#x5426;&#x5065;&#x5EB7;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x4E13;&#x6709;&#x7684;URL&#x8BBF;&#x95EE;&#xFF0C;&#x4F8B;&#x5982;/health&#xFF0C;&#x5F53;&#x8BBF;&#x95EE;/health &#x65F6;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7ED3;&#x679C;&#x3002;&#x8FD9;&#x91CC;&#x8981;&#x6CE8;&#x610F;&#x4E0D;&#x80FD;&#x505A;&#x9274;&#x6743;&#xFF0C;&#x4E0D;&#x7136;probe&#x5C31;&#x4F1A;&#x4E00;&#x76F4;&#x5931;&#x8D25;&#x5BFC;&#x81F4;&#x9677;&#x5165;&#x91CD;&#x542F;&#x7684;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x68C0;&#x67E5;&#x53EA;&#x80FD;&#x9650;&#x5236;&#x5728;&#x5E94;&#x7528;&#x5185;&#x90E8;&#xFF0C;&#x4E0D;&#x80FD;&#x68C0;&#x67E5;&#x4F9D;&#x8D56;&#x5916;&#x90E8;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#x5F53;&#x524D;&#x7AEF;web server&#x4E0D;&#x80FD;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x4E0D;&#x80FD;&#x770B;&#x6210;web server&#x4E0D;&#x5065;&#x5EB7;&#x3002;</p>
+</li>
+<li><p>Liveness Probe&#x5FC5;&#x987B;&#x8F7B;&#x91CF;</p>
+<p>Liveness Probe&#x4E0D;&#x80FD;&#x5360;&#x7528;&#x8FC7;&#x591A;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4E14;&#x4E0D;&#x80FD;&#x5360;&#x7528;&#x8FC7;&#x957F;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5426;&#x5219;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x90FD;&#x5728;&#x505A;&#x5065;&#x5EB7;&#x68C0;&#x67E5;&#xFF0C;&#x8FD9;&#x5C31;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x4E86;&#x3002;&#x4F8B;&#x5982;Java&#x5E94;&#x7528;&#xFF0C;&#x5C31;&#x6700;&#x597D;&#x7528;HTTP GET&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x7528;Exec&#x65B9;&#x5F0F;&#xFF0C;JVM&#x542F;&#x52A8;&#x5C31;&#x5360;&#x7528;&#x4E86;&#x975E;&#x5E38;&#x591A;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+</li>
+</ul>
+<h1 id="7&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><a name="7&#x5C31;&#x7EEA;&#x63A2;&#x9488;" class="plugin-anchor" href="#7&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>7.&#x5C31;&#x7EEA;&#x63A2;&#x9488;</h1>
+<p><img src="../../2024-linux/readnessprobe.webp" alt="img"></p>
+<p><a href="https://support.huaweicloud.com/basics-cce/kubernetes_0026.html" target="_blank">https://support.huaweicloud.com/basics-cce/kubernetes_0026.html</a></p>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;</p>
+<p>&#x4E00;&#x4E2A;&#x65B0;Pod&#x521B;&#x5EFA;&#x540E;&#xFF0C;Service&#x5C31;&#x80FD;&#x7ACB;&#x5373;&#x9009;&#x62E9;&#x5230;&#x5B83;&#xFF0C;&#x5E76;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x7ED9;Pod&#xFF0C;&#x90A3;&#x95EE;&#x9898;&#x5C31;&#x6765;&#x4E86;&#xFF0C;&#x901A;&#x5E38;&#x4E00;&#x4E2A;Pod&#x542F;&#x52A8;&#x662F;&#x9700;&#x8981;&#x65F6;&#x95F4;&#x7684;&#xFF0C;&#x5982;&#x679C;Pod&#x8FD8;&#x6CA1;&#x51C6;&#x5907;&#x597D;&#xFF08;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x65F6;&#x95F4;&#x6765;&#x52A0;&#x8F7D;&#x914D;&#x7F6E;&#x6216;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x9884;&#x70ED;&#x7A0B;&#x5E8F;&#x4E4B;&#x7C7B;&#xFF09;&#xFF0C;&#x8FD9;&#x65F6;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x7ED9;Pod&#x7684;&#x8BDD;&#xFF0C;Pod&#x4E5F;&#x65E0;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x9020;&#x6210;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x3002;</p>
+<p>Kubernetes&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x7ED9;Pod&#x52A0;&#x4E00;&#x4E2A;&#x4E1A;&#x52A1;&#x5C31;&#x7EEA;&#x63A2;&#x9488;Readiness Probe&#xFF0C;&#x5F53;&#x68C0;&#x6D4B;&#x5230;Pod&#x5C31;&#x7EEA;&#x540E;&#x624D;&#x5141;&#x8BB8;Service&#x5C06;&#x8BF7;&#x6C42;&#x8F6C;&#x7ED9;Pod&#x3002;</p>
+<p>Readiness Probe&#x540C;&#x6837;&#x662F;&#x5468;&#x671F;&#x6027;&#x7684;&#x68C0;&#x6D4B;Pod&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x54CD;&#x5E94;&#x6765;&#x5224;&#x65AD;Pod&#x662F;&#x5426;&#x5C31;&#x7EEA;&#xFF0C;&#x4E0E;<a href="https://support.huaweicloud.com/basics-cce/kubernetes_0010.html" target="_blank">&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#xFF08;Liveness Probe&#xFF09;</a>&#x76F8;&#x540C;&#xFF0C;&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#x4E5F;&#x652F;&#x6301;&#x5982;&#x4E0B;&#x4E09;&#x79CD;&#x7C7B;&#x578B;&#x3002;</p>
+<ul>
+<li>Exec&#xFF1A;Probe&#x6267;&#x884C;&#x5BB9;&#x5668;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x5E76;&#x68C0;&#x67E5;&#x547D;&#x4EE4;&#x9000;&#x51FA;&#x7684;&#x72B6;&#x6001;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x72B6;&#x6001;&#x7801;&#x4E3A;0&#x5219;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x3002;</li>
+<li>HTTP GET&#xFF1A;&#x5F80;&#x5BB9;&#x5668;&#x7684;IP:Port&#x53D1;&#x9001;HTTP GET&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x679C;Probe&#x6536;&#x5230;2xx&#x6216;3xx&#xFF0C;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x3002;</li>
+<li>TCP Socket&#xFF1A;&#x5C1D;&#x8BD5;&#x4E0E;&#x5BB9;&#x5668;&#x5EFA;&#x7ACB;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x3002;</li>
+</ul>
+<pre><code>&#x6709;&#x65F6;&#x5019;&#x53EF;&#x80FD;pod&#x5DF2;&#x7ECF;&#x8D77;&#x6765;&#x4E86;&#xFF0C;&#x4F46;&#x662F;pod&#x5185;&#x7684;&#x5BB9;&#x5668;&#x8FD8;&#x672A;&#x5B8C;&#x5168;&#x5C31;&#x7EEA;&#xFF0C;&#x80FD;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x8BBF;&#x95EE;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6D41;&#x91CF;&#x8FDB;&#x5165;pod&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x3002;
+
+k8s&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x5C31;&#x7EEA;&#x63A2;&#x9488;&#xFF0C;&#x80FD;&#x8BA9;&#x4F60;&#x786E;&#x8BA4;&#x5E94;&#x7528;&#x53EF;&#x8BBF;&#x95EE;&#xFF0C;&#x53EA;&#x6709;&#x63A2;&#x9488;&#x901A;&#x8FC7;&#x540E;&#xFF0C;k8s&#x624D;&#x5C06;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#x7ED9;pod&#x3002;
+</code></pre><h2 id="yaml"><a name="yaml" class="plugin-anchor" href="#yaml"><i class="fa fa-link" aria-hidden="true"></i></a>yaml</h2>
+<p>Readiness Probe&#x7684;&#x914D;&#x7F6E;&#x4E0E;<a href="https://support.huaweicloud.com/basics-cce/kubernetes_0010.html" target="_blank">&#x5B58;&#x6D3B;&#x63A2;&#x9488;&#xFF08;livness probe&#xFF09;</a>&#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x662F;&#x5728;Pod Template&#x7684;containers&#x91CC;&#x9762;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF0C;&#x8FD9;&#x4E2A;Readiness Probe&#x5411;Pod&#x53D1;&#x9001;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x5F53;Probe&#x6536;&#x5230;2xx&#x6216;3xx&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x8BF4;&#x660E;Pod&#x5DF2;&#x7ECF;&#x5C31;&#x7EEA;&#x3002;</p>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: readiness-http-pod
+  namespace: yuchaoit
+  labels:
+    app: myapp-readiness
+spec:
+  nodeName: k8s-node-12
+
+  volumes:
+    - name: nginx-html
+      hostPath:
+        path: /usr/share/nginx/html
+
+
+  containers:
+    - name: nginx-readiness
+      image: nginx:alpine
+      imagePullPolicy: IfNotPresent
+      lifecycle:
+        postStart:
+          exec:
+            command: [/bin/sh,-c,&apos;echo k8s www.yuchaoit.cn 666 &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+        preStop:
+          exec:
+            command: [/bin/sh,-c,&apos;echo &#x518D;&#x89C1;&#x5427;&#x60A8;&#xFF01;&#x8D85;&#x54E5;&#x6253;&#x5361;&#x4E0B;&#x73ED;&#x4E86;&#xFF01;www.yuchaoit.cn &gt;&gt; /usr/share/nginx/html/index.html&apos;]
+
+      livenessProbe:
+        #exec:
+        #  command:
+        #   - cat
+        #    - /usr/share/nginx/html/index.html
+
+        httpGet:
+          path: /index.html
+          port: 80
+
+        initialDelaySeconds: 3
+        periodSeconds: 1
+
+      readinessProbe:
+        httpGet:
+          path: /read
+          port: 80
+        initialDelaySeconds: 10    # &#x5BB9;&#x5668;&#x542F;&#x52A8;&#x540E;&#x591A;&#x4E45;&#x5F00;&#x59CB;&#x63A2;&#x6D4B;
+        timeoutSeconds: 2          # &#x8868;&#x793A;&#x5BB9;&#x5668;&#x5FC5;&#x987B;&#x5728;2s&#x5185;&#x505A;&#x51FA;&#x76F8;&#x5E94;&#x53CD;&#x9988;&#x7ED9;probe&#xFF0C;&#x5426;&#x5219;&#x89C6;&#x4E3A;&#x63A2;&#x6D4B;&#x5931;&#x8D25;
+        periodSeconds: 30          # &#x63A2;&#x6D4B;&#x5468;&#x671F;&#xFF0C;&#x6BCF;30s&#x63A2;&#x6D4B;&#x4E00;&#x6B21;
+        successThreshold: 1        # &#x8FDE;&#x7EED;&#x63A2;&#x6D4B;1&#x6B21;&#x6210;&#x529F;&#x8868;&#x793A;&#x6210;&#x529F;
+        failureThreshold: 3        # &#x8FDE;&#x7EED;&#x63A2;&#x6D4B;3&#x6B21;&#x5931;&#x8D25;&#x8868;&#x793A;&#x5931;&#x8D25;
+
+      volumeMounts:
+        - name: nginx-html
+          mountPath: /usr/share/nginx/html
+</code></pre>
+<h3 id="&#x8FD0;&#x884C;&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><a name="&#x8FD0;&#x884C;&#x5C31;&#x7EEA;&#x63A2;&#x9488;" class="plugin-anchor" href="#&#x8FD0;&#x884C;&#x5C31;&#x7EEA;&#x63A2;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x884C;&#x5C31;&#x7EEA;&#x63A2;&#x9488;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl create -f readiness-pod.yml 
+pod/readiness-http-pod created
+
+
+
+[root@k8s-master-10 ~]#kubectl -n yuchaoit get po readiness-http-pod -owide
+NAME                 READY   STATUS    RESTARTS   AGE   IP          NODE          NOMINATED NODE   READINESS GATES
+readiness-http-pod   0/1     Running   0          21s   10.2.2.20   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+</code></pre><p><img src="../../2024-linux/image-20220907202250677.png" alt="image-20220907202250677"></p>
+<h3 id="&#x8BA9;pod&#x5C31;&#x7EEA;"><a name="&#x8BA9;pod&#x5C31;&#x7EEA;" class="plugin-anchor" href="#&#x8BA9;pod&#x5C31;&#x7EEA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BA9;pod&#x5C31;&#x7EEA;</h3>
+<pre><code>[root@k8s-master-10 ~]#kubectl -n yuchaoit get po readiness-http-pod 
+NAME                 READY   STATUS    RESTARTS   AGE
+readiness-http-pod   0/1     Running   0          3m46s
+
+
+
+[root@k8s-master-10 ~]#kubectl exec -n yuchaoit -it readiness-http-pod -- sh -c &quot;echo www.yuchaoit.cn  &gt; /usr/share/nginx/html/read&quot;
+[root@k8s-master-10 ~]#
+
+[root@k8s-master-10 ~]#curl 10.2.2.20
+k8s www.yuchaoit.cn 666
+k8s www.yuchaoit.cn 666
+k8s www.yuchaoit.cn 666
+[root@k8s-master-10 ~]#curl 10.2.2.20/read
+www.yuchaoit.cn
+[root@k8s-master-10 ~]#
+
+[root@k8s-master-10 ~]#kubectl -n yuchaoit get po readiness-http-pod -owide
+NAME                 READY   STATUS    RESTARTS   AGE     IP          NODE          NOMINATED NODE   READINESS GATES
+readiness-http-pod   1/1     Running   0          6m13s   10.2.2.20   k8s-node-12   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+</code></pre><h3 id="&#x5C31;&#x7EEA;&#x7ED3;&#x679C;describe"><a name="&#x5C31;&#x7EEA;&#x7ED3;&#x679C;describe" class="plugin-anchor" href="#&#x5C31;&#x7EEA;&#x7ED3;&#x679C;describe"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5C31;&#x7EEA;&#x7ED3;&#x679C;describe</h3>
+<p><img src="../../2024-linux/image-20220907202610759.png" alt="image-20220907202610759"></p>
+<h1 id="8pod&#x8D44;&#x6E90;&#x9650;&#x5236;"><a name="8pod&#x8D44;&#x6E90;&#x9650;&#x5236;" class="plugin-anchor" href="#8pod&#x8D44;&#x6E90;&#x9650;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>8.Pod&#x8D44;&#x6E90;&#x9650;&#x5236;</h1>
+<pre><code>&#x4E4B;&#x524D;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x8BB2;&#x8FC7;&#x5BB9;&#x5668;docker&#x53EF;&#x4EE5;&#x5229;&#x7528;CGroup&#x8FDB;&#x884C;&#x8D44;&#x6E90;&#x9650;&#x5236;&#xFF0C;CPU&#x3001;&#x5185;&#x5B58;&#x7684;&#x4E3B;&#x8981;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x7387;&#x3002;
+POD&#x5F53;&#x7136;&#x4E5F;&#x4E00;&#x6837;&#x3002;
+</code></pre><h2 id="&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5355;&#x4F4D;"><a name="&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5355;&#x4F4D;" class="plugin-anchor" href="#&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5355;&#x4F4D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D44;&#x6E90;&#x9650;&#x5236;&#x5355;&#x4F4D;</h2>
+<pre><code>1 CPU = 1000m
+
+0.5  CPU = 500m
+
+
+1 Mib = 1024 Kib
+
+1Mb = 1000KB
+</code></pre><h2 id="yaml"><a name="yaml" class="plugin-anchor" href="#yaml"><i class="fa fa-link" aria-hidden="true"></i></a>yaml</h2>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: Pod
+metadata:
+  name: limit-pod
+  namespace: yuchaoit
+
+spec:
+  containers:
+    - name: resource-demo
+      image: nginx:alpine
+      ports:
+        - containerPort: 80
+      resources:
+        requests: # &#x8282;&#x70B9;&#x6240;&#x9700;&#x7684;&#x6700;&#x5C0F;&#x8D44;&#x6E90;
+          memory: 50Mi
+          cpu: 150m
+        limits:   # &#x9650;&#x5236;pod&#x6700;&#x5927;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x91CF;
+          memory: 100Mi
+          cpu: 200m
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x9650;&#x5236;pod"><a name="&#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x9650;&#x5236;pod" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x9650;&#x5236;pod"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x9650;&#x5236;pod</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl -n yuchaoit get po limit-pod -owide
+NAME        READY   STATUS    RESTARTS   AGE   IP         NODE          NOMINATED NODE   READINESS GATES
+limit-pod   1/1     Running   0          22s   10.2.1.9   k8s-node-11   &lt;none&gt;           &lt;none&gt;
+[root@k8s-master-10 ~]#
+</code></pre><h2 id="&#x67E5;&#x770B;pod&#x8D44;&#x6E90;&#x9650;&#x5236;&#x6548;&#x679C;"><a name="&#x67E5;&#x770B;pod&#x8D44;&#x6E90;&#x9650;&#x5236;&#x6548;&#x679C;" class="plugin-anchor" href="#&#x67E5;&#x770B;pod&#x8D44;&#x6E90;&#x9650;&#x5236;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;pod&#x8D44;&#x6E90;&#x9650;&#x5236;&#x6548;&#x679C;</h2>
+<pre><code>[root@k8s-master-10 ~]#kubectl  -n yuchaoit describe pod limit-pod
+</code></pre><p><img src="../../2024-linux/image-20220908145628920.png" alt="image-20220908145628920"></p>
+<h2 id="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x52A8;&#x6001;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x52A8;&#x6001;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x52A8;&#x6001;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x52A8;&#x6001;&#x4FE1;&#x606F;</h2>
+<pre><code>[root@k8s-node-11 ~]#docker inspect 9467d9e9a813 |grep Cgroup
+            &quot;Cgroup&quot;: &quot;&quot;,
+            &quot;CgroupParent&quot;: &quot;kubepods-burstable-pod367e53f8_ee58_4a89_97f6_552108d85be2.slice&quot;,
+            &quot;DeviceCgroupRules&quot;: null,
+[root@k8s-node-11 ~]#
+
+
+[root@k8s-node-11 /sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/kubepods-burstable-pod367e53f8_ee58_4a89_97f6_552108d85be2.slice]#cat cpu.cfs_quota_us 
+20000
+</code></pre><p><img src="../../2024-linux/image-20220908150216403.png" alt="image-20220908150216403"></p>
+<hr>
+<pre><code>docker stats
+</code></pre><p><img src="../../2024-linux/image-20220908150308623.png" alt="image-20220908150308623"></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.bikongge.com 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4F5C;&#x8005;&#xFF1A;&#x733F;&#x6765;&#x6559;&#x80B2;
+2024-05-11 17:46:41
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03_pod详解","level":"1.11.4.4","depth":3,"next":{"title":"04_pod控制器详解","level":"1.11.4.5","depth":3,"path":"10-云原生容器编排/k8s-all/04_pod控制器详解.md","ref":"10-云原生容器编排/k8s-all/04_pod控制器详解.md","articles":[]},"previous":{"title":"02_k8s资源清单","level":"1.11.4.3","depth":3,"path":"10-云原生容器编排/k8s-all/02_k8s资源清单.md","ref":"10-云原生容器编排/k8s-all/02_k8s资源清单.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","theme-comscore","theme-api","hide-element","-highlight","advanced-emoji","-lunr","-search","search-pro","page-toc-button","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.bikongge.com 2024","modify_label":"作者：猿来教育"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./icon/book.ico","theme-comscore":{},"page-toc-button":{},"theme-api":{"languages":[{"lang":"python","name":"python","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"light"},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://s1.ax1x.com/2022/10/25/xRowNj.jpg"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"10-云原生容器编排/k8s-all/03_pod详解.md","mtime":"2024-05-11T09:46:41.987Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T07:32:03.155Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

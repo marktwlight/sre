@@ -1,0 +1,8 @@
+checked_internal_refs=59729
+missing_internal_refs=6
+MISSING	http://book.bikongge.com/sre/02-系统核心服务/pic/image-20220215142202077.png
+MISSING	http://book.bikongge.com/sre/10-云原生容器编排/docker-all/(www.yuchaoit.cn
+MISSING	http://book.bikongge.com/sre/10-云原生容器编排/docker-all/www.yuchaoit.cn
+MISSING	http://book.bikongge.com/sre/10-云原生容器编排/k8s-all/www.yuchaoit.cn
+MISSING	http://book.bikongge.com/sre/2024-linux/20180527192553774
+MISSING	http://book.bikongge.com/sre/2024-linux/resize,m_fixed,w_1184

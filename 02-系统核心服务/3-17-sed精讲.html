@@ -1,0 +1,3942 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3-17-sed精讲 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3-18-1-awk进阶.html" />
+    
+    
+    <link rel="prev" href="3-16-正则表达式和三剑客.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-linux核心基础/0.html">
+            
+                <a href="../01-linux核心基础/0.html">
+            
+                    
+                    01-linux 核心基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                <a href="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                    
+                    01_Linux云计算运维工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                <a href="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                    
+                    02_运维基础重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-linux核心基础/03_计算机基础.html">
+            
+                <a href="../01-linux核心基础/03_计算机基础.html">
+            
+                    
+                    03_计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-linux核心基础/04_操作系统基础.html">
+            
+                <a href="../01-linux核心基础/04_操作系统基础.html">
+            
+                    
+                    04_操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                <a href="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                    
+                    05_Linux系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                <a href="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                    
+                    06_vmware安装Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-linux核心基础/07_Linux快速入门.html">
+            
+                <a href="../01-linux核心基础/07_Linux快速入门.html">
+            
+                    
+                    07_Linux快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                <a href="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                    
+                    08_linux文件管理篇一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                <a href="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                    
+                    09_linux文件管理篇二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-linux核心基础/10_linux用户管理.html">
+            
+                <a href="../01-linux核心基础/10_linux用户管理.html">
+            
+                    
+                    10_linux用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-linux核心基础/11_远程连接linux.html">
+            
+                <a href="../01-linux核心基础/11_远程连接linux.html">
+            
+                    
+                    11_远程连接linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-linux核心基础/12_linux权限管理.html">
+            
+                <a href="../01-linux核心基础/12_linux权限管理.html">
+            
+                    
+                    12_linux权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                <a href="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                    
+                    13_linux基础服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                <a href="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                    
+                    14_linux进程与资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                <a href="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                    
+                    15_YUM与开源项目（Web运维）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-linux核心基础/16_计算机网络.html">
+            
+                <a href="../01-linux核心基础/16_计算机网络.html">
+            
+                    
+                    16_计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                <a href="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                    
+                    17_如果让你来设计网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                <a href="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                    
+                    18_OSI模型与TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                <a href="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                    
+                    19_Vmware网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-linux核心基础/20_centos网络配置.html">
+            
+                <a href="../01-linux核心基础/20_centos网络配置.html">
+            
+                    
+                    20_centos网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    02-系统核心服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3-0-Linux重要命令.html">
+            
+                <a href="3-0-Linux重要命令.html">
+            
+                    
+                    3-0-Linux重要命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="3-1-软件包管理.html">
+            
+                <a href="3-1-软件包管理.html">
+            
+                    
+                    3-1-软件包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3-10-黄金web架构之LAMP.html">
+            
+                <a href="3-10-黄金web架构之LAMP.html">
+            
+                    
+                    3-10-黄金web架构之LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="3-11-磁盘管理.html">
+            
+                <a href="3-11-磁盘管理.html">
+            
+                    
+                    3-11-磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="3-12-磁盘管理二.html">
+            
+                <a href="3-12-磁盘管理二.html">
+            
+                    
+                    3-12-磁盘管理二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="3-13-Raid磁盘冗余阵列.html">
+            
+                <a href="3-13-Raid磁盘冗余阵列.html">
+            
+                    
+                    3-13-Raid磁盘冗余阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="3-14-lvm逻辑卷管理.html">
+            
+                <a href="3-14-lvm逻辑卷管理.html">
+            
+                    
+                    3-14-lvm逻辑卷管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="3-15-通配符和特殊符号.html">
+            
+                <a href="3-15-通配符和特殊符号.html">
+            
+                    
+                    3-15-通配符和特殊符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="3-16-正则表达式和三剑客.html">
+            
+                <a href="3-16-正则表达式和三剑客.html">
+            
+                    
+                    3-16-正则表达式和三剑客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.10" data-path="3-17-sed精讲.html">
+            
+                <a href="3-17-sed精讲.html">
+            
+                    
+                    3-17-sed精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="3-18-1-awk进阶.html">
+            
+                <a href="3-18-1-awk进阶.html">
+            
+                    
+                    3-18-1-awk进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="3-18-awk精讲.html">
+            
+                <a href="3-18-awk精讲.html">
+            
+                    
+                    3-18-awk精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="3-19-正则练习题.html">
+            
+                <a href="3-19-正则练习题.html">
+            
+                    
+                    3-19-正则练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="3-2-yum精讲.html">
+            
+                <a href="3-2-yum精讲.html">
+            
+                    
+                    3-2-yum精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="3-20-sed练习题.html">
+            
+                <a href="3-20-sed练习题.html">
+            
+                    
+                    3-20-sed练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="3-21-awk练习题.html">
+            
+                <a href="3-21-awk练习题.html">
+            
+                    
+                    3-21-awk练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="3-22-什么是Shell.html">
+            
+                <a href="3-22-什么是Shell.html">
+            
+                    
+                    3-22-什么是Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="3-23-Shell快速入门.html">
+            
+                <a href="3-23-Shell快速入门.html">
+            
+                    
+                    3-23-Shell快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="3-3-SSH远程安全登录.html">
+            
+                <a href="3-3-SSH远程安全登录.html">
+            
+                    
+                    3-3-SSH远程安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="3-4-Rsync数据同步服务.html">
+            
+                <a href="3-4-Rsync数据同步服务.html">
+            
+                    
+                    3-4-Rsync数据同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="3-5-Inotify实时数据同步.html">
+            
+                <a href="3-5-Inotify实时数据同步.html">
+            
+                    
+                    3-5-Inotify实时数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="3-6-文件共享服务之FTP.html">
+            
+                <a href="3-6-文件共享服务之FTP.html">
+            
+                    
+                    3-6-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="3-7-文件共享服务之Samba.html">
+            
+                <a href="3-7-文件共享服务之Samba.html">
+            
+                    
+                    3-7-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="3-8文件共享服务之NFS.html">
+            
+                <a href="3-8文件共享服务之NFS.html">
+            
+                    
+                    3-8文件共享服务之NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="3-9-域名管理系统之DNS.html">
+            
+                <a href="3-9-域名管理系统之DNS.html">
+            
+                    
+                    3-9-域名管理系统之DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-网站集群架构/0.html">
+            
+                <a href="../03-网站集群架构/0.html">
+            
+                    
+                    03-网站集群架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                <a href="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                    
+                    00-淘宝网的十年架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-网站集群架构/01-综合架构开篇.html">
+            
+                <a href="../03-网站集群架构/01-综合架构开篇.html">
+            
+                    
+                    01-综合架构开篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                <a href="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                    
+                    02-综合架构环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                <a href="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                    
+                    03-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                <a href="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                    
+                    04-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-网站集群架构/05-备份工具rsync.html">
+            
+                <a href="../03-网站集群架构/05-备份工具rsync.html">
+            
+                    
+                    05-备份工具rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-网站集群架构/06-备份任务实战.html">
+            
+                <a href="../03-网站集群架构/06-备份任务实战.html">
+            
+                    
+                    06-备份任务实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                <a href="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                    
+                    07-共享存储服务NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-网站集群架构/08-实时同步数据.html">
+            
+                <a href="../03-网站集群架构/08-实时同步数据.html">
+            
+                    
+                    08-实时同步数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03-网站集群架构/09-SSH安全登录.html">
+            
+                <a href="../03-网站集群架构/09-SSH安全登录.html">
+            
+                    
+                    09-SSH安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03-网站集群架构/10--SSH进阶.html">
+            
+                <a href="../03-网站集群架构/10--SSH进阶.html">
+            
+                    
+                    10--SSH进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                <a href="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                    
+                    11-运维自动化Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                <a href="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                    
+                    12-Ansible-playbook剧本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                <a href="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                    
+                    13-Ansible-playbook剧本进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../03-网站集群架构/14-ansible-role角色.html">
+            
+                <a href="../03-网站集群架构/14-ansible-role角色.html">
+            
+                    
+                    14-ansible-role角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                <a href="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                    
+                    20-用户访问网站原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                <a href="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                    
+                    21-静态资源加速cdn篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../03-网站集群架构/22-web通信协议篇.html">
+            
+                <a href="../03-网站集群架构/22-web通信协议篇.html">
+            
+                    
+                    22-web通信协议篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                <a href="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                    
+                    23-1-nginx虚拟主机实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../03-网站集群架构/23-nginx基础篇.html">
+            
+                <a href="../03-网站集群架构/23-nginx基础篇.html">
+            
+                    
+                    23-nginx基础篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../03-网站集群架构/24-nginx高级篇.html">
+            
+                <a href="../03-网站集群架构/24-nginx高级篇.html">
+            
+                    
+                    24-nginx高级篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                <a href="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                    
+                    25-LNMP黄金架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../03-网站集群架构/26-网站集群拆分.html">
+            
+                <a href="../03-网站集群架构/26-网站集群拆分.html">
+            
+                    
+                    26-网站集群拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                <a href="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                    
+                    27-1-负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                <a href="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                    
+                    27-高性能负载均衡集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../03-网站集群架构/28-HTTPS.html">
+            
+                <a href="../03-网站集群架构/28-HTTPS.html">
+            
+                    
+                    28-HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                <a href="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                    
+                    29-keepalived高可用性负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../03-网站集群架构/30-部署Python网站.html">
+            
+                <a href="../03-网站集群架构/30-部署Python网站.html">
+            
+                    
+                    30-部署Python网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../03-网站集群架构/31-jumpserver实战.html">
+            
+                <a href="../03-网站集群架构/31-jumpserver实战.html">
+            
+                    
+                    31-jumpserver实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                <a href="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                    
+                    32-期中综合架构验收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-shell编程/0.html">
+            
+                <a href="../04-shell编程/0.html">
+            
+                    
+                    04-shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-shell编程/01-shell基础概述.html">
+            
+                <a href="../04-shell编程/01-shell基础概述.html">
+            
+                    
+                    01-Shell基础概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-shell编程/02-shell变量.html">
+            
+                <a href="../04-shell编程/02-shell变量.html">
+            
+                    
+                    02-Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../04-shell编程/03-条件判断.html">
+            
+                <a href="../04-shell编程/03-条件判断.html">
+            
+                    
+                    03-条件判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../04-shell编程/04-流程控制之if.html">
+            
+                <a href="../04-shell编程/04-流程控制之if.html">
+            
+                    
+                    04-流程控制之if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../04-shell编程/05-流程控制之case.html">
+            
+                <a href="../04-shell编程/05-流程控制之case.html">
+            
+                    
+                    05-流程控制之case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                <a href="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                    
+                    06-流程控制之for循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../04-shell编程/07-流程控制之while循环.html">
+            
+                <a href="../04-shell编程/07-流程控制之while循环.html">
+            
+                    
+                    07-流程控制之while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../04-shell编程/08-循环控制.html">
+            
+                <a href="../04-shell编程/08-循环控制.html">
+            
+                    
+                    08-循环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../04-shell编程/09-shell函数.html">
+            
+                <a href="../04-shell编程/09-shell函数.html">
+            
+                    
+                    09-Shell函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../04-shell编程/10-shell数组.html">
+            
+                <a href="../04-shell编程/10-shell数组.html">
+            
+                    
+                    10-Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../04-shell编程/脚本练习题库.html">
+            
+                <a href="../04-shell编程/脚本练习题库.html">
+            
+                    
+                    脚本练习题库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-监控系统/00.html">
+            
+                <a href="../05-监控系统/00.html">
+            
+                    
+                    05-监控系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-监控系统/00-监控系统.html">
+            
+                <a href="../05-监控系统/00-监控系统.html">
+            
+                    
+                    00-监控系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-监控系统/01-监控体系理论.html">
+            
+                <a href="../05-监控系统/01-监控体系理论.html">
+            
+                    
+                    01-监控体系理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-监控系统/02-zabbix安装部署.html">
+            
+                <a href="../05-监控系统/02-zabbix安装部署.html">
+            
+                    
+                    02-zabbix安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                <a href="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                    
+                    03-zabbix如何监控服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-监控系统/04-1-微信报警.html">
+            
+                <a href="../05-监控系统/04-1-微信报警.html">
+            
+                    
+                    04-1-微信报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-监控系统/04-2-钉钉报警.html">
+            
+                <a href="../05-监控系统/04-2-钉钉报警.html">
+            
+                    
+                    04-2-钉钉报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-监控系统/04-自定义监控项.html">
+            
+                <a href="../05-监控系统/04-自定义监控项.html">
+            
+                    
+                    04-自定义监控项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-监控系统/05-自定义监控模板.html">
+            
+                <a href="../05-监控系统/05-自定义监控模板.html">
+            
+                    
+                    05-自定义监控模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-监控系统/06-1-nginx监控.html">
+            
+                <a href="../05-监控系统/06-1-nginx监控.html">
+            
+                    
+                    06-1-nginx监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-监控系统/06-2-php监控.html">
+            
+                <a href="../05-监控系统/06-2-php监控.html">
+            
+                    
+                    06-2-php监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../05-监控系统/06-3-mysql监控.html">
+            
+                <a href="../05-监控系统/06-3-mysql监控.html">
+            
+                    
+                    06-3-mysql监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../05-监控系统/06-4-redis监控.html">
+            
+                <a href="../05-监控系统/06-4-redis监控.html">
+            
+                    
+                    06-4-redis监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../05-监控系统/06-5-tomcat监控.html">
+            
+                <a href="../05-监控系统/06-5-tomcat监控.html">
+            
+                    
+                    06-5-tomcat监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                <a href="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                    
+                    06-6-模拟登录之web监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                <a href="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                    
+                    06-zabbix监控核心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                <a href="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                    
+                    07-1-zabbix-agent修改主动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                <a href="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                    
+                    07-2-zabbix自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                <a href="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                    
+                    07-3-zabbix自动注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../05-监控系统/07-zabbix工作模式.html">
+            
+                <a href="../05-监控系统/07-zabbix工作模式.html">
+            
+                    
+                    07-zabbix工作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                <a href="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                    
+                    08-zabbix分布式proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../06-敏捷开发流水线/00.html">
+            
+                <a href="../06-敏捷开发流水线/00.html">
+            
+                    
+                    06-敏捷开发流水线
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                <a href="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                    
+                    00-版本控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-敏捷开发流水线/01-git工具.html">
+            
+                <a href="../06-敏捷开发流水线/01-git工具.html">
+            
+                    
+                    01-git工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                <a href="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                    
+                    02-git与gitee码云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                <a href="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                    
+                    03-gitlab私有仓库搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-敏捷开发流水线/04-jenkins.html">
+            
+                <a href="../06-敏捷开发流水线/04-jenkins.html">
+            
+                    
+                    04-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                <a href="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                    
+                    05-jenkins结合远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                <a href="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                    
+                    06-自动化发布静态页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                <a href="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                    
+                    07-SonarQube代码质量扫描工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                <a href="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                    
+                    08-jenkins发布Java项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                <a href="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                    
+                    09-jenkins流水线pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../07-数据库运维/00.html">
+            
+                <a href="../07-数据库运维/00.html">
+            
+                    
+                    07-数据库运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                <a href="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                    
+                    02-1-数据库基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../07-数据库运维/02-10-主从复制高级.html">
+            
+                <a href="../07-数据库运维/02-10-主从复制高级.html">
+            
+                    
+                    02-10-主从复制高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                <a href="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                    
+                    02-11-高可用集群MHA方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                <a href="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                    
+                    02-2-mysql基础实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                <a href="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                    
+                    02-3-mysql运维核心基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../07-数据库运维/02-4-SQL语句一.html">
+            
+                <a href="../07-数据库运维/02-4-SQL语句一.html">
+            
+                    
+                    02-4-SQL语句一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../07-数据库运维/02-5-SQL语句二.html">
+            
+                <a href="../07-数据库运维/02-5-SQL语句二.html">
+            
+                    
+                    02-5-SQL语句二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                <a href="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                    
+                    02-6-mysql备份方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                <a href="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                    
+                    02-7-mysql备份实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                <a href="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                    
+                    02-8-xtrabackup备份工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../07-数据库运维/02-9-主从复制架构.html">
+            
+                <a href="../07-数据库运维/02-9-主从复制架构.html">
+            
+                    
+                    02-9-主从复制架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../07-数据库运维/02-DBA之路.html">
+            
+                <a href="../07-数据库运维/02-DBA之路.html">
+            
+                    
+                    02-DBA之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../08-缓存redis/00.html">
+            
+                <a href="../08-缓存redis/00.html">
+            
+                    
+                    08-缓存 redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                <a href="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                    
+                    01-redis部署与数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../08-缓存redis/02-redis数据类型篇.html">
+            
+                <a href="../08-缓存redis/02-redis数据类型篇.html">
+            
+                    
+                    02-redis数据类型篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                <a href="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                    
+                    03-redis数据持久化篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../08-缓存redis/04-redis安全篇.html">
+            
+                <a href="../08-缓存redis/04-redis安全篇.html">
+            
+                    
+                    04-redis安全篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../08-缓存redis/05-redis主从复制篇.html">
+            
+                <a href="../08-缓存redis/05-redis主从复制篇.html">
+            
+                    
+                    05-redis主从复制篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                <a href="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                    
+                    06-redis高可用哨兵篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                <a href="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                    
+                    07-reids分片技术cluster篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../08-缓存redis/08-redis自动化安装.html">
+            
+                <a href="../08-缓存redis/08-redis自动化安装.html">
+            
+                    
+                    08-redis自动化安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../08-缓存redis/09-redis实战技巧.html">
+            
+                <a href="../08-缓存redis/09-redis实战技巧.html">
+            
+                    
+                    09-redis实战技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../09-java运维/00.html">
+            
+                <a href="../09-java运维/00.html">
+            
+                    
+                    09-java 运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09-java运维/01-Tomcat.html">
+            
+                <a href="../09-java运维/01-Tomcat.html">
+            
+                    
+                    01-Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10-云原生容器编排/00.html">
+            
+                <a href="../10-云原生容器编排/00.html">
+            
+                    
+                    10-云原生容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10-云原生容器编排/docker-all/00.html">
+            
+                <a href="../10-云原生容器编排/docker-all/00.html">
+            
+                    
+                    docker-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                <a href="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                    
+                    01_docker技术详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                <a href="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                    
+                    02_docker安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                <a href="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                    
+                    03_docker存储与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                <a href="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                    
+                    04_dockerfile构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                <a href="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                    
+                    05-企业级私有仓库Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                <a href="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                    
+                    06-docker网络模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.7" data-path="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                <a href="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                    
+                    07-docker容器单机编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.8" data-path="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                <a href="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                    
+                    08-docker容器跨主机通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.9" data-path="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                <a href="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                    
+                    09-docker综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.10" data-path="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                <a href="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                    
+                    10-容器化部署案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.11" data-path="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                <a href="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                    
+                    11-容器监控方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10-云原生容器编排/iptables/00.html">
+            
+                <a href="../10-云原生容器编排/iptables/00.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                <a href="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                    
+                    00-iptables防火墙安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                <a href="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                    
+                    01-iptables命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10-云原生容器编排/kvm-all/00.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/00.html">
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                    
+                    01-kvm虚拟化实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                    
+                    02-kvm进阶实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10-云原生容器编排/k8s-all/00.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00.html">
+            
+                    
+                    k8s-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" data-path="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                    
+                    00_k8s容器编排系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.2" data-path="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                    
+                    01_kubeadm安装k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.3" data-path="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                    
+                    02_k8s资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.4" data-path="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                    
+                    03_pod详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.5" data-path="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                    
+                    04_pod控制器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.6" data-path="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                    
+                    05-k8s网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.7" data-path="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                    
+                    06-k8s数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.8" data-path="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                    
+                    07-k8s配置文件管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.9" data-path="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                    
+                    08-dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.10" data-path="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                    
+                    09-prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11-mongodb/0.html">
+            
+                <a href="../11-mongodb/0.html">
+            
+                    
+                    11-mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11-mongodb/01-mongodb安装.html">
+            
+                <a href="../11-mongodb/01-mongodb安装.html">
+            
+                    
+                    01-mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11-mongodb/02-mongodb增删改查.html">
+            
+                <a href="../11-mongodb/02-mongodb增删改查.html">
+            
+                    
+                    02-mongodb增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                <a href="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                    
+                    03-mongodb基于角色的访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../11-mongodb/04-副本集replicaSet.html">
+            
+                <a href="../11-mongodb/04-副本集replicaSet.html">
+            
+                    
+                    04-副本集replicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../11-mongodb/05-mongodb备份恢复.html">
+            
+                <a href="../11-mongodb/05-mongodb备份恢复.html">
+            
+                    
+                    05-mongodb备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12-zookeeper/0.html">
+            
+                <a href="../12-zookeeper/0.html">
+            
+                    
+                    12-zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12-zookeeper/01-zookeeper.html">
+            
+                <a href="../12-zookeeper/01-zookeeper.html">
+            
+                    
+                    01-zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12-zookeeper/02-zk实践操作.html">
+            
+                <a href="../12-zookeeper/02-zk实践操作.html">
+            
+                    
+                    02-zk实践操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                <a href="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                    
+                    03-python-API开发zk客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13-kafka/0.html">
+            
+                <a href="../13-kafka/0.html">
+            
+                    
+                    13-kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13-kafka/01-kafka基础.html">
+            
+                <a href="../13-kafka/01-kafka基础.html">
+            
+                    
+                    01-kafka基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13-kafka/02-kafka集群.html">
+            
+                <a href="../13-kafka/02-kafka集群.html">
+            
+                    
+                    02-kafka集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14-ELK/0.html">
+            
+                <a href="../14-ELK/0.html">
+            
+                    
+                    14-ELK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14-ELK/01-elasticSearch.html">
+            
+                <a href="../14-ELK/01-elasticSearch.html">
+            
+                    
+                    01-elasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14-ELK/02-ES集群.html">
+            
+                <a href="../14-ELK/02-ES集群.html">
+            
+                    
+                    02-ES集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14-ELK/03-ES进阶.html">
+            
+                <a href="../14-ELK/03-ES进阶.html">
+            
+                    
+                    03-ES进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14-ELK/04-ES备份恢复.html">
+            
+                <a href="../14-ELK/04-ES备份恢复.html">
+            
+                    
+                    04-ES备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14-ELK/05-EBLK日志收集方案.html">
+            
+                <a href="../14-ELK/05-EBLK日志收集方案.html">
+            
+                    
+                    05-EBLK日志收集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                <a href="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                    
+                    06-ELK收集主流应用日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14-ELK/07-filebeat实战.html">
+            
+                <a href="../14-ELK/07-filebeat实战.html">
+            
+                    
+                    07-filebeat实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15-阿里云/0.html">
+            
+                <a href="../15-阿里云/0.html">
+            
+                    
+                    15-阿里云
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15-阿里云/01-阿里云实战.html">
+            
+                <a href="../15-阿里云/01-阿里云实战.html">
+            
+                    
+                    01-阿里云实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                <a href="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                    
+                    02-阿里云数据库RDS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                <a href="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                    
+                    03-阿里云负载均衡SLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15-阿里云/04-阿里云NAS.html">
+            
+                <a href="../15-阿里云/04-阿里云NAS.html">
+            
+                    
+                    04-阿里云NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15-阿里云/05-阿里云Redis.html">
+            
+                <a href="../15-阿里云/05-阿里云Redis.html">
+            
+                    
+                    05-阿里云Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15-阿里云/06-ACK.html">
+            
+                <a href="../15-阿里云/06-ACK.html">
+            
+                    
+                    06-ACK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                <a href="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                    
+                    07-阿里云ACK实践部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                <a href="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                    
+                    08-阿里云ACK部署mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3-17-sed精讲</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3-17-sed&#x7CBE;&#x8BB2;"><a name="3-17-sed&#x7CBE;&#x8BB2;" class="plugin-anchor" href="#3-17-sed&#x7CBE;&#x8BB2;"><i class="fa fa-link" aria-hidden="true"></i></a>3-17-sed&#x7CBE;&#x8BB2;</h1>
+<blockquote>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;sed&#x548C;awk&#x90FD;&#x4F7F;&#x7528;&#x5355;&#x5F15;&#x53F7;&#x53BB;&#x7EC3;&#x4E60;&#xFF0C;&#x53CC;&#x5F15;&#x53F7;&#x4F1A;&#x52A0;&#x8F7D;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#xFF0C;&#x8981;&#x505A;&#x66F4;&#x591A;&#x7684;&#x8F6C;&#x4E49;&#x3002;</p>
+</blockquote>
+<h1 id="sed&#x662F;&#x4EC0;&#x4E48;"><a name="sed&#x662F;&#x4EC0;&#x4E48;" class="plugin-anchor" href="#sed&#x662F;&#x4EC0;&#x4E48;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x662F;&#x4EC0;&#x4E48;</h1>
+<p>sed&#x662F;Stream Editor&#xFF08;&#x5B57;&#x7B26;&#x6D41;&#x7F16;&#x8F91;&#x5668;&#xFF09;&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x7B80;&#x79F0;&#x6D41;&#x7F16;&#x8F91;&#x5668;&#x3002;</p>
+<p>&#x6587;&#x4EF6;&#x6570;&#x636E;&#x5C31;&#x50CF;&#x6D41;&#x6C34;&#x7EBF;&#x4E00;&#x6837;&#x88AB;&#x52A0;&#x5DE5;&#x5904;&#x7406;&#xFF0C;sed&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x52A0;&#x5DE5;&#x5382;&#xFF0C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x90FD;&#x662F;&#x539F;&#x6599;&#xFF1B;</p>
+<p>&#x7ECF;&#x8FC7;sed&#x5904;&#x7406;&#x540E;&#xFF0C;&#x6700;&#x7EC8;&#x4ECE;&#x6D41;&#x6C34;&#x7EBF;&#x51FA;&#x6765;&#xFF0C;&#x4EA7;&#x751F;&#x7ED3;&#x679C;&#x3002;</p>
+<p><img src="../2024-linux/image-20220407190617359.png" alt="image-20220407190617359"></p>
+<p>sed&#x5E38;&#x7528;&#x4E8E;&#x548C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7ED3;&#x5408;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x529F;&#x80FD;&#x662F;</p>
+<ul>
+<li>&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4FE1;&#x606F;</li>
+<li>&#x53D6;&#x51FA;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x884C;</li>
+<li>&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</li>
+</ul>
+<h1 id="sed&#x7248;&#x672C;&#x4E0E;&#x529F;&#x80FD;"><a name="sed&#x7248;&#x672C;&#x4E0E;&#x529F;&#x80FD;" class="plugin-anchor" href="#sed&#x7248;&#x672C;&#x4E0E;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x7248;&#x672C;&#x4E0E;&#x529F;&#x80FD;</h1>
+<p>sed &#x547D;&#x4EE4;&#x662F;&#x64CD;&#x4F5C;,&#x8FC7;&#x6EE4;&#x548C;&#x8F6C;&#x6362;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7684;&#x5F3A;&#x5927;&#x5DE5;&#x5177;</p>
+<ul>
+<li><p>&#x5E38;&#x7528;&#x529F;&#x80FD;&#x6709;&#x589E;&#x5220;&#x6539;&#x67E5;(&#x589E;&#x52A0;,&#x5220;&#x9664;,&#x4FEE;&#x6539;,&#x67E5;&#x8BE2;</p>
+</li>
+<li><p>&#x5176;&#x4E2D;&#x67E5;&#x8BE2;&#x7684;&#x529F;&#x80FD;&#x6700;&#x5E38;&#x7528;&#x7684;</p>
+</li>
+<li><p>&#x53E6;&#x5916;&#x4E24;&#x5927;&#x529F;&#x80FD;</p>
+<ul>
+<li>&#x8FC7;&#x6EE4;(&#x8FC7;&#x6EE4;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;)</li>
+<li>&#x53D6;&#x884C;(&#x53BB;&#x9664;&#x6307;&#x5B9A;&#x884C;).</li>
+</ul>
+</li>
+</ul>
+<p>&#x5F53;&#x524D;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x4F7F;&#x7528;&#x7684;&#x7248;&#x672C;&#x662F;GNU&#x7248;&#x672C;linux&#x5F00;&#x6E90;&#x7684;sed&#x5DE5;&#x5177;</p>
+<p>&#x5F53;&#x524D;&#x673A;&#x5668;&#x73AF;&#x5883;</p>
+<pre><code>[yuchao-linux01 root ~]$cat /etc/os-release
+NAME=&quot;CentOS Linux&quot;
+VERSION=&quot;7 (Core)&quot;
+ID=&quot;centos&quot;
+ID_LIKE=&quot;rhel fedora&quot;
+VERSION_ID=&quot;7&quot;
+PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;
+ANSI_COLOR=&quot;0;31&quot;
+CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;
+HOME_URL=&quot;https://www.centos.org/&quot;
+BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;
+
+CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;
+CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;
+REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;
+REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;
+</code></pre><p>sed&#x7248;&#x672C;</p>
+<pre><code>[yuchao-linux01 root ~]$sed --version
+sed (GNU sed) 4.2.2
+Copyright (C) 2012 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Jay Fenlason, Tom Lord, Ken Pizzini,
+and Paolo Bonzini.
+GNU sed home page: &lt;http://www.gnu.org/software/sed/&gt;.
+General help using GNU software: &lt;http://www.gnu.org/gethelp/&gt;.
+E-mail bug reports to: &lt;bug-sed@gnu.org&gt;.
+Be sure to include the word ``sed&apos;&apos; somewhere in the ``Subject:&apos;&apos; field.
+</code></pre><h1 id="sed&#x8BED;&#x6CD5;&#x683C;&#x5F0F;"><a name="sed&#x8BED;&#x6CD5;&#x683C;&#x5F0F;" class="plugin-anchor" href="#sed&#x8BED;&#x6CD5;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</h1>
+<pre><code>sed [&#x9009;&#x9879;] [sed&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x5B57;&#x7B26;] [&#x8F93;&#x5165;&#x6587;&#x4EF6;]
+
+&#x8BF4;&#x660E;:
+1.&#x6CE8;&#x610F; sed &#x8F6F;&#x4EF6;&#x53CA;&#x540E;&#x9762;&#x9009;&#x9879;,sed &#x547D;&#x4EE4;&#x548C;&#x8F93;&#x5165;&#x6587;&#x4EF6;,&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x90FD;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;
+
+2.&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x6DF7;&#x6DC6;,&#x6587;&#x672C;&#x79F0;&#x547C;sed&#x4E3A;sed&#x8F6F;&#x4EF6;.sed-commands(sed&#x547D;&#x4EE4;)&#x662F;sed&#x8F6F;&#x4EF6;&#x5185;&#x7F6E;&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x9009;&#x9879;,&#x4E3A;&#x4E86;&#x548C;&#x524D;&#x9762;&#x7684; options(&#x9009;&#x9879;)&#x533A;&#x5206;,&#x6545;&#x79F0;&#x4E3A;sed&#x547D;&#x4EE4;.
+
+3.sed-commands &#x65E2;&#x53EF;&#x4EE5;&#x662F;&#x5355;&#x4E2A;sed &#x547D;&#x4EE4;,&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x591A;&#x4E2A;sed&#x547D;&#x4EE4;&#x7EC4;&#x5408;.
+
+4.input-file(&#x8F93;&#x5165;&#x6587;&#x4EF6;)&#x662F;&#x53EF;&#x9009;&#x9879;,sed &#x8FD8;&#x80FD;&#x591F;&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x6216;&#x7BA1;&#x9053;&#x83B7;&#x53D6;&#x8F93;&#x5165;
+</code></pre><h1 id="sed&#x547D;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x7A0B;"><a name="sed&#x547D;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x7A0B;" class="plugin-anchor" href="#sed&#x547D;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x547D;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x7A0B;</h1>
+<pre><code>&#x6982;&#x62EC;&#x6D41;&#x7A0B;:
+sed &#x8F6F;&#x4EF6;&#x4ECE;&#x6587;&#x4EF6;&#x6216;&#x7BA1;&#x9053;&#x8BFB;&#x53D6;&#x4E00;&#x884C;,&#x5904;&#x7406;&#x4E00;&#x884C;,&#x8F93;&#x51FA;&#x4E00;&#x884C;;&#x518D;&#x8BFB;&#x53D6;&#x4E00;&#x884C;.&#x518D;&#x5904;&#x7406;&#x4E00;&#x884C;.&#x5728;&#x8F93;&#x51FA;&#x4E00;&#x884C;....
+
+&#x5C0F;&#x63D0;&#x793A;&#xFF1A;
+&#x4E00;&#x6B21;&#x4E00;&#x884C;&#x7684;&#x8BBE;&#x8BA1;&#x662F;&#x7684; sed &#x8F6F;&#x4EF6;&#x6027;&#x80FD;&#x5F88;&#x9AD8;,sed &#x5728;&#x8BFB;&#x53D6;&#x975E;&#x5E38;&#x5E9E;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5361;&#x987F;&#x73B0;&#x8C61;.&#x5927;&#x5BB6; &#x90FD;&#x7528;&#x8FC7; vi &#x547D;&#x4EE4;,&#x7528; vi &#x547D;&#x4EE4;&#x6253;&#x5F00;&#x51E0;&#x5341; M &#x6216;&#x66F4;&#x5927;&#x7684;&#x6587;&#x4EF6;,&#x4F1A;&#x53D1;&#x73B0;&#x6709;&#x5361;&#x987F;&#x73B0;&#x8C61;,&#x8FD9;&#x662F;&#x56E0;&#x4E3A; vi &#x547D;&#x4EE4;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x662F;&#x4E00; &#x6B21;&#x6027;&#x5C06;&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5BB9;,&#x7136;&#x540E;&#x518D;&#x6253;&#x5F00;.&#x56E0;&#x6B64;&#x5361;&#x77ED;&#x65F6;&#x95F4;&#x957F;&#x77ED;&#x5C31;&#x53D6;&#x51B3;&#x4E8E;&#x78C1;&#x76D8;&#x5230;&#x5185;&#x5B58;&#x7684;&#x8BFB;&#x53D6;&#x901F;&#x5EA6;&#x4E86;.&#x800C;&#x4E14;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x8FC7;&#x5927;&#x7684;&#x8BDD;&#x8FD8;&#x4F1A;&#x9020;&#x6210;&#x5185;&#x5B58;&#x6EA2;&#x51FA;&#x73B0;&#x8C61;.
+sed &#x8F6F;&#x4EF6;&#x5C31;&#x5F88;&#x597D;&#x7684;&#x907F;&#x514D;&#x4E86;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;,&#x6253;&#x5F00;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;,&#x6267;&#x884C;&#x901F;&#x5EA6;&#x4E5F;&#x5F88;&#x5FEB;.
+</code></pre><p><img src="../2024-linux/image-20220407192053880.png" alt="image-20220407192053880"></p>
+<p>&#x6587;&#x5B57;&#x63CF;&#x8FF0;</p>
+<pre><code>sed &#x5904;&#x7406; &#x6587;&#x4EF6; chaoge.txt
+
+1.&#x5224;&#x65AD;&#x7B2C;&#x4E00;&#x884C;&#x662F;&#x5426;&#x8981;&#x5904;&#x7406;&#xFF0C;&#x4E0D;&#x662F;&#x5C31;&#x91CD;&#x65B0;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x884C;&#xFF1B;&#x662F;&#x5219;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#xFF0C;&#x6D41;&#x6C34;&#x7EBF;&#x5411;&#x540E;&#x8D70;&#xFF1B;
+2.&#x6570;&#x636E;&#x653E;&#x5230;&#x4E86;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;&#x5185;&#x5B58;&#xFF09;&#xFF0C;&#x6267;&#x884C;sed&#x547D;&#x4EE4;&#xFF0C;&#x5982;a&#x8FFD;&#x52A0;&#x3001;i&#x63D2;&#x5165;&#x3001;s&#x66FF;&#x6362;
+3.&#x5C06;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5185;&#x52A0;&#x5DE5;&#x8FC7;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8F93;&#x51FA;&#x5230;&#x7EC8;&#x7AEF;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x6E05;&#x7A7A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#xFF1B;
+4.&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x4E0B;&#x4E00;&#x884C;&#x6587;&#x672C;&#xFF0C;&#x91CD;&#x590D;&#x4E0A;&#x8FF0;&#x6D41;&#x7A0B;&#xFF0C;&#x76F4;&#x5230;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x7ED3;&#x675F;&#xFF1B;
+</code></pre><h2 id="&#x56FE;&#x89E3;sed&#x4F7F;&#x7528;&#x65B9;&#x5F0F;"><a name="&#x56FE;&#x89E3;sed&#x4F7F;&#x7528;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x56FE;&#x89E3;sed&#x4F7F;&#x7528;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x89E3;sed&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h2>
+<pre><code>[yuchao-linux01 root ~]$sed &apos;2a &#x8D85;&#x54E5;&#x725B;&#x554A;&#x725B;&#x554A;&apos; chaoge.txt
+I am teacher yuchao.
+I teach linux,python.
+&#x8D85;&#x54E5;&#x725B;&#x554A;&#x725B;&#x554A;
+testtttsss000123566666
+
+I like video,games,girls
+#I like girls.
+$my blog is http://www.yuchaoit.cn
+#my site is https://www.cnblogs.com/pyyu
+My qq num is 877348180.
+my phone num  is 15210888008.
+</code></pre><p>&#x56FE;&#x89E3;</p>
+<p><img src="../2024-linux/image-20220407193107208.png" alt="image-20220407193107208"></p>
+<h2 id="&#x56FE;&#x89E3;sed&#x5DE5;&#x4F5C;&#x6D41;"><a name="&#x56FE;&#x89E3;sed&#x5DE5;&#x4F5C;&#x6D41;" class="plugin-anchor" href="#&#x56FE;&#x89E3;sed&#x5DE5;&#x4F5C;&#x6D41;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x89E3;sed&#x5DE5;&#x4F5C;&#x6D41;</h2>
+<p><img src="../2024-linux/image-20220407194839894.png" alt="image-20220407194839894"></p>
+<h2 id="sed-&#x7684;&#x52A0;&#x5DE5;&#x5382;"><a name="sed-&#x7684;&#x52A0;&#x5DE5;&#x5382;" class="plugin-anchor" href="#sed-&#x7684;&#x52A0;&#x5DE5;&#x5382;"><i class="fa fa-link" aria-hidden="true"></i></a>sed &#x7684;&#x52A0;&#x5DE5;&#x5382;</h2>
+<p>sed&#x8F6F;&#x4EF6;&#x6709;&#x4E24;&#x4E2A;&#x9ED8;&#x8BA4;&#x5185;&#x7F6E;&#x52A0;&#x5DE5;&#x7A7A;&#x95F4;&#x3002;</p>
+<h3 id="&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;parttern-space&#xFF09;"><a name="&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;parttern-space&#xFF09;" class="plugin-anchor" href="#&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;parttern-space&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;parttern space&#xFF09;</h3>
+<p>&#x662F; sed &#x8F6F;&#x4EF6;&#x4ECE;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x4E00;&#x884C;&#x6587;&#x672C;&#x7136;&#x540E;&#x5B58;&#x5165;&#x7684;&#x7F13;&#x51B2;&#x533A;(&#x8FD9;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x662F;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;),</p>
+<p>&#x7136;&#x540E;&#x4F7F;&#x7528; sed &#x547D;&#x4EE4;&#x64CD;&#x4F5C;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<pre><code>sed&#x6211;&#x4EEC;&#x5DF2;&#x77E5;&#x6709;&#x4E00;&#x5757;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;pattern space&#xFF09;&#x7528;&#x4E8E;sed&#x7F16;&#x8F91;&#x5668;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4FDD;&#x5B58;&#x5F85;&#x68C0;&#x67E5;&#x7684;&#x6587;&#x672C;&#x3002;
+</code></pre><h3 id="&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;hold-space&#xFF09;&#xFF08;&#x8FDB;&#x9636;&#x7BC7;&#xFF09;"><a name="&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;hold-space&#xFF09;&#xFF08;&#x8FDB;&#x9636;&#x7BC7;&#xFF09;" class="plugin-anchor" href="#&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;hold-space&#xFF09;&#xFF08;&#x8FDB;&#x9636;&#x7BC7;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;hold space&#xFF09;&#xFF08;&#x8FDB;&#x9636;&#x7BC7;&#xFF09;</h3>
+<p>sed&#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x4EE5;&#x884C;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x7F16;&#x8F91;&#x6216;&#x4FEE;&#x6539;&#x6587;&#x672C;&#xFF0C;&#x5176;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#x5B83;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x7A7A;&#x95F4;&#xFF1A;&#x4E00;&#x4E2A;&#x662F;&#x6D3B;&#x52A8;&#x7684;&#x201C;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;pattern space&#xFF09;&#x201D;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F;&#x8D77;&#x8F85;&#x52A9;&#x4F5C;&#x7528;&#x7684;&#x201C;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;hold space&#xFF09;&#x8FD9;2&#x4E2A;&#x7A7A;&#x95F4;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<ul>
+<li><p>&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF1A;&#x53EF;&#x4EE5;&#x60F3;&#x6210;&#x5DE5;&#x7A0B;&#x91CC;&#x9762;&#x7684;&#x6D41;&#x6C34;&#x7EBF;&#xFF0C;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x5728;&#x5B83;&#x4E0A;&#x9762;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+</li>
+<li><p>&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF1A;&#x53EF;&#x4EE5;&#x60F3;&#x8C61;&#x6210;&#x4ED3;&#x5E93;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x7684;&#x6682;&#x5B58;&#x533A;&#x57DF;&#x3002;</p>
+</li>
+</ul>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x663E;&#x793A;&#x4F7F;&#x7528;&#x67D0;&#x4E9B;&#x9AD8;&#x7EA7;&#x547D;&#x4EE4;&#xFF0C;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#xFF01;</p>
+<p><img src="../2024-linux/image-20220407200208393.png" alt="image-20220407200208393"></p>
+<h1 id="sed&#x8F6F;&#x4EF6;&#x7684;&#x53C2;&#x6570;"><a name="sed&#x8F6F;&#x4EF6;&#x7684;&#x53C2;&#x6570;" class="plugin-anchor" href="#sed&#x8F6F;&#x4EF6;&#x7684;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x8F6F;&#x4EF6;&#x7684;&#x53C2;&#x6570;</h1>
+<pre><code>options[&#x9009;&#x9879;]
+&#x89E3;&#x91CA;&#x8BF4;&#x660E;
+-n    &#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x7684; sed &#x8F6F;&#x4EF6;&#x7684;&#x8F93;&#x51FA;,&#x5E38;&#x4E0E; sed &#x547D;&#x4EE4;&#x7684; p &#x8FDE;&#x7528;
+-e    &#x4E00;&#x884C;&#x547D;&#x4EE4;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x591A;&#x6761; sed &#x547D;&#x4EE4;
+-f    &#x9009;&#x9879;&#x540E;&#x9762;&#x53EF;&#x4EE5;&#x63A5; sed &#x811A;&#x672C;&#x7684;&#x6587;&#x4EF6;&#x540D;
+-r    &#x4F7F;&#x7528;&#x6B63;&#x5219;&#x62D3;&#x5C55;&#x8868;&#x8FBE;&#x5F0F;,&#x9ED8;&#x8BA4;&#x60C5;&#x51B5; sed &#x53EA;&#x8BC6;&#x522B;&#x57FA;&#x672C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+-i    &#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x5185;&#x5BB9;,&#x800C;&#x4E0D;&#x662F;&#x8F93;&#x51FA;&#x7EC8;&#x7AEF;,&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;-i &#x9009;&#x9879; sed &#x8F6F;&#x4EF6;&#x53EA;&#x662F;&#x4FEE;&#x6539;&#x5728; &#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;,&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6587;&#x4EF6;
+</code></pre><h1 id="sed&#x8F6F;&#x4EF6;&#x7684;&#x547D;&#x4EE4;"><a name="sed&#x8F6F;&#x4EF6;&#x7684;&#x547D;&#x4EE4;" class="plugin-anchor" href="#sed&#x8F6F;&#x4EF6;&#x7684;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x8F6F;&#x4EF6;&#x7684;&#x547D;&#x4EE4;</h1>
+<pre><code>sed-commands[sed &#x547D;&#x4EE4;]
+&#x89E3;&#x91CA;&#x8BF4;&#x660E;
+a &#x8FFD;&#x52A0;,&#x5728;&#x6307;&#x5B9A;&#x884C;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6216;&#x591A;&#x884C;&#x6587;&#x672C;
+c &#x53D6;&#x4EE3;&#x6307;&#x5B9A;&#x7684;&#x884C;
+d &#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x884C;
+D &#x5220;&#x9664;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;,&#x76F4;&#x5230;&#x9047;&#x5230;&#x6362;&#x884C;&#x7B26;\n &#x7ED3;&#x675F;&#x64CD;&#x4F5C;,&#x4E0E;&#x591A;&#x884C;&#x6A21;&#x5F0F;&#x76F8;&#x5173;
+i &#x63D2;&#x5165;,&#x5728;&#x6307;&#x5B9A;&#x7684;&#x884C;&#x524D;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6216;&#x591A;&#x884C;&#x6587;&#x672C;
+h &#x628A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;
+H &#x628A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;
+g &#x628A;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;
+G &#x628A;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5230;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;
+x &#x4EA4;&#x6362;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x548C;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;
+l &#x6253;&#x5370;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x5B57;&#x7B26;
+n &#x6E05;&#x7A7A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;,&#x5E76;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x884C;&#x6570;&#x636E;&#x5E76;&#x8FFD;&#x52A0;&#x5230;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;
+N &#x4E0D;&#x6E05;&#x7A7A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;,&#x5E76;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x884C;&#x6570;&#x636E;&#x5E76;&#x8FFD;&#x52A0;&#x5230;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;
+p &#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;,&#x901A;&#x5E38; p &#x4F1A;&#x4E0E;&#x9009;&#x9879;-n &#x4E00;&#x8D77;&#x4F7F;&#x7528;
+P(&#x5927;&#x5199;) &#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;,&#x76F4;&#x5230;&#x9047;&#x5230;&#x6362;&#x884C;&#x7B26;\&#x4F60;&#x7ED3;&#x675F;&#x64CD;&#x4F5C;
+q &#x9000;&#x51FA; sed
+r &#x4ECE;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6570;&#x636E;
+s &#x53D6;&#x4EE3;,s#old#new#g==&gt;&#x8FD9;&#x91CC; g &#x662F; s &#x547D;&#x4EE4;&#x7684;&#x66FF;&#x4EE3;&#x6807;&#x5FD7;,&#x6CE8;&#x610F;&#x548C; g &#x547D;&#x4EE4;&#x533A;&#x5206;
+w &#x53E6;&#x5B58;,&#x628A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x4E2D;
+y &#x6839;&#x636E;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x8F6C;&#x6362;&#x5B57;&#x7B26;
+:label  &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6807;&#x7B7E;
+t &#x5982;&#x679C;&#x524D;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;,&#x90A3;&#x4E48;&#x5C31;&#x8DF3;&#x8F6C;&#x5230; t &#x6307;&#x5B9A;&#x7684;&#x6807;&#x7B7E;&#x5904;,&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#x540E; &#x7EED;&#x547D;&#x4EE4;,&#x5426;&#x5219;,&#x4ECD;&#x7136;&#x7EE7;&#x7EED;&#x6B63;&#x5E38;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;
+</code></pre><h1 id="sed&#x5339;&#x914D;&#x6587;&#x672C;&#x8303;&#x56F4;"><a name="sed&#x5339;&#x914D;&#x6587;&#x672C;&#x8303;&#x56F4;" class="plugin-anchor" href="#sed&#x5339;&#x914D;&#x6587;&#x672C;&#x8303;&#x56F4;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5339;&#x914D;&#x6587;&#x672C;&#x8303;&#x56F4;</h1>
+<p>sed&#x5339;&#x914D;&#x6587;&#x672C;&#x8303;&#x56F4;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8303;&#x56F4;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x7A7A;&#x5730;&#x5740;</td>
+<td>&#x5168;&#x6587;&#x5904;&#x7406;</td>
+</tr>
+<tr>
+<td>&#x5355;&#x5730;&#x5740;</td>
+<td>&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x67D0;&#x4E00;&#x884C;</td>
+</tr>
+<tr>
+<td><code>/pattern/</code></td>
+<td>&#x88AB;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x5230;&#x7684;&#x6BCF;&#x4E00;&#x884C;</td>
+</tr>
+<tr>
+<td>&#x8303;&#x56F4;&#x533A;&#x95F4;</td>
+<td><code>10,20 &#x5341;&#x5230;&#x4E8C;&#x5341;&#x884C;</code>&#xFF0C;<code>10,+5&#x7B2C;10&#x884C;&#x5411;&#x4E0B;5&#x884C;</code>&#xFF0C;<code>/pattern1/,/pattern2/</code></td>
+</tr>
+<tr>
+<td>&#x6B65;&#x957F;</td>
+<td><code>1~2&#xFF0C;&#x8868;&#x793A;1&#x3001;3&#x3001;5&#x3001;7&#x3001;9&#x884C;</code>&#xFF0C;<code>2~2&#x4E24;&#x4E2A;&#x6B65;&#x957F;&#xFF0C;&#x8868;&#x793A;2&#x3001;4&#x3001;6&#x3001;8&#x3001;10&#x3001;&#x5076;&#x6570;&#x884C;</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id="sed&#x8F6F;&#x4EF6;&#x5B9E;&#x8DF5;"><a name="sed&#x8F6F;&#x4EF6;&#x5B9E;&#x8DF5;" class="plugin-anchor" href="#sed&#x8F6F;&#x4EF6;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x8F6F;&#x4EF6;&#x5B9E;&#x8DF5;</h1>
+<p>&#x51C6;&#x5907;&#x6D4B;&#x8BD5;&#x6570;&#x636E;</p>
+<pre><code>[yuchao-linux01 root ~]$cat chaoge.txt -n
+     1    My name is yuchao.
+     2    I teach linux.
+     3    I like play computer game.
+     4    My qq is 877348180.
+     5    My website is http://www.yuchaoit.cn
+</code></pre><h2 id="sed-&#x9ED8;&#x8BA4;&#x4E0D;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;"><a name="sed-&#x9ED8;&#x8BA4;&#x4E0D;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;" class="plugin-anchor" href="#sed-&#x9ED8;&#x8BA4;&#x4E0D;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>Sed &#x9ED8;&#x8BA4;&#x4E0D;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;</h2>
+<p>sed&#x9ED8;&#x8BA4;&#x7684;&#x547D;&#x4EE4;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x770B;&#x5230;&#x7684;&#x7EC8;&#x7AEF;&#x7ED3;&#x679C;&#xFF0C;&#x53EA;&#x662F;sed&#x628A;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x6253;&#x5370;&#x7ED9;&#x4F60;&#x770B;&#x4E86;&#x800C;&#x5DF2;&#x3002;</p>
+<p>&#x5F97;&#x7528;sed -i &#x53C2;&#x6570;&#x4FEE;&#x6539;&#x6E90;&#x6570;&#x636E;&#x3002;</p>
+<h1 id="sed&#x589E;&#x5220;&#x6539;&#x67E5;"><a name="sed&#x589E;&#x5220;&#x6539;&#x67E5;" class="plugin-anchor" href="#sed&#x589E;&#x5220;&#x6539;&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x589E;&#x5220;&#x6539;&#x67E5;</h1>
+<p>&#x589E;&#xFF0C;&#x8868;&#x793A;&#x5728;&#x6307;&#x5B9A;&#x884C;&#x4E0E;&#x884C;&#x4E4B;&#x95F4;&#xFF0C;&#x6DFB;&#x52A0;&#x65B0;&#x5B57;&#x7B26;&#x6570;&#x636E;</p>
+<pre><code>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;vi&#x3001;vim&#x53BB;&#x5728;&#x67D0;&#x4E00;&#x884C;&#xFF0C;&#x589E;&#x52A0;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x4EA4;&#x4E92;&#x5F0F;&#x64CD;&#x4F5C;&#xFF0C;&#x6CA1;&#x6CD5;&#x8FDB;&#x884C;&#x811A;&#x672C;&#x5316;
+&#x56E0;&#x6B64;sed&#x6765;&#x4E86;&#xFF01;
+</code></pre><p>sed&#x589E;&#x52A0;&#x5B57;&#x7B26;&#x547D;&#x4EE4;</p>
+<pre><code>&quot;a&quot;:&#x8FFD;&#x52A0;&#x6587;&#x672C;&#x5230;&#x6307;&#x5B9A;&#x884C;,&#x8BB0;&#x5FC6;&#x65B9;&#x6CD5;:a &#x7684;&#x5168;&#x62FC;&#x662F; apend,,&#x610F;&#x601D;&#x662F;&#x8FFD;&#x52A0; 
+&quot;i&quot;:&#x63D2;&#x5165;&#x6587;&#x672C;&#x5230;&#x6307;&#x5B9A;&#x884C;&#x524D;,&#x8BB0;&#x5FC6;&#x65B9;&#x6CD5;:i &#x7684;&#x5168;&#x62FC;&#x662F; insert,&#x610F;&#x601D;&#x662F;&#x63D2;&#x5165;
+</code></pre><h2 id="&#x5355;&#x884C;&#x589E;&#x52A0;&#x547D;&#x4EE4;"><a name="&#x5355;&#x884C;&#x589E;&#x52A0;&#x547D;&#x4EE4;" class="plugin-anchor" href="#&#x5355;&#x884C;&#x589E;&#x52A0;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x884C;&#x589E;&#x52A0;&#x547D;&#x4EE4;</h2>
+<p>sed&#x589E;&#x52A0;&#x6570;&#x636E;&#x7684;&#x547D;&#x4EE4;</p>
+<pre><code>a &#x8FFD;&#x52A0;,&#x5728;&#x6307;&#x5B9A;&#x884C;&#x540E;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6216;&#x591A;&#x884C;&#x6587;&#x672C;
+
+i &#x63D2;&#x5165;,&#x5728;&#x6307;&#x5B9A;&#x7684;&#x884C;&#x524D;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6216;&#x591A;&#x884C;&#x6587;&#x672C;
+</code></pre><p> &#x5B9E;&#x8DF5;</p>
+<p>&#x5728;&#x6587;&#x4EF6;&#x7B2C;&#x4E8C;&#x884C;&#x540E;&#x6DFB;&#x52A0;&#x6570;&#x636E;</p>
+<pre><code>[yuchao-linux01 root ~]$sed &apos;2a &#x8D85;&#x54E5;&#x725B;&#x554A;&#x725B;&#x554A;&apos; chaoge.txt
+My name is yuchao.
+I teach linux.
+&#x8D85;&#x54E5;&#x725B;&#x554A;&#x725B;&#x554A;
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><p>&#x5728;&#x7B2C;&#x4E8C;&#x884C;&#x524D;&#xFF0C;&#x63D2;&#x5165;&#x6570;&#x636E;</p>
+<pre><code>[yuchao-linux01 root ~]$sed &apos;2i &#x8D85;&#x54E5;&#x725B;&#x554A;&#x725B;&#x554A;&apos; chaoge.txt
+My name is yuchao.
+&#x8D85;&#x54E5;&#x725B;&#x554A;&#x725B;&#x554A;
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><p>&#x8BED;&#x6CD5;&#x603B;&#x7ED3;</p>
+<pre><code>sed &apos;&#x884C;&#x53F7;a &#x5B57;&#x7B26;&#x6570;&#x636E;&apos; &#x6E90;&#x6587;&#x4EF6;
+
+&#x5982;
+sed &apos;3a  I am super man &apos; 
+
+sed&#x4F1A;&#x5728;&#x7B2C;&#x4E09;&#x884C;&#x4E0B;&#x9762;&#xFF0C;&#x6DFB;&#x52A0;&#x4F60; &#x5199;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x636E;
+</code></pre><h1 id="&#x5355;&#x5F15;&#x53F7;&#x3001;&#x53CC;&#x5F15;&#x53F7;&#x3001;&#x65E0;&#x5F15;&#x53F7;&#x3001;&#x53CD;&#x5F15;&#x53F7;"><a name="&#x5355;&#x5F15;&#x53F7;&#x3001;&#x53CC;&#x5F15;&#x53F7;&#x3001;&#x65E0;&#x5F15;&#x53F7;&#x3001;&#x53CD;&#x5F15;&#x53F7;" class="plugin-anchor" href="#&#x5355;&#x5F15;&#x53F7;&#x3001;&#x53CC;&#x5F15;&#x53F7;&#x3001;&#x65E0;&#x5F15;&#x53F7;&#x3001;&#x53CD;&#x5F15;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x5F15;&#x53F7;&#x3001;&#x53CC;&#x5F15;&#x53F7;&#x3001;&#x65E0;&#x5F15;&#x53F7;&#x3001;&#x53CD;&#x5F15;&#x53F7;</h1>
+<h2 id="&#x5355;&#x5F15;&#x53F7;"><a name="&#x5355;&#x5F15;&#x53F7;" class="plugin-anchor" href="#&#x5355;&#x5F15;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x5F15;&#x53F7;</h2>
+<p>&#x6240;&#x89C1;&#x5373;&#x6240;&#x5F97;&#x3001;&#x5355;&#x5F15;&#x53F7;&#x5185;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x539F;&#x6837;&#x8F93;&#x51FA;</p>
+<p>&#x5F53;&#x7ED3;&#x5408;sed&#x3001;egrep&#x3001;awk&#x547D;&#x4EE4;&#xFF0C;&#x80FD;&#x8BC6;&#x522B;&#x5355;&#x5F15;&#x53F7;&#x4E2D;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7B26;&#x53F7;&#x3002;</p>
+<pre><code>echo &apos;hello, i am teacher yuchao.&apos;
+</code></pre><h2 id="&#x53CC;&#x5F15;&#x53F7;"><a name="&#x53CC;&#x5F15;&#x53F7;" class="plugin-anchor" href="#&#x53CC;&#x5F15;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53CC;&#x5F15;&#x53F7;</h2>
+<p>&#x53CC;&#x5F15;&#x53F7;&#x4E5F;&#x662F;&#x8F93;&#x51FA;&#x5F15;&#x53F7;&#x5185;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;</p>
+<p>&#x53CC;&#x5F15;&#x53F7;&#x4F1A;&#x628A;&#x53D8;&#x91CF;&#x3001;&#x547D;&#x4EE4;&#x7B49;&#x5148;&#x89E3;&#x6790;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8F93;&#x51FA;&#x6700;&#x7EC8;&#x5185;&#x5BB9;&#xFF1B;</p>
+<pre><code>[root@client-242 ~]# echo &quot;hello, i am teacher ${name}&quot;
+hello, i am teacher chaoge
+
+
+[root@client-242 ~]# echo &quot;now datetime is `date &quot;+%F %T&quot;`&quot;
+now datetime is 2022-04-08 15:43:31
+
+[root@client-242 ~]# echo &quot;now datetime is $(date &quot;+%F %T&quot;)&quot;
+now datetime is 2022-04-08 15:44:01
+</code></pre><h2 id="&#x65E0;&#x5F15;&#x53F7;"><a name="&#x65E0;&#x5F15;&#x53F7;" class="plugin-anchor" href="#&#x65E0;&#x5F15;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65E0;&#x5F15;&#x53F7;</h2>
+<p>&#x4E0D;&#x4F7F;&#x7528;&#x5F15;&#x53F7;&#x3001;linux&#x4F1A;&#x4EE5;&#x7A7A;&#x683C;&#x6765;&#x8BC6;&#x522B;&#x4E3A;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x5185;&#x5BB9;&#x91CC;&#x6709;&#x53D8;&#x91CF;&#x3001;&#x547D;&#x4EE4;&#x7B49;&#xFF0C;&#x4F18;&#x5148;&#x89E3;&#x6790;&#x53D8;&#x91CF;&#x3001;&#x547D;&#x4EE4;&#xFF0C;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code>[root@client-242 ~]# echo now datetime is `date &apos;+%F %T&apos;`
+now datetime is 2022-04-08 15:55:23
+</code></pre><p>&#x4E0D;&#x5EFA;&#x8BAE;&#x7528;&#x65E0;&#x5F15;&#x53F7;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#xFF0C;&#x5C31;&#x5305;&#x62EC;&#x4E86;&#x7A7A;&#x683C;&#x7B49;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x65E0;&#x5F15;&#x53F7;&#x5C31;&#x4F1A;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x4E0A;<code>&#x53CC;&#x5F15;&#x53F7;</code>&#x3002;</p>
+<p><img src="../2024-linux/image-20220408160035871.png" alt="image-20220408160035871"></p>
+<h2 id="&#x53CD;&#x5F15;&#x53F7;"><a name="&#x53CD;&#x5F15;&#x53F7;" class="plugin-anchor" href="#&#x53CD;&#x5F15;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53CD;&#x5F15;&#x53F7;</h2>
+<pre><code>`command`
+</code></pre><p>&#x53CD;&#x5F15;&#x53F7;&#x5185;&#x9700;&#x8981;&#x5199;&#x5165;linux&#x547D;&#x4EE4;&#xFF0C;&#x4F1A;&#x4F18;&#x5148;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x51FA;&#x7ED3;&#x679C;</p>
+<p><img src="../2024-linux/image-20220408160059039.png" alt="image-20220408160059039"></p>
+<h2 id="&#x7ECF;&#x9A8C;&#x603B;&#x7ED3;"><a name="&#x7ECF;&#x9A8C;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x7ECF;&#x9A8C;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ECF;&#x9A8C;&#x603B;&#x7ED3;</h2>
+<p>1.&#x5F15;&#x53F7;&#x91CC;&#x6709;&#x53D8;&#x91CF;&#x3001;&#x6216;&#x8005;&#x5E26;&#x6709;&#x53CD;&#x5F15;&#x53F7;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x4F60;&#x60F3;&#x5B83;&#x80FD;&#x89E3;&#x6790;&#x5C31;&#x7528;&#x53CC;&#x5F15;&#x53F7;&#xFF1B;&#x5E0C;&#x671B;&#x539F;&#x6837;&#x8F93;&#x51FA;&#x5C31;&#x5355;&#x5F15;&#x53F7;&#xFF1B;</p>
+<h1 id="sed&#x591A;&#x884C;&#x589E;&#x52A0;"><a name="sed&#x591A;&#x884C;&#x589E;&#x52A0;" class="plugin-anchor" href="#sed&#x591A;&#x884C;&#x589E;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x591A;&#x884C;&#x589E;&#x52A0;</h1>
+<h2 id="cat&#x5B9E;&#x73B0;&#x591A;&#x884C;&#x6587;&#x672C;&#x8FFD;&#x52A0;"><a name="cat&#x5B9E;&#x73B0;&#x591A;&#x884C;&#x6587;&#x672C;&#x8FFD;&#x52A0;" class="plugin-anchor" href="#cat&#x5B9E;&#x73B0;&#x591A;&#x884C;&#x6587;&#x672C;&#x8FFD;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>cat&#x5B9E;&#x73B0;&#x591A;&#x884C;&#x6587;&#x672C;&#x8FFD;&#x52A0;</h2>
+<pre><code>&#x6D4B;&#x8BD5;&#x6570;&#x636E;
+[yuchao-linux01 root ~]#cat chaoge.log
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><p>&#x7528;cat&#x547D;&#x4EE4;&#x8FFD;&#x52A0;2&#x884C;&#x6587;&#x672C;</p>
+<pre><code>[yuchao-linux01 root ~]#cat &gt;&gt; chaoge.log &lt;&lt;EOF
+&gt; i am sed.
+&gt; how are you.
+&gt; EOF
+[yuchao-linux01 root ~]#
+[yuchao-linux01 root ~]#cat chaoge.log
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+i am sed.
+how are you.
+</code></pre><h2 id="echo-&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6570;&#x636E;"><a name="echo-&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6570;&#x636E;" class="plugin-anchor" href="#echo-&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>echo &#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6570;&#x636E;</h2>
+<pre><code>[yuchao-linux01 root ~]#cat chaoge.log
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+i am sed.
+how are you.
+[yuchao-linux01 root ~]#
+[yuchao-linux01 root ~]#echo &quot;i fine ,thank you&quot; &gt;&gt; chaoge.log
+[yuchao-linux01 root ~]#
+[yuchao-linux01 root ~]#
+[yuchao-linux01 root ~]#cat chaoge.log
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+i am sed.
+how are you.
+i fine ,thank you
+</code></pre><p>&#x5982;&#x4F55;&#x76F4;&#x63A5;&#x5199;&#x5165;&#x6362;&#x884C;&#x7684;&#x6587;&#x672C;&#xFF1F;&#x4F7F;&#x7528;&#x6362;&#x884C;&#x7B26;&#x53F7; <code>\n</code></p>
+<p><img src="../2024-linux/image-20220408162626733.png" alt="image-20220408162626733"></p>
+<hr>
+<pre><code>echo -e &#x53C2;&#x6570;
+-e &#x5141;&#x8BB8;&#x5BF9;&#x4E0B;&#x9762;&#x5217;&#x51FA;&#x7684;&#x52A0;&#x53CD;&#x659C;&#x7EBF;&#x8F6C;&#x4E49;&#x7684;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x89E3;&#x91CA;.
+\\
+&#x53CD;&#x659C;&#x7EBF;
+\a
+&#x62A5;&#x8B66;&#x7B26;(BEL)
+\b
+&#x9000;&#x683C;&#x7B26;
+\c
+&#x7981;&#x6B62;&#x5C3E;&#x968F;&#x7684;&#x6362;&#x884C;&#x7B26;
+\f
+&#x6362;&#x9875;&#x7B26;
+\n
+&#x6362;&#x884C;&#x7B26;
+\r
+&#x56DE;&#x8F66;&#x7B26;
+\t
+&#x6C34;&#x5E73;&#x5236;&#x8868;&#x7B26;
+\v
+&#x7EB5;&#x5411;&#x5236;&#x8868;&#x7B26;
+</code></pre><p><img src="../2024-linux/image-20220408162754641.png" alt="image-20220408162754641"></p>
+<h2 id="sed&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6587;&#x672C;"><a name="sed&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6587;&#x672C;" class="plugin-anchor" href="#sed&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6587;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x8FFD;&#x52A0;&#x591A;&#x884C;&#x6587;&#x672C;</h2>
+<p>&#x65E0;&#x8BBA;&#x662F;cat&#x3001;&#x8FD8;&#x662F;echo&#xFF0C;&#x90FD;&#x53EA;&#x80FD;&#x5F80;&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x800C;sed&#x662F;&#x6309;&#x884C;&#x5904;&#x7406;&#x6587;&#x672C;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8981;&#x5904;&#x7406;&#x7684;&#x884C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5728;&#x6307;&#x5B9A;&#x884C;&#x63D2;&#x5165;&#x5B57;&#x7B26;&#x6570;&#x636E;&#x3002;</p>
+<p><img src="../2024-linux/image-20220408163402196.png" alt="image-20220408163402196"></p>
+<h2 id="&#x4FEE;&#x6539;sshdconfig&#x5B9E;&#x6218;"><a name="&#x4FEE;&#x6539;sshdconfig&#x5B9E;&#x6218;" class="plugin-anchor" href="#&#x4FEE;&#x6539;sshdconfig&#x5B9E;&#x6218;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;sshd_config&#x5B9E;&#x6218;</h2>
+<p>&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x5728;&#x7CFB;&#x7EDF;&#x521D;&#x59CB;&#x5316;&#x4F18;&#x5316;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4FEE;&#x6539;sshd&#x670D;&#x52A1;&#x7AEF;&#x8BBE;&#x7F6E;&#xFF0C;&#x9700;&#x8981;&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x591A;&#x884C;&#x914D;&#x7F6E;</p>
+<pre><code>Port 25515                                   # &#x6539;&#x7AEF;&#x53E3;
+PermitRootLogin no                   # &#x4E0D;&#x5141;&#x8BB8;root&#x767B;&#x5F55;
+PerminEmptyPasswords no         # &#x4E0D;&#x5141;&#x8BB8;&#x7A7A;&#x5BC6;&#x7801;
+UseDNS no                                    # &#x4E0D;&#x505A;&#x4E3B;&#x673A;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x52A0;&#x901F;ssh&#x8FDE;&#x63A5;
+GSSAPIAuthentication no            # &#x4E0D;&#x505A;&#x4E3B;&#x673A;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x52A0;&#x901F;ssh&#x8FDE;&#x63A5;
+</code></pre><h3 id="&#x5907;&#x4EFD;sshdconfig"><a name="&#x5907;&#x4EFD;sshdconfig" class="plugin-anchor" href="#&#x5907;&#x4EFD;sshdconfig"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5907;&#x4EFD;sshd_config</h3>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4E4B;&#x524D;&#x5148;&#x5907;&#x4EFD;&#x6E90;&#x6587;&#x4EF6;</p>
+<pre><code>[yuchao-linux01 root ~]#cp /etc/ssh/sshd_config{,.origin}
+[yuchao-linux01 root ~]#ls /etc/ssh/sshd_config*
+/etc/ssh/sshd_config  /etc/ssh/sshd_config.origin
+
+&#x7B49;&#x4E8E; cp /etc/ssh/sshd_config /etc/ssh/sshd_config.origin
+</code></pre><h3 id="sed&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="sed&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="plugin-anchor" href="#sed&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<pre><code>sed &apos;1i Port 25515\nPermitRootLogin no\nPerminEmptyPasswords no\nUseDNS no\nGSSAPIAuthentication no&apos;  chaoge.log
+</code></pre><p><img src="../2024-linux/image-20220408165343984.png" alt="image-20220408165343984"></p>
+<h1 id="sed&#x5220;&#x9664;&#x5B57;&#x7B26;&#x6570;&#x636E;"><a name="sed&#x5220;&#x9664;&#x5B57;&#x7B26;&#x6570;&#x636E;" class="plugin-anchor" href="#sed&#x5220;&#x9664;&#x5B57;&#x7B26;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5220;&#x9664;&#x5B57;&#x7B26;&#x6570;&#x636E;</h1>
+<p>&#x6211;&#x4EEC;&#x4EE5;&#x524D;&#x662F;&#x7528;vim&#x7F16;&#x8F91;&#x6587;&#x672C;&#xFF0C;&#x4E5F;&#x662F;&#x901A;&#x8FC7;d&#x547D;&#x4EE4;&#xFF0C;&#x526A;&#x5207;&#xFF08;&#x5220;&#x9664;&#xFF09;&#x6570;&#x636E;&#x3002;</p>
+<p>sed&#x5173;&#x4E8E;&#x5220;&#x9664;&#x7684;&#x547D;&#x4EE4;</p>
+<pre><code>d &#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x884C;
+d &#x547D;&#x4EE4;&#xFF0C;&#x8868;&#x793A;&#x5220;&#x9664;&#x5B57;&#x7B26;&#xFF0C;delete&#x610F;&#x601D;
+
+sed&#x9ED8;&#x8BA4;&#x662F;&#x591A;&#x884C;&#x5904;&#x7406;&#x6240;&#x6709;&#x6587;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#xFF0C;sed&#x9ED8;&#x8BA4;&#x662F;&#x5220;&#x9664;&#x6240;&#x6709;&#x6587;&#x672C;&#x884C;&#x6570;&#x636E;&#x4E86;
+</code></pre><h2 id="sed&#x547D;&#x4EE4;&#x8BED;&#x6CD5;&#xFF08;&#x8BB0;&#x5FC6;&#xFF09;"><a name="sed&#x547D;&#x4EE4;&#x8BED;&#x6CD5;&#xFF08;&#x8BB0;&#x5FC6;&#xFF09;" class="plugin-anchor" href="#sed&#x547D;&#x4EE4;&#x8BED;&#x6CD5;&#xFF08;&#x8BB0;&#x5FC6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x547D;&#x4EE4;&#x8BED;&#x6CD5;&#xFF08;&#x8BB0;&#x5FC6;&#xFF09;</h2>
+<p>sed&#x8F6F;&#x4EF6;&#x63D0;&#x4F9B;&#x7684;&#x547D;&#x4EE4;&#x5F88;&#x5F3A;&#x5927;&#xFF0C;&#x521A;&#x5F00;&#x59CB;&#x5230;&#x4E0D;&#x7528;&#x5168;&#x90E8;&#x8BB0;&#x4F4F;&#xFF0C;&#x4EE5;&#x540E;&#x9010;&#x6B65;&#x8BB0;&#x5FC6;&#x5373;&#x53EF;&#xFF0C;&#x8BB0;&#x4F4F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>sed&#x547D;&#x4EE4;&#x8BED;&#x6CD5;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3{sed-commands}</td>
+<td>&#x64CD;&#x4F5C;&#x7B2C;&#x4E09;&#x884C;</td>
+</tr>
+<tr>
+<td>3,6{sed-commands}</td>
+<td>&#x64CD;&#x4F5C;3~6&#x884C;&#xFF0C;&#x5305;&#x62EC;3&#x548C;6&#x884C;</td>
+</tr>
+<tr>
+<td>3,+5{sed-commands}</td>
+<td>&#x64CD;&#x4F5C;3&#x5230;3+5(8)&#x884C;&#xFF0C;&#x5305;&#x62EC;3,8&#x884C;</td>
+</tr>
+<tr>
+<td>1~2{sed-commands}</td>
+<td>&#x6B65;&#x957F;&#x4E3A;2&#xFF0C;&#x64CD;&#x4F5C;1,3,5,7..&#x884C;</td>
+</tr>
+<tr>
+<td>3,${sed-commands}</td>
+<td>&#x5BF9;3&#x5230;&#x672B;&#x5C3E;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5305;&#x62EC;3&#x884C;</td>
+</tr>
+<tr>
+<td>/yuchao/{sed-commands}</td>
+<td>&#x5BF9;&#x5339;&#x914D;&#x5B57;&#x7B26;yuchao&#x7684;&#x558A;&#x8BE5;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>/yuchao/,/chaoge/{sed-commands}</td>
+<td>&#x5BF9;&#x5339;&#x914D;&#x5B57;&#x7B26;yuchao&#x5230;chaoge&#x7684;&#x884C;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>/yuchao/,${sed-commands}</td>
+<td>&#x5BF9;&#x5339;&#x914D;&#x5B57;&#x7B26;yuchao&#x5230;&#x7ED3;&#x5C3E;&#x7684;&#x884C;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>/yuchao/,+2{sed-commands}</td>
+<td>&apos;/yuchao/,+2p&apos;&#xFF0C;&#x6253;&#x5370;&#x5339;&#x914D;&#x5230;yuchao&#x7684;&#x884C;&#xFF0C;&#x5305;&#x62EC;&#x5176;&#x540E;2&#x884C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sed&#x5220;&#x9664;&#x547D;&#x4EE4;&#x7EC3;&#x4E60;"><a name="sed&#x5220;&#x9664;&#x547D;&#x4EE4;&#x7EC3;&#x4E60;" class="plugin-anchor" href="#sed&#x5220;&#x9664;&#x547D;&#x4EE4;&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5220;&#x9664;&#x547D;&#x4EE4;&#x7EC3;&#x4E60;</h2>
+<p>&#x6E90;&#x6570;&#x636E;</p>
+<pre><code>[yuchao-linux01 root ~]#cat chaoge.log
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x884C;"><a name="&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x884C;</h3>
+<pre><code>sed&#x4E0D;&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x7684;&#x8BDD;&#xFF0C;&#x9ED8;&#x8BA4;&#x5339;&#x914D;&#x6240;&#x6709;&#x884C;&#xFF0C;&#x6267;&#x884C;d&#x5220;&#x9664;&#x547D;&#x4EE4;
+
+sed &apos;&#x884C;&#x53F7; d&#x547D;&#x4EE4;&apos; &#x6587;&#x4EF6;
+</code></pre><p><img src="../2024-linux/image-20220408171052195.png" alt="image-20220408171052195"></p>
+<h3 id="&#x5220;&#x9664;&#x6587;&#x4EF6;&#x7B2C;2&#x884C;"><a name="&#x5220;&#x9664;&#x6587;&#x4EF6;&#x7B2C;2&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x6587;&#x4EF6;&#x7B2C;2&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x6587;&#x4EF6;&#x7B2C;2&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;2 d&apos; chaoge.log
+My name is yuchao.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x5220;&#x9664;1&#x5230;3&#x884C;"><a name="&#x5220;&#x9664;1&#x5230;3&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;1&#x5230;3&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;1&#x5230;3&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;1,3d&apos; chaoge.log
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x5220;&#x9664;&#x7B2C;1&#x3001;2&#x3001;4&#x884C;"><a name="&#x5220;&#x9664;&#x7B2C;1&#x3001;2&#x3001;4&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x7B2C;1&#x3001;2&#x3001;4&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x7B2C;1&#x3001;2&#x3001;4&#x884C;</h3>
+<p>&#x8BED;&#x6CD5;&#x662F;&#x7528;&#x5206;&#x53F7;&#xFF0C;&#x9694;&#x5F00;&#x591A;&#x4E2A;&#x547D;&#x4EE4;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;1d;2d;4d&apos; chaoge.log
+I like play computer game.
+My website is http://www.yuchaoit.cn
+</code></pre><h2 id="&#x6B63;&#x5219;&#x4E0E;sed&#x5220;&#x9664;"><a name="&#x6B63;&#x5219;&#x4E0E;sed&#x5220;&#x9664;" class="plugin-anchor" href="#&#x6B63;&#x5219;&#x4E0E;sed&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x4E0E;sed&#x5220;&#x9664;</h2>
+<p>&#x5982;&#x679C;&#x8981;&#x7CBE;&#x786E;&#x5339;&#x914D;&#xFF0C;&#x4F60;&#x4F9D;&#x7136;&#x5199;&#x4E0B;&#x7CBE;&#x51C6;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x9519;&#x7684;&#x9009;&#x62E9;</p>
+<h3 id="&#x5220;&#x9664;game&#x7684;&#x884C;"><a name="&#x5220;&#x9664;game&#x7684;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;game&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;game&#x7684;&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;/game/d&apos; chaoge.log
+My name is yuchao.
+I teach linux.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x6B63;&#x5219;&#x5220;&#x9664;game&#x7684;&#x884C;"><a name="&#x6B63;&#x5219;&#x5220;&#x9664;game&#x7684;&#x884C;" class="plugin-anchor" href="#&#x6B63;&#x5219;&#x5220;&#x9664;game&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x5220;&#x9664;game&#x7684;&#x884C;</h3>
+<p>&#x5982;&#x4F55;&#x5339;&#x914D;game&#x5B57;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;<code>g.*e</code></p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;/g.*e/d&apos; chaoge.log
+My name is yuchao.
+I teach linux.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x5220;&#x9664;game&#x548C;http&#x7684;&#x884C;"><a name="&#x5220;&#x9664;game&#x548C;http&#x7684;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;game&#x548C;http&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;game&#x548C;http&#x7684;&#x884C;</h3>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x5220;&#x9664;&#x4E86;2&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x884C;</p>
+<pre><code>&#x8BED;&#x6CD5;&#x662F;
+[yuchao-linux01 root ~]#sed &apos;/g.*e/d;/ht*p/d&apos; chaoge.log
+My name is yuchao.
+I teach linux.
+My qq is 877348180.
+</code></pre><h3 id="&#x5220;&#x9664;game&#x5230;http&#x7684;&#x884C;"><a name="&#x5220;&#x9664;game&#x5230;http&#x7684;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;game&#x5230;http&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;game&#x5230;http&#x7684;&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;/g.*e/,/ht*p/d&apos; chaoge.log
+My name is yuchao.
+I teach linux.
+</code></pre><h3 id="&#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x884C;&#x5230;qq&#x7684;&#x884C;"><a name="&#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x884C;&#x5230;qq&#x7684;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x884C;&#x5230;qq&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x7B2C;&#x4E8C;&#x884C;&#x5230;qq&#x7684;&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;2,/qq/d&apos; chaoge.log
+My name is yuchao.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x5220;&#x9664;2&#x548C;5&#x4E24;&#x884C;"><a name="&#x5220;&#x9664;2&#x548C;5&#x4E24;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;2&#x548C;5&#x4E24;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;2&#x548C;5&#x4E24;&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;2d;5d&apos; chaoge.log
+My name is yuchao.
+I like play computer game.
+My qq is 877348180.
+</code></pre><h3 id="&#x5220;&#x9664;2&#x5230;5&#x884C;"><a name="&#x5220;&#x9664;2&#x5230;5&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;2&#x5230;5&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;2&#x5230;5&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;2,5d&apos; chaoge.log
+My name is yuchao.
+</code></pre><h3 id="&#x5220;&#x9664;3&#x5230;&#x5C3E;&#x884C;"><a name="&#x5220;&#x9664;3&#x5230;&#x5C3E;&#x884C;" class="plugin-anchor" href="#&#x5220;&#x9664;3&#x5230;&#x5C3E;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;3&#x5230;&#x5C3E;&#x884C;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;3,$d&apos; chaoge.log
+My name is yuchao.
+I teach linux.
+</code></pre><h3 id="&#x5220;&#x9664;&#x5076;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;"><a name="&#x5220;&#x9664;&#x5076;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5076;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5076;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;</h3>
+<pre><code>[yuchao-linux01 root ~]#seq 10 | sed &apos;2~2d&apos;
+1
+3
+5
+7
+9
+</code></pre><h3 id="&#x5220;&#x9664;&#x5947;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;"><a name="&#x5220;&#x9664;&#x5947;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5947;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5947;&#x6570;&#x884C;&#xFF08;&#x6B65;&#x957F;&#xFF09;</h3>
+<pre><code>[yuchao-linux01 root ~]#seq 10 | sed &apos;1~2d&apos;
+2
+4
+6
+8
+10
+</code></pre><h3 id="&#x611F;&#x53F9;&#x53F7;&#x53D6;&#x53CD;"><a name="&#x611F;&#x53F9;&#x53F7;&#x53D6;&#x53CD;" class="plugin-anchor" href="#&#x611F;&#x53F9;&#x53F7;&#x53D6;&#x53CD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x611F;&#x53F9;&#x53F7;&#x53D6;&#x53CD;</h3>
+<p>&#x611F;&#x53F9;&#x53F7;&#x5728;&#x5F88;&#x591A;&#x547D;&#x4EE4;&#x91CC;&#x90FD;&#x662F;&#x53D6;&#x53CD;&#x7684;&#x4F5C;&#x7528;&#xFF0C;sed&#x4E5F;&#x4E00;&#x6837;</p>
+<p>&#x9664;&#x4E86;&#x6709;&#x5B57;&#x7B26;yuchao&#x7684;&#x884C;&#xFF0C;&#x5176;&#x4ED6;&#x90FD;&#x5220;&#x9664;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;/yuchao/!d&apos; chaoge.log
+My name is yuchao.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x603B;&#x7ED3;"><a name="&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;</h3>
+<p>&#x5DE5;&#x4F5C;&#x91CC;&#x7528;&#x7684;&#x6700;&#x591A;&#x7684;&#x8FD8;&#x662F;&#x6307;&#x5B9A;&#x6570;&#x5B57;&#x884C;&#x53F7;&#xFF0C;&#x6216;&#x8005;&#x5B8C;&#x6574;&#x5B57;&#x7B26;&#x7CBE;&#x786E;&#x5339;&#x914D;&#xFF0C;&#x4E0D;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#x3002;</p>
+<p>&#x800C;&#x6B63;&#x5219;&#x6216;&#x662F;&#x5176;&#x4ED6;&#x6A21;&#x7CCA;&#x5339;&#x914D;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x6539;&#x9519;&#xFF0C;&#x4E86;&#x89E3;&#x5373;&#x53EF;&#x3002;</p>
+<h1 id="sed&#x4FEE;&#x6539;&#x6570;&#x636E;"><a name="sed&#x4FEE;&#x6539;&#x6570;&#x636E;" class="plugin-anchor" href="#sed&#x4FEE;&#x6539;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x4FEE;&#x6539;&#x6570;&#x636E;</h1>
+<p>&#x4FEE;&#x6539;&#x6570;&#x636E;&#xFF0C;&#x662F;&#x4E00;&#x5927;&#x91CD;&#x70B9;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;sed&#x6765;&#x4FEE;&#x6539;&#x5404;&#x79CD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;sed&#x8FD9;&#x79CD;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5728;&#x811A;&#x672C;&#x4E2D;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x5316;&#x4FEE;&#x6539;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x4FEE;&#x6539;nginx&#x7684;&#x7AEF;&#x53E3;&#xFF1B;</p>
+<p>&#x4FEE;&#x6539;mysql&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;&#xFF1B;</p>
+<h2 id="&#x66FF;&#x6362;&#x6574;&#x884C;&#x547D;&#x4EE4;&#xFF08;c&#xFF09;"><a name="&#x66FF;&#x6362;&#x6574;&#x884C;&#x547D;&#x4EE4;&#xFF08;c&#xFF09;" class="plugin-anchor" href="#&#x66FF;&#x6362;&#x6574;&#x884C;&#x547D;&#x4EE4;&#xFF08;c&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66FF;&#x6362;&#x6574;&#x884C;&#x547D;&#x4EE4;&#xFF08;c&#xFF09;</h2>
+<pre><code>c\\ &#x628A;&#x9009;&#x5B9A;&#x7684;&#x884C;&#x6539;&#x4E3A;&#x65B0;&#x7684;&#x6587;&#x672C;&#x3002;
+</code></pre><p>&#x5B9E;&#x8DF5;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;2c I teach linux,python!&apos; chaoge.log
+My name is yuchao.
+I teach linux,python!
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h2 id="&#x66FF;&#x6362;&#x5B57;&#x7B26;&#xFF08;s&#xFF09;"><a name="&#x66FF;&#x6362;&#x5B57;&#x7B26;&#xFF08;s&#xFF09;" class="plugin-anchor" href="#&#x66FF;&#x6362;&#x5B57;&#x7B26;&#xFF08;s&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66FF;&#x6362;&#x5B57;&#x7B26;&#xFF08;s&#xFF09;</h2>
+<p>&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x5360;&#x7528;&#x4E86;sed&#x4F7F;&#x7528;&#x7387;&#x7684;80%&#xFF0C;&#x57FA;&#x672C;&#x66FF;&#x6362;&#x7684;&#x529F;&#x80FD;&#x90FD;&#x662F;&#x8FD9;&#x4E2A;s&#x6307;&#x4EE4;&#x3002;</p>
+<pre><code>sed&#x66FF;&#x6362;&#x7684;&#x547D;&#x4EE4;&#x89E3;&#x91CA;
+
+sed &apos;s/&#x66FF;&#x6362;&#x524D;&#x5B57;&#x7B26;/&#x66FF;&#x6362;&#x540E;&#x5B57;&#x7B26;/g&apos; file
+
+s &#x5C06;&#x6BCF;&#x4E00;&#x884C;&#x7B2C;&#x4E00;&#x5904;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x66FF;&#x6362; s/old_string/new_string/
+
+g &#x5168;&#x5C40;&#x66FF;&#x6362;global&#xFF0C;&#x6BCF;&#x4E00;&#x884C;&#xFF0C;&#x6BCF;&#x4E00;&#x5904;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x90FD;&#x66FF;&#x6362;  s/old_string/new_string/
+
+-i &#x9009;&#x9879;&#x3001;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6587;&#x4EF6;
+
+sed&#x9ED8;&#x8BA4;&#x662F;&#x4FEE;&#x6539;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;-i&#x4F1A;&#x4FEE;&#x6539;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x6570;&#x636E;&#x3002;
+</code></pre><h3 id="sed&#x547D;&#x4EE4;s&#x7684;&#x66FF;&#x6362;&#x8BED;&#x6CD5;"><a name="sed&#x547D;&#x4EE4;s&#x7684;&#x66FF;&#x6362;&#x8BED;&#x6CD5;" class="plugin-anchor" href="#sed&#x547D;&#x4EE4;s&#x7684;&#x66FF;&#x6362;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x547D;&#x4EE4;s&#x7684;&#x66FF;&#x6362;&#x8BED;&#x6CD5;</h3>
+<pre><code>&#x5173;&#x4E8E;s&#x66FF;&#x6362;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x5982;&#x4E0B;&#x90FD;&#x53EF;&#x4EE5;
+
+sed &apos;s/old_string/new_string/g&apos; file.log
+sed &apos;s@old_string@new_string@g&apos; file.log
+
+&#x5EFA;&#x8BAE;&#x7528;&#x8FD9;&#x4E2A;#&#x53F7;&#xFF0C;&#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x4ED6;&#x7B26;&#x53F7;&#x4E5F;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#xFF0C;&#x4F8B;&#x5982; / &#xFF0C;&#x5426;&#x5219;&#x4F60;&#x5C31;&#x5F97;&#x5199;&#x8F6C;&#x4E49;&#x7B26;&#xFF0C;&#x4F60;&#x5F97;&#x75AF;&#x6389;
+sed &apos;s#old_string#new_string#g&apos; file.log
+
+&#x4F8B;&#x5982;&#x5982;&#x4E0B;&#x6076;&#x5FC3;&#x7684;&#x5199;&#x6CD5;
+&apos;s\//opt/data/\//opt/new_data/\/g&apos;
+
+&#x6539;&#x4E3A;&#x8FD9;&#x6837;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x8212;&#x670D;&#x591A;&#x4E86;&#xFF1F;
+&apos;s#/opt/data/#/opt/new_data/#g&apos;
+
+&#x8FD9;&#x4E2A;# &#x79F0;&#x4F5C;&#x8FB9;&#x754C;&#x7B26;
+</code></pre><h3 id="yuchao-&#x6539;&#x4E3A;-&#x8001;&#x4E8E;"><a name="yuchao-&#x6539;&#x4E3A;-&#x8001;&#x4E8E;" class="plugin-anchor" href="#yuchao-&#x6539;&#x4E3A;-&#x8001;&#x4E8E;"><i class="fa fa-link" aria-hidden="true"></i></a>yuchao &#x6539;&#x4E3A; &#x8001;&#x4E8E;</h3>
+<p>&#x6D4B;&#x8BD5;&#x6570;&#x636E;</p>
+<pre><code>[yuchao-linux01 root ~]#cat chaoge.log
+My name is yuchao. you can call me yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/
+[yuchao-linux01 root ~]#
+</code></pre><p>&#x4E0D;&#x52A0;g&#x66FF;&#x6362;&#x4E00;&#x6B21;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;s#yuchao#&#x8001;&#x4E8E;#&apos; chaoge.log
+My name is &#x8001;&#x4E8E;. you can call me yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.&#x8001;&#x4E8E;it.cn , and another website is https://www.yuchao.top/
+</code></pre><p>&#x52A0;&#x4E0A;g&#xFF0C;&#x5168;&#x5C40;&#x66FF;&#x6362;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;s#yuchao#&#x8001;&#x4E8E;#g&apos; chaoge.log
+My name is &#x8001;&#x4E8E;. you can call me &#x8001;&#x4E8E;.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.&#x8001;&#x4E8E;it.cn , and another website is https://www.&#x8001;&#x4E8E;.top/
+</code></pre><p>&#x52A0;&#x4E0A;-i&#x53C2;&#x6570;&#xFF0C;&#x8BA9;&#x4FEE;&#x6539;&#x52A8;&#x4F5C;&#x751F;&#x6548;&#x3002;</p>
+<pre><code>[yuchao-linux01 root ~]#sed -i  &apos;s#yuchao#&#x8001;&#x4E8E;#g&apos; chaoge.log
+</code></pre><h3 id="&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x4FEE;&#x6539;"><a name="&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x4FEE;&#x6539;" class="plugin-anchor" href="#&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x4FEE;&#x6539;</h3>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;3s#computer#&#x7535;&#x8111;#g&apos; chaoge.log
+My name is yuchao. you can call me yuchao.
+I teach linux.
+I like play &#x7535;&#x8111; game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/
+</code></pre><h3 id="&#x6240;&#x6709;&#x7684;my&#x66FF;&#x6362;&#x4E3A;his"><a name="&#x6240;&#x6709;&#x7684;my&#x66FF;&#x6362;&#x4E3A;his" class="plugin-anchor" href="#&#x6240;&#x6709;&#x7684;my&#x66FF;&#x6362;&#x4E3A;his"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6240;&#x6709;&#x7684;my&#x66FF;&#x6362;&#x4E3A;His</h3>
+<h4 id="sed&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;"><a name="sed&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;" class="plugin-anchor" href="#sed&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</h4>
+<p><img src="../2024-linux/image-20220408200234504.png" alt="image-20220408200234504"></p>
+<p>&#x66FF;&#x6362;&#x65B9;&#x6CD5;1&#xFF0C;&#x7CBE;&#x786E;&#x5339;&#x914D;&#x5B57;&#x7B26;</p>
+<pre><code>
+[yuchao-linux01 root ~]#sed &apos;s#My#his#g&apos; chaoge.log
+his name is yuchao. you can call me yuchao.
+I teach linux.
+I like play computer game.
+his qq is 877348180.
+his website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/
+</code></pre><p>&#x66FF;&#x6362;&#x65B9;&#x6CD5;2&#xFF0C;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;s#my#his#gi&apos; chaoge.log
+his name is yuchao. you can call me yuchao.
+I teach linux.
+I like play computer game.
+his qq is 877348180.
+his website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/
+</code></pre><h2 id="sed&#x8BFB;&#x53D6;&#x53D8;&#x91CF;&#xFF08;&#x66FF;&#x6362;&#x6570;&#x636E;&#xFF09;"><a name="sed&#x8BFB;&#x53D6;&#x53D8;&#x91CF;&#xFF08;&#x66FF;&#x6362;&#x6570;&#x636E;&#xFF09;" class="plugin-anchor" href="#sed&#x8BFB;&#x53D6;&#x53D8;&#x91CF;&#xFF08;&#x66FF;&#x6362;&#x6570;&#x636E;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x8BFB;&#x53D6;&#x53D8;&#x91CF;&#xFF08;&#x66FF;&#x6362;&#x6570;&#x636E;&#xFF09;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#x811A;&#x672C;&#x4E2D;sed&#x66FF;&#x6362;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x975E;&#x662F;&#x6211;&#x4EEC;&#x4EBA;&#x4E3A;&#x5199;&#x6B7B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4ECE;&#x53D8;&#x91CF;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x3002;</p>
+<pre><code>&#x6CE8;&#x610F;&#xFF0C;&#x522B;&#x5FD8;&#x4E86;
+&#x5355;&#x5F15;&#x53F7;&#x662F;&#x6240;&#x89C1;&#x5373;&#x6240;&#x5F97;
+&#x53CC;&#x5F15;&#x53F7;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#x53D8;&#x91CF;
+</code></pre><p>&#x9ED8;&#x8BA4;&#x65E0;&#x5F15;&#x53F7;&#xFF0C;&#x65E0;&#x6CD5;&#x89E3;&#x6790;&#x53D8;&#x91CF;</p>
+<pre><code>[yuchao-linux01 root ~]#sed &apos;s#yuchao#$name#g&apos; chaoge.log
+My name is $name. you can call me $name.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.$nameit.cn , and another website is https://www.$name.top/
+</code></pre><h3 id="&#x5355;&#x5F15;&#x53F7;&#x60C5;&#x51B5;&#xFF08;&#x77E5;&#x9053;&#x5373;&#x53EF;&#xFF09;"><a name="&#x5355;&#x5F15;&#x53F7;&#x60C5;&#x51B5;&#xFF08;&#x77E5;&#x9053;&#x5373;&#x53EF;&#xFF09;" class="plugin-anchor" href="#&#x5355;&#x5F15;&#x53F7;&#x60C5;&#x51B5;&#xFF08;&#x77E5;&#x9053;&#x5373;&#x53EF;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x5F15;&#x53F7;&#x60C5;&#x51B5;&#xFF08;&#x77E5;&#x9053;&#x5373;&#x53EF;&#xFF09;</h3>
+<p><img src="../2024-linux/image-20220408201138696.png" alt="image-20220408201138696"></p>
+<h3 id="&#x53CC;&#x5F15;&#x53F7;&#xFF08;&#x7528;&#x8FD9;&#x4E2A;&#xFF09;"><a name="&#x53CC;&#x5F15;&#x53F7;&#xFF08;&#x7528;&#x8FD9;&#x4E2A;&#xFF09;" class="plugin-anchor" href="#&#x53CC;&#x5F15;&#x53F7;&#xFF08;&#x7528;&#x8FD9;&#x4E2A;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53CC;&#x5F15;&#x53F7;&#xFF08;&#x7528;&#x8FD9;&#x4E2A;&#xFF09;</h3>
+<p><img src="../2024-linux/image-20220408201213293.png" alt="image-20220408201213293"></p>
+<h2 id="sed&#x5206;&#x7EC4;&#x66FF;&#x6362;"><a name="sed&#x5206;&#x7EC4;&#x66FF;&#x6362;" class="plugin-anchor" href="#sed&#x5206;&#x7EC4;&#x66FF;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5206;&#x7EC4;&#x66FF;&#x6362;</h2>
+<pre><code>&#x8BED;&#x6CD5;&#xFF1A;
+sed&#x8F6F;&#x4EF6;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86; \(\)&#x5206;&#x7EC4;&#x529F;&#x80FD;
+&#x4F7F;&#x7528;\1&#x5F15;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x62EC;&#x53F7;&#x7684;&#x6570;&#x636E;
+\2&#x5F15;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x62EC;&#x53F7;&#x7684;&#x6570;&#x636E;
+sed&#x6700;&#x591A;&#x8BB0;&#x4F4F;9&#x4E2A;&#x5206;&#x7EC4;
+</code></pre><p>&#x6D4B;&#x8BD5;&#x6570;&#x636E;</p>
+<pre><code>echo &apos;I am teacher yuchao,welcome my linux course&apos;
+</code></pre><h3 id="&#x4EC5;&#x4FDD;&#x7559;yuchao&#x5B57;&#x7B26;&#x4E32;"><a name="&#x4EC5;&#x4FDD;&#x7559;yuchao&#x5B57;&#x7B26;&#x4E32;" class="plugin-anchor" href="#&#x4EC5;&#x4FDD;&#x7559;yuchao&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC5;&#x4FDD;&#x7559;yuchao&#x5B57;&#x7B26;&#x4E32;</h3>
+<pre><code>[root@yuchao-tx-server ~]# echo &apos;I am teacher yuchao,welcome my linux course&apos; |sed &apos;s#^.*er \([a-z].*\)\,.*#\1#g&apos;
+yuchao
+</code></pre><p><img src="../2024-linux/image-20220408204437154.png" alt="image-20220408204437154"></p>
+<h3 id="sed&#x4E0E;&#x6269;&#x5C55;&#x6B63;&#x5219;"><a name="sed&#x4E0E;&#x6269;&#x5C55;&#x6B63;&#x5219;" class="plugin-anchor" href="#sed&#x4E0E;&#x6269;&#x5C55;&#x6B63;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x4E0E;&#x6269;&#x5C55;&#x6B63;&#x5219;</h3>
+<pre><code>&#x5173;&#x4E8E;&#x6B63;&#x5219;&#xFF1A;
+()&#x662F;&#x6269;&#x5C55;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7684;&#x5143;&#x5B57;&#x7B26;&#xFF0C;sed&#x8F6F;&#x4EF6;&#x9ED8;&#x8BA4;&#x4E5F;&#x53EA;&#x8BC6;&#x522B;&#x57FA;&#x672C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x6269;&#x5C55;&#x6B63;&#x5219;&#xFF0C;&#x9700;&#x8981;&#x7528;\&#x8F6C;&#x4E49;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;\(\)
+&#x6216;&#x8005;&#x4F7F;&#x7528;sed -r&#x53C2;&#x6570;&#xFF0C;&#x8BC6;&#x522B;&#x6269;&#x5C55;&#x6B63;&#x5219; &#xFF0C;&#x4E8C;&#x9009;&#x4E00;
+</code></pre><p>&#x8F6C;&#x4E49;&#x7B26;&#x4E0E;&#x6269;&#x5C55;&#x6B63;&#x5219;</p>
+<pre><code>echo &apos;I am teacher yuchao,welcome my linux course&apos; |sed &apos;s#^.*er \([a-z].*\)\,.*#\1#g&apos;
+</code></pre><p>sed -r&#x53C2;&#x6570;</p>
+<pre><code>echo &apos;I am teacher yuchao,welcome my linux course&apos; |sed  -r &apos;s#^.*er ([a-z].*)\,.*#\1#g&apos;
+</code></pre><h3 id="&#x5173;&#x4E8E;&#x6B63;&#x5219;&#x7684;&#x7406;&#x89E3;"><a name="&#x5173;&#x4E8E;&#x6B63;&#x5219;&#x7684;&#x7406;&#x89E3;" class="plugin-anchor" href="#&#x5173;&#x4E8E;&#x6B63;&#x5219;&#x7684;&#x7406;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x4E8E;&#x6B63;&#x5219;&#x7684;&#x7406;&#x89E3;</h3>
+<p>&#x6B63;&#x5219;&#x4E0D;&#x662F;&#x4E07;&#x80FD;&#x94A5;&#x5319;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x4F60;&#x638C;&#x63E1;&#x4E86;&#x5143;&#x5B57;&#x7B26;&#x7684;&#x542B;&#x4E49;&#x540E;&#xFF0C;&#x6D3B;&#x5B66;&#x6D3B;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x6B63;&#x786E;&#x7684;&#x5143;&#x5B57;&#x7B26;&#xFF0C;&#x6765;&#x5904;&#x7406;&#x5176;&#x4ED6;&#x4EFB;&#x610F;&#x53D8;&#x5316;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="&#x5206;&#x7EC4;&#x53D6;&#x51FA;ip"><a name="&#x5206;&#x7EC4;&#x53D6;&#x51FA;ip" class="plugin-anchor" href="#&#x5206;&#x7EC4;&#x53D6;&#x51FA;ip"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7EC4;&#x53D6;&#x51FA;ip</h3>
+<p>\s &#x8868;&#x793A;&#x5355;&#x4E2A;&#x7A7A;&#x683C;</p>
+<pre><code>[root@yuanlai-school ~]# ifconfig eth0 | sed -rn &apos;2s#^.*inet\s(.*)net.*#\1#p&apos;
+172.19.19.95
+</code></pre><h3 id="&#x53BB;&#x5934;&#x53BB;&#x5C3E;&#x6CD5;"><a name="&#x53BB;&#x5934;&#x53BB;&#x5C3E;&#x6CD5;" class="plugin-anchor" href="#&#x53BB;&#x5934;&#x53BB;&#x5C3E;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53BB;&#x5934;&#x53BB;&#x5C3E;&#x6CD5;</h3>
+<p>-e &#x591A;&#x6B21;&#x7F16;&#x8F91;&#xFF0C;&#x5199;&#x5165;&#x591A;&#x6B21;sed&#x547D;&#x4EE4;</p>
+<pre><code>[root@yuanlai-school ~]# ifconfig eth0 | sed -ne &apos;2s#^.*inet\s##&apos; -e &apos;2s#net.*##p&apos;
+172.19.19.95
+</code></pre><h1 id="sed&#x67E5;&#x8BE2;"><a name="sed&#x67E5;&#x8BE2;" class="plugin-anchor" href="#sed&#x67E5;&#x8BE2;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x67E5;&#x8BE2;</h1>
+<p>sed&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x5220;&#x9664;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5B66;&#x5B8C;&#x4E86;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x770B;&#x770B;sed&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x4E5F;&#x662F;&#x6BD4;&#x8F83;&#x5B9E;&#x7528;&#x7684;&#xFF0C;&#x6BD4;&#x8D77;cat&#x3001;more&#x8981;&#x65B9;&#x4FBF;&#x7684;&#x591A;&#x3002;</p>
+<pre><code>sed&#x6253;&#x5370;&#x547D;&#x4EE4;p &#x6253;&#x5370;sed&#x6B63;&#x5219;&#x5904;&#x7406;&#x540E;&#x7684;&#x6570;&#x636E;
+&#x5E76;&#x4E14;sed&#x9ED8;&#x8BA4;&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;-n&#x53D6;&#x6D88;
+
+&#x56FA;&#x5B9A;&#x7528;&#x6CD5;&#xFF0C;&#x53EA;&#x8981;&#x5B9E;&#x7528;p&#xFF0C;&#x5C31;&#x662F;&#x60F3;&#x8F93;&#x51FA;&#x6307;&#x5B9A;&#x6570;&#x636E;&#xFF0C;&#x5FC5;&#x7136;&#x7528;-n&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x6253;&#x5370;
+</code></pre><h2 id="&#x6253;&#x5370;&#x6307;&#x5B9A;&#x884C;"><a name="&#x6253;&#x5370;&#x6307;&#x5B9A;&#x884C;" class="plugin-anchor" href="#&#x6253;&#x5370;&#x6307;&#x5B9A;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6253;&#x5370;&#x6307;&#x5B9A;&#x884C;</h2>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;2p&apos; chaoge.log -n
+I teach linux.
+</code></pre><h2 id="&#x6253;&#x5370;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x884C;"><a name="&#x6253;&#x5370;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x884C;" class="plugin-anchor" href="#&#x6253;&#x5370;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6253;&#x5370;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x884C;</h2>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;1,4p&apos; chaoge.log -n
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+</code></pre><h2 id="&#x8FC7;&#x6EE4;&#x5B57;&#x7B26;&#x4E32;&#x6253;&#x5370;"><a name="&#x8FC7;&#x6EE4;&#x5B57;&#x7B26;&#x4E32;&#x6253;&#x5370;" class="plugin-anchor" href="#&#x8FC7;&#x6EE4;&#x5B57;&#x7B26;&#x4E32;&#x6253;&#x5370;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FC7;&#x6EE4;&#x5B57;&#x7B26;&#x4E32;&#x6253;&#x5370;</h2>
+<p>&#x6253;&#x5370;qq&#x90A3;&#x4E00;&#x884C;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;/qq/p&apos; chaoge.log -n
+My qq is 877348180.
+</code></pre><h2 id="&#x6307;&#x5B9A;&#x884C;&#x5230;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x533A;&#x95F4;"><a name="&#x6307;&#x5B9A;&#x884C;&#x5230;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x533A;&#x95F4;" class="plugin-anchor" href="#&#x6307;&#x5B9A;&#x884C;&#x5230;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x533A;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x884C;&#x5230;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x533A;&#x95F4;</h2>
+<p>&#x4E86;&#x89E3;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x6CA1;&#x5339;&#x914D;&#x5230;<code>/http/</code>&#x5B57;&#x7B26;&#xFF0C;&#x4F9D;&#x7136;&#x4F1A;&#x5411;&#x540E;&#x6253;&#x5370;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;3,/http/p&apos; chaoge.log -n
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h2 id="&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;"><a name="&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;" class="plugin-anchor" href="#&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;</h2>
+<p>&#x6CE8;&#x610F;&#x8BED;&#x6CD5;</p>
+<h3 id="&#x627E;&#x51FA;http&#x6216;linux&#x7684;&#x884C;"><a name="&#x627E;&#x51FA;http&#x6216;linux&#x7684;&#x884C;" class="plugin-anchor" href="#&#x627E;&#x51FA;http&#x6216;linux&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x627E;&#x51FA;http&#x6216;linux&#x7684;&#x884C;</h3>
+<p>&#x6CE8;&#x610F;&#x6269;&#x5C55;&#x6B63;&#x5219; &#x6216;&#x7B26;&#x53F7;&#xFF0C;&#x9700;&#x8981;&#x7528;-r&#x53C2;&#x6570;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed -r &apos;/linux|http/p&apos; chaoge.log  -n
+I teach linux.
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x627E;&#x51FA;http&#x5230;linux&#x7684;&#x884C;"><a name="&#x627E;&#x51FA;http&#x5230;linux&#x7684;&#x884C;" class="plugin-anchor" href="#&#x627E;&#x51FA;http&#x5230;linux&#x7684;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x627E;&#x51FA;http&#x5230;linux&#x7684;&#x884C;</h3>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4F9D;&#x7136;&#x4E0D;&#x63A8;&#x8350;&#xFF0C;&#x4E0D;&#x80FD;&#x7CBE;&#x51C6;&#x627E;&#x5230;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x6570;&#x636E;&#x884C;&#xFF0C;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;/linux/,/http/p&apos; chaoge.log  -n
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn
+</code></pre><h1 id="sed&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><a name="sed&#x5176;&#x4ED6;&#x547D;&#x4EE4;" class="plugin-anchor" href="#sed&#x5176;&#x4ED6;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5176;&#x4ED6;&#x547D;&#x4EE4;</h1>
+<h2 id="w&#x547D;&#x4EE4;"><a name="w&#x547D;&#x4EE4;" class="plugin-anchor" href="#w&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>w&#x547D;&#x4EE4;</h2>
+<p>&#x4F5C;&#x7528;&#x662F;&#x5C06;sed&#x64CD;&#x4F5C;&#x7ED3;&#x679C;&#xFF0C;&#x5199;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x4E2D;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;/linux/w linux.log&apos; chaoge.log -n
+[root@yuchao-tx-server ~]#
+[root@yuchao-tx-server ~]# cat linux.log
+I teach linux.
+</code></pre><p>&#x66FF;&#x6362;&#x6587;&#x4EF6;&#x4E2D;&#x6240;&#x6709;&#x7684;yuchao&#x4E3A;&#x8001;&#x4E8E;&#xFF0C;&#x65B0;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;yu.log</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;s#yuchao#&#x8001;&#x4E8E;#gw yu.log&apos; chaoge.log -n
+[root@yuchao-tx-server ~]#
+[root@yuchao-tx-server ~]#
+[root@yuchao-tx-server ~]# ls
+chaoge.log  linux.log  yu.log
+[root@yuchao-tx-server ~]# cat yu.log
+My name is &#x8001;&#x4E8E;.
+My website is http://www.&#x8001;&#x4E8E;it.cn
+</code></pre><h2 id="i&#x547D;&#x4EE4;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;"><a name="i&#x547D;&#x4EE4;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;" class="plugin-anchor" href="#i&#x547D;&#x4EE4;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;"><i class="fa fa-link" aria-hidden="true"></i></a>i&#x547D;&#x4EE4;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</h2>
+<p>&#x66FF;&#x6362;&#x6587;&#x4EF6;&#x4E2D;&#x6240;&#x6709;My&#x4E3A;his&#xFF0C;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;s#my#his#igp&apos; chaoge.log -n
+his name is yuchao.
+his qq is 877348180.
+his website is http://www.yuchaoit.cn
+</code></pre><h2 id="&#x83B7;&#x53D6;&#x884C;&#x53F7;"><a name="&#x83B7;&#x53D6;&#x884C;&#x53F7;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x884C;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>= &#x83B7;&#x53D6;&#x884C;&#x53F7;</h2>
+<p>sed&#x4E2D;&#x4F7F;&#x7528;&#x7279;&#x8212;&#x7B26;&#x53F7;<code>=</code> &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x884C;&#x53F7;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x597D;&#x7528;&#xFF0C;&#x548C;&#x6E90;&#x6587;&#x4EF6;&#x6570;&#x636E;&#x4E0D;&#x5728;&#x4E00;&#x884C;&#x3002;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;=&apos; chaoge.log -n
+1
+2
+3
+4
+5
+[root@yuchao-tx-server ~]#
+[root@yuchao-tx-server ~]# sed &apos;=&apos; chaoge.log
+1
+My name is yuchao.
+2
+I teach linux.
+3
+I like play computer game.
+4
+My qq is 877348180.
+5
+My website is http://www.yuchaoit.cn
+</code></pre><h3 id="&#x67E5;&#x770B;&#x5305;&#x542B;&#x4E86;www&#x5B57;&#x7B26;&#x5728;&#x54EA;&#x4E00;&#x884C;"><a name="&#x67E5;&#x770B;&#x5305;&#x542B;&#x4E86;www&#x5B57;&#x7B26;&#x5728;&#x54EA;&#x4E00;&#x884C;" class="plugin-anchor" href="#&#x67E5;&#x770B;&#x5305;&#x542B;&#x4E86;www&#x5B57;&#x7B26;&#x5728;&#x54EA;&#x4E00;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x5305;&#x542B;&#x4E86;www&#x5B57;&#x7B26;&#x5728;&#x54EA;&#x4E00;&#x884C;</h3>
+<pre><code>[root@yuchao-tx-server ~]#
+[root@yuchao-tx-server ~]# sed &apos;/www/=&apos; chaoge.log
+My name is yuchao.
+I teach linux.
+I like play computer game.
+My qq is 877348180.
+5
+My website is http://www.yuchaoit.cn
+
+&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;
+[root@yuchao-tx-server ~]# sed &apos;/www/=&apos; chaoge.log -n
+5
+</code></pre><h3 id="&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x663E;&#x793A;&#x5176;&#x884C;&#x53F7;"><a name="&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x663E;&#x793A;&#x5176;&#x884C;&#x53F7;" class="plugin-anchor" href="#&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x663E;&#x793A;&#x5176;&#x884C;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x5B9A;&#x884C;&#x53F7;&#x663E;&#x793A;&#x5176;&#x884C;&#x53F7;</h3>
+<p>&#xFF08;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x884C;&#x6570;&#xFF09;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed &apos;3=&apos; chaoge.log -n
+3
+
+&#x7528;$=&#x8868;&#x793A;&#x6587;&#x4EF6;&#x7684;&#x672B;&#x884C;&#xFF0C;&#x7EDF;&#x8BA1;&#x6587;&#x4EF6;&#x884C;&#x6570;
+[root@yuchao-tx-server ~]# sed &apos;$=&apos; chaoge.log -n
+5
+</code></pre><h1 id="sed&#x5176;&#x4ED6;&#x9009;&#x9879;"><a name="sed&#x5176;&#x4ED6;&#x9009;&#x9879;" class="plugin-anchor" href="#sed&#x5176;&#x4ED6;&#x9009;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>sed&#x5176;&#x4ED6;&#x9009;&#x9879;</h1>
+<h2 id="e&#x9009;&#x9879;"><a name="e&#x9009;&#x9879;" class="plugin-anchor" href="#e&#x9009;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>-e&#x9009;&#x9879;</h2>
+<p>-e&#x9009;&#x9879;&#x7528;&#x4E8E;&#x63A5;&#x4E0A;sed&#x591A;&#x4E2A;&#x547D;&#x4EE4;</p>
+<pre><code>[root@yuchao-tx-server ~]# sed -e &apos;4,$d&apos; chaoge.log -e &apos;s#I#you#g&apos;
+My name is yuchao.
+you teach linux.
+you like play computer game.
+</code></pre><h2 id="&#x5206;&#x53F7;"><a name="&#x5206;&#x53F7;" class="plugin-anchor" href="#&#x5206;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>; &#x5206;&#x53F7;</h2>
+<p>&#x5206;&#x53F7;&#x4E5F;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x591A;&#x6761;&#x547D;&#x4EE4;&#xFF0C;&#x548C;linux&#x57FA;&#x7840;&#x547D;&#x4EE4;&#x4E00;&#x6837;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x3002;</p>
+<pre><code>[242-yuchao-class01 root ~]#sed &apos;3,$d;s#I#&#x6211;#g&apos; chaoge.log
+My name is yuchao. you can call me yuchao.
+&#x6211; teach linux.
+</code></pre><h2 id="f-&#x6307;&#x5B9A;&#x6587;&#x4EF6;"><a name="f-&#x6307;&#x5B9A;&#x6587;&#x4EF6;" class="plugin-anchor" href="#f-&#x6307;&#x5B9A;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>-f &#x6307;&#x5B9A;&#x6587;&#x4EF6;</h2>
+<p>sed&#x4E5F;&#x652F;&#x6301;&#x628A;&#x547D;&#x4EE4;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x518D;&#x901A;&#x8FC7;-f&#x53C2;&#x6570;&#x53BB;&#x8C03;&#x7528;</p>
+<pre><code>&#x4F8B;&#x5982;
+&#x57FA;&#x672C;&#x7684;sed&#x7528;&#x6CD5;
+
+[242-yuchao-class01 root ~]#sed &apos;s#I#&#x6211;#g&apos; chaoge.log
+My name is yuchao. you can call me yuchao.
+&#x6211; teach linux.
+&#x6211; like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/
+</code></pre><p>sed&#x547D;&#x4EE4;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x6CE8;&#x610F;&#x8BED;&#x6CD5;</p>
+<pre><code>[242-yuchao-class01 root ~]#cat test1.sed
+s#I#&#x6211;#g
+[242-yuchao-class01 root ~]#
+[242-yuchao-class01 root ~]#
+[242-yuchao-class01 root ~]#sed -f test1.sed chaoge.log
+My name is yuchao. you can call me yuchao.
+&#x6211; teach linux.
+&#x6211; like play computer game.
+My qq is 877348180.
+My website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/
+</code></pre><h2 id="l-&#x547D;&#x4EE4;"><a name="l-&#x547D;&#x4EE4;" class="plugin-anchor" href="#l-&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>l &#x547D;&#x4EE4;</h2>
+<pre><code>&#x5C0F;&#x5199;&#x7684; l &#x547D;&#x4EE4;
+&#x4F5C;&#x7528;&#x662F;&#x663E;&#x793A;&#x5B57;&#x6587;&#x672C;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6BCF;&#x4E00;&#x884C;&#x7ED3;&#x5C3E;&#x7684;$&#x7B26;
+</code></pre><p>&#x7528;&#x6CD5;</p>
+<pre><code>[242-yuchao-class01 root ~]#sed &apos;l&apos; chaoge.log -n
+My name is yuchao. you can call me yuchao.$
+I teach linux.$
+I like play computer game.$
+My qq is 877348180.$
+My website is http://www.yuchaoit.cn , and another website is https:/\
+/www.yuchao.top/$
+</code></pre><p>&#x8FD9;&#x4E2A;sed&#x547D;&#x4EE4;&#xFF0C;&#x4F5C;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;cat  -E</p>
+<pre><code>cat -E &#x53C2;&#x6570;&#x4F5C;&#x7528;
+-E, --show-ends
+    display $ at end of each line
+
+
+[242-yuchao-class01 root ~]#cat -E chaoge.log
+My name is yuchao. you can call me yuchao.$
+I teach linux.$
+I like play computer game.$
+My qq is 877348180.$
+My website is http://www.yuchaoit.cn , and another website is https://www.yuchao.top/$
+</code></pre><h2 id="q-&#x547D;&#x4EE4;"><a name="q-&#x547D;&#x4EE4;" class="plugin-anchor" href="#q-&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>q &#x547D;&#x4EE4;</h2>
+<p>&#x8FD9;&#x662F;sed&#x7684;q&#x7EC8;&#x6B62;&#x547D;&#x4EE4;&#xFF1B;</p>
+<p>sed&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#x662F;</p>
+<ul>
+<li>&#x8BFB;&#x53D6;&#x6570;&#x636E; </li>
+<li>&#x6267;&#x884C;sed&#x547D;&#x4EE4;</li>
+<li>&#x6253;&#x5370;&#x7ED3;&#x679C;</li>
+<li>&#x91CD;&#x590D;&#x5FAA;&#x73AF;</li>
+</ul>
+<p>&#x56E0;&#x6B64;&#x9047;&#x89C1;q&#x547D;&#x4EE4;&#x5C31;&#x7ED3;&#x675F;sed&#x6267;&#x884C;</p>
+<pre><code>[242-yuchao-class01 root ~]#sed &apos;3q&apos; chaoge.log
+My name is yuchao. you can call me yuchao.
+I teach linux.
+I like play computer game.
+</code></pre><h3 id="&#x7279;&#x6B8A;&#x7528;&#x6CD5;&#xFF0C;q&#x547D;&#x4EE4;&#x622A;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;"><a name="&#x7279;&#x6B8A;&#x7528;&#x6CD5;&#xFF0C;q&#x547D;&#x4EE4;&#x622A;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;" class="plugin-anchor" href="#&#x7279;&#x6B8A;&#x7528;&#x6CD5;&#xFF0C;q&#x547D;&#x4EE4;&#x622A;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7279;&#x6B8A;&#x7528;&#x6CD5;&#xFF0C;q&#x547D;&#x4EE4;&#x622A;&#x53D6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</h3>
+<pre><code>&#x4F7F;&#x7528;q&#x547D;&#x4EE4;&#xFF0C;&#x5B9E;&#x73B0;head&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x63D0;&#x53D6;&#x6587;&#x4EF6;&#x524D;&#x51E0;&#x884C;&#x6570;&#x636E;
+</code></pre><p>head&#x7528;&#x6CD5;&#xFF0C;&#x63D0;&#x53D6;&#x6587;&#x4EF6;&#x524D;3&#x884C;</p>
+<pre><code>[242-yuchao-class01 root ~]#head -3 chaoge.log  &gt; h3.log
+[242-yuchao-class01 root ~]#cat h3.log
+My name is yuchao. you can call me yuchao.
+I teach linux.
+I like play computer game.
+</code></pre><p>sed&#x547D;&#x4EE4;q&#x7528;&#x6CD5;&#xFF0C;&#x4E00;&#x6837;&#x5B9E;&#x73B0;&#x622A;&#x56FE;&#x524D;3&#x884C;</p>
+<pre><code>[242-yuchao-class01 root ~]#sed &apos;3q&apos; chaoge.log &gt; sed3.log
+
+[242-yuchao-class01 root ~]#cat sed3.log
+My name is yuchao. you can call me yuchao.
+I teach linux.
+I like play computer game.
+</code></pre><h2 id="&#x5355;&#x72EC;&#x63D0;&#x53D6;124&#x884C;"><a name="&#x5355;&#x72EC;&#x63D0;&#x53D6;124&#x884C;" class="plugin-anchor" href="#&#x5355;&#x72EC;&#x63D0;&#x53D6;124&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5355;&#x72EC;&#x63D0;&#x53D6;1,2,4&#x884C;</h2>
+<p>sed&#x57FA;&#x672C;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x8303;&#x56F4;&#x53D6;&#x503C;&#xFF0C;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x884C;&#xFF0C;&#x5F97;&#x901A;&#x8FC7;&#x591A;&#x6B21;&#x6267;&#x884C;sed&#x547D;&#x4EE4;&#x5B9E;&#x73B0;</p>
+<p>&#x5206;&#x53F7;&#x5B9E;&#x73B0;</p>
+<pre><code>[242-yuchao-class01 root ~]#sed &apos;1p;2p;4p&apos; chaoge.log  -n
+My name is yuchao. you can call me yuchao.
+I teach linux.
+My qq is 877348180.
+</code></pre><p>-e&#x53C2;&#x6570;&#x5B9E;&#x73B0;</p>
+<pre><code>[242-yuchao-class01 root ~]#sed -e &apos;1p&apos; chaoge.log -e &apos;2p&apos; -e &apos;4p&apos; -n
+My name is yuchao. you can call me yuchao.
+I teach linux.
+My qq is 877348180.
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; www.bikongge.com 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4F5C;&#x8005;&#xFF1A;&#x733F;&#x6765;&#x6559;&#x80B2;
+2024-05-11 17:46:33
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3-17-sed精讲","level":"1.3.10","depth":2,"next":{"title":"3-18-1-awk进阶","level":"1.3.11","depth":2,"path":"02-系统核心服务/3-18-1-awk进阶.md","ref":"02-系统核心服务/3-18-1-awk进阶.md","articles":[]},"previous":{"title":"3-16-正则表达式和三剑客","level":"1.3.9","depth":2,"path":"02-系统核心服务/3-16-正则表达式和三剑客.md","ref":"02-系统核心服务/3-16-正则表达式和三剑客.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","theme-comscore","theme-api","hide-element","-highlight","advanced-emoji","-lunr","-search","search-pro","page-toc-button","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.bikongge.com 2024","modify_label":"作者：猿来教育"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./icon/book.ico","theme-comscore":{},"page-toc-button":{},"theme-api":{"languages":[{"lang":"python","name":"python","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"light"},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://s1.ax1x.com/2022/10/25/xRowNj.jpg"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-系统核心服务/3-17-sed精讲.md","mtime":"2024-05-11T09:46:33.295Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T07:32:03.155Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

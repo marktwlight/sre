@@ -1,0 +1,4248 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>02-4-SQL语句一 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02-5-SQL语句二.html" />
+    
+    
+    <link rel="prev" href="02-3-mysql运维核心基础.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-linux核心基础/0.html">
+            
+                <a href="../01-linux核心基础/0.html">
+            
+                    
+                    01-linux 核心基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                <a href="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                    
+                    01_Linux云计算运维工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                <a href="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                    
+                    02_运维基础重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-linux核心基础/03_计算机基础.html">
+            
+                <a href="../01-linux核心基础/03_计算机基础.html">
+            
+                    
+                    03_计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-linux核心基础/04_操作系统基础.html">
+            
+                <a href="../01-linux核心基础/04_操作系统基础.html">
+            
+                    
+                    04_操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                <a href="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                    
+                    05_Linux系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                <a href="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                    
+                    06_vmware安装Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-linux核心基础/07_Linux快速入门.html">
+            
+                <a href="../01-linux核心基础/07_Linux快速入门.html">
+            
+                    
+                    07_Linux快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                <a href="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                    
+                    08_linux文件管理篇一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                <a href="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                    
+                    09_linux文件管理篇二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-linux核心基础/10_linux用户管理.html">
+            
+                <a href="../01-linux核心基础/10_linux用户管理.html">
+            
+                    
+                    10_linux用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-linux核心基础/11_远程连接linux.html">
+            
+                <a href="../01-linux核心基础/11_远程连接linux.html">
+            
+                    
+                    11_远程连接linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-linux核心基础/12_linux权限管理.html">
+            
+                <a href="../01-linux核心基础/12_linux权限管理.html">
+            
+                    
+                    12_linux权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                <a href="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                    
+                    13_linux基础服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                <a href="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                    
+                    14_linux进程与资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                <a href="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                    
+                    15_YUM与开源项目（Web运维）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-linux核心基础/16_计算机网络.html">
+            
+                <a href="../01-linux核心基础/16_计算机网络.html">
+            
+                    
+                    16_计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                <a href="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                    
+                    17_如果让你来设计网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                <a href="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                    
+                    18_OSI模型与TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                <a href="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                    
+                    19_Vmware网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-linux核心基础/20_centos网络配置.html">
+            
+                <a href="../01-linux核心基础/20_centos网络配置.html">
+            
+                    
+                    20_centos网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-系统核心服务/00.html">
+            
+                <a href="../02-系统核心服务/00.html">
+            
+                    
+                    02-系统核心服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-系统核心服务/3-0-Linux重要命令.html">
+            
+                <a href="../02-系统核心服务/3-0-Linux重要命令.html">
+            
+                    
+                    3-0-Linux重要命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-系统核心服务/3-1-软件包管理.html">
+            
+                <a href="../02-系统核心服务/3-1-软件包管理.html">
+            
+                    
+                    3-1-软件包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-系统核心服务/3-10-黄金web架构之LAMP.html">
+            
+                <a href="../02-系统核心服务/3-10-黄金web架构之LAMP.html">
+            
+                    
+                    3-10-黄金web架构之LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-系统核心服务/3-11-磁盘管理.html">
+            
+                <a href="../02-系统核心服务/3-11-磁盘管理.html">
+            
+                    
+                    3-11-磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-系统核心服务/3-12-磁盘管理二.html">
+            
+                <a href="../02-系统核心服务/3-12-磁盘管理二.html">
+            
+                    
+                    3-12-磁盘管理二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-系统核心服务/3-13-Raid磁盘冗余阵列.html">
+            
+                <a href="../02-系统核心服务/3-13-Raid磁盘冗余阵列.html">
+            
+                    
+                    3-13-Raid磁盘冗余阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02-系统核心服务/3-14-lvm逻辑卷管理.html">
+            
+                <a href="../02-系统核心服务/3-14-lvm逻辑卷管理.html">
+            
+                    
+                    3-14-lvm逻辑卷管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02-系统核心服务/3-15-通配符和特殊符号.html">
+            
+                <a href="../02-系统核心服务/3-15-通配符和特殊符号.html">
+            
+                    
+                    3-15-通配符和特殊符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02-系统核心服务/3-16-正则表达式和三剑客.html">
+            
+                <a href="../02-系统核心服务/3-16-正则表达式和三剑客.html">
+            
+                    
+                    3-16-正则表达式和三剑客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02-系统核心服务/3-17-sed精讲.html">
+            
+                <a href="../02-系统核心服务/3-17-sed精讲.html">
+            
+                    
+                    3-17-sed精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02-系统核心服务/3-18-1-awk进阶.html">
+            
+                <a href="../02-系统核心服务/3-18-1-awk进阶.html">
+            
+                    
+                    3-18-1-awk进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02-系统核心服务/3-18-awk精讲.html">
+            
+                <a href="../02-系统核心服务/3-18-awk精讲.html">
+            
+                    
+                    3-18-awk精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../02-系统核心服务/3-19-正则练习题.html">
+            
+                <a href="../02-系统核心服务/3-19-正则练习题.html">
+            
+                    
+                    3-19-正则练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../02-系统核心服务/3-2-yum精讲.html">
+            
+                <a href="../02-系统核心服务/3-2-yum精讲.html">
+            
+                    
+                    3-2-yum精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../02-系统核心服务/3-20-sed练习题.html">
+            
+                <a href="../02-系统核心服务/3-20-sed练习题.html">
+            
+                    
+                    3-20-sed练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../02-系统核心服务/3-21-awk练习题.html">
+            
+                <a href="../02-系统核心服务/3-21-awk练习题.html">
+            
+                    
+                    3-21-awk练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../02-系统核心服务/3-22-什么是Shell.html">
+            
+                <a href="../02-系统核心服务/3-22-什么是Shell.html">
+            
+                    
+                    3-22-什么是Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../02-系统核心服务/3-23-Shell快速入门.html">
+            
+                <a href="../02-系统核心服务/3-23-Shell快速入门.html">
+            
+                    
+                    3-23-Shell快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../02-系统核心服务/3-3-SSH远程安全登录.html">
+            
+                <a href="../02-系统核心服务/3-3-SSH远程安全登录.html">
+            
+                    
+                    3-3-SSH远程安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../02-系统核心服务/3-4-Rsync数据同步服务.html">
+            
+                <a href="../02-系统核心服务/3-4-Rsync数据同步服务.html">
+            
+                    
+                    3-4-Rsync数据同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../02-系统核心服务/3-5-Inotify实时数据同步.html">
+            
+                <a href="../02-系统核心服务/3-5-Inotify实时数据同步.html">
+            
+                    
+                    3-5-Inotify实时数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../02-系统核心服务/3-6-文件共享服务之FTP.html">
+            
+                <a href="../02-系统核心服务/3-6-文件共享服务之FTP.html">
+            
+                    
+                    3-6-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../02-系统核心服务/3-7-文件共享服务之Samba.html">
+            
+                <a href="../02-系统核心服务/3-7-文件共享服务之Samba.html">
+            
+                    
+                    3-7-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../02-系统核心服务/3-8文件共享服务之NFS.html">
+            
+                <a href="../02-系统核心服务/3-8文件共享服务之NFS.html">
+            
+                    
+                    3-8文件共享服务之NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../02-系统核心服务/3-9-域名管理系统之DNS.html">
+            
+                <a href="../02-系统核心服务/3-9-域名管理系统之DNS.html">
+            
+                    
+                    3-9-域名管理系统之DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-网站集群架构/0.html">
+            
+                <a href="../03-网站集群架构/0.html">
+            
+                    
+                    03-网站集群架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                <a href="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                    
+                    00-淘宝网的十年架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-网站集群架构/01-综合架构开篇.html">
+            
+                <a href="../03-网站集群架构/01-综合架构开篇.html">
+            
+                    
+                    01-综合架构开篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                <a href="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                    
+                    02-综合架构环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                <a href="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                    
+                    03-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                <a href="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                    
+                    04-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-网站集群架构/05-备份工具rsync.html">
+            
+                <a href="../03-网站集群架构/05-备份工具rsync.html">
+            
+                    
+                    05-备份工具rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-网站集群架构/06-备份任务实战.html">
+            
+                <a href="../03-网站集群架构/06-备份任务实战.html">
+            
+                    
+                    06-备份任务实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                <a href="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                    
+                    07-共享存储服务NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-网站集群架构/08-实时同步数据.html">
+            
+                <a href="../03-网站集群架构/08-实时同步数据.html">
+            
+                    
+                    08-实时同步数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03-网站集群架构/09-SSH安全登录.html">
+            
+                <a href="../03-网站集群架构/09-SSH安全登录.html">
+            
+                    
+                    09-SSH安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03-网站集群架构/10--SSH进阶.html">
+            
+                <a href="../03-网站集群架构/10--SSH进阶.html">
+            
+                    
+                    10--SSH进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                <a href="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                    
+                    11-运维自动化Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                <a href="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                    
+                    12-Ansible-playbook剧本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                <a href="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                    
+                    13-Ansible-playbook剧本进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../03-网站集群架构/14-ansible-role角色.html">
+            
+                <a href="../03-网站集群架构/14-ansible-role角色.html">
+            
+                    
+                    14-ansible-role角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                <a href="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                    
+                    20-用户访问网站原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                <a href="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                    
+                    21-静态资源加速cdn篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../03-网站集群架构/22-web通信协议篇.html">
+            
+                <a href="../03-网站集群架构/22-web通信协议篇.html">
+            
+                    
+                    22-web通信协议篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                <a href="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                    
+                    23-1-nginx虚拟主机实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../03-网站集群架构/23-nginx基础篇.html">
+            
+                <a href="../03-网站集群架构/23-nginx基础篇.html">
+            
+                    
+                    23-nginx基础篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../03-网站集群架构/24-nginx高级篇.html">
+            
+                <a href="../03-网站集群架构/24-nginx高级篇.html">
+            
+                    
+                    24-nginx高级篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                <a href="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                    
+                    25-LNMP黄金架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../03-网站集群架构/26-网站集群拆分.html">
+            
+                <a href="../03-网站集群架构/26-网站集群拆分.html">
+            
+                    
+                    26-网站集群拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                <a href="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                    
+                    27-1-负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                <a href="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                    
+                    27-高性能负载均衡集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../03-网站集群架构/28-HTTPS.html">
+            
+                <a href="../03-网站集群架构/28-HTTPS.html">
+            
+                    
+                    28-HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                <a href="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                    
+                    29-keepalived高可用性负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../03-网站集群架构/30-部署Python网站.html">
+            
+                <a href="../03-网站集群架构/30-部署Python网站.html">
+            
+                    
+                    30-部署Python网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../03-网站集群架构/31-jumpserver实战.html">
+            
+                <a href="../03-网站集群架构/31-jumpserver实战.html">
+            
+                    
+                    31-jumpserver实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                <a href="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                    
+                    32-期中综合架构验收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-shell编程/0.html">
+            
+                <a href="../04-shell编程/0.html">
+            
+                    
+                    04-shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-shell编程/01-shell基础概述.html">
+            
+                <a href="../04-shell编程/01-shell基础概述.html">
+            
+                    
+                    01-Shell基础概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-shell编程/02-shell变量.html">
+            
+                <a href="../04-shell编程/02-shell变量.html">
+            
+                    
+                    02-Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../04-shell编程/03-条件判断.html">
+            
+                <a href="../04-shell编程/03-条件判断.html">
+            
+                    
+                    03-条件判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../04-shell编程/04-流程控制之if.html">
+            
+                <a href="../04-shell编程/04-流程控制之if.html">
+            
+                    
+                    04-流程控制之if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../04-shell编程/05-流程控制之case.html">
+            
+                <a href="../04-shell编程/05-流程控制之case.html">
+            
+                    
+                    05-流程控制之case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                <a href="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                    
+                    06-流程控制之for循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../04-shell编程/07-流程控制之while循环.html">
+            
+                <a href="../04-shell编程/07-流程控制之while循环.html">
+            
+                    
+                    07-流程控制之while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../04-shell编程/08-循环控制.html">
+            
+                <a href="../04-shell编程/08-循环控制.html">
+            
+                    
+                    08-循环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../04-shell编程/09-shell函数.html">
+            
+                <a href="../04-shell编程/09-shell函数.html">
+            
+                    
+                    09-Shell函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../04-shell编程/10-shell数组.html">
+            
+                <a href="../04-shell编程/10-shell数组.html">
+            
+                    
+                    10-Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../04-shell编程/脚本练习题库.html">
+            
+                <a href="../04-shell编程/脚本练习题库.html">
+            
+                    
+                    脚本练习题库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-监控系统/00.html">
+            
+                <a href="../05-监控系统/00.html">
+            
+                    
+                    05-监控系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-监控系统/00-监控系统.html">
+            
+                <a href="../05-监控系统/00-监控系统.html">
+            
+                    
+                    00-监控系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-监控系统/01-监控体系理论.html">
+            
+                <a href="../05-监控系统/01-监控体系理论.html">
+            
+                    
+                    01-监控体系理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-监控系统/02-zabbix安装部署.html">
+            
+                <a href="../05-监控系统/02-zabbix安装部署.html">
+            
+                    
+                    02-zabbix安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                <a href="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                    
+                    03-zabbix如何监控服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-监控系统/04-1-微信报警.html">
+            
+                <a href="../05-监控系统/04-1-微信报警.html">
+            
+                    
+                    04-1-微信报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-监控系统/04-2-钉钉报警.html">
+            
+                <a href="../05-监控系统/04-2-钉钉报警.html">
+            
+                    
+                    04-2-钉钉报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-监控系统/04-自定义监控项.html">
+            
+                <a href="../05-监控系统/04-自定义监控项.html">
+            
+                    
+                    04-自定义监控项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-监控系统/05-自定义监控模板.html">
+            
+                <a href="../05-监控系统/05-自定义监控模板.html">
+            
+                    
+                    05-自定义监控模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-监控系统/06-1-nginx监控.html">
+            
+                <a href="../05-监控系统/06-1-nginx监控.html">
+            
+                    
+                    06-1-nginx监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-监控系统/06-2-php监控.html">
+            
+                <a href="../05-监控系统/06-2-php监控.html">
+            
+                    
+                    06-2-php监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../05-监控系统/06-3-mysql监控.html">
+            
+                <a href="../05-监控系统/06-3-mysql监控.html">
+            
+                    
+                    06-3-mysql监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../05-监控系统/06-4-redis监控.html">
+            
+                <a href="../05-监控系统/06-4-redis监控.html">
+            
+                    
+                    06-4-redis监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../05-监控系统/06-5-tomcat监控.html">
+            
+                <a href="../05-监控系统/06-5-tomcat监控.html">
+            
+                    
+                    06-5-tomcat监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                <a href="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                    
+                    06-6-模拟登录之web监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                <a href="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                    
+                    06-zabbix监控核心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                <a href="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                    
+                    07-1-zabbix-agent修改主动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                <a href="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                    
+                    07-2-zabbix自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                <a href="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                    
+                    07-3-zabbix自动注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../05-监控系统/07-zabbix工作模式.html">
+            
+                <a href="../05-监控系统/07-zabbix工作模式.html">
+            
+                    
+                    07-zabbix工作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                <a href="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                    
+                    08-zabbix分布式proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../06-敏捷开发流水线/00.html">
+            
+                <a href="../06-敏捷开发流水线/00.html">
+            
+                    
+                    06-敏捷开发流水线
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                <a href="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                    
+                    00-版本控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-敏捷开发流水线/01-git工具.html">
+            
+                <a href="../06-敏捷开发流水线/01-git工具.html">
+            
+                    
+                    01-git工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                <a href="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                    
+                    02-git与gitee码云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                <a href="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                    
+                    03-gitlab私有仓库搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-敏捷开发流水线/04-jenkins.html">
+            
+                <a href="../06-敏捷开发流水线/04-jenkins.html">
+            
+                    
+                    04-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                <a href="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                    
+                    05-jenkins结合远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                <a href="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                    
+                    06-自动化发布静态页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                <a href="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                    
+                    07-SonarQube代码质量扫描工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                <a href="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                    
+                    08-jenkins发布Java项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                <a href="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                    
+                    09-jenkins流水线pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    07-数据库运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="02-1-数据库基础知识.html">
+            
+                <a href="02-1-数据库基础知识.html">
+            
+                    
+                    02-1-数据库基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="02-10-主从复制高级.html">
+            
+                <a href="02-10-主从复制高级.html">
+            
+                    
+                    02-10-主从复制高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="02-11-高可用集群MHA方案.html">
+            
+                <a href="02-11-高可用集群MHA方案.html">
+            
+                    
+                    02-11-高可用集群MHA方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="02-2-mysql基础实践.html">
+            
+                <a href="02-2-mysql基础实践.html">
+            
+                    
+                    02-2-mysql基础实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="02-3-mysql运维核心基础.html">
+            
+                <a href="02-3-mysql运维核心基础.html">
+            
+                    
+                    02-3-mysql运维核心基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.6" data-path="02-4-SQL语句一.html">
+            
+                <a href="02-4-SQL语句一.html">
+            
+                    
+                    02-4-SQL语句一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="02-5-SQL语句二.html">
+            
+                <a href="02-5-SQL语句二.html">
+            
+                    
+                    02-5-SQL语句二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="02-6-mysql备份方案.html">
+            
+                <a href="02-6-mysql备份方案.html">
+            
+                    
+                    02-6-mysql备份方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="02-7-mysql备份实战.html">
+            
+                <a href="02-7-mysql备份实战.html">
+            
+                    
+                    02-7-mysql备份实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="02-8-xtrabackup备份工具.html">
+            
+                <a href="02-8-xtrabackup备份工具.html">
+            
+                    
+                    02-8-xtrabackup备份工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="02-9-主从复制架构.html">
+            
+                <a href="02-9-主从复制架构.html">
+            
+                    
+                    02-9-主从复制架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="02-DBA之路.html">
+            
+                <a href="02-DBA之路.html">
+            
+                    
+                    02-DBA之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../08-缓存redis/00.html">
+            
+                <a href="../08-缓存redis/00.html">
+            
+                    
+                    08-缓存 redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                <a href="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                    
+                    01-redis部署与数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../08-缓存redis/02-redis数据类型篇.html">
+            
+                <a href="../08-缓存redis/02-redis数据类型篇.html">
+            
+                    
+                    02-redis数据类型篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                <a href="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                    
+                    03-redis数据持久化篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../08-缓存redis/04-redis安全篇.html">
+            
+                <a href="../08-缓存redis/04-redis安全篇.html">
+            
+                    
+                    04-redis安全篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../08-缓存redis/05-redis主从复制篇.html">
+            
+                <a href="../08-缓存redis/05-redis主从复制篇.html">
+            
+                    
+                    05-redis主从复制篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                <a href="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                    
+                    06-redis高可用哨兵篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                <a href="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                    
+                    07-reids分片技术cluster篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../08-缓存redis/08-redis自动化安装.html">
+            
+                <a href="../08-缓存redis/08-redis自动化安装.html">
+            
+                    
+                    08-redis自动化安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../08-缓存redis/09-redis实战技巧.html">
+            
+                <a href="../08-缓存redis/09-redis实战技巧.html">
+            
+                    
+                    09-redis实战技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../09-java运维/00.html">
+            
+                <a href="../09-java运维/00.html">
+            
+                    
+                    09-java 运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09-java运维/01-Tomcat.html">
+            
+                <a href="../09-java运维/01-Tomcat.html">
+            
+                    
+                    01-Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10-云原生容器编排/00.html">
+            
+                <a href="../10-云原生容器编排/00.html">
+            
+                    
+                    10-云原生容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10-云原生容器编排/docker-all/00.html">
+            
+                <a href="../10-云原生容器编排/docker-all/00.html">
+            
+                    
+                    docker-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                <a href="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                    
+                    01_docker技术详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                <a href="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                    
+                    02_docker安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                <a href="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                    
+                    03_docker存储与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                <a href="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                    
+                    04_dockerfile构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                <a href="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                    
+                    05-企业级私有仓库Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                <a href="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                    
+                    06-docker网络模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.7" data-path="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                <a href="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                    
+                    07-docker容器单机编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.8" data-path="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                <a href="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                    
+                    08-docker容器跨主机通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.9" data-path="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                <a href="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                    
+                    09-docker综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.10" data-path="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                <a href="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                    
+                    10-容器化部署案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.11" data-path="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                <a href="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                    
+                    11-容器监控方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10-云原生容器编排/iptables/00.html">
+            
+                <a href="../10-云原生容器编排/iptables/00.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                <a href="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                    
+                    00-iptables防火墙安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                <a href="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                    
+                    01-iptables命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10-云原生容器编排/kvm-all/00.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/00.html">
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                    
+                    01-kvm虚拟化实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                    
+                    02-kvm进阶实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10-云原生容器编排/k8s-all/00.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00.html">
+            
+                    
+                    k8s-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" data-path="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                    
+                    00_k8s容器编排系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.2" data-path="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                    
+                    01_kubeadm安装k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.3" data-path="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                    
+                    02_k8s资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.4" data-path="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                    
+                    03_pod详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.5" data-path="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                    
+                    04_pod控制器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.6" data-path="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                    
+                    05-k8s网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.7" data-path="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                    
+                    06-k8s数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.8" data-path="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                    
+                    07-k8s配置文件管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.9" data-path="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                    
+                    08-dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.10" data-path="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                    
+                    09-prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11-mongodb/0.html">
+            
+                <a href="../11-mongodb/0.html">
+            
+                    
+                    11-mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11-mongodb/01-mongodb安装.html">
+            
+                <a href="../11-mongodb/01-mongodb安装.html">
+            
+                    
+                    01-mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11-mongodb/02-mongodb增删改查.html">
+            
+                <a href="../11-mongodb/02-mongodb增删改查.html">
+            
+                    
+                    02-mongodb增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                <a href="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                    
+                    03-mongodb基于角色的访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../11-mongodb/04-副本集replicaSet.html">
+            
+                <a href="../11-mongodb/04-副本集replicaSet.html">
+            
+                    
+                    04-副本集replicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../11-mongodb/05-mongodb备份恢复.html">
+            
+                <a href="../11-mongodb/05-mongodb备份恢复.html">
+            
+                    
+                    05-mongodb备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12-zookeeper/0.html">
+            
+                <a href="../12-zookeeper/0.html">
+            
+                    
+                    12-zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12-zookeeper/01-zookeeper.html">
+            
+                <a href="../12-zookeeper/01-zookeeper.html">
+            
+                    
+                    01-zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12-zookeeper/02-zk实践操作.html">
+            
+                <a href="../12-zookeeper/02-zk实践操作.html">
+            
+                    
+                    02-zk实践操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                <a href="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                    
+                    03-python-API开发zk客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13-kafka/0.html">
+            
+                <a href="../13-kafka/0.html">
+            
+                    
+                    13-kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13-kafka/01-kafka基础.html">
+            
+                <a href="../13-kafka/01-kafka基础.html">
+            
+                    
+                    01-kafka基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13-kafka/02-kafka集群.html">
+            
+                <a href="../13-kafka/02-kafka集群.html">
+            
+                    
+                    02-kafka集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14-ELK/0.html">
+            
+                <a href="../14-ELK/0.html">
+            
+                    
+                    14-ELK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14-ELK/01-elasticSearch.html">
+            
+                <a href="../14-ELK/01-elasticSearch.html">
+            
+                    
+                    01-elasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14-ELK/02-ES集群.html">
+            
+                <a href="../14-ELK/02-ES集群.html">
+            
+                    
+                    02-ES集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14-ELK/03-ES进阶.html">
+            
+                <a href="../14-ELK/03-ES进阶.html">
+            
+                    
+                    03-ES进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14-ELK/04-ES备份恢复.html">
+            
+                <a href="../14-ELK/04-ES备份恢复.html">
+            
+                    
+                    04-ES备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14-ELK/05-EBLK日志收集方案.html">
+            
+                <a href="../14-ELK/05-EBLK日志收集方案.html">
+            
+                    
+                    05-EBLK日志收集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                <a href="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                    
+                    06-ELK收集主流应用日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14-ELK/07-filebeat实战.html">
+            
+                <a href="../14-ELK/07-filebeat实战.html">
+            
+                    
+                    07-filebeat实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15-阿里云/0.html">
+            
+                <a href="../15-阿里云/0.html">
+            
+                    
+                    15-阿里云
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15-阿里云/01-阿里云实战.html">
+            
+                <a href="../15-阿里云/01-阿里云实战.html">
+            
+                    
+                    01-阿里云实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                <a href="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                    
+                    02-阿里云数据库RDS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                <a href="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                    
+                    03-阿里云负载均衡SLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15-阿里云/04-阿里云NAS.html">
+            
+                <a href="../15-阿里云/04-阿里云NAS.html">
+            
+                    
+                    04-阿里云NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15-阿里云/05-阿里云Redis.html">
+            
+                <a href="../15-阿里云/05-阿里云Redis.html">
+            
+                    
+                    05-阿里云Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15-阿里云/06-ACK.html">
+            
+                <a href="../15-阿里云/06-ACK.html">
+            
+                    
+                    06-ACK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                <a href="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                    
+                    07-阿里云ACK实践部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                <a href="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                    
+                    08-阿里云ACK部署mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >02-4-SQL语句一</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="02-4-sql&#x8BED;&#x53E5;&#x4E00;"><a name="02-4-sql&#x8BED;&#x53E5;&#x4E00;" class="plugin-anchor" href="#02-4-sql&#x8BED;&#x53E5;&#x4E00;"><i class="fa fa-link" aria-hidden="true"></i></a>02-4-SQL&#x8BED;&#x53E5;&#x4E00;</h1>
+<p>SQL&#x7EC3;&#x4E60;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x5BFC;&#x5165;&#x8D85;&#x54E5;&#x51C6;&#x5907;&#x597D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code>https://github.com/datacharmer/test_db   &#x968F;&#x610F;&#x5BFC;&#x5165;&#xFF0C;&#x7EC3;&#x4E60;SQL&#x73A9;&#x6CD5;
+
+
+&#x8FD8;&#x6709;&#x4E2A; yuanlai_mysql.sql
+</code></pre><h1 id="1mysql&#x6838;&#x5FC3;sql&#x8BED;&#x53E5;"><a name="1mysql&#x6838;&#x5FC3;sql&#x8BED;&#x53E5;" class="plugin-anchor" href="#1mysql&#x6838;&#x5FC3;sql&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.MySQl&#x6838;&#x5FC3;SQL&#x8BED;&#x53E5;</h1>
+<p>SQL&#xFF0C;&#x82F1;&#x6587;&#x5168;&#x79F0;&#x4E3A;Structured Query Language&#xFF0C;&#x4E2D;&#x6587;&#x610F;&#x601D;&#x662F;&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x5BF9;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x548C;&#x64CD;&#x4F5C;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x662F;&#x5927;&#x591A;&#x6570;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x6240;&#x652F;&#x6301;&#x7684;&#x5DE5;&#x4E1A;&#x6807;&#x51C6;&#x8BED;&#x8A00;&#x3002;</p>
+<p>&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x548C;bash&#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x8981;&#x9075;&#x5FAA;bash&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x5BF9;linux&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FDB;&#x884C;&#x589E;&#x5220;&#x6539;&#x67E5;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;mysql&#x8FD9;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x7BA1;&#x7406;&#xFF0C;&#x5C31;&#x5F97;&#x9075;&#x5FAA;SQL&#x4E13;&#x95E8;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x66F4;&#x65B0;&#x3001;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x5E93;&#x5185;&#x5BB9;&#x3002;</p>
+<p>SQL&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x4E0D;&#x7528;&#x5173;&#x6CE8;&#x6570;&#x636E;&#x5230;&#x5E95;&#x662F;&#x600E;&#x4E48;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x9AD8;&#x7EA7;SQL&#x8BED;&#x8A00;&#xFF0C;&#x80FD;&#x591F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x5BF9;&#x6570;&#x636E;&#x7BA1;&#x7406;&#xFF0C;&#x4EE5;&#x53CA;&#x5F3A;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;SQL&#x4F1A;&#x6709;&#x4E9B;&#x5DEE;&#x522B;&#x3002;</p>
+<pre><code>&#x7528;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;mysql&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x4E2D;&#x4E13;&#x6709;&#x7684;&#x67E5;&#x6570;&#x636E;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x53EB;&#x505A;&#x7ED3;&#x6784;&#x5316;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x3002;
+</code></pre><h1 id="2&#x6709;&#x5173;sql&#x7684;&#x5206;&#x7C7B;"><a name="2&#x6709;&#x5173;sql&#x7684;&#x5206;&#x7C7B;" class="plugin-anchor" href="#2&#x6709;&#x5173;sql&#x7684;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x6709;&#x5173;SQL&#x7684;&#x5206;&#x7C7B;</h1>
+<p><img src="../2024-linux/image-20210415221416415.png" alt="image-20210415221416415" style="zoom:25%;"></p>
+<pre><code>DDL&#x6570;&#x636E;&#x5B9A;&#x4E49;&#xFF0C;&#x5168;&#x79F0;&#x4E3A;Data Definition Language
+
+DQL&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF0C;DQL&#xFF0C;&#x5168;&#x79F0;&#x4E3A;Data Query Language
+
+DCL&#x6388;&#x6743;&#x63A7;&#x5236;,&#x5168;&#x79F0;&#x4E3A;Data Control Language
+
+DML&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;&#xFF0C;DML&#xFF0C;&#x5168;&#x79F0;&#x4E3A;Data Manipulation Language&#xFF0C;&#x4E2D;&#x6587;&#x4E3A;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;
+</code></pre><h2 id="dql&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;"><a name="dql&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;" class="plugin-anchor" href="#dql&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>DQL&#x6570;&#x636E;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;</h2>
+<p>DQL&#xFF0C;&#x5168;&#x79F0;&#x4E3A;Data Query Language&#xFF0C;&#x5176;&#x8BED;&#x53E5;&#x4E5F;&#x79F0;&#x4E3A;&#x201C;&#x6570;&#x636E;&#x68C0;&#x7D22;&#x8BED;&#x53E5;&#x201D;&#xFF0C;&#x4F5C;&#x7528;&#x662F;<code>&#x4ECE;&#x8868;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x786E;&#x5B9A;&#x6570;&#x636E;&#x5E94;&#x600E;&#x6837;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7ED9;&#x51FA;&#x3002;</code></p>
+<p>&#x5173;&#x952E;&#x5B57;SELECT&#x662F;DQL&#xFF08;&#x4E5F;&#x662F;&#x6240;&#x6709;SQL&#xFF09;&#x7528;&#x5F97;&#x6700;&#x591A;&#x7684;&#xFF0C;&#x5176;&#x4ED6;DQL&#x5E38;&#x7528;&#x7684;&#x4FDD;&#x7559;&#x5B57;&#x6709;WHERE&#x3001;ORDER BY&#x3001;GROUP BY&#x548C;HAVING&#x3002;&#x8FD9;&#x4E9B;&#x5355;&#x8BCD;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8FD9;&#x4E00;&#x8282;&#x8981;&#x5B66;&#x4E60;&#x7684;SQL&#x8BED;&#x53E5;&#xFF0C;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;DQL&#x4FDD;&#x7559;&#x5B57;&#x5E38;&#x4E0E;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;SQL&#x8BED;&#x53E5;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;&#x5177;&#x4F53;&#x8BED;&#x53E5;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-sql"># &#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;
+[root@mysql-server56 ~]#
+[root@mysql-server56 ~]# mysql -S /data/3307/mysql.sock
+ERROR 1045 (28000): Access denied for user &apos;root&apos;@&apos;localhost&apos; (using password: NO)
+[root@mysql-server56 ~]# mysql -pyuchao7777 -S /data/3307/mysql.sock
+Warning: Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.6.40-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+# &#x8FD9;&#x53E5;SQL&#x7FFB;&#x8BD1;&#x662F;&#x4ECE;mysql&#x5E93;&#x4E0B;&#x7684;user&#x8868;&#xFF0C;&#x67E5;&#x8BE2;user&#x3001;host&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;&#x3001;&#x4E14;&#x5BF9;user&#x6392;&#x5E8F;
+# &#x8FD9;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x7528;excel&#x4E00;&#x6837;
+mysql&gt; select user,host from mysql.user order by user;
++------+----------------+
+| user | host           |
++------+----------------+
+|      | localhost      |
+|      | mysql-server56 |
+| root | localhost      |
+| root | mysql-server56 |
+| root | 127.0.0.1      |
+| root | ::1            |
+| root | %              |
++------+----------------+
+7 rows in set (0.00 sec)
+</code></pre>
+<h2 id="dml&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;"><a name="dml&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;" class="plugin-anchor" href="#dml&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>DML&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;</h2>
+<p>DML&#xFF0C;&#x5168;&#x79F0;&#x4E3A;Data Manipulation Language&#xFF0C;&#x4E2D;&#x6587;&#x4E3A;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;&#x3002;</p>
+<p>&#x5176;&#x8BED;&#x53E5;&#x7684;&#x5173;&#x952E;&#x5B57;&#x4E3A;INSERT&#x3001;UPDATE&#x548C;DELETE&#x3002;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x7528;&#x4E8E;&#x6DFB;&#x52A0;&#x3001;&#x4FEE;&#x6539;&#x548C;&#x5220;&#x9664;&#x8868;&#x4E2D;&#x7684;&#x884C;&#xFF08;&#x6570;&#x636E;&#xFF09;&#x3002;&#x5177;&#x4F53;&#x8BED;&#x53E5;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-sql"># &#x5220;&#x9664;&#x8FD9;&#x4E9B;&#x65E0;&#x7528;&#x7684;&#x7528;&#x6237;
+# &#x53D1;&#x73B0;&#x5220;&#x9664;&#x4E86;2&#x4E2A;&#x7A7A;&#x7528;&#x6237;
+mysql&gt; delete from mysql.user where user=&apos; &apos;;
+Query OK, 2 rows affected (0.00 sec)
+
+mysql&gt; delete from mysql.user where user=&apos;root&apos; and host=&apos;mysql-server56&apos;;
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; delete from mysql.user where user=&apos;root&apos; and host=&apos;::1&apos;;
+Query OK, 1 row affected (0.00 sec)
+
+# &#x5269;&#x4E0B;&#x6765;&#x7684;&#x7528;&#x6237;
+mysql&gt; select user,host from mysql.user order by user;
++------+-----------+
+| user | host      |
++------+-----------+
+| root | localhost |
+| root | 127.0.0.1 |
+| root | %         |
++------+-----------+
+3 rows in set (0.00 sec)
+</code></pre>
+<h2 id="tpl&#x4E8B;&#x52A1;"><a name="tpl&#x4E8B;&#x52A1;" class="plugin-anchor" href="#tpl&#x4E8B;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>TPL&#x4E8B;&#x52A1;</h2>
+<p>&#x5168;&#x79F0;&#x4E3A;Transaction Processing Language&#xFF0C;TPL&#x8BED;&#x53E5;&#x7528;&#x4E8E;&#x786E;&#x4FDD;&#x88AB;DML&#x8BED;&#x53E5;&#x5F71;&#x54CD;&#x7684;&#x8868;&#x7684;&#x6240;&#x6709;&#x884C;&#x80FD;&#x591F;&#x53CA;&#x65F6;&#x5F97;&#x5230;&#x66F4;&#x65B0;&#x3002;TPL&#x8BED;&#x53E5;&#x5305;&#x62EC;BEGIN TRANSACTION&#x3001;COMMIT&#x548C;ROLLBACK&#x3002;</p>
+<h2 id="dcl&#x6388;&#x6743;&#x63A7;&#x5236;"><a name="dcl&#x6388;&#x6743;&#x63A7;&#x5236;" class="plugin-anchor" href="#dcl&#x6388;&#x6743;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>DCL&#x6388;&#x6743;&#x63A7;&#x5236;</h2>
+<p>&#x5168;&#x79F0;&#x4E3A;Data Control Language&#xFF0C;&#x8FD9;&#x7C7B;&#x8BED;&#x53E5;&#x901A;&#x8FC7;GRANT&#x6216;REVOKE&#x6388;&#x6743;&#x7528;&#x6237;&#x8BB8;&#x53EF;&#xFF0C;&#x786E;&#x5B9A;&#x5355;&#x4E2A;&#x7528;&#x6237;&#x548C;&#x7528;&#x6237;&#x7EC4;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;&#x7684;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x67D0;&#x4E9B;RDBMS&#x53EF;&#x7528;GRANT&#x6216;REVOKE&#x63A7;&#x5236;&#x5BF9;&#x8868;&#x4E2D;&#x5355;&#x4E2A;&#x5217;&#x7684;&#x8BBF;&#x95EE;&#x3002;</p>
+<pre><code class="lang-sql">mysql&gt; create user pyyu@&apos;%&apos; identified by &apos;pyyu668&apos;;
+Query OK, 0 rows affected (0.01 sec)
+
+# &#x666E;&#x901A;&#x7528;&#x6237;&#x88AB;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9ED8;&#x8BA4;&#x6709;USAGE&#x6743;&#x9650;&#xFF0C;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x65E0;&#x5176;&#x4ED6;&#x6743;&#x9650;
+mysql&gt; show grants for pyyu@&apos;%&apos;;
++-----------------------------------------------------------------------------------------------------+
+| Grants for pyyu@%                                                                                   |
++-----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO &apos;pyyu&apos;@&apos;%&apos; IDENTIFIED BY PASSWORD &apos;*4896EFB7643861D41A6BF9CD6FF012B785508323&apos; |
++-----------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+# &#x53EA;&#x7ED9;pyyu&#x7528;&#x6237;&#x67E5;&#x770B;luffy&#x6570;&#x636E;&#x5E93;&#x7684;&#x67E5;&#x8BE2;&#x6743;&#x9650;
+mysql&gt; grant select on luffy.* to &apos;pyyu&apos;@&apos;%&apos; with grant option;
+Query OK, 0 rows affected (0.00 sec)
+
+# &#x67E5;&#x8BE2;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x6743;&#x9650;
+mysql&gt; show grants for pyyu@&apos;%&apos;;
++-----------------------------------------------------------------------------------------------------+
+| Grants for pyyu@%                                                                                   |
++-----------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO &apos;pyyu&apos;@&apos;%&apos; IDENTIFIED BY PASSWORD &apos;*4896EFB7643861D41A6BF9CD6FF012B785508323&apos; |
+| GRANT SELECT ON `luffy`.* TO &apos;pyyu&apos;@&apos;%&apos; WITH GRANT OPTION                                           |
++-----------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+</code></pre>
+<h2 id="ddl&#x6570;&#x636E;&#x5B9A;&#x4E49;"><a name="ddl&#x6570;&#x636E;&#x5B9A;&#x4E49;" class="plugin-anchor" href="#ddl&#x6570;&#x636E;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>DDL&#x6570;&#x636E;&#x5B9A;&#x4E49;</h2>
+<p>&#x5168;&#x79F0;&#x4E3A;Data Definition Language&#xFF0C;&#x5176;&#x8BED;&#x53E5;&#x5305;&#x62EC;&#x52A8;&#x8BCD;CREATE&#x3001;DROP&#x548C;ALTER&#x3002;&#x53EF;&#x4F7F;&#x7528;&#x8BE5;&#x8BED;&#x8A00;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x521B;&#x5EFA;&#x65B0;&#x5E93;&#x8868;&#x6216;&#x5220;&#x9664;&#x5E93;&#x8868;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x8868;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;&#x3001;&#x7D22;&#x5F15;&#x7B49;&#x3002;</p>
+<pre><code># &#x8FD9;&#x53E5;SQL&#x610F;&#x4E3A;&#x521B;&#x5EFA;luffy&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E14;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x4E3A;utf8&#xFF0C;&#x4E14;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#xFF0C;a&#x548C;A&#x4E00;&#x6837;&#x5904;&#x7406;
+mysql&gt; create database  if not exists luffy default charset utf8 collate utf8_general_ci;
+Query OK, 1 row affected (0.01 sec)
+
+mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| luffy              |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+5 rows in set (0.01 sec)
+</code></pre><h2 id="ccl&#x6307;&#x9488;&#x63A7;&#x5236;&#x8BED;&#x8A00;"><a name="ccl&#x6307;&#x9488;&#x63A7;&#x5236;&#x8BED;&#x8A00;" class="plugin-anchor" href="#ccl&#x6307;&#x9488;&#x63A7;&#x5236;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>CCL&#x6307;&#x9488;&#x63A7;&#x5236;&#x8BED;&#x8A00;</h2>
+<p>CCL&#xFF0C;&#x5168;&#x79F0;&#x4E3A;CURSOR Control Language&#xFF0C;&#x5B83;&#x7684;&#x8BED;&#x53E5;&#xFF08;&#x50CF;DECLARE CURSOR&#x3001;FETCH INTO&#x548C;UPDATE WHERE CURRENT&#xFF09;&#x7528;&#x4E8E;&#x5BF9;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8868;&#x7684;&#x5355;&#x72EC;&#x884C;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x8FD0;&#x7EF4;&#x548C;&#x5F00;&#x53D1;--sql"><a name="&#x8FD0;&#x7EF4;&#x548C;&#x5F00;&#x53D1;--sql" class="plugin-anchor" href="#&#x8FD0;&#x7EF4;&#x548C;&#x5F00;&#x53D1;--sql"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x7EF4;&#x548C;&#x5F00;&#x53D1;--SQL</h2>
+<blockquote>
+<p>&#x8FD0;&#x7EF4;&#x4E3B;&#x8981;&#x5173;&#x5FC3;&#x6570;&#x636E;&#x5E93;&#x7684;&#x67B6;&#x6784;&#x7EF4;&#x62A4;&#x3001;&#x6570;&#x636E;&#x5907;&#x4EFD;&#x3001;&#x57FA;&#x7840;&#x6570;&#x636E;&#x7684;&#x7BA1;&#x7406;&#x3001;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x8868;&#x7684;&#x7ED3;&#x6784;</p>
+</blockquote>
+<p>&#x4E3B;&#x8981;&#x4EE5;DDL&#x7C7B;&#x522B;&#x5DE5;&#x4F5C;&#x4E3A;&#x4E3B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6570;&#x636E;&#x5B9A;&#x4E49;&#xFF0C;&#x8FD0;&#x7EF4;&#x548C;&#x5F00;&#x53D1;&#x90FD;&#x5F97;&#x638C;&#x63E1;</p>
+<ul>
+<li>create</li>
+<li>alter</li>
+<li>drop</li>
+</ul>
+<h3 id="&#x67E5;&#x770B;ddl&#x8BED;&#x53E5;&#x5177;&#x4F53;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x770B;ddl&#x8BED;&#x53E5;&#x5177;&#x4F53;&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x67E5;&#x770B;ddl&#x8BED;&#x53E5;&#x5177;&#x4F53;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;DDL&#x8BED;&#x53E5;&#x5177;&#x4F53;&#x4FE1;&#x606F;</h3>
+<pre><code class="lang-sql">
+mysql&gt; ? Data Definition
+You asked for help about help category: &quot;Data Definition&quot;
+For more information, type &apos;help &lt;item&gt;&apos;, where &lt;item&gt; is one of the following
+topics:
+   ALTER DATABASE
+   ALTER EVENT
+   ALTER FUNCTION
+   ALTER LOGFILE GROUP
+   ALTER PROCEDURE
+   ALTER SERVER
+   ALTER TABLE
+   ALTER TABLESPACE
+   ALTER VIEW
+   CONSTRAINT
+   CREATE DATABASE
+   CREATE EVENT
+   CREATE FUNCTION
+   CREATE INDEX
+   CREATE LOGFILE GROUP
+   CREATE PROCEDURE
+   CREATE SERVER
+   CREATE TABLE
+   CREATE TABLESPACE
+   CREATE TRIGGER
+   CREATE VIEW
+   DROP DATABASE
+   DROP EVENT
+   DROP FUNCTION
+   DROP INDEX
+   DROP PROCEDURE
+   DROP SERVER
+   DROP TABLE
+   DROP TABLESPACE
+   DROP TRIGGER
+   DROP VIEW
+   RENAME TABLE
+   TRUNCATE TABLE
+</code></pre>
+<h3 id="dcl&#x6570;&#x636E;&#x6388;&#x6743;&#x63A7;&#x5236;"><a name="dcl&#x6570;&#x636E;&#x6388;&#x6743;&#x63A7;&#x5236;" class="plugin-anchor" href="#dcl&#x6570;&#x636E;&#x6388;&#x6743;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>DCL&#x6570;&#x636E;&#x6388;&#x6743;&#x63A7;&#x5236;</h3>
+<p>&#x4E00;&#x822C;&#x662F;&#x8FD0;&#x7EF4;&#x64CD;&#x4F5C;&#x7684;&#x591A;&#x4E9B;</p>
+<ul>
+<li>grant</li>
+<li>revoke</li>
+<li>commit</li>
+<li>Rollback</li>
+</ul>
+<pre><code class="lang-sql">mysql&gt; ? Account Management
+You asked for help about help category: &quot;Account Management&quot;
+For more information, type &apos;help &lt;item&gt;&apos;, where &lt;item&gt; is one of the following
+topics:
+   ALTER USER
+   CREATE USER
+   DROP USER
+   GRANT
+   RENAME USER
+   REVOKE
+   SET PASSWORD
+</code></pre>
+<h3 id="dml&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;"><a name="dml&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;" class="plugin-anchor" href="#dml&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>DML&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;</h3>
+<p>&#x5F00;&#x53D1;&#x8981;&#x91CD;&#x70B9;&#x638C;&#x63E1;&#x7684;SQL&#xFF0C;&#x8FD0;&#x7EF4;&#x719F;&#x6089;&#x5C31;&#x597D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;DML&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x8BED;&#x8A00;&#xFF0C;&#x56E0;&#x4E3A;&#x7F51;&#x7AD9;&#x6709;&#x5404;&#x5F0F;&#x5404;&#x6837;&#x7684;&#x6570;&#x636E;&#x5199;&#x5165;&#x3001;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x662F;&#x5F00;&#x53D1;&#x5BF9;&#x4E8E;&#x8868;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x662F;&#x5F00;&#x53D1;&#x5FC5;&#x987B;&#x91CD;&#x70B9;&#x638C;&#x63E1;&#x7684;&#x6280;&#x80FD;&#x3002;</p>
+<p>&#x8FD0;&#x7EF4;&#x65E0;&#x987B;&#x50CF;&#x5F00;&#x53D1;&#x4E00;&#x6837;&#xFF0C;&#x4E86;&#x89E3;&#x5404;&#x79CD;&#x4E1A;&#x52A1;&#x8868;&#x7684;&#x7ED3;&#x6784;&#x3001;&#x8BBE;&#x8BA1;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x719F;&#x6089;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;DML&#x8BED;&#x53E5;</p>
+<ul>
+<li>select</li>
+<li>insert</li>
+<li>delete</li>
+<li>update</li>
+</ul>
+<pre><code class="lang-sql">mysql&gt; ? Data Manipulation
+You asked for help about help category: &quot;Data Manipulation&quot;
+For more information, type &apos;help &lt;item&gt;&apos;, where &lt;item&gt; is one of the following
+topics:
+   CALL
+   DELETE
+   DO
+   DUAL
+   HANDLER
+   INSERT
+   INSERT DELAYED
+   INSERT SELECT
+   JOIN
+   LOAD DATA
+   LOAD XML
+   REPLACE
+   SELECT
+   UNION
+   UPDATE
+</code></pre>
+<h1 id="&#x8865;&#x5145;&#xFF1A;sql&#x5E95;&#x5C42;&#x89E3;&#x6790;&#x5668;"><a name="&#x8865;&#x5145;&#xFF1A;sql&#x5E95;&#x5C42;&#x89E3;&#x6790;&#x5668;" class="plugin-anchor" href="#&#x8865;&#x5145;&#xFF1A;sql&#x5E95;&#x5C42;&#x89E3;&#x6790;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8865;&#x5145;&#xFF1A;SQL&#x5E95;&#x5C42;&#x89E3;&#x6790;&#x5668;</h1>
+<p>&#x76EE;&#x524D;&#x5927;&#x5BB6;&#x90FD;&#x77E5;&#x9053;&#x8F93;&#x5165;&#x4E00;&#x6BB5;&#x6B63;&#x786E;&#x7684;SQL&#x8BED;&#x53E5;&#xFF0C;mysql&#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x62FF;&#x5230;&#x7ED3;&#x679C;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x80CC;&#x540E;&#xFF0C;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#xFF0C;&#x542C;&#x8D85;&#x54E5;&#x7ED9;&#x5927;&#x5BB6;&#x804A;&#x804A;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x4F60;&#x8F93;&#x5165;mysql&#x7684;&#x8FDE;&#x63A5;&#x547D;&#x4EE4;&#xFF0C;&#x8FDE;&#x63A5;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x8F93;&#x5165;SQL&#xFF0C;&#x8FD9;&#x671F;&#x95F4;&#x5E95;&#x5C42;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#x3002;</p>
+<blockquote>
+<p>&#x5927;&#x81F4;&#x987A;&#x5E8F;&#x662F;</p>
+<p>1.&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8FDE;&#x63A5;mysql&#xFF0C;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;</p>
+<p>2.SQL&#x8FDB;&#x884C;&#x89E3;&#x6790;</p>
+<p>3.&#x8FDB;&#x5165;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x627E;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x78C1;&#x76D8;&#x3001;&#x5185;&#x5B58;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x4F9D;&#x6B21;&#x8FD4;&#x56DE;</p>
+<p>4.&#x6570;&#x636E;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;</p>
+</blockquote>
+<p><img src="../2024-linux/image-20210416111511037.png" alt="image-20210416111511037"></p>
+<h2 id="sql&#x89E3;&#x6790;&#x6D41;&#x7A0B;"><a name="sql&#x89E3;&#x6790;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#sql&#x89E3;&#x6790;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>SQL&#x89E3;&#x6790;&#x6D41;&#x7A0B;</h2>
+<ul>
+<li><p>&#x8FDE;&#x63A5;&#x5C42;</p>
+<ul>
+<li>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF08;php&#xFF0C;python&#xFF0C;&#x4EE3;&#x7801;&#xFF09;&#x8FDE;&#x63A5;mysql&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x8FDB;&#x8FC7;&#x8FDE;&#x63A5;&#x6C60;&#xFF08;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x662F;&#x5F88;&#x8017;&#x65F6;&#x4E14;&#x6D88;&#x8017;&#x8D44;&#x6E90;&#x7684;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x4F1A;&#x63D0;&#x4F9B;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x4FDD;&#x6301;&#x8FDE;&#x63A5;&#xFF0C;&#x5141;&#x8BB8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x73B0;&#x6709;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x65E0;&#x987B;&#x91CD;&#x590D;&#x65B0;&#x5EFA;&#xFF0C;&#x7701;&#x8D44;&#x6E90;&#xFF0C;&#x51CF;&#x8F7B;&#x6570;&#x636E;&#x5E93;&#x538B;&#x529B;&#xFF09;&#xFF0C;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#x540E;&#xFF0C;&#x8FDB;&#x5165;SQL&#x89E3;&#x6790;&#x5C42;</li>
+</ul>
+</li>
+<li><p>SQL&#x5C42;</p>
+<ul>
+<li><p>&#x8FD9;&#x4E00;&#x5C42;&#x662F;&#x89E3;&#x6790;SQL&#x8BED;&#x53E5;&#xFF0C;&#x9996;&#x5148;&#x5224;&#x65AD;SQL&#x6B63;&#x786E;&#x6027;&#xFF0C;&#x662F;&#x5426;&#x7B26;&#x5408;DDL&#x3001;DML&#x3001;DCL&#x8BED;&#x53E5;&#x89C4;&#x5219;</p>
+</li>
+<li><p>&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x547D;&#x4EE4;&#x5206;&#x53D1;&#x6A21;&#x5757;&#x8F6C;&#x53D1;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x5757;&#x5904;&#x7406;</p>
+<ul>
+<li><p>&#x4F8B;&#x5982;&#x63A5;&#x6536;&#x7684;&#x662F;select&#x8BED;&#x53E5;&#xFF0C;&#x5C31;&#x662F;DML&#x67E5;&#x8BE2;&#xFF0C;&#x65E2;&#x7136;&#x67E5;&#x8BE2;&#xFF0C;&#x5C31;&#x4F1A;&#x53BB;&#x67E5;&#x627E;&#x662F;&#x5426;&#x6709;&#x7F13;&#x5B58;</p>
+<ul>
+<li><p>&#x6709;&#x7F13;&#x5B58;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7F13;&#x5B58;&#xFF0C;&#x5C31;&#x8FDB;&#x5165;&#x4E86;SQL&#x7684;&#x89E3;&#x6790;&#x6D41;&#x7A0B;</p>
+<pre><code>(Parsing queries)
+</code></pre><ul>
+<li>&#x89E3;&#x6790;&#x8FD9;&#x4EF6;&#x4E8B;&#x7531;Parser&#x89E3;&#x6790;&#x5668;&#x6765;&#x5BF9;SQL&#x8FDB;&#x884C;&#x8BCD;&#x6CD5;&#x5206;&#x6790;&#xFF08;&#x56E0;&#x4E3A;SQL&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x5408;&#x7684;&#xFF0C;&#x590D;&#x6742;&#x3001;&#x8F83;&#x957F;&#x7684;&#x8BED;&#x53E5;&#xFF09;&#xFF0C;&#x6700;&#x7EC8;&#x5206;&#x6790;&#x51FA;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;SQL&#x8BED;&#x53E5;&#x7684;&#x6267;&#x884C;&#x8BA1;&#x5212;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x5F97;&#x5230;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x540E;&#xFF0C;&#x8FD8;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x56E0;&#x4E3A;&#x89E3;&#x6790;&#x5668;&#x53EF;&#x80FD;&#x7ED9;&#x51FA;&#x4E86;SQL&#x7684;&#x591A;&#x79CD;&#x6267;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD8;&#x8981;&#x518D;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x600E;&#x4E48;&#x6267;&#x884C;&#x624D;&#x662F;&#x6700;&#x9AD8;&#x6548;&#x7684;&#x3002;</p>
+<ul>
+<li>mysql&#x5185;&#x90E8;&#x6709;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x5668;&#xFF08;Optimizer&#xFF09;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x6700;&#x9AD8;&#x6548;&#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;SQL&#xFF08;&#x4F8B;&#x5982;&#x6709;&#x5408;&#x7406;&#x7D22;&#x5F15;&#x7684;&#x90A3;&#x4E00;&#x6761;SQL&#xFF09;</li>
+</ul>
+</li>
+<li><p>&#x5F53;&#x4F18;&#x5316;&#x5668;&#x786E;&#x5B9A;&#x4E86;&#x6267;&#x884C;&#x8BA1;&#x5212;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x5C31;&#x53EF;&#x4EE5;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x4E86;?&#x4E0D;&#x662F;&#x3002;&#x3002;&#xFF08;&#x5927;&#x5BB6;&#x53EF;&#x80FD;&#x56DE;&#x90C1;&#x95F7;&#x4E86;&#xFF0C;&#x8D85;&#x54E5;&#x4F60;&#x8FD9;&#x4E48;&#x58A8;&#x8FF9;&#x5462;&#xFF1F;&#xFF09;&#x56E0;&#x4E3A;&#x5373;&#x4F7F;&#x4F60;&#x786E;&#x5B9A;&#x4E86;SQL&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x662F;&#x4E0D;&#x662F;&#x6709;&#x6743;&#x9650;&#x6267;&#x884C;&#xFF0C;&#x5BF9;&#x628A;&#x3002;</p>
+</li>
+<li><p>&#x5728;SQL&#x5C42;&#x5185;&#x90E8;&#x5BF9;&#x6743;&#x9650;&#x4E5F;&#x68C0;&#x67E5;&#x540E;&#xFF0C;SQL&#x8BED;&#x53E5;&#x7EC8;&#x4E8E;&#x6267;&#x884C;&#x4E86;&#xFF0C;&#x6700;&#x540E;&#x628A;&#x6267;&#x884C;&#x540E;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4EA4;&#x7ED9;&#x6700;&#x5E95;&#x5C42;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x63A5;&#x53E3;&#xFF08;&#x53D1;&#x52A8;&#x673A;&#xFF09;&#xFF0C;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4EA4;&#x4E92;&#xFF0C;&#x8BFB;&#x53D6;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6570;&#x636E;&#xFF08;&#x53D1;&#x52A8;&#x673A;&#x559D;&#x6CB9;&#x5F00;&#x59CB;&#x5E72;&#x6D3B;&#x4E86;&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x6700;&#x7EC8;SQL&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;&#x672C;&#x6B21;&#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5E38;&#x89C4;&#x4E0B;&#x66F4;&#x65B0;&#x5230;&#x7F13;&#x5B58;&#x4E2D;&#xFF0C;&#x4FBF;&#x4E8E;&#x4E0B;&#x6B21;&#x52A0;&#x901F;&#x67E5;&#x8BE2;&#x3002;</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x662F;&#x5E0C;&#x671B;&#x5927;&#x5BB6;&#x5FC3;&#x4E2D;&#x6709;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#xFF0C;&#x5177;&#x4F53;&#x843D;&#x5730;&#x5230;&#x64CD;&#x4F5C;&#xFF0C;mysql&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x91CF;&#x7684;SQL&#x8BED;&#x53E5;&#xFF0C;&#x63D0;&#x4F9B;&#x6211;&#x4EEC;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x6027;&#x80FD;&#x5206;&#x6790;&#x3002;&#x540E;&#x9762;&#x8D85;&#x54E5;&#x4F1A;&#x7ED9;&#x5927;&#x5BB6;&#x8BB2;&#xFF01;&#xFF01;</p>
+</blockquote>
+<h1 id="3&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;"><a name="3&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;" class="plugin-anchor" href="#3&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>3.&#x6570;&#x636E;&#x5E93;&#x5BF9;&#x8C61;</h1>
+<h2 id="&#x5E93;"><a name="&#x5E93;" class="plugin-anchor" href="#&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E93;</h2>
+<pre><code>&#x6570;&#x636E;&#x5E93;&#x540D;
+&#x6570;&#x636E;&#x5E93;&#x5C5E;&#x6027;&#x3001;&#x5B57;&#x7B26;&#x96C6;&#x3001;&#x6821;&#x5BF9;&#x89C4;&#x5219;&#xFF08;&#x5927;&#x5C0F;&#x5199;&#x7B49;&#xFF09;
+</code></pre><p>&#x4F8B;&#x5B50;</p>
+<pre><code class="lang-sql">mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+
+mysql&gt; show create database mysql;
++----------+------------------------------------------------------------------+
+| Database | Create Database                                                  |
++----------+------------------------------------------------------------------+
+| mysql    | CREATE DATABASE `mysql` /*!40100 DEFAULT CHARACTER SET latin1 */ |
++----------+------------------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre>
+<h2 id="&#x8868;"><a name="&#x8868;" class="plugin-anchor" href="#&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;</h2>
+<pre><code>&#x6570;&#x636E;&#x5E93;.&#x6570;&#x636E;&#x8868;&#x540D;
+
+&#x5217;
+    &#x5217;&#x540D;
+    &#x5217;&#x5C5E;&#x6027;&#xFF1A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3001;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x3001;&#x5176;&#x4ED6;&#x5C5E;&#x6027;
+
+
+&#x884C;
+    &#x5B57;&#x6BB5;&#x540D;
+    &#x5B57;&#x6BB5;&#x5C5E;&#x6027;
+</code></pre><p>&#x4F8B;</p>
+<pre><code class="lang-sql">mysql&gt; select Host,User from mysql.user;
++-----------+---------------+
+| Host      | User          |
++-----------+---------------+
+| 10.0.0.%  | dev01         |
+| 10.0.0.%  | yuchao02      |
+| 10.0.0.7  | bob01         |
+| localhost | chaoge01      |
+| localhost | mysql.session |
+| localhost | mysql.sys     |
+| localhost | root          |
+| localhost | yuchao01      |
++-----------+---------------+
+8 rows in set (0.00 sec)
+</code></pre>
+<h2 id="&#x5B57;&#x7B26;&#x96C6;"><a name="&#x5B57;&#x7B26;&#x96C6;" class="plugin-anchor" href="#&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x96C6;</h2>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x5982;&#x679C;&#x60F3;&#x6B63;&#x786E;&#x7684;&#x8BFB;&#x5199;mysql&#x7684;&#x4E2D;&#x6587;&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x670D;&#x52A1;&#x7AEF;&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x4E00;&#x81F4;</p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x662F;&#x6211;&#x4EEC;&#x7684;mysql&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x5F62;&#x5F0F;&#x6709;&#x5F88;&#x591A;&#x4E86;&#xFF0C;&#x53EF;&#x80FD;&#x662F;xshell&#xFF0C;navicat&#xFF0C;&#x7A0B;&#x5E8F;&#x7B49;&#x7B49;</p>
+<p>&#x670D;&#x52A1;&#x7AEF;mysql&#x7684;&#x7F16;&#x7801;&#x8BBE;&#x7F6E;&#x4E0E;&#x67E5;&#x770B;</p>
+</blockquote>
+<pre><code class="lang-perl"># &#x67E5;&#x770B;mysql&#x652F;&#x6301;&#x54EA;&#x4E9B;&#x5B57;&#x7B26;&#x96C6;
+mysql&gt; show character set;
+
+# &#x67E5;&#x770B;&#x5F53;&#x524D;mysql&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4EC0;&#x4E48;&#x5B57;&#x7B26;&#x96C6;
+# &#x5B57;&#x7B26;&#x96C6;&#xFF08;character set&#xFF09;&#xFF1A;&#x5B9A;&#x4E49;&#x4E86;&#x5B57;&#x7B26;&#x4EE5;&#x53CA;&#x5B57;&#x7B26;&#x7684;&#x7F16;&#x7801;&#x3002;
+
+mysql&gt; show variables like &apos;%char%&apos;;
++--------------------------+----------------------------------+
+| Variable_name            | Value                            |
++--------------------------+----------------------------------+
+| character_set_client     | utf8                             |
+| character_set_connection | utf8                             |
+| character_set_database   | latin1                           |
+| character_set_filesystem | binary                           |
+| character_set_results    | utf8                             |
+| character_set_server     | latin1                           |
+| character_set_system     | utf8                             |
+| character_sets_dir       | /opt/mysql5.7.28/share/charsets/ |
++--------------------------+----------------------------------+
+8 rows in set (0.00 sec)
+
+
+# &#x67E5;&#x770B;mysql&#x9ED8;&#x8BA4;&#x7684;&#x5B57;&#x7B26;&#x5E8F;
+# &#x5B57;&#x7B26;&#x5E8F;&#xFF08;collation&#xFF09;&#xFF1A;&#x5B9A;&#x4E49;&#x4E86;&#x5B57;&#x7B26;&#x7684;&#x6BD4;&#x8F83;&#x89C4;&#x5219;&#x3002;
+mysql&gt; show variables like &apos;collation%&apos;;
++----------------------+-------------------+
+| Variable_name        | Value             |
++----------------------+-------------------+
+| collation_connection | utf8_general_ci   |
+| collation_database   | latin1_swedish_ci |
+| collation_server     | latin1_swedish_ci |
++----------------------+-------------------+
+3 rows in set (0.00 sec)
+</code></pre>
+<p>&#x963F;&#x91CC;&#x6280;&#x672F;&#x4E13;&#x5BB6;&#x7684;&#x535A;&#x5BA2;</p>
+<p><a href="https://www.cnblogs.com/chyingp/p/mysql-character-set-collation.html" target="_blank">https://www.cnblogs.com/chyingp/p/mysql-character-set-collation.html</a></p>
+<h3 id="&#x5E38;&#x7528;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5B57;&#x7B26;&#x5E8F;&#x7EC4;&#x5408;"><a name="&#x5E38;&#x7528;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5B57;&#x7B26;&#x5E8F;&#x7EC4;&#x5408;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5B57;&#x7B26;&#x5E8F;&#x7EC4;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5B57;&#x7B26;&#x5E8F;&#x7EC4;&#x5408;</h3>
+<pre><code>utf-8        &#x6700;&#x5927;&#x652F;&#x6301;3&#x5B57;&#x8282;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E2D;&#x6587;&#x6C49;&#x5B57;&#xFF0C;&#x4E0D;&#x652F;&#x6301;emoji&#x7B26;&#x53F7;
+utf8mb4    &#x6700;&#x5927;&#x652F;&#x6301;4&#x5B57;&#x8282;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x652F;&#x6301;emoji&#x5B57;&#x7B26;
+</code></pre><pre><code>mysql8.0&#x4E4B;&#x524D;&#xFF0C;&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;&#x662F;latin1 
+8.0&#x4E4B;&#x540E;&#x9ED8;&#x8BA4;utf8mb4 &#xFF0C;&#x76EE;&#x524D;&#x4E3B;&#x6D41;&#x7F51;&#x7AD9;&#x80AF;&#x5B9A;&#x90FD;&#x662F;&#x652F;&#x6301;&#x8868;&#x60C5;&#x7B26;&#x53F7;&#x7684;&#xFF0C;&#x5982;emoji &#x1F604;&#x8FD9;&#x7C7B;&#x3002;
+</code></pre><h1 id="4&#x6570;&#x636E;&#x8868;&#xFF08;&#x6570;&#x636E;&#x5C5E;&#x6027;&#xFF09;"><a name="4&#x6570;&#x636E;&#x8868;&#xFF08;&#x6570;&#x636E;&#x5C5E;&#x6027;&#xFF09;" class="plugin-anchor" href="#4&#x6570;&#x636E;&#x8868;&#xFF08;&#x6570;&#x636E;&#x5C5E;&#x6027;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>4.&#x6570;&#x636E;&#x8868;&#xFF08;&#x6570;&#x636E;&#x5C5E;&#x6027;&#xFF09;</h1>
+<p><img src="../2024-linux/image-20220720104405235.png" alt="image-20220720104405235"></p>
+<h2 id="&#x6570;&#x5B57;&#x7C7B;&#x578B;"><a name="&#x6570;&#x5B57;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x6570;&#x5B57;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x5B57;&#x7C7B;&#x578B;</h2>
+<p>MySQL &#x4E2D;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x5BF9;&#x4F60;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4F18;&#x5316;&#x662F;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x3002;</p>
+<p>MySQL &#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x5927;&#x81F4;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x7C7B;&#xFF1A;&#x6570;&#x503C;&#x3001;&#x65E5;&#x671F;/&#x65F6;&#x95F4;&#x548C;&#x5B57;&#x7B26;&#x4E32;(&#x5B57;&#x7B26;)&#x7C7B;&#x578B;&#x3002;</p>
+<p>MySQL &#x652F;&#x6301;&#x6240;&#x6709;&#x6807;&#x51C6; SQL &#x6570;&#x503C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5305;&#x62EC;&#x4E25;&#x683C;&#x6570;&#x503C;&#x6570;&#x636E;&#x7C7B;&#x578B;(INTEGER&#x3001;SMALLINT&#x3001;DECIMAL &#x548C; NUMERIC)&#xFF0C;&#x4EE5;&#x53CA;&#x8FD1;&#x4F3C;&#x6570;&#x503C;&#x6570;&#x636E;&#x7C7B;&#x578B;(FLOAT&#x3001;REAL &#x548C; DOUBLE PRECISION)&#x3002;</p>
+<p>&#x5173;&#x952E;&#x5B57;INT&#x662F;INTEGER&#x7684;&#x540C;&#x4E49;&#x8BCD;&#xFF0C;&#x5173;&#x952E;&#x5B57;DEC&#x662F;DECIMAL&#x7684;&#x540C;&#x4E49;&#x8BCD;&#x3002;</p>
+<p>BIT&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4FDD;&#x5B58;&#x4F4D;&#x5B57;&#x6BB5;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x652F;&#x6301; MyISAM&#x3001;MEMORY&#x3001;InnoDB &#x548C; BDB&#x8868;&#x3002;</p>
+<p>&#x4F5C;&#x4E3A; SQL &#x6807;&#x51C6;&#x7684;&#x6269;&#x5C55;&#xFF0C;MySQL &#x4E5F;&#x652F;&#x6301;&#x6574;&#x6570;&#x7C7B;&#x578B; TINYINT&#x3001;MEDIUMINT &#x548C; BIGINT&#x3002;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x663E;&#x793A;&#x4E86;&#x9700;&#x8981;&#x7684;&#x6BCF;&#x4E2A;&#x6574;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x5B58;&#x50A8;&#x548C;&#x8303;&#x56F4;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x5927;&#x5C0F;</th>
+<th style="text-align:left">&#x8303;&#x56F4;&#xFF08;&#x6709;&#x7B26;&#x53F7;&#xFF09;</th>
+<th style="text-align:left">&#x8303;&#x56F4;&#xFF08;&#x65E0;&#x7B26;&#x53F7;&#xFF09;</th>
+<th style="text-align:left">&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TINYINT</td>
+<td style="text-align:left">1 Bytes</td>
+<td style="text-align:left">(-128&#xFF0C;127)</td>
+<td style="text-align:left">(0&#xFF0C;255)</td>
+<td style="text-align:left">&#x5C0F;&#x6574;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">SMALLINT</td>
+<td style="text-align:left">2 Bytes</td>
+<td style="text-align:left">(-32 768&#xFF0C;32 767)</td>
+<td style="text-align:left">(0&#xFF0C;65 535)</td>
+<td style="text-align:left">&#x5927;&#x6574;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMINT</td>
+<td style="text-align:left">3 Bytes</td>
+<td style="text-align:left">(-8 388 608&#xFF0C;8 388 607)</td>
+<td style="text-align:left">(0&#xFF0C;16 777 215)</td>
+<td style="text-align:left">&#x5927;&#x6574;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">INT&#x6216;INTEGER</td>
+<td style="text-align:left">4 Bytes</td>
+<td style="text-align:left">(-2 147 483 648&#xFF0C;2 147 483 647)</td>
+<td style="text-align:left">(0&#xFF0C;4 294 967 295)</td>
+<td style="text-align:left">&#x5927;&#x6574;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">BIGINT</td>
+<td style="text-align:left">8 Bytes</td>
+<td style="text-align:left">(-9,223,372,036,854,775,808&#xFF0C;9 223 372 036 854 775 807)</td>
+<td style="text-align:left">(0&#xFF0C;18 446 744 073 709 551 615)</td>
+<td style="text-align:left">&#x6781;&#x5927;&#x6574;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">FLOAT</td>
+<td style="text-align:left">4 Bytes</td>
+<td style="text-align:left">(-3.402 823 466 E+38&#xFF0C;-1.175 494 351 E-38)&#xFF0C;0&#xFF0C;(1.175 494 351 E-38&#xFF0C;3.402 823 466 351 E+38)</td>
+<td style="text-align:left">0&#xFF0C;(1.175 494 351 E-38&#xFF0C;3.402 823 466 E+38)</td>
+<td style="text-align:left">&#x5355;&#x7CBE;&#x5EA6; &#x6D6E;&#x70B9;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">DOUBLE</td>
+<td style="text-align:left">8 Bytes</td>
+<td style="text-align:left">(-1.797 693 134 862 315 7 E+308&#xFF0C;-2.225 073 858 507 201 4 E-308)&#xFF0C;0&#xFF0C;(2.225 073 858 507 201 4 E-308&#xFF0C;1.797 693 134 862 315 7 E+308)</td>
+<td style="text-align:left">0&#xFF0C;(2.225 073 858 507 201 4 E-308&#xFF0C;1.797 693 134 862 315 7 E+308)</td>
+<td style="text-align:left">&#x53CC;&#x7CBE;&#x5EA6; &#x6D6E;&#x70B9;&#x6570;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">DECIMAL</td>
+<td style="text-align:left">&#x5BF9;DECIMAL(M,D) &#xFF0C;&#x5982;&#x679C;M&gt;D&#xFF0C;&#x4E3A;M+2&#x5426;&#x5219;&#x4E3A;D+2</td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x4E8E;M&#x548C;D&#x7684;&#x503C;</td>
+<td style="text-align:left">&#x4F9D;&#x8D56;&#x4E8E;M&#x548C;D&#x7684;&#x503C;</td>
+<td style="text-align:left">&#x5C0F;&#x6570;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</h2>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x6307;CHAR&#x3001;VARCHAR&#x3001;BINARY&#x3001;VARBINARY&#x3001;BLOB&#x3001;TEXT&#x3001;ENUM&#x548C;SET&#x3002;&#x8BE5;&#x8282;&#x63CF;&#x8FF0;&#x4E86;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5728;&#x67E5;&#x8BE2;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x7C7B;&#x578B;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x5927;&#x5C0F;</th>
+<th style="text-align:left">&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CHAR</td>
+<td style="text-align:left">0-255 bytes</td>
+<td style="text-align:left">&#x5B9A;&#x957F;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:left">VARCHAR</td>
+<td style="text-align:left">0-65535 bytes</td>
+<td style="text-align:left">&#x53D8;&#x957F;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:left">TINYBLOB</td>
+<td style="text-align:left">0-255 bytes</td>
+<td style="text-align:left">&#x4E0D;&#x8D85;&#x8FC7; 255 &#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:left">TINYTEXT</td>
+<td style="text-align:left">0-255 bytes</td>
+<td style="text-align:left">&#x77ED;&#x6587;&#x672C;&#x5B57;&#x7B26;&#x4E32;</td>
+</tr>
+<tr>
+<td style="text-align:left">BLOB</td>
+<td style="text-align:left">0-65 535 bytes</td>
+<td style="text-align:left">&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#x7684;&#x957F;&#x6587;&#x672C;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">TEXT</td>
+<td style="text-align:left">0-65 535 bytes</td>
+<td style="text-align:left">&#x957F;&#x6587;&#x672C;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMBLOB</td>
+<td style="text-align:left">0-16 777 215 bytes</td>
+<td style="text-align:left">&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#x7684;&#x4E2D;&#x7B49;&#x957F;&#x5EA6;&#x6587;&#x672C;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMTEXT</td>
+<td style="text-align:left">0-16 777 215 bytes</td>
+<td style="text-align:left">&#x4E2D;&#x7B49;&#x957F;&#x5EA6;&#x6587;&#x672C;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">LONGBLOB</td>
+<td style="text-align:left">0-4 294 967 295 bytes</td>
+<td style="text-align:left">&#x4E8C;&#x8FDB;&#x5236;&#x5F62;&#x5F0F;&#x7684;&#x6781;&#x5927;&#x6587;&#x672C;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td style="text-align:left">LONGTEXT</td>
+<td style="text-align:left">0-4 294 967 295 bytes</td>
+<td style="text-align:left">&#x6781;&#x5927;&#x6587;&#x672C;&#x6570;&#x636E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;char(n) &#x548C; varchar(n) &#x4E2D;&#x62EC;&#x53F7;&#x4E2D; n &#x4EE3;&#x8868;&#x5B57;&#x7B26;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x5E76;&#x4E0D;&#x4EE3;&#x8868;&#x5B57;&#x8282;&#x4E2A;&#x6570;&#xFF0C;&#x6BD4;&#x5982; CHAR(30) &#x5C31;&#x53EF;&#x4EE5;&#x5B58;&#x50A8; 30 &#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+<p>CHAR &#x548C; VARCHAR &#x7C7B;&#x578B;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5B83;&#x4EEC;&#x4FDD;&#x5B58;&#x548C;&#x68C0;&#x7D22;&#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#x3002;&#x5B83;&#x4EEC;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x548C;&#x662F;&#x5426;&#x5C3E;&#x90E8;&#x7A7A;&#x683C;&#x88AB;&#x4FDD;&#x7559;&#x7B49;&#x65B9;&#x9762;&#x4E5F;&#x4E0D;&#x540C;&#x3002;&#x5728;&#x5B58;&#x50A8;&#x6216;&#x68C0;&#x7D22;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x8FDB;&#x884C;&#x5927;&#x5C0F;&#x5199;&#x8F6C;&#x6362;&#x3002;</p>
+<p>BINARY &#x548C; VARBINARY &#x7C7B;&#x4F3C;&#x4E8E; CHAR &#x548C; VARCHAR&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x5B83;&#x4EEC;&#x5305;&#x542B;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x800C;&#x4E0D;&#x8981;&#x975E;&#x4E8C;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4EEC;&#x5305;&#x542B;&#x5B57;&#x8282;&#x5B57;&#x7B26;&#x4E32;&#x800C;&#x4E0D;&#x662F;&#x5B57;&#x7B26;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x8BF4;&#x660E;&#x5B83;&#x4EEC;&#x6CA1;&#x6709;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5E76;&#x4E14;&#x6392;&#x5E8F;&#x548C;&#x6BD4;&#x8F83;&#x57FA;&#x4E8E;&#x5217;&#x503C;&#x5B57;&#x8282;&#x7684;&#x6570;&#x503C;&#x503C;&#x3002;</p>
+<p>BLOB &#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x5927;&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x53EF;&#x53D8;&#x6570;&#x91CF;&#x7684;&#x6570;&#x636E;&#x3002;&#x6709; 4 &#x79CD; BLOB &#x7C7B;&#x578B;&#xFF1A;TINYBLOB&#x3001;BLOB&#x3001;MEDIUMBLOB &#x548C; LONGBLOB&#x3002;&#x5B83;&#x4EEC;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x53EF;&#x5BB9;&#x7EB3;&#x5B58;&#x50A8;&#x8303;&#x56F4;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x6709; 4 &#x79CD; TEXT &#x7C7B;&#x578B;&#xFF1A;TINYTEXT&#x3001;TEXT&#x3001;MEDIUMTEXT &#x548C; LONGTEXT&#x3002;&#x5BF9;&#x5E94;&#x7684;&#x8FD9; 4 &#x79CD; BLOB &#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x5B58;&#x50A8;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x4E0D;&#x540C;&#xFF0C;&#x53EF;&#x6839;&#x636E;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x9009;&#x62E9;&#x3002;</p>
+<h2 id="&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7C7B;&#x578B;"><a name="&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7C7B;&#x578B;</h2>
+<p>&#x8868;&#x793A;&#x65F6;&#x95F4;&#x503C;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#x4E3A;DATETIME&#x3001;DATE&#x3001;TIMESTAMP&#x3001;TIME&#x548C;YEAR&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x7C7B;&#x578B;&#x6709;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x503C;&#x8303;&#x56F4;&#x548C;&#x4E00;&#x4E2A;&quot;&#x96F6;&quot;&#x503C;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x4E0D;&#x5408;&#x6CD5;&#x7684;MySQL&#x4E0D;&#x80FD;&#x8868;&#x793A;&#x7684;&#x503C;&#x65F6;&#x4F7F;&#x7528;&quot;&#x96F6;&quot;&#x503C;&#x3002;</p>
+<p>TIMESTAMP&#x7C7B;&#x578B;&#x6709;&#x4E13;&#x6709;&#x7684;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x5C06;&#x5728;&#x540E;&#x9762;&#x63CF;&#x8FF0;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x5927;&#x5C0F; ( bytes)</th>
+<th style="text-align:left">&#x8303;&#x56F4;</th>
+<th style="text-align:left">&#x683C;&#x5F0F;</th>
+<th style="text-align:left">&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DATE</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">1000-01-01/9999-12-31</td>
+<td style="text-align:left">YYYY-MM-DD</td>
+<td style="text-align:left">&#x65E5;&#x671F;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">TIME</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">&apos;-838:59:59&apos;/&apos;838:59:59&apos;</td>
+<td style="text-align:left">HH:MM:SS</td>
+<td style="text-align:left">&#x65F6;&#x95F4;&#x503C;&#x6216;&#x6301;&#x7EED;&#x65F6;&#x95F4;</td>
+</tr>
+<tr>
+<td style="text-align:left">YEAR</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">1901/2155</td>
+<td style="text-align:left">YYYY</td>
+<td style="text-align:left">&#x5E74;&#x4EFD;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">DATETIME</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">1000-01-01 00:00:00/9999-12-31 23:59:59</td>
+<td style="text-align:left">YYYY-MM-DD HH:MM:SS</td>
+<td style="text-align:left">&#x6DF7;&#x5408;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">TIMESTAMP</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">1970-01-01 00:00:00/2038&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x662F;&#x7B2C; <strong>2147483647</strong> &#x79D2;&#xFF0C;&#x5317;&#x4EAC;&#x65F6;&#x95F4; <strong>2038-1-19 11:14:07</strong>&#xFF0C;&#x683C;&#x6797;&#x5C3C;&#x6CBB;&#x65F6;&#x95F4; 2038&#x5E74;1&#x6708;19&#x65E5; &#x51CC;&#x6668; 03:14:07</td>
+<td style="text-align:left">YYYYMMDD HHMMSS</td>
+<td style="text-align:left">&#x6DF7;&#x5408;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x503C;&#xFF0C;&#x65F6;&#x95F4;&#x6233;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="5&#x6570;&#x636E;&#x8868;&#xFF08;&#x5217;&#x7EA6;&#x675F;&#xFF09;"><a name="5&#x6570;&#x636E;&#x8868;&#xFF08;&#x5217;&#x7EA6;&#x675F;&#xFF09;" class="plugin-anchor" href="#5&#x6570;&#x636E;&#x8868;&#xFF08;&#x5217;&#x7EA6;&#x675F;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>5.&#x6570;&#x636E;&#x8868;&#xFF08;&#x5217;&#x7EA6;&#x675F;&#xFF09;</h1>
+<p><img src="../2024-linux/image-20220720104211870.png" alt="image-20220720104211870"></p>
+<h2 id="&#x4E3B;&#x952E;-primary-key--&#x7B80;&#x79F0;pk"><a name="&#x4E3B;&#x952E;-primary-key--&#x7B80;&#x79F0;pk" class="plugin-anchor" href="#&#x4E3B;&#x952E;-primary-key--&#x7B80;&#x79F0;pk"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3B;&#x952E; primary key  &#x7B80;&#x79F0;pk</h2>
+<pre><code>
+
+&#x7279;&#x70B9;
+1. &#x4E00;&#x5F20;&#x8868;&#xFF0C;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;pk&#xFF0C;&#x53EF;&#x4EE5;&#x7531;&#x591A;&#x4E2A;&#x5217;&#x6784;&#x6210;
+2. &#x7B49;&#x4E8E; &#x552F;&#x4E00;&#x7EA6;&#x675F;&#xFF08;Unique Key&#xFF09;&#x548C;&#x975E;&#x7A7A;&#x7EA6;&#x675F;&#xFF08;NOT NULL&#xFF09; &#x7684;&#x7EC4;&#x5408;
+3. &#x5EFA;&#x8BAE;&#x6BCF;&#x5F20;&#x8868;&#x90FD;&#x8981;&#x8BBE;&#x7F6E;&#x4E3B;&#x952E;&#xFF0C;&#x4FBF;&#x4E8E;&#x7D22;&#x5F15;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x4EE5;id&#x5217;&#x4E3A;&#x4E3B;&#x952E;&#xFF0C;&#x662F;&#x9ED8;&#x8BA4;&#x81EA;&#x589E;&#x7684;&#x6570;&#x5B57;&#x5217;&#x3002;
+</code></pre><h2 id="&#x975E;&#x7A7A;-not-null"><a name="&#x975E;&#x7A7A;-not-null" class="plugin-anchor" href="#&#x975E;&#x7A7A;-not-null"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x7A7A; not null</h2>
+<pre><code>&#x8BE5;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x5199;&#x5165;&#x6570;&#x636E;
+&#x5EFA;&#x8BAE;&#x6BCF;&#x4E00;&#x5217;&#x90FD;&#x8BBE;&#x7F6E;&#xFF0C;&#x4FBF;&#x4E8E;&#x7D22;&#x5F15;&#x5E94;&#x7528;
+</code></pre><h2 id="&#x552F;&#x4E00;&#x6027;-unique-key"><a name="&#x552F;&#x4E00;&#x6027;-unique-key" class="plugin-anchor" href="#&#x552F;&#x4E00;&#x6027;-unique-key"><i class="fa fa-link" aria-hidden="true"></i></a>&#x552F;&#x4E00;&#x6027; unique key</h2>
+<pre><code>&#x8BE5;&#x5217;&#x7684;&#x503C;&#x4E0D;&#x5F97;&#x91CD;&#x590D;&#xFF0C;&#x4F60;&#x6BD4;&#x5982;&#x5B58;&#x50A8;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7684;&#x5217;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;&#x53F7;&#x7801;&#x90FD;&#x662F;&#x552F;&#x4E00;&#xFF0C;&#x4E0D;&#x5F97;&#x91CD;&#x590D;&#xFF0C;&#x5F97;&#x5FC5;&#x987B;&#x6709;&#x6570;&#x636E;&#x7684;
+</code></pre><h2 id="&#x65E0;&#x7B26;&#x53F7;-unsingned"><a name="&#x65E0;&#x7B26;&#x53F7;-unsingned" class="plugin-anchor" href="#&#x65E0;&#x7B26;&#x53F7;-unsingned"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65E0;&#x7B26;&#x53F7; unsingned</h2>
+<pre><code>&#x9488;&#x5BF9;&#x6570;&#x5B57;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x800C;&#x8A00;&#xFF0C;&#x662F;&#x5426;&#x6709;&#x7B26;&#x53F7;&#xFF0C;&#x5982;&#x8D1F;&#x6570;
+</code></pre><h2 id="&#x5176;&#x4ED6;&#x5C5E;&#x6027;"><a name="&#x5176;&#x4ED6;&#x5C5E;&#x6027;" class="plugin-anchor" href="#&#x5176;&#x4ED6;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5176;&#x4ED6;&#x5C5E;&#x6027;</h2>
+<pre><code>1.&#x8868;&#x5C5E;&#x6027;
+engine&#xFF0C;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;innodb
+charset&#xFF0C;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;utf8mb4
+comment&#xFF0C;&#x6CE8;&#x91CA;
+
+
+&#x5217;&#x5C5E;&#x6027;
+default &#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B57;&#x6BB5;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x4E00;&#x822C;&#x548C;not null&#x4E0D;&#x4E3A;&#x7A7A;&#x7ED3;&#x5408;&#x7528;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5982;&#x6027;&#x522B;&#x4E0D;&#x9009;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x7537;
+
+auto_increment&#xFF0C;&#x6570;&#x5B57;&#x5B57;&#x6BB5;&#xFF0C;&#x81EA;&#x589E;&#x957F;&#xFF0C;&#x4E00;&#x822C;&#x914D;&#x5408;&#x4E3B;&#x952E;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x8868;&#xFF0C;id&#x4F9D;&#x6B21;&#x7684;+1
+
+comment&#xFF0C;&#x5217;&#x7684;&#x6CE8;&#x91CA;
+</code></pre><h1 id="1ddl&#x6570;&#x636E;&#x5E93;&#x5B9A;&#x4E49;&#x8BED;&#x8A00;"><a name="1ddl&#x6570;&#x636E;&#x5E93;&#x5B9A;&#x4E49;&#x8BED;&#x8A00;" class="plugin-anchor" href="#1ddl&#x6570;&#x636E;&#x5E93;&#x5B9A;&#x4E49;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>1.DDL&#x6570;&#x636E;&#x5E93;&#x5B9A;&#x4E49;&#x8BED;&#x8A00;</h1>
+<p>DDL&#x7684;&#x7279;&#x70B9;&#x662F;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5185;&#x90E8;&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x6D89;&#x53CA;&#x5BF9;&#x8868;&#x4E2D;&#x5185;&#x5BB9;&#x7684;&#x64CD;&#x4F5C;&#x548C;&#x66F4;&#x6539;&#x3002;</p>
+<p>&#x8FD9;&#x90E8;&#x5206;&#x662F;&#x8FD0;&#x7EF4;&#x4EBA;&#x5458;&#x6216;DBA&#x9700;&#x8981;&#x719F;&#x7EC3;&#x638C;&#x63E1;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4E86;&#x89E3;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5168;&#x79F0;&#x4E3A;Data Definition Language&#xFF0C;&#x5176;&#x8BED;&#x53E5;&#x5305;&#x62EC;&#x52A8;&#x8BCD;CREATE&#x3001;DROP&#x548C;ALTER&#x3002;&#x53EF;&#x4F7F;&#x7528;&#x8BE5;&#x8BED;&#x8A00;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x521B;&#x5EFA;&#x65B0;&#x5E93;&#x8868;&#x6216;&#x5220;&#x9664;&#x5E93;&#x8868;&#xFF0C;&#x6216;&#x8005;&#x4E3A;&#x8868;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;&#x3001;&#x7D22;&#x5F15;&#x7B49;&#x3002;</p>
+<blockquote>
+<p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</p>
+</blockquote>
+<p>&#x4E0D;&#x5F97;&#x5DF2;&#x6570;&#x5B57;&#x5F00;&#x5934;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;</p>
+<h2 id="11-&#x6570;&#x636E;&#x5E93;&#x90E8;&#x5206;"><a name="11-&#x6570;&#x636E;&#x5E93;&#x90E8;&#x5206;" class="plugin-anchor" href="#11-&#x6570;&#x636E;&#x5E93;&#x90E8;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x6570;&#x636E;&#x5E93;&#x90E8;&#x5206;</h2>
+<pre><code>1. &#x5E93;&#x540D;&#x4E0D;&#x5F97;&#x4EE5;&#x6570;&#x5B57;&#x5F00;&#x5934;
+2. &#x5E93;&#x540D;&#x548C;&#x4E1A;&#x52A1;&#x6709;&#x5173;&#xFF0C;&#x89C1;&#x540D;&#x77E5;&#x610F;
+3. &#x5E93;&#x540D;&#x4E0D;&#x5F97;&#x6709;&#x5927;&#x5199;&#x5B57;&#x6BCD;
+
+&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x591A;&#x7CFB;&#x7EDF;&#x5E73;&#x53F0;&#x7684;&#x517C;&#x5BB9;&#x6027;
+
+4.&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x9700;&#x8981;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5EFA;&#x8BAE;&#x8BBE;&#x5B9A;&#x9ED8;&#x8BA4;&#x89C4;&#x5219;&#x5C31;&#x662F;utf8mb4
+
+5.&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x7981;&#x7528;&#x666E;&#x901A;&#x7528;&#x6237;&#x7684;drop database&#x6743;&#x9650;
+</code></pre><h2 id="12-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><a name="12-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;" class="plugin-anchor" href="#12-&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</h2>
+<pre><code>&#x5B8C;&#x6574;&#x5199;&#x6CD5;&#xFF08;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x6570;&#x636E;&#x5E93;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x51B2;&#x7A81;&#xFF09;
+create database  if not exists kings default charset utf8mb4 ;
+
+&#x57FA;&#x672C;&#x5199;&#x6CD5;
+create database yuchao_linux charset utf8;
+create database yuchao_linux charset utf8mb4;
+</code></pre><h2 id="13-&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;"><a name="13-&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;" class="plugin-anchor" href="#13-&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;</h2>
+<pre><code>mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |    # &#x7CFB;&#x7EDF;&#x81EA;&#x5E26;&#x5E93;&#xFF0C;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;&#x5185;&#x7F6E;&#x4FE1;&#x606F;
+| kings                |
+| luffy              |
+| mysql              |    # &#x81EA;&#x5E26;&#x5E93;&#xFF0C;&#x5B58;&#x50A8;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x6388;&#x6743;&#x7B49;
+| performance_schema |    # &#x5B58;&#x50A8;&#x548C;&#x6027;&#x80FD;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;
+| test               | 
++--------------------+
+
+# &#x67E5;&#x770B;show create&#x5E2E;&#x52A9;&#x4FE1;&#x606F;
+help show create database
+
+
+
+&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x67E5;&#x770B;&#x5EFA;&#x5E93;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x53EF;&#x4EE5;&#x590D;&#x7528;
+
+show create database yuchao_linux;
+show create database kings;
+</code></pre><h3 id="131-&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6821;&#x9A8C;&#x89C4;&#x5219;"><a name="131-&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6821;&#x9A8C;&#x89C4;&#x5219;" class="plugin-anchor" href="#131-&#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6821;&#x9A8C;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1 &#x5B57;&#x7B26;&#x96C6;&#x548C;&#x6821;&#x9A8C;&#x89C4;&#x5219;</h3>
+<pre><code># &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x4EE5;&#x53CA;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x6821;&#x9A8C;&#x89C4;&#x5219;
+
+1. &#x5B57;&#x7B26;&#x96C6;&#xFF0C;character set&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x5957;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x7684;&#x7B26;&#x53F7;&#x548C;&#x8FD9;&#x4E9B;&#x7684;&#x7B26;&#x53F7;&#x7684;&#x5E95;&#x5C42;&#x7F16;&#x7801;&#xFF1B;
+2. &#x6821;&#x9A8C;&#x89C4;&#x5219;&#xFF0C;&#x5219;&#x662F;&#x5728;&#x5B57;&#x7B26;&#x96C6;&#x5185;&#x7528;&#x4E8E;&#x6BD4;&#x8F83;&#x5B57;&#x7B26;&#x7684;&#x4E00;&#x5957;&#x89C4;&#x5219;&#x3002;
+
+
+# &#x67E5;&#x770B;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x652F;&#x6301;&#x7684;&#x5B57;&#x7B26;&#x96C6;
+# maxlen&#x8868;&#x793A;&#x8981;&#x7528;&#x6700;&#x5927;&#x591A;&#x5C11;&#x4E2A;&#x5B57;&#x8282;&#x6765;&#x5B58;&#x50A8;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x5355;&#x4E2A;&#x8BCD;&#xFF0C;default collation&#x8868;&#x793A;&#x8BE5;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x9ED8;&#x8BA4;&#x6821;&#x9A8C;&#x89C4;&#x5219;&#x3002;
+
+show character set;
+
+
+# &#x67E5;&#x8BE2;mysql&#x6570;&#x636E;&#x5E93;&#x6240;&#x652F;&#x6301;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x6821;&#x9A8C;&#x89C4;&#x5219;
+show collation;
+
+# &#x5148;&#x7B80;&#x5355;&#x4E86;&#x89E3;&#x5373;&#x53EF;&#xFF0C;&#x5728;&#x9047;&#x89C1;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#xFF0C;&#x4E2D;&#x82F1;&#x6587;&#xFF0C;&#x4EE5;&#x53CA;&#x5305;&#x542B;&#x7279;&#x6B8A;&#x7B26;&#x53F7;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x67E5;&#x9605;&#xFF0C;&#x8C03;&#x6574;&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;&#x4E86;
+
+&#x4E3B;&#x6D41;&#x7528;&#x6CD5;&#x7EC4;&#x5408;
+utf8mb4 &#x5B57;&#x7B26;&#x96C6;   
+utf8mb4_general_ci&#x6392;&#x5E8F;&#x89C4;&#x5219;
+</code></pre><h2 id="14-&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x7B26;&#x96C6;"><a name="14-&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x7B26;&#x96C6;" class="plugin-anchor" href="#14-&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 &#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x5B57;&#x7B26;&#x96C6;</h2>
+<pre><code>mysql&gt; show create database yuchao_linux;
++--------------+-----------------------------------------------------------------------+
+| Database     | Create Database                                                       |
++--------------+-----------------------------------------------------------------------+
+| yuchao_linux | CREATE DATABASE `yuchao_linux` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++--------------+-----------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+# &#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x7F16;&#x7801;
+mysql&gt; alter database yuchao_linux charset utf8mb4;
+Query OK, 1 row affected (0.00 sec)
+
+
+mysql&gt; show create database yuchao_linux;
++--------------+--------------------------------------------------------------------------+
+| Database     | Create Database                                                          |
++--------------+--------------------------------------------------------------------------+
+| yuchao_linux | CREATE DATABASE `yuchao_linux` /*!40100 DEFAULT CHARACTER SET utf8mb4 */ |
++--------------+--------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre><h2 id="15-&#x8BBE;&#x7F6E;mysqld&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;"><a name="15-&#x8BBE;&#x7F6E;mysqld&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;" class="plugin-anchor" href="#15-&#x8BBE;&#x7F6E;mysqld&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5 &#x8BBE;&#x7F6E;mysqld&#x9ED8;&#x8BA4;&#x5B57;&#x7B26;&#x96C6;</h2>
+<p>&#x8BE5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre><code>[root@db-51 ~]#cat /etc/my.cnf 
+[mysqld]
+character_set_server=utf8mb4
+port=3306
+user=mysql
+basedir=/opt/mysql
+datadir=/www.yuchaoit.cn/mysql_3306
+socket=/tmp/mysql.sock
+
+[mysql]
+socket=/tmp/mysql.sock
+
+
+&#x91CD;&#x542F;
+[root@db-51 ~]#systemctl restart mysql
+</code></pre><p>&#x518D;&#x6B21;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x8BD5;&#x8BD5;</p>
+<pre><code>mysql&gt; create database kings_linux;
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; show create database kings_linux;
++-------------+-------------------------------------------------------------------------+
+| Database    | Create Database                                                         |
++-------------+-------------------------------------------------------------------------+
+| kings_linux | CREATE DATABASE `kings_linux` /*!40100 DEFAULT CHARACTER SET utf8mb4 */ |
++-------------+-------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre><h2 id="16-&#x6570;&#x636E;&#x8868;&#x90E8;&#x5206;"><a name="16-&#x6570;&#x636E;&#x8868;&#x90E8;&#x5206;" class="plugin-anchor" href="#16-&#x6570;&#x636E;&#x8868;&#x90E8;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6 &#x6570;&#x636E;&#x8868;&#x90E8;&#x5206;</h2>
+<h3 id="&#x8868;&#x5B9A;&#x4E49;&#x89C4;&#x8303;"><a name="&#x8868;&#x5B9A;&#x4E49;&#x89C4;&#x8303;" class="plugin-anchor" href="#&#x8868;&#x5B9A;&#x4E49;&#x89C4;&#x8303;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;&#x5B9A;&#x4E49;&#x89C4;&#x8303;</h3>
+<h3 id="&#x521B;&#x5EFA;&#x8868;"><a name="&#x521B;&#x5EFA;&#x8868;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8868;</h3>
+<pre><code>1.&#x521B;&#x5EFA;&#x8868;
+    a.&#x8868;&#x540D;&#x7684;&#x89C4;&#x8303;
+        &#x4E0D;&#x5F97;&#x6570;&#x5B57;&#x5F00;&#x5934;
+        &#x89C1;&#x540D;&#x77E5;&#x610F;&#xFF0C;&#x8868;&#x548C;&#x4E1A;&#x52A1;&#x6709;&#x5173;&#xFF0C;&#x53C2;&#x8003;wordpress&#x7B49;&#x6570;&#x636E;&#x5E93;&#x547D;&#x540D;&#x89C4;&#x8303;&#xFF0C;&#x5982;yuchaoit_post
+        &#x4E0D;&#x5F97;&#x5927;&#x5199;&#x5B57;&#x6BCD;
+        &#x522B;&#x8D85;&#x8FC7;18&#x4E2A;&#x5B57;&#x7B26;
+        &#x522B;&#x662F;mysql&#x9ED8;&#x8BA4;&#x5173;&#x952E;&#x5B57;
+    b. &#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x662F;innodb
+    c. 5.7&#x4E4B;&#x540E;&#xFF0C;&#x6570;&#x636E;&#x8868;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x9ED8;&#x8BA4;utf8mb4
+    d. &#x6570;&#x636E;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#xFF09;&#x4E5F;&#x548C;&#x4E1A;&#x52A1;&#x6709;&#x5173;&#xFF0C;&#x5B57;&#x7B26;&#x522B;&#x8D85;&#x8FC7;18&#x4E2A;
+    e. &#x6570;&#x636E;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#xFF09;&#x8981;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x3001;&#x8DB3;&#x591F;&#x5BB9;&#x91CF;&#x3001;&#x7701;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;
+    f. &#x6570;&#x636E;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#xFF09;&#x5EFA;&#x8BAE;&#x90FD;not null
+    g. &#x6570;&#x636E;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#xFF09;&#x5EFA;&#x8BAE;&#x90FD;&#x8981;&#x6709;&#x6CE8;&#x91CA;
+    h. &#x6570;&#x636E;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#xFF09; &#x6BCF;&#x5F20;&#x6570;&#x636E;&#x8868;&#x90FD;&#x5EFA;&#x8BAE;&#x52A0;&#x4E3B;&#x952E;
+    i. &#x9488;&#x5BF9;not null&#x7684;&#x5217;&#xFF0C;&#x4E00;&#x822C;&#x7ED9;&#x4E0E;&#x9ED8;&#x8BA4;&#x503C;
+    j. &#x7ED9;&#x6BCF;&#x5F20;&#x8868;&#x6DFB;&#x52A0;&#x6CE8;&#x91CA;
+</code></pre><h3 id="&#x4FEE;&#x6539;&#x8868;"><a name="&#x4FEE;&#x6539;&#x8868;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x8868;</h3>
+<pre><code>1. &#x6DFB;&#x52A0;&#x6570;&#x636E;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#xFF08;&#x5217;&#xFF09;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528;&#x8FFD;&#x52A0;&#x65B9;&#x5F0F;
+2. &#x4FEE;&#x6539;&#x5217;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x7528;modify&#x8BED;&#x53E5;
+3. &#x4FEE;&#x6539;&#x8868;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;&#x4E1A;&#x52A1;&#x4E0D;&#x7E41;&#x5FD9;&#x7684;&#x65F6;&#x5019;&#x4FEE;&#x6539;
+</code></pre><h2 id="17-&#x751F;&#x4EA7;&#x7EA7;sql&#x5BA1;&#x6838;&#x5DE5;&#x5177;"><a name="17-&#x751F;&#x4EA7;&#x7EA7;sql&#x5BA1;&#x6838;&#x5DE5;&#x5177;" class="plugin-anchor" href="#17-&#x751F;&#x4EA7;&#x7EA7;sql&#x5BA1;&#x6838;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7 &#x751F;&#x4EA7;&#x7EA7;SQL&#x5BA1;&#x6838;&#x5DE5;&#x5177;</h2>
+<p>dba&#x4E13;&#x7528;</p>
+<p><a href="https://yearning.io/" target="_blank">https://yearning.io/</a></p>
+<p><a href="https://hanchuanchuan.github.io/goInception/" target="_blank">https://hanchuanchuan.github.io/goInception/</a></p>
+<h2 id="18-&#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;navicat&#x5B9E;&#x6218;"><a name="18-&#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;navicat&#x5B9E;&#x6218;" class="plugin-anchor" href="#18-&#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;navicat&#x5B9E;&#x6218;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8 &#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;navicat&#x5B9E;&#x6218;</h2>
+<h3 id="&#x521B;&#x5EFA;&#x5E93;"><a name="&#x521B;&#x5EFA;&#x5E93;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x5E93;</h3>
+<p><img src="../2024-linux/image-20220720141903735.png" alt="image-20220720141903735"></p>
+<pre><code>mysql&gt; create database d1;
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; show create database d1;
++----------+---------------------------------------------------------------+
+| Database | Create Database                                               |
++----------+---------------------------------------------------------------+
+| d1       | CREATE DATABASE `d1` /*!40100 DEFAULT CHARACTER SET latin1 */ |
++----------+---------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; 
+
+
+# &#x8BE5;&#x7279;&#x6B8A;&#x7B26;&#x53F7; /*!40100 &#x662F;mysql&#x4E3A;&#x4E86;&#x517C;&#x5BB9;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6CE8;&#x91CA;&#x4FE1;&#x606F;&#xFF0C;&#x5FFD;&#x7565;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4F60;&#x53BB;&#x5199;
+</code></pre><h3 id="&#x521B;&#x5EFA;&#x8868;"><a name="&#x521B;&#x5EFA;&#x8868;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x8868;</h3>
+<p><img src="../2024-linux/image-20220720144031607.png" alt="image-20220720144031607"></p>
+<blockquote>
+<p>&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x7684;&#x73A9;&#x6CD5;&#xFF0C;&#x5148;&#x7528;SQL&#xFF0C;&#x518D;&#x53BB;&#x7528;&#x56FE;&#x5F62;&#x5316;&#x521B;&#x5EFA;&#x3002;</p>
+<p>&#x4EE5;&#x540E;&#x719F;&#x7EC3;SQL&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x56FE;&#x5F62;&#x5316;&#x521B;&#x5EFA;&#xFF0C;&#x7136;&#x540E;&#x8F6C;&#x4E3A;SQL&#xFF0C;&#x4FBF;&#x4E8E;&#x547D;&#x4EE4;&#x884C;&#x7528;&#x3002;</p>
+</blockquote>
+<h4 id="&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x8BED;&#x6CD5;"><a name="&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x8BED;&#x6CD5;" class="plugin-anchor" href="#&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x8BED;&#x6CD5;</h4>
+<pre><code>help create table;
+</code></pre><pre><code>CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;&#x5B66;&#x53F7;&apos;,
+  `name` varchar(64) NOT NULL COMMENT &apos;&#x5B66;&#x751F;&#x59D3;&#x540D;&apos;,
+  `age` tinyint(3) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x5B66;&#x751F;&#x5E74;&#x9F84;&apos;,
+  `gender` enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;) NOT NULL COMMENT &apos;&#x5B66;&#x751F;&#x6027;&#x522B;&apos;,
+  `address` enum(&apos;&#x5317;&#x4EAC;&apos;,&apos;&#x6DF1;&#x5733;&apos;,&apos;&#x4E91;&#x5357;&apos;,&apos;&#x6C5F;&#x82CF;&apos;) NOT NULL COMMENT &apos;&#x7701;&#x4EFD;&apos;,
+  `intime` datetime NOT NULL COMMENT &apos;&#x5165;&#x5B66;&#x65F6;&#x95F4;&apos;,
+  `phone` char(11) NOT NULL COMMENT &apos;&#x624B;&#x673A;&#x53F7;&apos;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+</code></pre><p><img src="../2024-linux/image-20220720144109883.png" alt="image-20220720144109883"></p>
+<h4 id="&#x8868;&#x5B57;&#x6BB5;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;"><a name="&#x8868;&#x5B57;&#x6BB5;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x8868;&#x5B57;&#x6BB5;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8868;&#x5B57;&#x6BB5;&#xFF0C;&#x6570;&#x636E;&#x7C7B;&#x578B;</h4>
+<pre><code>int                &#x6574;&#x6570;&#xFF0C;&#x6709;&#x7B26;&#x53F7; -2^31 &#x5230; 2^31-1  &#xFF08;-2147483648  ~  2147483647 &#xFF09;
+tinyint          &#x6700;&#x5C0F;&#x6574;&#x6570;&#xFF0C;-128 &#x5230; 127&#xFF0C;&#x5982;&#x5E74;&#x9F84;
+varchar         &#x5B57;&#x7B26;&#x7C7B;&#x578B;&#xFF0C;&#x53D8;&#x5316;&#x957F;&#x5EA6;&#xFF0C;&#x5982;&#x8EAB;&#x4EFD;&#x8BC1;
+char            &#x5B57;&#x7B26;&#x7C7B;&#x578B;&#xFF0C;&#x56FA;&#x5B9A;&#x957F;&#x5EA6;
+enum            &#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x6027;&#x522B;&#x4E8C;&#x9009;&#x4E00;&#xFF0C;&#x4E09;&#x9009;&#x4E00;&#x884C;&#x4E0D;&#x884C;&#xFF1F;
+datetime         &#x65F6;&#x95F4;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x4E0B;&#x5355;&#x65F6;&#x95F4;&#xFF0C;&#x53D1;&#x8868;&#x6587;&#x7AE0;&#x65F6;&#x95F4;&#xFF0C;&#x6CE8;&#x518C;&#x65F6;&#x95F4;&#x7B49;
+
+
+# &#x7B80;&#x5355;&#x73A9;&#x4E00;&#x73A9;&#x6570;&#x636E;&#x7C7B;&#x578B;
+# &#x73A9;&#x73A9;int&#x8303;&#x56F4;
+mysql&gt; create table t1(id int);
+Query OK, 0 rows affected (0.01 sec)
+
+
+mysql&gt; insert into t1 values(2147483647);
+Query OK, 1 row affected (0.01 sec)
+
+mysql&gt; insert into t1 values(2147483648);
+ERROR 1264 (22003): Out of range value for column &apos;id&apos; at row 1
+
+mysql&gt; insert into t1 values(-2147483648);
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; insert into t1 values(-2147483649);
+ERROR 1264 (22003): Out of range value for column &apos;id&apos; at row 1
+
+
+# &#x73A9;&#x73A9;tinyint
+create table t2(age tinyint);
+
+insert into t2 values(128);
+insert into t2 values(127);
+
+# &#x73A9;&#x73A9;char&#x56FA;&#x5B9A;&#x957F;&#x5EA6;
+create table t3(name char(4)) charset utf8;
+insert into t3 values(&apos;jntmm&apos;);
+insert into t3 values(&apos;jntmm&apos;);
+
+# &#x73A9;&#x73A9;&#x679A;&#x4E3E;&#x7C7B;&#x578B;
+create table t4(gender enum(&apos;male&apos;,&apos;female&apos;,&apos;unknown&apos;));
+insert into t4 values(&apos;cxk&apos;);
+insert into t4 values(&apos;male&apos;);
+insert into t4 values(&apos;female&apos;);
+insert into t4 values(&apos;unknown&apos;);
+
+# &#x73A9;&#x73A9;&#x65E5;&#x671F;&#x7C7B;&#x578B;datetime
+create table t5(in_school_time  datetime );
+
+&#x67E5;&#x770B;&#x63D2;&#x5165;&#x6570;&#x636E;&#x7684;&#x8BED;&#x6CD5; 
+ ? datetime
+
+
+insert into t5 values(&quot;1993-1-25&quot;);
+insert into t5 values(&quot;1993/1/25&quot;);
+insert into t5 values(&quot;199333/1/25 &quot;);
+insert into t5 values(&quot;1993/133/25&quot;);
+insert into t5 values(&quot;1993133/25&quot;);
+insert into t5 values(&quot;14-3-1933&quot;);
+insert into t5 values(&quot;3-2-2 3:22:11&quot;);
+</code></pre><h3 id="&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;"><a name="&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;" class="plugin-anchor" href="#&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</h3>
+<p><img src="../2024-linux/image-20220720144133439.png" alt="image-20220720144133439"></p>
+<pre><code class="lang-sql"># &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5BA2;&#x6237;&#x7AEF;
+mysql&gt; select user();
++-------------------+
+| user()            |
++-------------------+
+| yuchao02@10.0.0.1 |
++-------------------+
+1 row in set (0.01 sec)
+
+# &#x67E5;&#x770B;&#x6240;&#x6709;&#x5E93;
+mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| kings              |
+| kings_linux        |
+| mysql              |
+| performance_schema |
+| sys                |
+| yuchao_linux       |
+| yuchaoit_mysql     |
++--------------------+
+8 rows in set (0.02 sec)
+
+
+
+# &#x67E5;&#x770B;&#x5EFA;&#x5E93;&#x8BED;&#x53E5;SQL
+mysql&gt; show create database yuchaoit_mysql;
++----------------+----------------------------------------------------------------------------+
+| Database       | Create Database                                                            |
++----------------+----------------------------------------------------------------------------+
+| yuchaoit_mysql | CREATE DATABASE `yuchaoit_mysql` /*!40100 DEFAULT CHARACTER SET utf8mb4 */ |
++----------------+----------------------------------------------------------------------------+
+1 row in set (0.02 sec)
+
+
+
+mysql&gt; 
+
+
+# &#x67E5;&#x770B;&#x5EFA;&#x8868;&#x8BED;&#x53E5;SQL
+mysql&gt; show create table students;
++----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Table    | Create Table                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
++----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| students | CREATE TABLE `students` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT &apos;&#x5B66;&#x53F7;&apos;,
+  `name` varchar(64) NOT NULL COMMENT &apos;&#x5B66;&#x751F;&#x59D3;&#x540D;&apos;,
+  `age` tinyint(3) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x5B66;&#x751F;&#x5E74;&#x9F84;&apos;,
+  `gender` enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;) NOT NULL COMMENT &apos;&#x5B66;&#x751F;&#x6027;&#x522B;&apos;,
+  `address` enum(&apos;&#x5317;&#x4EAC;&apos;,&apos;&#x6DF1;&#x5733;&apos;,&apos;&#x4E91;&#x5357;&apos;,&apos;&#x6C5F;&#x82CF;&apos;) NOT NULL COMMENT &apos;&#x7701;&#x4EFD;&apos;,
+  `intime` datetime NOT NULL COMMENT &apos;&#x5165;&#x5B66;&#x65F6;&#x95F4;&apos;,
+  `phone` char(11) NOT NULL COMMENT &apos;&#x624B;&#x673A;&#x53F7;&apos;,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 |
++----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.04 sec)
+
+
+# &#x67E5;&#x770B;&#x5F53;&#x524D;&#x5728;&#x90A3;&#x4E2A;&#x5E93;
+mysql&gt; select database();
++--------------+
+| database()   |
++--------------+
+| yuchao_linux |
++--------------+
+1 row in set (0.04 sec)
+
+
+
+# &#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784;
+mysql&gt; desc students;
++---------+-----------------------------------+------+-----+---------+----------------+
+| Field   | Type                              | Null | Key | Default | Extra          |
++---------+-----------------------------------+------+-----+---------+----------------+
+| id      | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(64)                       | NO   |     | NULL    |                |
+| age     | tinyint(3)                        | NO   |     | 0       |                |
+| gender  | enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;)                   | NO   |     | NULL    |                |
+| address | enum(&apos;&#x5317;&#x4EAC;&apos;,&apos;&#x6DF1;&#x5733;&apos;,&apos;&#x4E91;&#x5357;&apos;,&apos;&#x6C5F;&#x82CF;&apos;) | NO   |     | NULL    |                |
+| intime  | datetime                          | NO   |     | NULL    |                |
+| phone   | char(11)                          | NO   |     | NULL    |                |
++---------+-----------------------------------+------+-----+---------+----------------+
+7 rows in set (0.05 sec)
+</code></pre>
+<h3 id="&#x590D;&#x5236;&#x6570;&#x636E;&#x8868;"><a name="&#x590D;&#x5236;&#x6570;&#x636E;&#x8868;" class="plugin-anchor" href="#&#x590D;&#x5236;&#x6570;&#x636E;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x5236;&#x6570;&#x636E;&#x8868;</h3>
+<pre><code>mysql&gt; create table stu_back like students;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; show tables;
++------------------------+
+| Tables_in_yuchao_linux |
++------------------------+
+| stu_back               |
+| students               |
++------------------------+
+2 rows in set (0.05 sec)
+
+mysql&gt; desc stu_back;
++---------+-----------------------------------+------+-----+---------+----------------+
+| Field   | Type                              | Null | Key | Default | Extra          |
++---------+-----------------------------------+------+-----+---------+----------------+
+| id      | int(11)                           | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(64)                       | NO   |     | NULL    |                |
+| age     | tinyint(3)                        | NO   |     | 0       |                |
+| gender  | enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;)                   | NO   |     | NULL    |                |
+| address | enum(&apos;&#x5317;&#x4EAC;&apos;,&apos;&#x6DF1;&#x5733;&apos;,&apos;&#x4E91;&#x5357;&apos;,&apos;&#x6C5F;&#x82CF;&apos;) | NO   |     | NULL    |                |
+| intime  | datetime                          | NO   |     | NULL    |                |
+| phone   | char(11)                          | NO   |     | NULL    |                |
++---------+-----------------------------------+------+-----+---------+----------------+
+7 rows in set (0.03 sec)
+</code></pre><h2 id="19-&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;"><a name="19-&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;" class="plugin-anchor" href="#19-&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9 &#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;</h2>
+<p>&#x54B1;&#x5C31;&#x4E0D;&#x7528;&#x56FE;&#x5F62;&#x5316;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;&#x5B66;&#x4E60;&#x5E95;&#x5C42;&#x7684;SQL&#x8BED;&#x53E5;</p>
+<h3 id="&#x7ED3;&#x5C3E;&#x52A0;&#x5165;&#x4E00;&#x5217;"><a name="&#x7ED3;&#x5C3E;&#x52A0;&#x5165;&#x4E00;&#x5217;" class="plugin-anchor" href="#&#x7ED3;&#x5C3E;&#x52A0;&#x5165;&#x4E00;&#x5217;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ED3;&#x5C3E;&#x52A0;&#x5165;&#x4E00;&#x5217;</h3>
+<blockquote>
+<p>&#x7ED9;students&#x8868;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5174;&#x8DA3;&#x5B57;&#x6BB5;&#xFF0C;hobby &#x8981;&#x6C42;&#x53EA;&#x80FD;&#x8F93;&#x5165;20&#x4E2A;&#x6C49;&#x5B57;&#x4EE5;&#x5185;&#xFF08;20&#xFF09;</p>
+</blockquote>
+<pre><code># &#x7ED9;students&#x8868;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5174;&#x8DA3;&#x5B57;&#x6BB5;&#xFF0C;hobby &#x8981;&#x6C42;&#x53EA;&#x80FD;&#x8F93;&#x5165;20&#x4E2A;&#x6C49;&#x5B57;&#x4EE5;&#x5185;&#xFF08;20&#xFF09;
+
+mysql&gt; desc yuchao_linux.students;
++---------+-------------------------------------------+------+-----+---------+----------------+
+| Field   | Type                                      | Null | Key | Default | Extra          |
++---------+-------------------------------------------+------+-----+---------+----------------+
+| id      | int(11)                                   | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(64)                               | NO   |     | NULL    |                |
+| age     | tinyint(3)                                | NO   |     | 0       |                |
+| gender  | enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;)                           | NO   |     | NULL    |                |
+| address | enum(&apos;&#x5317;&#x4EAC;&apos;,&apos;&#x6DF1;&#x5733;&apos;,&apos;&#x4E91;&#x5357;&apos;,&apos;&#x6C5F;&#x82CF;&apos;)         | NO   |     | NULL    |                |
+| intime  | datetime                                  | NO   |     | NULL    |                |
+| phone   | char(11)                                  | NO   |     | NULL    |                |
++---------+-------------------------------------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+
+&#x8BED;&#x6CD5;&#xFF1A;
+ALTER TABLE &#x8868;&#x540D;  ADD COLUMN &#x5B57;&#x6BB5;&#x540D;  &#x6570;&#x636E;&#x7C7B;&#x578B;  &#x5B57;&#x6BB5;&#x7EA6;&#x675F;  &#x6CE8;&#x91CA;
+
+&#x6848;&#x4F8B;
+mysql&gt; alter table yuchao_linux.students add column hobby char(20) not null  default &apos;&#x5B66;&#x4E60;&apos; comment &apos;&#x5B66;&#x751F;&#x7231;&#x597D;&apos;;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre><h2 id="tip&#x8865;&#x5145;float&#x7C7B;&#x578B;"><a name="tip&#x8865;&#x5145;float&#x7C7B;&#x578B;" class="plugin-anchor" href="#tip&#x8865;&#x5145;float&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>tip:&#x8865;&#x5145;float&#x7C7B;&#x578B;</h2>
+<pre><code>mysql&#x7684;float&#x8BED;&#x6CD5;
+
+height float(&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x4F4D;,&#x5C0F;&#x6570;&#x70B9;&#x540E;&#x6709;&#x51E0;&#x4F4D;)
+</code></pre><h3 id="&#x5728;&#x7B2C;&#x4E00;&#x5217;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;"><a name="&#x5728;&#x7B2C;&#x4E00;&#x5217;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;" class="plugin-anchor" href="#&#x5728;&#x7B2C;&#x4E00;&#x5217;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;&#x7B2C;&#x4E00;&#x5217;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;</h3>
+<p>&#x6DFB;&#x52A0;&#x8EAB;&#x9AD8;&#x5B57;&#x6BB5;&#xFF0C;&#x8981;&#x6C42;&#x4E0D;&#x8D85;&#x8FC7;3&#x4F4D;&#x6570;&#xFF0C;&#x6709;&#x4E00;&#x4F4D;&#x5C0F;&#x6570;</p>
+<pre><code>mysql&gt; alter table yuchao_linux.students add column height float(4,1)  default null comment &apos;&#x5B66;&#x751F;&#x8EAB;&#x9AD8;&apos; first;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql&gt; desc yuchao_linux.students;
++---------+-------------------------------------------+------+-----+---------+----------------+
+| Field   | Type                                      | Null | Key | Default | Extra          |
++---------+-------------------------------------------+------+-----+---------+----------------+
+| height  | float(4,1)                                | YES  |     | NULL    |                |
+| id      | int(11)                                   | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(64)                               | NO   |     | NULL    |                |
+| age     | tinyint(3)                                | NO   |     | 0       |                |
+| gender  | enum(&apos;&#x7537;&apos;,&apos;&#x5973;&apos;)                           | NO   |     | NULL    |                |
+| address | enum(&apos;&#x5317;&#x4EAC;&apos;,&apos;&#x6DF1;&#x5733;&apos;,&apos;&#x4E91;&#x5357;&apos;,&apos;&#x6C5F;&#x82CF;&apos;)         | NO   |     | NULL    |                |
+| intime  | datetime                                  | NO   |     | NULL    |                |
+| phone   | char(11)                                  | NO   |     | NULL    |                |
+| hobby   | char(20)                                  | NO   |     | &#x5B66;&#x4E60;    |                |
++---------+-------------------------------------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)
+</code></pre><h3 id="&#x5728;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x540E;&#x6DFB;&#x52A0;"><a name="&#x5728;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x540E;&#x6DFB;&#x52A0;" class="plugin-anchor" href="#&#x5728;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x540E;&#x6DFB;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x540E;&#x6DFB;&#x52A0;</h3>
+<pre><code>mysql&gt; alter table yuchao_linux.students drop height;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+&#x5728;&#x6027;&#x522B;&#x540E;&#x9762;&#x6DFB;&#x52A0; height&#x8EAB;&#x9AD8;&#x5B57;&#x6BB5;
+alter table yuchao_linux.students add column height float(4,1)  default null comment &apos;&#x5B66;&#x751F;&#x8EAB;&#x9AD8;&apos; after gender;
+</code></pre><h3 id="&#x5220;&#x9664;&#x5B57;&#x6BB5;"><a name="&#x5220;&#x9664;&#x5B57;&#x6BB5;" class="plugin-anchor" href="#&#x5220;&#x9664;&#x5B57;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x5B57;&#x6BB5;</h3>
+<pre><code>
+&#x5220;&#x9664;&#x5B57;&#x6BB5;
+mysql&gt; 
+mysql&gt; alter table yuchao_linux.students drop hobby;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+&#x5371;&#x9669;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x80FD;&#x968F;&#x4FBF;&#x5220;&#x9664;&#x6570;&#x636E;
+</code></pre><h2 id="110-&#x4FEE;&#x6539;&#x8868;&#x5C5E;&#x6027;"><a name="110-&#x4FEE;&#x6539;&#x8868;&#x5C5E;&#x6027;" class="plugin-anchor" href="#110-&#x4FEE;&#x6539;&#x8868;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10 &#x4FEE;&#x6539;&#x8868;&#x5C5E;&#x6027;</h2>
+<h3 id="&#x4FEE;&#x6539;&#x8868;&#x540D;"><a name="&#x4FEE;&#x6539;&#x8868;&#x540D;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x8868;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x8868;&#x540D;</h3>
+<pre><code>mysql&gt; alter table students rename to new_students;
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql&gt; show tables;
++------------------------+
+| Tables_in_yuchao_linux |
++------------------------+
+| new_students           |
+| stu_back               |
++------------------------+
+2 rows in set (0.00 sec)
+</code></pre><h3 id="&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;"><a name="&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;</h3>
+<pre><code>&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;&#x6570;&#x636E;
+create table t1(id int) engine=MYISAM;
+
+mysql&gt; 
+mysql&gt; show create table t1;
++-------+-----------------------------------------------------------------------------------------+
+| Table | Create Table                                                                            |
++-------+-----------------------------------------------------------------------------------------+
+| t1    | CREATE TABLE `t1` (
+  `id` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 |
++-------+-----------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; 
+mysql&gt; alter table t1 engine=innodb;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql&gt; show create table t1;
++-------+-----------------------------------------------------------------------------------------+
+| Table | Create Table                                                                            |
++-------+-----------------------------------------------------------------------------------------+
+| t1    | CREATE TABLE `t1` (
+  `id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 |
++-------+-----------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre><h3 id="&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x8868;&#x5B57;&#x7B26;&#x96C6;"><a name="&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x8868;&#x5B57;&#x7B26;&#x96C6;" class="plugin-anchor" href="#&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x8868;&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x8868;&#x5B57;&#x7B26;&#x96C6;</h3>
+<pre><code>mysql&gt; alter table t1 charset=latin1;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql&gt; show create table t1;
++-------+----------------------------------------------------------------------------------------+
+| Table | Create Table                                                                           |
++-------+----------------------------------------------------------------------------------------+
+| t1    | CREATE TABLE `t1` (
+  `id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
++-------+----------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre><h2 id="111-&#x4FEE;&#x6539;&#x5217;&#x5C5E;&#x6027;"><a name="111-&#x4FEE;&#x6539;&#x5217;&#x5C5E;&#x6027;" class="plugin-anchor" href="#111-&#x4FEE;&#x6539;&#x5217;&#x5C5E;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11 &#x4FEE;&#x6539;&#x5217;&#x5C5E;&#x6027;</h2>
+<p>&#x57FA;&#x4E8E;&#x76EE;&#x524D;&#x521B;&#x5EFA;&#x7684;students&#x8868;&#xFF0C;&#x9ED8;&#x8BA4;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x5F88;&#x591A;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5B57;&#x6BB5;&#x7684;&#x5C5E;&#x6027;&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x3002;</p>
+<h3 id="change&#x5173;&#x952E;&#x5B57;"><a name="change&#x5173;&#x952E;&#x5B57;" class="plugin-anchor" href="#change&#x5173;&#x952E;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>change&#x5173;&#x952E;&#x5B57;</h3>
+<pre><code>ALTER TABLE &lt;&#x8868;&#x540D;&gt; CHANGE &lt;&#x65E7;&#x5B57;&#x6BB5;&#x540D;&gt; &lt;&#x65B0;&#x5B57;&#x6BB5;&#x540D;&gt; &lt;&#x65B0;&#x6570;&#x636E;&#x7C7B;&#x578B;&gt;&#xFF1B;
+
+&#x65E7;&#x5B57;&#x6BB5;&#x540D;&#xFF1A;&#x6307;&#x4FEE;&#x6539;&#x524D;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#xFF1B;
+&#x65B0;&#x5B57;&#x6BB5;&#x540D;&#xFF1A;&#x6307;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#xFF1B;
+&#x65B0;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;&#x6307;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x65B0;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;&#x6210;&#x4E0E;&#x539F;&#x6765;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x3002;
+
+CHANGE &#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x5B9E;&#x73B0;&#x548C; MODIFY &#x540C;&#x6837;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x5C06; SQL &#x8BED;&#x53E5;&#x4E2D;&#x7684;&#x201C;&#x65B0;&#x5B57;&#x6BB5;&#x540D;&#x201D;&#x548C;&#x201C;&#x65E7;&#x5B57;&#x6BB5;&#x540D;&#x201D;&#x8BBE;&#x7F6E;&#x4E3A;&#x76F8;&#x540C;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x53EA;&#x6539;&#x53D8;&#x201C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x201D;&#x3002;
+
+&#x63D0;&#x793A;&#xFF1A;&#x7531;&#x4E8E;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x5728;&#x673A;&#x5668;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x53CA;&#x957F;&#x5EA6;&#x5E76;&#x4E0D;&#x76F8;&#x540C;&#xFF0C;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x6570;&#x636E;&#x8868;&#x4E2D;&#x5DF2;&#x6709;&#x7684;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x8868;&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x8F7B;&#x6613;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7C7B;&#x578B;
+</code></pre><p>&#x53EA;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x540D;</p>
+<pre><code>mysql&gt; alter table stu_back change phone_num telephone_num varchar(11) NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;&#x624B;&#x673A;&#x53F7;&apos;;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre><p>&#x53EA;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x503C;</p>
+<pre><code>mysql&gt; alter table stu_back change telephone_num telephone_num varchar(11) NOT NULL DEFAULT &apos;15210858004&apos; COMMENT &apos;&#x624B;&#x673A;&#x53F7;&apos;;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre><p>&#x540C;&#x65F6;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;,&#x9ED8;&#x8BA4;&#x503C;</p>
+<pre><code>alter table stu_back change phone phone_num varchar(11) not null default &apos;0&apos; comment &apos;&#x624B;&#x673A;&#x53F7;&apos;;
+</code></pre><h3 id="modify&#x5173;&#x952E;&#x5B57;"><a name="modify&#x5173;&#x952E;&#x5B57;" class="plugin-anchor" href="#modify&#x5173;&#x952E;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>modify&#x5173;&#x952E;&#x5B57;</h3>
+<pre><code>&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x5C31;&#x662F;&#x628A;&#x5B57;&#x6BB5;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x6210;&#x53E6;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;
+
+&#x5728; MySQL &#x4E2D;&#x4FEE;&#x6539;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x8BED;&#x6CD5;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;
+ALTER TABLE &lt;&#x8868;&#x540D;&gt; MODIFY &lt;&#x5B57;&#x6BB5;&#x540D;&gt; &lt;&#x6570;&#x636E;&#x7C7B;&#x578B;&gt;
+
+&#x5176;&#x4E2D;&#xFF1A;
+&#x8868;&#x540D;&#xFF1A;&#x6307;&#x8981;&#x4FEE;&#x6539;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#x6240;&#x5728;&#x8868;&#x7684;&#x540D;&#x79F0;&#xFF1B;
+&#x5B57;&#x6BB5;&#x540D;&#xFF1A;&#x6307;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x5B57;&#x6BB5;&#xFF1B;
+&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;&#x6307;&#x4FEE;&#x6539;&#x540E;&#x5B57;&#x6BB5;&#x7684;&#x65B0;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;
+
+
+&#x4FEE;&#x6539;telephone_num&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x6539;&#x4E3A;char(11)
+
+&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x5E0C;&#x671B;&#x6539;&#x53D8;&#xFF0C;&#x4E5F;&#x8981;&#x52A0;&#x4E0A;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x4E22;&#x5931;&#x4E86;
+
+mysql&gt; alter table stu_back modify telephone_num char(11) not null;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre><h2 id="112-&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;"><a name="112-&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;" class="plugin-anchor" href="#112-&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>1.12 &#x5220;&#x9664;&#x6570;&#x636E;&#x8868;</h2>
+<p>&#x5371;&#x9669;&#x64CD;&#x4F5C;</p>
+<pre><code>mysql&gt; drop table stu_back;
+Query OK, 0 rows affected (0.00 sec)
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; www.bikongge.com 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4F5C;&#x8005;&#xFF1A;&#x733F;&#x6765;&#x6559;&#x80B2;
+2024-05-11 17:46:39
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02-4-SQL语句一","level":"1.8.6","depth":2,"next":{"title":"02-5-SQL语句二","level":"1.8.7","depth":2,"path":"07-数据库运维/02-5-SQL语句二.md","ref":"07-数据库运维/02-5-SQL语句二.md","articles":[]},"previous":{"title":"02-3-mysql运维核心基础","level":"1.8.5","depth":2,"path":"07-数据库运维/02-3-mysql运维核心基础.md","ref":"07-数据库运维/02-3-mysql运维核心基础.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","theme-comscore","theme-api","hide-element","-highlight","advanced-emoji","-lunr","-search","search-pro","page-toc-button","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.bikongge.com 2024","modify_label":"作者：猿来教育"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./icon/book.ico","theme-comscore":{},"page-toc-button":{},"theme-api":{"languages":[{"lang":"python","name":"python","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"light"},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://s1.ax1x.com/2022/10/25/xRowNj.jpg"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"07-数据库运维/02-4-SQL语句一.md","mtime":"2024-05-11T09:46:39.227Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T07:32:03.155Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

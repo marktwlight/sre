@@ -1,0 +1,3472 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>07-reids分片技术cluster篇 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08-redis自动化安装.html" />
+    
+    
+    <link rel="prev" href="06-redis高可用哨兵篇.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-linux核心基础/0.html">
+            
+                <a href="../01-linux核心基础/0.html">
+            
+                    
+                    01-linux 核心基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                <a href="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                    
+                    01_Linux云计算运维工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                <a href="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                    
+                    02_运维基础重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-linux核心基础/03_计算机基础.html">
+            
+                <a href="../01-linux核心基础/03_计算机基础.html">
+            
+                    
+                    03_计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-linux核心基础/04_操作系统基础.html">
+            
+                <a href="../01-linux核心基础/04_操作系统基础.html">
+            
+                    
+                    04_操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                <a href="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                    
+                    05_Linux系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                <a href="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                    
+                    06_vmware安装Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-linux核心基础/07_Linux快速入门.html">
+            
+                <a href="../01-linux核心基础/07_Linux快速入门.html">
+            
+                    
+                    07_Linux快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                <a href="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                    
+                    08_linux文件管理篇一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                <a href="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                    
+                    09_linux文件管理篇二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-linux核心基础/10_linux用户管理.html">
+            
+                <a href="../01-linux核心基础/10_linux用户管理.html">
+            
+                    
+                    10_linux用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-linux核心基础/11_远程连接linux.html">
+            
+                <a href="../01-linux核心基础/11_远程连接linux.html">
+            
+                    
+                    11_远程连接linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-linux核心基础/12_linux权限管理.html">
+            
+                <a href="../01-linux核心基础/12_linux权限管理.html">
+            
+                    
+                    12_linux权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                <a href="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                    
+                    13_linux基础服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                <a href="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                    
+                    14_linux进程与资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                <a href="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                    
+                    15_YUM与开源项目（Web运维）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-linux核心基础/16_计算机网络.html">
+            
+                <a href="../01-linux核心基础/16_计算机网络.html">
+            
+                    
+                    16_计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                <a href="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                    
+                    17_如果让你来设计网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                <a href="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                    
+                    18_OSI模型与TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                <a href="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                    
+                    19_Vmware网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-linux核心基础/20_centos网络配置.html">
+            
+                <a href="../01-linux核心基础/20_centos网络配置.html">
+            
+                    
+                    20_centos网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-系统核心服务/00.html">
+            
+                <a href="../02-系统核心服务/00.html">
+            
+                    
+                    02-系统核心服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-系统核心服务/3-0-Linux重要命令.html">
+            
+                <a href="../02-系统核心服务/3-0-Linux重要命令.html">
+            
+                    
+                    3-0-Linux重要命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-系统核心服务/3-1-软件包管理.html">
+            
+                <a href="../02-系统核心服务/3-1-软件包管理.html">
+            
+                    
+                    3-1-软件包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-系统核心服务/3-10-黄金web架构之LAMP.html">
+            
+                <a href="../02-系统核心服务/3-10-黄金web架构之LAMP.html">
+            
+                    
+                    3-10-黄金web架构之LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-系统核心服务/3-11-磁盘管理.html">
+            
+                <a href="../02-系统核心服务/3-11-磁盘管理.html">
+            
+                    
+                    3-11-磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-系统核心服务/3-12-磁盘管理二.html">
+            
+                <a href="../02-系统核心服务/3-12-磁盘管理二.html">
+            
+                    
+                    3-12-磁盘管理二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../02-系统核心服务/3-13-Raid磁盘冗余阵列.html">
+            
+                <a href="../02-系统核心服务/3-13-Raid磁盘冗余阵列.html">
+            
+                    
+                    3-13-Raid磁盘冗余阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../02-系统核心服务/3-14-lvm逻辑卷管理.html">
+            
+                <a href="../02-系统核心服务/3-14-lvm逻辑卷管理.html">
+            
+                    
+                    3-14-lvm逻辑卷管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../02-系统核心服务/3-15-通配符和特殊符号.html">
+            
+                <a href="../02-系统核心服务/3-15-通配符和特殊符号.html">
+            
+                    
+                    3-15-通配符和特殊符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../02-系统核心服务/3-16-正则表达式和三剑客.html">
+            
+                <a href="../02-系统核心服务/3-16-正则表达式和三剑客.html">
+            
+                    
+                    3-16-正则表达式和三剑客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../02-系统核心服务/3-17-sed精讲.html">
+            
+                <a href="../02-系统核心服务/3-17-sed精讲.html">
+            
+                    
+                    3-17-sed精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../02-系统核心服务/3-18-1-awk进阶.html">
+            
+                <a href="../02-系统核心服务/3-18-1-awk进阶.html">
+            
+                    
+                    3-18-1-awk进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../02-系统核心服务/3-18-awk精讲.html">
+            
+                <a href="../02-系统核心服务/3-18-awk精讲.html">
+            
+                    
+                    3-18-awk精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../02-系统核心服务/3-19-正则练习题.html">
+            
+                <a href="../02-系统核心服务/3-19-正则练习题.html">
+            
+                    
+                    3-19-正则练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../02-系统核心服务/3-2-yum精讲.html">
+            
+                <a href="../02-系统核心服务/3-2-yum精讲.html">
+            
+                    
+                    3-2-yum精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../02-系统核心服务/3-20-sed练习题.html">
+            
+                <a href="../02-系统核心服务/3-20-sed练习题.html">
+            
+                    
+                    3-20-sed练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../02-系统核心服务/3-21-awk练习题.html">
+            
+                <a href="../02-系统核心服务/3-21-awk练习题.html">
+            
+                    
+                    3-21-awk练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../02-系统核心服务/3-22-什么是Shell.html">
+            
+                <a href="../02-系统核心服务/3-22-什么是Shell.html">
+            
+                    
+                    3-22-什么是Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../02-系统核心服务/3-23-Shell快速入门.html">
+            
+                <a href="../02-系统核心服务/3-23-Shell快速入门.html">
+            
+                    
+                    3-23-Shell快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../02-系统核心服务/3-3-SSH远程安全登录.html">
+            
+                <a href="../02-系统核心服务/3-3-SSH远程安全登录.html">
+            
+                    
+                    3-3-SSH远程安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../02-系统核心服务/3-4-Rsync数据同步服务.html">
+            
+                <a href="../02-系统核心服务/3-4-Rsync数据同步服务.html">
+            
+                    
+                    3-4-Rsync数据同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../02-系统核心服务/3-5-Inotify实时数据同步.html">
+            
+                <a href="../02-系统核心服务/3-5-Inotify实时数据同步.html">
+            
+                    
+                    3-5-Inotify实时数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../02-系统核心服务/3-6-文件共享服务之FTP.html">
+            
+                <a href="../02-系统核心服务/3-6-文件共享服务之FTP.html">
+            
+                    
+                    3-6-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../02-系统核心服务/3-7-文件共享服务之Samba.html">
+            
+                <a href="../02-系统核心服务/3-7-文件共享服务之Samba.html">
+            
+                    
+                    3-7-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../02-系统核心服务/3-8文件共享服务之NFS.html">
+            
+                <a href="../02-系统核心服务/3-8文件共享服务之NFS.html">
+            
+                    
+                    3-8文件共享服务之NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../02-系统核心服务/3-9-域名管理系统之DNS.html">
+            
+                <a href="../02-系统核心服务/3-9-域名管理系统之DNS.html">
+            
+                    
+                    3-9-域名管理系统之DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-网站集群架构/0.html">
+            
+                <a href="../03-网站集群架构/0.html">
+            
+                    
+                    03-网站集群架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                <a href="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                    
+                    00-淘宝网的十年架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-网站集群架构/01-综合架构开篇.html">
+            
+                <a href="../03-网站集群架构/01-综合架构开篇.html">
+            
+                    
+                    01-综合架构开篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                <a href="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                    
+                    02-综合架构环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                <a href="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                    
+                    03-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                <a href="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                    
+                    04-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-网站集群架构/05-备份工具rsync.html">
+            
+                <a href="../03-网站集群架构/05-备份工具rsync.html">
+            
+                    
+                    05-备份工具rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-网站集群架构/06-备份任务实战.html">
+            
+                <a href="../03-网站集群架构/06-备份任务实战.html">
+            
+                    
+                    06-备份任务实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                <a href="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                    
+                    07-共享存储服务NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-网站集群架构/08-实时同步数据.html">
+            
+                <a href="../03-网站集群架构/08-实时同步数据.html">
+            
+                    
+                    08-实时同步数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03-网站集群架构/09-SSH安全登录.html">
+            
+                <a href="../03-网站集群架构/09-SSH安全登录.html">
+            
+                    
+                    09-SSH安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03-网站集群架构/10--SSH进阶.html">
+            
+                <a href="../03-网站集群架构/10--SSH进阶.html">
+            
+                    
+                    10--SSH进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                <a href="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                    
+                    11-运维自动化Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                <a href="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                    
+                    12-Ansible-playbook剧本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                <a href="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                    
+                    13-Ansible-playbook剧本进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../03-网站集群架构/14-ansible-role角色.html">
+            
+                <a href="../03-网站集群架构/14-ansible-role角色.html">
+            
+                    
+                    14-ansible-role角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                <a href="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                    
+                    20-用户访问网站原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                <a href="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                    
+                    21-静态资源加速cdn篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../03-网站集群架构/22-web通信协议篇.html">
+            
+                <a href="../03-网站集群架构/22-web通信协议篇.html">
+            
+                    
+                    22-web通信协议篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                <a href="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                    
+                    23-1-nginx虚拟主机实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../03-网站集群架构/23-nginx基础篇.html">
+            
+                <a href="../03-网站集群架构/23-nginx基础篇.html">
+            
+                    
+                    23-nginx基础篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../03-网站集群架构/24-nginx高级篇.html">
+            
+                <a href="../03-网站集群架构/24-nginx高级篇.html">
+            
+                    
+                    24-nginx高级篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                <a href="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                    
+                    25-LNMP黄金架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../03-网站集群架构/26-网站集群拆分.html">
+            
+                <a href="../03-网站集群架构/26-网站集群拆分.html">
+            
+                    
+                    26-网站集群拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                <a href="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                    
+                    27-1-负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                <a href="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                    
+                    27-高性能负载均衡集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../03-网站集群架构/28-HTTPS.html">
+            
+                <a href="../03-网站集群架构/28-HTTPS.html">
+            
+                    
+                    28-HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                <a href="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                    
+                    29-keepalived高可用性负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../03-网站集群架构/30-部署Python网站.html">
+            
+                <a href="../03-网站集群架构/30-部署Python网站.html">
+            
+                    
+                    30-部署Python网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../03-网站集群架构/31-jumpserver实战.html">
+            
+                <a href="../03-网站集群架构/31-jumpserver实战.html">
+            
+                    
+                    31-jumpserver实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                <a href="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                    
+                    32-期中综合架构验收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-shell编程/0.html">
+            
+                <a href="../04-shell编程/0.html">
+            
+                    
+                    04-shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-shell编程/01-shell基础概述.html">
+            
+                <a href="../04-shell编程/01-shell基础概述.html">
+            
+                    
+                    01-Shell基础概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-shell编程/02-shell变量.html">
+            
+                <a href="../04-shell编程/02-shell变量.html">
+            
+                    
+                    02-Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../04-shell编程/03-条件判断.html">
+            
+                <a href="../04-shell编程/03-条件判断.html">
+            
+                    
+                    03-条件判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../04-shell编程/04-流程控制之if.html">
+            
+                <a href="../04-shell编程/04-流程控制之if.html">
+            
+                    
+                    04-流程控制之if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../04-shell编程/05-流程控制之case.html">
+            
+                <a href="../04-shell编程/05-流程控制之case.html">
+            
+                    
+                    05-流程控制之case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                <a href="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                    
+                    06-流程控制之for循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../04-shell编程/07-流程控制之while循环.html">
+            
+                <a href="../04-shell编程/07-流程控制之while循环.html">
+            
+                    
+                    07-流程控制之while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../04-shell编程/08-循环控制.html">
+            
+                <a href="../04-shell编程/08-循环控制.html">
+            
+                    
+                    08-循环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../04-shell编程/09-shell函数.html">
+            
+                <a href="../04-shell编程/09-shell函数.html">
+            
+                    
+                    09-Shell函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../04-shell编程/10-shell数组.html">
+            
+                <a href="../04-shell编程/10-shell数组.html">
+            
+                    
+                    10-Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../04-shell编程/脚本练习题库.html">
+            
+                <a href="../04-shell编程/脚本练习题库.html">
+            
+                    
+                    脚本练习题库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-监控系统/00.html">
+            
+                <a href="../05-监控系统/00.html">
+            
+                    
+                    05-监控系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-监控系统/00-监控系统.html">
+            
+                <a href="../05-监控系统/00-监控系统.html">
+            
+                    
+                    00-监控系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-监控系统/01-监控体系理论.html">
+            
+                <a href="../05-监控系统/01-监控体系理论.html">
+            
+                    
+                    01-监控体系理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-监控系统/02-zabbix安装部署.html">
+            
+                <a href="../05-监控系统/02-zabbix安装部署.html">
+            
+                    
+                    02-zabbix安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                <a href="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                    
+                    03-zabbix如何监控服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-监控系统/04-1-微信报警.html">
+            
+                <a href="../05-监控系统/04-1-微信报警.html">
+            
+                    
+                    04-1-微信报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-监控系统/04-2-钉钉报警.html">
+            
+                <a href="../05-监控系统/04-2-钉钉报警.html">
+            
+                    
+                    04-2-钉钉报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-监控系统/04-自定义监控项.html">
+            
+                <a href="../05-监控系统/04-自定义监控项.html">
+            
+                    
+                    04-自定义监控项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-监控系统/05-自定义监控模板.html">
+            
+                <a href="../05-监控系统/05-自定义监控模板.html">
+            
+                    
+                    05-自定义监控模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-监控系统/06-1-nginx监控.html">
+            
+                <a href="../05-监控系统/06-1-nginx监控.html">
+            
+                    
+                    06-1-nginx监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-监控系统/06-2-php监控.html">
+            
+                <a href="../05-监控系统/06-2-php监控.html">
+            
+                    
+                    06-2-php监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../05-监控系统/06-3-mysql监控.html">
+            
+                <a href="../05-监控系统/06-3-mysql监控.html">
+            
+                    
+                    06-3-mysql监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../05-监控系统/06-4-redis监控.html">
+            
+                <a href="../05-监控系统/06-4-redis监控.html">
+            
+                    
+                    06-4-redis监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../05-监控系统/06-5-tomcat监控.html">
+            
+                <a href="../05-监控系统/06-5-tomcat监控.html">
+            
+                    
+                    06-5-tomcat监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                <a href="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                    
+                    06-6-模拟登录之web监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                <a href="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                    
+                    06-zabbix监控核心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                <a href="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                    
+                    07-1-zabbix-agent修改主动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                <a href="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                    
+                    07-2-zabbix自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                <a href="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                    
+                    07-3-zabbix自动注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../05-监控系统/07-zabbix工作模式.html">
+            
+                <a href="../05-监控系统/07-zabbix工作模式.html">
+            
+                    
+                    07-zabbix工作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                <a href="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                    
+                    08-zabbix分布式proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../06-敏捷开发流水线/00.html">
+            
+                <a href="../06-敏捷开发流水线/00.html">
+            
+                    
+                    06-敏捷开发流水线
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                <a href="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                    
+                    00-版本控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-敏捷开发流水线/01-git工具.html">
+            
+                <a href="../06-敏捷开发流水线/01-git工具.html">
+            
+                    
+                    01-git工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                <a href="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                    
+                    02-git与gitee码云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                <a href="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                    
+                    03-gitlab私有仓库搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-敏捷开发流水线/04-jenkins.html">
+            
+                <a href="../06-敏捷开发流水线/04-jenkins.html">
+            
+                    
+                    04-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                <a href="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                    
+                    05-jenkins结合远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                <a href="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                    
+                    06-自动化发布静态页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                <a href="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                    
+                    07-SonarQube代码质量扫描工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                <a href="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                    
+                    08-jenkins发布Java项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                <a href="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                    
+                    09-jenkins流水线pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../07-数据库运维/00.html">
+            
+                <a href="../07-数据库运维/00.html">
+            
+                    
+                    07-数据库运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                <a href="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                    
+                    02-1-数据库基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../07-数据库运维/02-10-主从复制高级.html">
+            
+                <a href="../07-数据库运维/02-10-主从复制高级.html">
+            
+                    
+                    02-10-主从复制高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                <a href="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                    
+                    02-11-高可用集群MHA方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                <a href="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                    
+                    02-2-mysql基础实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                <a href="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                    
+                    02-3-mysql运维核心基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../07-数据库运维/02-4-SQL语句一.html">
+            
+                <a href="../07-数据库运维/02-4-SQL语句一.html">
+            
+                    
+                    02-4-SQL语句一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../07-数据库运维/02-5-SQL语句二.html">
+            
+                <a href="../07-数据库运维/02-5-SQL语句二.html">
+            
+                    
+                    02-5-SQL语句二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                <a href="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                    
+                    02-6-mysql备份方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                <a href="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                    
+                    02-7-mysql备份实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                <a href="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                    
+                    02-8-xtrabackup备份工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../07-数据库运维/02-9-主从复制架构.html">
+            
+                <a href="../07-数据库运维/02-9-主从复制架构.html">
+            
+                    
+                    02-9-主从复制架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../07-数据库运维/02-DBA之路.html">
+            
+                <a href="../07-数据库运维/02-DBA之路.html">
+            
+                    
+                    02-DBA之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    08-缓存 redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="01-redis部署与数据类型.html">
+            
+                <a href="01-redis部署与数据类型.html">
+            
+                    
+                    01-redis部署与数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="02-redis数据类型篇.html">
+            
+                <a href="02-redis数据类型篇.html">
+            
+                    
+                    02-redis数据类型篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="03-redis数据持久化篇.html">
+            
+                <a href="03-redis数据持久化篇.html">
+            
+                    
+                    03-redis数据持久化篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="04-redis安全篇.html">
+            
+                <a href="04-redis安全篇.html">
+            
+                    
+                    04-redis安全篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="05-redis主从复制篇.html">
+            
+                <a href="05-redis主从复制篇.html">
+            
+                    
+                    05-redis主从复制篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="06-redis高可用哨兵篇.html">
+            
+                <a href="06-redis高可用哨兵篇.html">
+            
+                    
+                    06-redis高可用哨兵篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.7" data-path="07-reids分片技术cluster篇.html">
+            
+                <a href="07-reids分片技术cluster篇.html">
+            
+                    
+                    07-reids分片技术cluster篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="08-redis自动化安装.html">
+            
+                <a href="08-redis自动化安装.html">
+            
+                    
+                    08-redis自动化安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="09-redis实战技巧.html">
+            
+                <a href="09-redis实战技巧.html">
+            
+                    
+                    09-redis实战技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../09-java运维/00.html">
+            
+                <a href="../09-java运维/00.html">
+            
+                    
+                    09-java 运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09-java运维/01-Tomcat.html">
+            
+                <a href="../09-java运维/01-Tomcat.html">
+            
+                    
+                    01-Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10-云原生容器编排/00.html">
+            
+                <a href="../10-云原生容器编排/00.html">
+            
+                    
+                    10-云原生容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10-云原生容器编排/docker-all/00.html">
+            
+                <a href="../10-云原生容器编排/docker-all/00.html">
+            
+                    
+                    docker-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                <a href="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                    
+                    01_docker技术详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                <a href="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                    
+                    02_docker安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                <a href="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                    
+                    03_docker存储与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                <a href="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                    
+                    04_dockerfile构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                <a href="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                    
+                    05-企业级私有仓库Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                <a href="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                    
+                    06-docker网络模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.7" data-path="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                <a href="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                    
+                    07-docker容器单机编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.8" data-path="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                <a href="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                    
+                    08-docker容器跨主机通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.9" data-path="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                <a href="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                    
+                    09-docker综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.10" data-path="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                <a href="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                    
+                    10-容器化部署案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.11" data-path="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                <a href="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                    
+                    11-容器监控方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10-云原生容器编排/iptables/00.html">
+            
+                <a href="../10-云原生容器编排/iptables/00.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                <a href="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                    
+                    00-iptables防火墙安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                <a href="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                    
+                    01-iptables命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10-云原生容器编排/kvm-all/00.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/00.html">
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                    
+                    01-kvm虚拟化实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                    
+                    02-kvm进阶实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10-云原生容器编排/k8s-all/00.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00.html">
+            
+                    
+                    k8s-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" data-path="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                    
+                    00_k8s容器编排系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.2" data-path="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                    
+                    01_kubeadm安装k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.3" data-path="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                    
+                    02_k8s资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.4" data-path="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                    
+                    03_pod详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.5" data-path="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                    
+                    04_pod控制器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.6" data-path="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                    
+                    05-k8s网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.7" data-path="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                    
+                    06-k8s数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.8" data-path="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                    
+                    07-k8s配置文件管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.9" data-path="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                    
+                    08-dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.10" data-path="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                    
+                    09-prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11-mongodb/0.html">
+            
+                <a href="../11-mongodb/0.html">
+            
+                    
+                    11-mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11-mongodb/01-mongodb安装.html">
+            
+                <a href="../11-mongodb/01-mongodb安装.html">
+            
+                    
+                    01-mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11-mongodb/02-mongodb增删改查.html">
+            
+                <a href="../11-mongodb/02-mongodb增删改查.html">
+            
+                    
+                    02-mongodb增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                <a href="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                    
+                    03-mongodb基于角色的访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../11-mongodb/04-副本集replicaSet.html">
+            
+                <a href="../11-mongodb/04-副本集replicaSet.html">
+            
+                    
+                    04-副本集replicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../11-mongodb/05-mongodb备份恢复.html">
+            
+                <a href="../11-mongodb/05-mongodb备份恢复.html">
+            
+                    
+                    05-mongodb备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12-zookeeper/0.html">
+            
+                <a href="../12-zookeeper/0.html">
+            
+                    
+                    12-zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12-zookeeper/01-zookeeper.html">
+            
+                <a href="../12-zookeeper/01-zookeeper.html">
+            
+                    
+                    01-zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12-zookeeper/02-zk实践操作.html">
+            
+                <a href="../12-zookeeper/02-zk实践操作.html">
+            
+                    
+                    02-zk实践操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                <a href="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                    
+                    03-python-API开发zk客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13-kafka/0.html">
+            
+                <a href="../13-kafka/0.html">
+            
+                    
+                    13-kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13-kafka/01-kafka基础.html">
+            
+                <a href="../13-kafka/01-kafka基础.html">
+            
+                    
+                    01-kafka基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13-kafka/02-kafka集群.html">
+            
+                <a href="../13-kafka/02-kafka集群.html">
+            
+                    
+                    02-kafka集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14-ELK/0.html">
+            
+                <a href="../14-ELK/0.html">
+            
+                    
+                    14-ELK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14-ELK/01-elasticSearch.html">
+            
+                <a href="../14-ELK/01-elasticSearch.html">
+            
+                    
+                    01-elasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14-ELK/02-ES集群.html">
+            
+                <a href="../14-ELK/02-ES集群.html">
+            
+                    
+                    02-ES集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14-ELK/03-ES进阶.html">
+            
+                <a href="../14-ELK/03-ES进阶.html">
+            
+                    
+                    03-ES进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14-ELK/04-ES备份恢复.html">
+            
+                <a href="../14-ELK/04-ES备份恢复.html">
+            
+                    
+                    04-ES备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14-ELK/05-EBLK日志收集方案.html">
+            
+                <a href="../14-ELK/05-EBLK日志收集方案.html">
+            
+                    
+                    05-EBLK日志收集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                <a href="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                    
+                    06-ELK收集主流应用日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14-ELK/07-filebeat实战.html">
+            
+                <a href="../14-ELK/07-filebeat实战.html">
+            
+                    
+                    07-filebeat实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15-阿里云/0.html">
+            
+                <a href="../15-阿里云/0.html">
+            
+                    
+                    15-阿里云
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15-阿里云/01-阿里云实战.html">
+            
+                <a href="../15-阿里云/01-阿里云实战.html">
+            
+                    
+                    01-阿里云实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                <a href="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                    
+                    02-阿里云数据库RDS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                <a href="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                    
+                    03-阿里云负载均衡SLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15-阿里云/04-阿里云NAS.html">
+            
+                <a href="../15-阿里云/04-阿里云NAS.html">
+            
+                    
+                    04-阿里云NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15-阿里云/05-阿里云Redis.html">
+            
+                <a href="../15-阿里云/05-阿里云Redis.html">
+            
+                    
+                    05-阿里云Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15-阿里云/06-ACK.html">
+            
+                <a href="../15-阿里云/06-ACK.html">
+            
+                    
+                    06-ACK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                <a href="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                    
+                    07-阿里云ACK实践部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                <a href="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                    
+                    08-阿里云ACK部署mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >07-reids分片技术cluster篇</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="07-reids&#x5206;&#x7247;&#x6280;&#x672F;cluster&#x7BC7;"><a name="07-reids&#x5206;&#x7247;&#x6280;&#x672F;cluster&#x7BC7;" class="plugin-anchor" href="#07-reids&#x5206;&#x7247;&#x6280;&#x672F;cluster&#x7BC7;"><i class="fa fa-link" aria-hidden="true"></i></a>07-reids&#x5206;&#x7247;&#x6280;&#x672F;cluster&#x7BC7;</h1>
+<h1 id="&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;redis-cluster"><a name="&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;redis-cluster" class="plugin-anchor" href="#&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;redis-cluster"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3A;&#x4EC0;&#x4E48;&#x5B66;redis-cluster</h1>
+<ul>
+<li><p>&#x524D;&#x9762;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x548C;&#x54E8;&#x5175;&#x673A;&#x5236;&#x4FDD;&#x969C;&#x4E86;&#x9AD8;&#x53EF;&#x7528;</p>
+</li>
+<li><p>&#x5C31;&#x8BFB;&#x5199;&#x5206;&#x79BB;&#xFF0C;&#x800C;&#x8A00;&#x867D;&#x7136;slave&#x8282;&#x70B9;&#x6269;&#x5C55;&#x4E86;&#x4E3B;&#x4ECE;&#x7684;&#x8BFB;&#x5E76;&#x53D1;&#x80FD;&#x529B;</p>
+</li>
+<li><p>&#x4F46;&#x662F;<strong>&#x5199;&#x80FD;&#x529B;</strong>&#x548C;<strong>&#x5B58;&#x50A8;&#x80FD;&#x529B;</strong>&#x662F;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6269;&#x5C55;&#xFF0C;&#x5C31;&#x53EA;&#x80FD;&#x662F;master&#x8282;&#x70B9;&#x80FD;&#x591F;&#x627F;&#x8F7D;&#x7684;&#x4E0A;&#x9650;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x9762;&#x5BF9;&#x6D77;&#x91CF;&#x6570;&#x636E;&#x90A3;&#x4E48;&#x5FC5;&#x7136;&#x9700;&#x8981;&#x6784;&#x5EFA;master&#xFF08;&#x4E3B;&#x8282;&#x70B9;&#x5206;&#x7247;)&#x4E4B;&#x95F4;&#x7684;&#x96C6;&#x7FA4;</p>
+</li>
+<li>&#x540C;&#x65F6;&#x5FC5;&#x7136;&#x9700;&#x8981;&#x5438;&#x6536;&#x9AD8;&#x53EF;&#x7528;&#xFF08;&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x548C;&#x54E8;&#x5175;&#x673A;&#x5236;&#xFF09;&#x80FD;&#x529B;&#xFF0C;&#x5373;&#x6BCF;&#x4E2A;master&#x5206;&#x7247;&#x8282;&#x70B9;&#x8FD8;&#x9700;&#x8981;&#x6709;slave&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E2D;&#x5178;&#x578B;&#x7684;&#x7EB5;&#x5411;&#x6269;&#x5C55;&#xFF08;&#x96C6;&#x7FA4;&#x7684;&#x5206;&#x7247;&#x6280;&#x672F;&#xFF09;&#x7684;&#x4F53;&#x73B0;</li>
+</ul>
+<pre><code>redis-cluster &#x662F;&#x670D;&#x52A1;&#x5668;&#x5206;&#x7247;&#x6280;&#x672F;
+&#x5B98;&#x7F51;&#x8D44;&#x6599;
+https://redis.io/topics/cluster-spec/#redis-cluster-goals
+</code></pre><h2 id="&#x5E76;&#x53D1;&#x95EE;&#x9898;"><a name="&#x5E76;&#x53D1;&#x95EE;&#x9898;" class="plugin-anchor" href="#&#x5E76;&#x53D1;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E76;&#x53D1;&#x95EE;&#x9898;</h2>
+<pre><code>redis&#x5B98;&#x7F51;&#x7ED9;&#x51FA;&#x7684;reids&#x6027;&#x80FD;&#x62A5;&#x544A;
+https://redis.io/topics/benchmarks/
+
+
+&#x7B80;&#x5355;&#x8BF4;&#x662F;&#xFF0C;&#x5982;&#x5728;8&#x6838;16G&#x5185;&#x5B58;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#xFF0C;redis&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;10&#x4E07;/&#x6BCF;&#x79D2;&#x7684;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;
+&#x5F53;&#x7136;&#x5177;&#x4F53;&#x8FD8;&#x8981;&#x770B;&#x786C;&#x4EF6;&#x914D;&#x7F6E;&#xFF0C;redis&#x67B6;&#x6784;&#xFF0C;&#x53C2;&#x6570;&#x7B49;&#x73AF;&#x5883;&#x56E0;&#x7D20;&#x3002;
+
+&#x90A3;&#x5982;&#x679C;&#x50CF;&#x5FAE;&#x535A;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x6BCF;&#x79D2;&#x5199;&#x5165;100&#x4E07;&#x4E2A;key&#x548B;&#x529E;&#xFF1F;
+</code></pre><h2 id="&#x6570;&#x636E;&#x91CF;&#x95EE;&#x9898;"><a name="&#x6570;&#x636E;&#x91CF;&#x95EE;&#x9898;" class="plugin-anchor" href="#&#x6570;&#x636E;&#x91CF;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x91CF;&#x95EE;&#x9898;</h2>
+<pre><code>&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x6B63;&#x5E38;&#x5185;&#x5B58;&#x518D;16G~256G&#xFF0C;&#x4F60;&#x73B0;&#x5728;&#x6709;500G&#x7684;redis&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF0C;&#x548B;&#x5B58;&#xFF1F;
+&#x62C6;&#x5F00;&#x5B58;&#x5457;&#xFF01;&#x6BCF;&#x4E2A;&#x673A;&#x5668;&#x5B58;&#x4E00;&#x70B9;&#x3002;
+
+&#x65B0;&#x6D6A;&#x5FAE;&#x535A;&#x4F5C;&#x4E3A;&#x4E16;&#x754C;&#x4E0A;&#x6700;&#x5927;&#x7684;redis&#x5B58;&#x50A8;&#xFF0C;&#x5C31;&#x8D85;&#x8FC7;1TB&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53BB;&#x54EA;&#x4E70;&#x8FD9;&#x4E48;&#x5927;&#x7684;&#x5185;&#x5B58;&#x6761;&#xFF1F;
+&#x5404;&#x5927;&#x516C;&#x53F8;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x63A8;&#x51FA;&#x5404;&#x81EA;&#x7684;&#x96C6;&#x7FA4;&#x529F;&#x80FD;&#xFF0C;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#x90FD;&#x662F;&#x5C06;&#x6570;&#x636E;&#x5206;&#x7247;&#xFF08;sharding&#xFF09;&#x5B58;&#x50A8;&#x5728;&#x591A;&#x4E2A;redis&#x5B9E;&#x4F8B;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x7247;&#x5C31;&#x662F;&#x4E00;&#x4E2A;redis&#x5B9E;&#x4F8B;&#x3002;
+
+&#x5404;&#x5927;&#x4F01;&#x4E1A;&#x96C6;&#x7FA4;&#x65B9;&#x6848;&#xFF1A;
+twemproxy&#x7531;Twitter&#x5F00;&#x6E90;
+Codis&#x7531;&#x8C4C;&#x8C46;&#x835A;&#x5F00;&#x53D1;&#xFF0C;&#x57FA;&#x4E8E;GO&#x548C;C&#x5F00;&#x53D1;
+redis-cluster&#x5B98;&#x65B9;3.0&#x7248;&#x672C;&#x540E;&#x7684;&#x96C6;&#x7FA4;&#x65B9;&#x6848;
+</code></pre><h3 id="&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a name="&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="plugin-anchor" href="#&#x89E3;&#x51B3;&#x65B9;&#x6848;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<p>1.&#x4E70;&#x4E00;&#x4E2A;&#x8D85;&#x7EA7;&#x725B;&#x903C;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#xFF0C;1T&#x5185;&#x5B58;&#xFF0C;64&#x6838;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x4E70;&#x51E0;&#x53F0;&#x5408;&#x9002;&#xFF1F;&#x4F60;&#x8001;&#x677F;&#x540C;&#x610F;&#x82B1;&#x8FD9;&#x94B1;&#x5417;&#xFF1F;</p>
+<p><img src="../2024-linux/1132884-20181024160915096-209591231.png" alt="img"></p>
+<p>2.&#x6B63;&#x786E;&#x5E94;&#x8BE5;&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x554A;&#xFF0C;&#x52A0;&#x673A;&#x5668;&#xFF0C;&#x6570;&#x636E;&#x5206;&#x6563;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x96C6;&#x7FA4;&#x591A;&#x597D;&#x554A;&#x3002;</p>
+<p><img src="../2024-linux/1132884-20181024161047230-851823170.png" alt="img"></p>
+<h1 id="redis&#x6838;&#x5FC3;&#x91CD;&#x8981;&#x6982;&#x5FF5;"><a name="redis&#x6838;&#x5FC3;&#x91CD;&#x8981;&#x6982;&#x5FF5;" class="plugin-anchor" href="#redis&#x6838;&#x5FC3;&#x91CD;&#x8981;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>Redis&#x6838;&#x5FC3;&#x91CD;&#x8981;&#x6982;&#x5FF5;</h1>
+<pre><code># author by: www.yuchaoit.cn
+
+1.redis&#x96C6;&#x7FA4;&#x901A;&#x8FC7;&#x54C8;&#x5E0C;&#x69FD;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6765;&#x51B3;&#x5B9A;key&#x653E;&#x5728;&#x54EA;&#x4E2A;&#x69FD;&#x91CC;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x6709;16384&#xFF08;2&#x7684;14&#x6B21;&#x65B9;&#x4E2A;&#x69FD;&#x4F4D;&#xFF09;
+
+2. &#x6BCF;&#x4E00;&#x4E2A;key&#x901A;&#x8FC7;CRC16&#x7B97;&#x6CD5;&#x6821;&#x9A8C;&#x540E;&#x51B3;&#x5B9A;&#x653E;&#x5165;&#x54EA;&#x4E2A;&#x69FD;&#x4F4D;&#x3002;
+
+3.redis&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x8D1F;&#x8D23;&#x4E00;&#x90E8;&#x5206;&#x54C8;&#x5E0C;&#x69FD;&#xFF08;hash slot&#xFF09;
+&#x4F8B;&#x5982;&#x662F;&#x4E09;&#x4E2A;redis&#x8282;&#x70B9;&#xFF0C;&#x69FD;&#x4F4D;&#x5206;&#x4E3A;&#x4F8B;&#x5982;&#x662F;
+- &#x8282;&#x70B9;A&#x8D1F;&#x8D23;0~5500&#x53F7; hash slot
+- &#x8282;&#x70B9;B&#x8D1F;&#x8D23;5501~11000&#x53F7;hash slot
+- &#x8282;&#x70B9;C&#x8D1F;&#x8D23;11001~16383&#x53F7;
+
+&#x4E3A;&#x4EC0;&#x4E48;&#x662F;16384&#x4E2A;&#x69FD;&#xFF0C;&#x4F5C;&#x8005;&#x7684;&#x56DE;&#x590D;
+https://github.com/redis/redis/issues/2576
+
+4.&#x69FD;&#x4F4D;&#x5F97;&#x6B63;&#x786E;&#x5206;&#x914D;&#xFF0C;&#x5426;&#x5219;&#x96C6;&#x7FA4;&#x4E0D;&#x53EF;&#x7528;
+
+5. redis&#x901A;&#x8FC7; hash tags&#x529F;&#x80FD;&#xFF0C;&#x5B9E;&#x73B0;&#x5C06;&#x591A;&#x4E2A;&#x76F8;&#x5173;&#x7684;key&#xFF0C;&#x653E;&#x5230;&#x540C;&#x4E00;&#x4E2A;hash slot&#x4E2D;&#x3002;
+&#x4F8B;&#x5982;
+key&#x5305;&#x542B;&#x4E00;&#x4E2A;{&#x5B57;&#x7B26;
+&#x5E76;&#x4E14; &#x5982;&#x679C;&#x5728;&#x8FD9;&#x4E2A;{&#x7684;&#x53F3;&#x9762;&#x6709;&#x4E00;&#x4E2A;}&#x5B57;&#x7B26;
+&#x5E76;&#x4E14; &#x5982;&#x679C;&#x5728;{&#x548C;}&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;
+- &#x7B80;&#x5355;&#x8BF4;&#x4E5F;&#x5C31;&#x662F;&#xFF0C;redis-cluster&#x9ED8;&#x8BA4;&#x6709;16384&#x4E2A;&#x69FD;&#x4F4D;&#xFF0C;&#x6BCF;&#x4E2A;&#x69FD;&#x4F4D;&#x91CC;&#x4F1A;&#x81EA;&#x52A8;&#x901A;&#x8FC7;&#x7B97;&#x6CD5;&#xFF0C;&#x653E;&#x5165;&#x76F8;&#x4F3C;&#x7684;key&#x3002;
+
+6.redis&#x96C6;&#x7FA4;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x90FD;&#x6709;&#x552F;&#x4E00;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x7531;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;&#x8868;&#x793A;&#xFF0C;&#x4E00;&#x822C;&#x57FA;&#x4E8E;/dev/urandom&#x81EA;&#x52A8;&#x751F;&#x6210;&#x3002;
+&#x4E14;&#x8282;&#x70B9;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4FDD;&#x7559;ID&#xFF0C;&#x9664;&#x975E;&#x8FD0;&#x7EF4;&#x4E3B;&#x52A8;&#x6267;&#x884C;cluster reset hard&#x6216;&#x8005;hard reset&#x8282;&#x70B9;&#x3002;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;redis-cli cluster nodes&#x67E5;&#x770B;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x3002;
+
+&#x4E3B;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x4FE1;&#x606F;&#x662F;
+node id, address:port, flags, last ping sent, last pong received, configuration epoch, link state, slots.
+
+7.redis&#x96C6;&#x7FA4;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x76F8;&#x4E92;ping&#xFF0C;&#x5EFA;&#x7ACB;&#x4E86;TCP&#x8FDE;&#x63A5;&#xFF0C;&#x4E14;&#x4FDD;&#x5B58;&#x6D3B;&#x8DC3;&#x6027;&#xFF0C;&#x671F;&#x671B;&#x5F97;&#x5230;&#x5BF9;&#x65B9;&#x8282;&#x70B9;&#x7684;pong&#x56DE;&#x590D;&#x3002;
+
+8.&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411;&#x7279;&#x6027;&#x3002;
+redis cluster&#x91C7;&#x7528;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x67B6;&#x6784;&#xFF0C;&#x96C6;&#x7FA4;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x590D;&#x5236;&#x4E00;&#x90E8;&#x5206;&#x69FD;&#x4F4D;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x5199;&#x5165;key&#x65F6;&#xFF0C;&#x5230;&#x5E95;&#x653E;&#x5230;&#x54EA;&#x4E2A;&#x69FD;&#x4F4D;&#x5462;&#xFF1F;
+</code></pre><h2 id="redis&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411;"><a name="redis&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411;" class="plugin-anchor" href="#redis&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411;"><i class="fa fa-link" aria-hidden="true"></i></a>redis&#x8BF7;&#x6C42;&#x91CD;&#x5B9A;&#x5411;</h2>
+<p>redis cluster&#x91C7;&#x7528;&#x53BB;&#x4E2D;&#x5FC3;&#x5316;&#x7684;&#x67B6;&#x6784;&#xFF0C;&#x96C6;&#x7FA4;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x590D;&#x5236;&#x4E00;&#x90E8;&#x5206;&#x69FD;&#x4F4D;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x5199;&#x5165;key&#x65F6;&#xFF0C;&#x5230;&#x5E95;&#x653E;&#x5230;&#x54EA;&#x4E2A;&#x69FD;&#x4F4D;&#x5462;&#xFF1F;</p>
+<pre><code>&#x5728;cluster&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x8282;&#x70B9;&#x5BF9;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;&#x8FC7;&#x7A0B;
+
+1&#x3001;&#x68C0;&#x67E5;&#x5F53;&#x524D;key&#x662F;&#x5426;&#x5B58;&#x5728;node
+- &#x57FA;&#x4E8E;crc16&#x7B97;&#x6CD5;/16384&#x53D6;&#x6A21;&#x8BA1;&#x7B97;&#xFF0C;&#x5F97;&#x5230;slot&#x69FD;&#x4F4D;
+- &#x67E5;&#x8BE2;&#x8D1F;&#x8D23;&#x8BE5;slot&#x7684;&#x8282;&#x70B9;
+2&#x3001;&#x82E5;slot&#x4E0D;&#x662F;&#x81EA;&#x8EAB;&#xFF0C;&#x81EA;&#x52A8;&#x8FDB;&#x884C;moved&#x91CD;&#x5B9A;&#x5411;
+3&#x3001;&#x82E5;slot&#x662F;&#x81EA;&#x8EAB;&#xFF0C;&#x4E14;key&#x5728;slot&#x91CC;&#xFF0C;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#x8BE5;key&#x7684;&#x7ED3;&#x679C;
+4&#x3001;&#x82E5;key&#x4E0D;&#x5728;&#x5F53;&#x524D;&#x8282;&#x70B9;slot&#x91CC;&#xFF0C;&#x68C0;&#x67E5;slot&#x662F;&#x5426;&#x5728;migrating&#xFF0C;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x4E2D;
+5&#x3001;&#x5982;&#x679C;key&#x6B63;&#x5728;&#x8FC1;&#x79FB;&#xFF0C;&#x8FD4;&#x56DE;ask&#x9519;&#x8BEF;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;
+6&#x3001;&#x82E5;slot&#x672A;&#x8FC1;&#x79FB;&#xFF0C;&#x68C0;&#x67E5;slot&#x662F;&#x5426;&#x5728;&#x5BFC;&#x5165;&#x4E2D;
+7&#x3001;&#x82E5;slot&#x5728;&#x5BFC;&#x5165;&#x4E2D;&#xFF0C;&#x4E14;&#x6709;asking&#x6807;&#x8BB0;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;
+8&#x3001;&#x5426;&#x5219;&#x8FD4;&#x56DE;moved&#x91CD;&#x5B9A;&#x5411;&#x3002;
+</code></pre><p><img src="../2024-linux/image-20220811165850497.png" alt="image-20220811165850497"></p>
+<pre><code>cluster keyslot key-name # &#x67E5;&#x8BE2;key&#x6240;&#x5728;&#x7684;&#x69FD;
+
+cluster slots # &#x67E5;&#x8BE2;&#x69FD;&#x4F4D;&#xFF0C;&#x8282;&#x70B9;&#x7684;&#x5173;&#x7CFB;
+</code></pre><h1 id="&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x89C4;&#x5212;"><a name="&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x89C4;&#x5212;" class="plugin-anchor" href="#&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x89C4;&#x5212;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x89C4;&#x5212;</h1>
+<h2 id="&#x673A;&#x5668;&#x73AF;&#x5883;"><a name="&#x673A;&#x5668;&#x73AF;&#x5883;" class="plugin-anchor" href="#&#x673A;&#x5668;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x673A;&#x5668;&#x73AF;&#x5883;</h2>
+<pre><code>db-51
+db-52
+db-53
+
+master &#x4E3B;&#x5E93; 6380
+slave &#x4ECE;&#x5E93;   6381
+</code></pre><p><img src="../2024-linux/image-20220811175527242.png" alt="image-20220811175527242"></p>
+<pre><code>redis&#x96C6;&#x7FA4;&#x6CA1;&#x6709;&#x5165;&#x53E3;&#xFF0C;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x662F;&#x8FDE;&#x63A5;&#x96C6;&#x7FA4;&#x7684;node&#x8282;&#x70B9;&#xFF0C;&#x96C6;&#x7FA4;&#x5185;&#x90E8;&#x4E92;&#x76F8;&#x901A;&#x4FE1;&#xFF0C;&#x57FA;&#x4E8E;ping-pong&#x786E;&#x8BA4;&#x5BF9;&#x65B9;&#x5B58;&#x6D3B;&#x3002;
+</code></pre><h2 id="db-51&#x4E3B;&#x5E93;&#x64CD;&#x4F5C;"><a name="db-51&#x4E3B;&#x5E93;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#db-51&#x4E3B;&#x5E93;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>db-51&#x4E3B;&#x5E93;&#x64CD;&#x4F5C;</h2>
+<p>&#x6E05;&#x7A7A;&#x73AF;&#x5883;&#x7684;&#x547D;&#x4EE4;</p>
+<pre><code>rm -rf   /opt/redis_{6380,6381}/{conf,logs,pid}
+rm -rf   /data/redis_{6380,6381}
+</code></pre><p>&#x64CD;&#x4F5C;&#x547D;&#x4EE4;</p>
+<pre><code>1.&#x786E;&#x4FDD;&#x53EF;&#x4EE5;&#x514D;&#x5BC6;3&#x4E2A;&#x8282;&#x70B9;
+[root@db-51 ~]#for i in 52 53;do ssh root@10.0.0.$i &apos;hostname&apos;;done
+db-52
+db-53
+
+
+2.&#x521B;&#x5EFA;&#x6570;&#x636E;&#x76EE;&#x5F55;
+mkdir -p /opt/redis_{6380,6381}/{conf,logs,pid}
+mkdir -p /data/redis_{6380,6381}
+
+3.&#x4E3B;&#x8282;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+# &#x7EC6;&#x8282;&#x5751;&#xFF0C;ip&#x4E0D;&#x80FD;&#x8D70;&#x5185;&#x7F51;127
+
+cat &gt;/opt/redis_6380/conf/redis_6380.conf &lt;&lt;&apos;EOF&apos;
+daemonize yes
+bind 10.0.0.51
+port 6380
+pidfile /opt/redis_6380/pid/redis_6380.pid
+logfile /opt/redis_6380/logs/redis_6380.log
+dbfilename www.yuchaoit.cn_redis_6380.rdb
+appendonly yes
+appendfilename &quot;www.yuchaoit.cn_appendonly.aof&quot;
+dir /data/redis_6380/
+appendfsync everysec
+cluster-enabled yes
+cluster-config-file nodes_6380.conf
+cluster-node-timeout 15000
+EOF
+
+
+4.&#x590D;&#x5236;master&#x8282;&#x70B9;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5230;slave&#x8282;&#x70B9;&#x4E14;&#x4FEE;&#x6539;&#x7AEF;&#x53E3;
+
+cp /opt/redis_6380/conf/redis_6380.conf  /opt/redis_6381/conf/redis_6381.conf 
+sed -i &apos;s/6380/6381/g&apos;  /opt/redis_6381/conf/redis_6381.conf 
+
+# 5.&#x6388;&#x6743;
+chown -R redis.redis /opt/redis*
+chown -R redis.redis /data/redis*
+
+6.&#x751F;&#x6210;&#x670D;&#x52A1;&#x811A;&#x672C;
+cat &gt;/usr/lib/systemd/system/redis-master.service &lt;&lt;EOF
+[Unit]
+Description=Redis service by www.yuchaoit.cn
+After=network.target
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/redis-server /opt/redis_6380/conf/redis_6380.conf  --supervised systemd
+ExecStop=/usr/local/bin/redis-cli -h $(ifconfig ens33|awk &apos;NR==2{print $2}&apos;) -p 6380 shutdown
+Type=notify
+User=redis
+Group=redis
+RuntimeDirectory=redis
+RuntimeDirectoryMode=0755
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+7.&#x590D;&#x5236;&#x751F;&#x6210;slave&#x8282;&#x70B9;&#x811A;&#x672C;
+
+cp /usr/lib/systemd/system/redis-master.service /usr/lib/systemd/system/redis-slave.service 
+sed -i &apos;s/6380/6381/g&apos;  /usr/lib/systemd/system/redis-slave.service 
+
+# 8.&#x542F;&#x52A8;master&#x3001;slave&#x8282;&#x70B9;
+systemctl daemon-reload
+systemctl restart redis-master
+systemctl restart redis-slave
+
+
+9.&#x68C0;&#x67E5;m&#xFF0C;s
+[root@db-51 /data/redis_6380]#ps -ef|grep redis
+redis      4858      1  0 20:00 ?        00:00:00 /usr/local/bin/redis-server 10.0.0.51:6380 [cluster]
+redis      4868      1  0 20:00 ?        00:00:00 /usr/local/bin/redis-server 10.0.0.51:6381 [cluster]
+root       4873   3706  0 20:00 pts/0    00:00:00 grep --color=auto redis
+
+
+10.&#x5427;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53D1;&#x9001;&#x7ED9;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#xFF0C;&#x6216;&#x8005;&#x624B;&#x5DE5;&#x90E8;&#x7F72;&#x5747;&#x53EF;
+[root@db-51 ~]#rsync -avz /opt/redis_638* 10.0.0.52:/opt/
+[root@db-51 ~]#rsync -avz /opt/redis_638* 10.0.0.53:/opt/
+[root@db-51 ~]#rsync -avz /usr/lib/systemd/system/redis-*.service 10.0.0.52:/usr/lib/systemd/system/
+[root@db-51 ~]#rsync -avz /usr/lib/systemd/system/redis-*.service 10.0.0.53:/usr/lib/systemd/system/
+</code></pre><p><img src="../2024-linux/image-20220811182045409.png" alt="image-20220811182045409"></p>
+<h2 id="db-52&#x64CD;&#x4F5C;"><a name="db-52&#x64CD;&#x4F5C;" class="plugin-anchor" href="#db-52&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>db-52&#x64CD;&#x4F5C;</h2>
+<pre><code>1.&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;ip
+[root@db-52 ~]#pkill redis
+
+[root@db-52 ~]#find /opt/redis_638* -type f -name &apos;*.conf&apos; | xargs sed -i &apos;/bind/s#51#52#g&apos; 
+[root@db-52 ~]#sed -i &apos;s#51#52#g&apos; /usr/lib/systemd/system/redis-*.service
+
+2.&#x521B;&#x5EFA;&#x6570;&#x636E;&#x76EE;&#x5F55;
+
+mkdir -p /data/redis_{6380,6381}
+chown -R redis.redis /opt/redis_*
+chown -R redis.redis /data/redis_*
+
+3.&#x542F;&#x52A8;
+systemctl daemon-reload
+systemctl start redis-master
+systemctl start redis-slave
+
+4.&#x68C0;&#x67E5;
+[root@db-52 ~]#ps -ef|grep redis
+redis      2745      1  0 20:32 ?        00:00:00 /usr/local/bin/redis-server 10.0.0.52:6380 [cluster]
+redis      2755      1  0 20:32 ?        00:00:00 /usr/local/bin/redis-server 10.0.0.52:6381 [cluster]
+</code></pre><h2 id="db-53&#x64CD;&#x4F5C;"><a name="db-53&#x64CD;&#x4F5C;" class="plugin-anchor" href="#db-53&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>db-53&#x64CD;&#x4F5C;</h2>
+<pre><code>cat &gt; init_redis_node.sh &lt;&lt;&apos;EOF&apos;
+# author by : www.yuchaoit.cn
+find /opt/redis_638* -type f -name &apos;*.conf&apos; | xargs sed -i &apos;/bind/s#51#53#g&apos; 
+sed -i &apos;s#51#53#g&apos; /usr/lib/systemd/system/redis-*.service
+mkdir -p /data/redis_{6380,6381}
+chown -R redis.redis /opt/redis_*
+chown -R redis.redis /data/redis_*
+systemctl daemon-reload
+systemctl start redis-master
+systemctl start redis-slave
+ps -ef|grep redis
+EOF
+
+
+[root@db-53 ~]#
+[root@db-53 ~]#bash init_redis_node.sh 
+root       2600   2545  0 20:33 pts/1    00:00:00 bash init_redis_node.sh
+redis      2632      1  0 20:33 ?        00:00:00 /usr/local/bin/redis-server 10.0.0.53:6380 [cluster]
+redis      2642      1  0 20:33 ?        00:00:00 /usr/local/bin/redis-server 10.0.0.53:6381 [cluster]
+root       2644   2600  0 20:33 pts/1    00:00:00 grep redis
+</code></pre><h2 id="&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x53D1;&#x73B0;&#x8282;&#x70B9;"><a name="&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x53D1;&#x73B0;&#x8282;&#x70B9;" class="plugin-anchor" href="#&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x53D1;&#x73B0;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x53D1;&#x73B0;&#x8282;&#x70B9;</h2>
+<p>&#x81F3;&#x6B64;redis&#x73AF;&#x5883;&#x5C31;&#x51C6;&#x5907;&#x597D;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;redis&#x96C6;&#x7FA4;&#x4E86;&#xFF0C;&#x4FE9;&#x65B9;&#x6848;</p>
+<ul>
+<li>&#x6709;&#x81EA;&#x52A8;&#x5316;&#x521B;&#x5EFA;&#x811A;&#x672C;</li>
+<li>&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#xFF0C;&#x5206;&#x914D;&#x69FD;&#x4F4D;</li>
+</ul>
+<pre><code># &#x8282;&#x70B9;&#x63E1;&#x624B;
+# &#x4E00;&#x4E2A;meet&#x6D88;&#x606F;&#xFF0C;&#x5C31;&#x50CF;ping&#x547D;&#x4EE4;&#xFF0C;&#x4E14;&#x4F1A;&#x5F3A;&#x5236;&#x63A5;&#x53D7;&#x8005;&#x4F5C;&#x4E3A;&#x96C6;&#x7FA4;&#x7684;&#x4E00;&#x4E2A;&#x8282;&#x70B9;
+redis-cli -h 10.0.0.51 -p 6380 cluster meet  10.0.0.52 6380
+redis-cli -h 10.0.0.51 -p 6380 cluster meet  10.0.0.53 6380
+redis-cli -h 10.0.0.51 -p 6380 cluster meet  10.0.0.51 6381
+redis-cli -h 10.0.0.51 -p 6380 cluster meet  10.0.0.52 6381
+redis-cli -h 10.0.0.51 -p 6380 cluster meet  10.0.0.53 6381
+
+
+# &#x67E5;&#x770B;redis&#x96C6;&#x7FA4;&#x8282;&#x70B9;
+
+[root@db-51 ~]#redis-cli -h 10.0.0.51 -p 6380 cluster nodes
+1dfbaf032beeffbf113d646c370027dffebe766b 10.0.0.52:6380@16380 master - 0 1660221270732 4 connected
+d3852638955c57d5179f78d6fd89176b804754da 10.0.0.53:6381@16381 master - 0 1660221269000 0 connected
+69e488725a0989a4c6e77e90fb73e76f63863b77 10.0.0.51:6381@16381 master - 0 1660221270000 2 connected
+3cc48f6dc558e0e0a35eeb5371b097205500e1d7 10.0.0.52:6381@16381 master - 0 1660221271752 3 connected
+2f0744ab2fe16126fe4b054abec71ebc5ed1a8e8 10.0.0.51:6380@16380 myself,master - 0 1660221272000 1 connected
+d1034fd5b77a3cebc5c2fd701deb68a64a5f909d 10.0.0.53:6380@16380 master - 0 1660221272772 5 connected
+</code></pre><h3 id="&#x56FE;&#x89E3;&#x57FA;&#x4E8E;gossip&#x534F;&#x8BAE;&#x7684;&#x8282;&#x70B9;&#x53D1;&#x73B0;"><a name="&#x56FE;&#x89E3;&#x57FA;&#x4E8E;gossip&#x534F;&#x8BAE;&#x7684;&#x8282;&#x70B9;&#x53D1;&#x73B0;" class="plugin-anchor" href="#&#x56FE;&#x89E3;&#x57FA;&#x4E8E;gossip&#x534F;&#x8BAE;&#x7684;&#x8282;&#x70B9;&#x53D1;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x89E3;&#x57FA;&#x4E8E;gossip&#x534F;&#x8BAE;&#x7684;&#x8282;&#x70B9;&#x53D1;&#x73B0;</h3>
+<p><img src="../2024-linux/image-20220811183928923.png" alt="image-20220811183928923"></p>
+<pre><code>gossip&#x534F;&#x8BAE;&#x6709;&#x51E0;&#x79CD;&#x96C6;&#x7FA4;&#x901A;&#x4FE1;&#x7C7B;&#x578B;
+- meet&#x7C7B;&#x578B;&#xFF0C;cluster meet ip port&#xFF0C;&#x5DF2;&#x6709;&#x7684;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x4F1A;&#x5411;&#x65B0;&#x7684;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x9080;&#x8BF7;&#xFF0C;&#x52A0;&#x5165;&#x96C6;&#x7FA4;
+- ping&#x7C7B;&#x578B;&#xFF0C;&#x8282;&#x70B9;&#x6BCF;&#x79D2;&#x5411;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x53D1;&#x9001;ping&#x6D88;&#x606F;&#xFF0C;&#x6D88;&#x606F;&#x4E2D;&#x5E26;&#x6709;&#x5DF2;&#x77E5;&#x8282;&#x70B9;&#x7684;&#x5730;&#x5740;&#x3001;&#x69FD;&#x3001;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x3001;&#x4EE5;&#x53CA;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x88AB;&#x8BBF;&#x95EE;&#x7684;&#x4FE1;&#x606F;&#x3002;
+- pong&#xFF0C;&#x8282;&#x70B9;&#x6536;&#x5230;ping&#x6D88;&#x606F;&#x7ED9;&#x4E0E;pong&#x56DE;&#x590D;&#xFF0C;&#x6D88;&#x606F;&#x4E2D;&#x4E5F;&#x643A;&#x5E26;&#x81EA;&#x5DF1;&#x5DF2;&#x77E5;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x3002;
+- fail&#xFF0C;&#x8282;&#x70B9;ping&#x4E0D;&#x901A;&#x540E;&#xFF0C;&#x5411;&#x96C6;&#x7FA4;&#x6240;&#x6709;&#x8282;&#x70B9;&#x5E7F;&#x64AD;&#xFF0C;&#x544A;&#x8BC9;&#x8BE5;&#x8282;&#x70B9;&#x6302;&#x4E86;&#xFF0C;&#x5176;&#x4ED6;&#x8282;&#x70B9;&#x6536;&#x5230;&#x6D88;&#x606F;&#x540E;&#x5747;&#x6807;&#x8BB0;&#x8BE5;down&#x8282;&#x70B9;&#x4E0B;&#x7EBF;&#x3002;
+</code></pre><h2 id="&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x5206;&#x914D;&#x69FD;&#x4F4D;"><a name="&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x5206;&#x914D;&#x69FD;&#x4F4D;" class="plugin-anchor" href="#&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x5206;&#x914D;&#x69FD;&#x4F4D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x7FA4;&#x624B;&#x52A8;&#x5206;&#x914D;&#x69FD;&#x4F4D;</h2>
+<p><img src="../2024-linux/image-20220811190003330.png" alt="image-20220811190003330"></p>
+<pre><code># &#x6839;&#x636E;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x6240;&#x7ED8;&#x56FE;&#xFF0C;&#x521B;&#x5EFA;&#x69FD;&#x4F4D;
+
+redis-cli -h 10.0.0.51 -p 6380 cluster addslots {0..5460}
+redis-cli -h 10.0.0.52 -p 6380 cluster addslots {5461..10921}
+redis-cli -h 10.0.0.53 -p 6380 cluster addslots {10922..16383}
+
+# &#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x72B6;&#x6001;
+
+redis-cli -h 10.0.0.51 -p 6380 cluster nodes
+redis-cli -h 10.0.0.51 -p 6380 cluster info
+</code></pre><h2 id="&#x96C6;&#x7FA4;&#x7ED3;&#x679C;&#x5982;&#x56FE;"><a name="&#x96C6;&#x7FA4;&#x7ED3;&#x679C;&#x5982;&#x56FE;" class="plugin-anchor" href="#&#x96C6;&#x7FA4;&#x7ED3;&#x679C;&#x5982;&#x56FE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x96C6;&#x7FA4;&#x7ED3;&#x679C;&#x5982;&#x56FE;</h2>
+<pre><code>&#x96C6;&#x7FA4;&#x5DF2;&#x521B;&#x5EFA;&#xFF0C;&#x8FD8;&#x5DEE;&#x521B;&#x5EFA;&#x8282;&#x70B9;&#x7684;&#x4E3B;&#x4ECE;&#x590D;&#x5236;&#x3002;
+</code></pre><p><img src="../2024-linux/image-20220811204013893.png" alt="image-20220811204013893"></p>
+<h2 id="redis-cluster&#x547D;&#x4EE4;&#x6574;&#x7406;"><a name="redis-cluster&#x547D;&#x4EE4;&#x6574;&#x7406;" class="plugin-anchor" href="#redis-cluster&#x547D;&#x4EE4;&#x6574;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>redis-cluster&#x547D;&#x4EE4;&#x6574;&#x7406;</h2>
+<pre><code class="lang-bash">&#x96C6;&#x7FA4;
+cluster info &#xFF1A;&#x6253;&#x5370;&#x96C6;&#x7FA4;&#x7684;&#x4FE1;&#x606F;
+cluster nodes &#xFF1A;&#x5217;&#x51FA;&#x96C6;&#x7FA4;&#x5F53;&#x524D;&#x5DF2;&#x77E5;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#xFF08; node&#xFF09;&#xFF0C;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;
+&#x8282;&#x70B9;
+cluster meet &lt;ip&gt; &lt;port&gt; &#xFF1A;&#x5C06; ip &#x548C; port &#x6240;&#x6307;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x96C6;&#x7FA4;&#x5F53;&#x4E2D;&#xFF0C;&#x8BA9;&#x5B83;&#x6210;&#x4E3A;&#x96C6;&#x7FA4;&#x7684;&#x4E00;&#x4EFD;&#x5B50;&#x3002;
+cluster forget &lt;node_id&gt; &#xFF1A;&#x4ECE;&#x96C6;&#x7FA4;&#x4E2D;&#x79FB;&#x9664; node_id &#x6307;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x3002;
+cluster replicate &lt;master_node_id&gt; &#xFF1A;&#x5C06;&#x5F53;&#x524D;&#x4ECE;&#x8282;&#x70B9;&#x8BBE;&#x7F6E;&#x4E3A; node_id &#x6307;&#x5B9A;&#x7684;master&#x8282;&#x70B9;&#x7684;slave&#x8282;&#x70B9;&#x3002;&#x53EA;&#x80FD;&#x9488;&#x5BF9;slave&#x8282;&#x70B9;&#x64CD;&#x4F5C;&#x3002;
+cluster saveconfig &#xFF1A;&#x5C06;&#x8282;&#x70B9;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5230;&#x786C;&#x76D8;&#x91CC;&#x9762;&#x3002;
+&#x69FD;(slot)
+cluster addslots &lt;slot&gt; [slot ...] &#xFF1A;&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x69FD;&#xFF08; slot&#xFF09;&#x6307;&#x6D3E;&#xFF08; assign&#xFF09;&#x7ED9;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x3002;
+cluster delslots &lt;slot&gt; [slot ...] &#xFF1A;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x69FD;&#x5BF9;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6307;&#x6D3E;&#x3002;
+cluster flushslots &#xFF1A;&#x79FB;&#x9664;&#x6307;&#x6D3E;&#x7ED9;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x69FD;&#xFF0C;&#x8BA9;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x6307;&#x6D3E;&#x4EFB;&#x4F55;&#x69FD;&#x7684;&#x8282;&#x70B9;&#x3002;
+cluster setslot &lt;slot&gt; node &lt;node_id&gt; &#xFF1A;&#x5C06;&#x69FD; slot &#x6307;&#x6D3E;&#x7ED9; node_id &#x6307;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x69FD;&#x5DF2;&#x7ECF;&#x6307;&#x6D3E;&#x7ED9;
+&#x53E6;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x90A3;&#x4E48;&#x5148;&#x8BA9;&#x53E6;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5220;&#x9664;&#x8BE5;&#x69FD;&gt;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x6307;&#x6D3E;&#x3002;
+cluster setslot &lt;slot&gt; migrating &lt;node_id&gt; &#xFF1A;&#x5C06;&#x672C;&#x8282;&#x70B9;&#x7684;&#x69FD; slot &#x8FC1;&#x79FB;&#x5230; node_id &#x6307;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x4E2D;&#x3002;
+cluster setslot &lt;slot&gt; importing &lt;node_id&gt; &#xFF1A;&#x4ECE; node_id &#x6307;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#x4E2D;&#x5BFC;&#x5165;&#x69FD; slot &#x5230;&#x672C;&#x8282;&#x70B9;&#x3002;
+cluster setslot &lt;slot&gt; stable &#xFF1A;&#x53D6;&#x6D88;&#x5BF9;&#x69FD; slot &#x7684;&#x5BFC;&#x5165;&#xFF08; import&#xFF09;&#x6216;&#x8005;&#x8FC1;&#x79FB;&#xFF08; migrate&#xFF09;&#x3002;
+&#x952E;
+cluster keyslot &lt;key&gt; &#xFF1A;&#x8BA1;&#x7B97;&#x952E; key &#x5E94;&#x8BE5;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x54EA;&#x4E2A;&#x69FD;&#x4E0A;&#x3002;
+cluster countkeysinslot &lt;slot&gt; &#xFF1A;&#x8FD4;&#x56DE;&#x69FD; slot &#x76EE;&#x524D;&#x5305;&#x542B;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x91CF;&#x3002;
+cluster getkeysinslot &lt;slot&gt; &lt;count&gt; &#xFF1A;&#x8FD4;&#x56DE; count &#x4E2A; slot &#x69FD;&#x4E2D;&#x7684;&#x952E; &#x3002;
+</code></pre>
+<h2 id="&#x624B;&#x5DE5;&#x6DFB;&#x52A0;&#x590D;&#x5236;&#x5173;&#x7CFB;"><a name="&#x624B;&#x5DE5;&#x6DFB;&#x52A0;&#x590D;&#x5236;&#x5173;&#x7CFB;" class="plugin-anchor" href="#&#x624B;&#x5DE5;&#x6DFB;&#x52A0;&#x590D;&#x5236;&#x5173;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x5DE5;&#x6DFB;&#x52A0;&#x590D;&#x5236;&#x5173;&#x7CFB;</h2>
+<p>&#x7ED9;slave&#x6DFB;&#x52A0;</p>
+<pre><code>redis-cli -h 10.0.0.51 -p 6381 cluster replicate  db-52&#x7684;6380&#x7684;id
+redis-cli -h 10.0.0.52 -p 6381 cluster replicate   db-53&#x7684;6380&#x7684;id
+redis-cli -h 10.0.0.53 -p 6381 cluster replicate   db-51&#x7684;6380&#x7684;id
+
+
+redis-cli -h 10.0.0.51 -p 6381 cluster replicate   1dfbaf032beeffbf113d646c370027dffebe766b
+redis-cli -h 10.0.0.52 -p 6381 cluster replicate  d1034fd5b77a3cebc5c2fd701deb68a64a5f909d
+redis-cli -h 10.0.0.53 -p 6381 cluster replicate  2f0744ab2fe16126fe4b054abec71ebc5ed1a8e8
+</code></pre><p><img src="../2024-linux/image-20220811211944392.png" alt="image-20220811211944392"></p>
+<hr>
+<p><img src="../2024-linux/image-20220811212408062.png" alt="image-20220811212408062"></p>
+<h2 id="&#x6700;&#x540E;&#xFF0C;&#x6D4B;&#x8BD5;&#x96C6;&#x7FA4;&#x5199;&#x5165;&#x6570;&#x636E;"><a name="&#x6700;&#x540E;&#xFF0C;&#x6D4B;&#x8BD5;&#x96C6;&#x7FA4;&#x5199;&#x5165;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x6700;&#x540E;&#xFF0C;&#x6D4B;&#x8BD5;&#x96C6;&#x7FA4;&#x5199;&#x5165;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6700;&#x540E;&#xFF0C;&#x6D4B;&#x8BD5;&#x96C6;&#x7FA4;&#x5199;&#x5165;&#x6570;&#x636E;</h2>
+<pre><code>[root@db-51 ~]#redis-cli -c -h 10.0.0.51 -p 6380
+10.0.0.51:6380&gt; set name www.yuchaoit.cn
+-&gt; Redirected to slot [5798] located at 10.0.0.52:6380
+OK
+10.0.0.52:6380&gt; 
+
+
+&#x81EA;&#x52A8;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4E86; 52&#x8282;&#x70B9;
+10.0.0.52:6380&gt; keys *
+1) &quot;name&quot;
+10.0.0.52:6380&gt; get name
+&quot;www.yuchaoit.cn&quot;
+
+
+# &#x7EE7;&#x7EED;&#x5199;&#x5165;&#x591A;&#x4E2A;key
+10.0.0.52:6380&gt; 
+10.0.0.52:6380&gt; set k1 v1
+-&gt; Redirected to slot [12706] located at 10.0.0.53:6380
+OK
+10.0.0.53:6380&gt; set k2 v2
+-&gt; Redirected to slot [449] located at 10.0.0.51:6380
+OK
+10.0.0.51:6380&gt; set k3 v3
+OK
+10.0.0.51:6380&gt;
+</code></pre><h2 id="&#x603B;&#x7ED3;&#x96C6;&#x7FA4;key&#x64CD;&#x4F5C;"><a name="&#x603B;&#x7ED3;&#x96C6;&#x7FA4;key&#x64CD;&#x4F5C;" class="plugin-anchor" href="#&#x603B;&#x7ED3;&#x96C6;&#x7FA4;key&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x603B;&#x7ED3;&#x96C6;&#x7FA4;key&#x64CD;&#x4F5C;</h2>
+<pre><code>1. redis&#x96C6;&#x7FA4;&#x64CD;&#x4F5C;&#xFF0C;&#x5FC5;&#x987B;&#x52A0;&#x5165;-c&#x53C2;&#x6570;&#xFF0C;&#x5F00;&#x542F;&#x96C6;&#x7FA4;&#x64CD;&#x4F5C;
+2. &#x81EA;&#x52A8;&#x5224;&#x5B9A;key&#x5728;&#x96C6;&#x7FA4;&#x54EA;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x54EA;&#x4E2A;&#x69FD;&#x4F4D;&#x91CC;
+</code></pre><h1 id="&#x6D4B;&#x8BD5;redis&#x96C6;&#x7FA4;&#x7B97;&#x6CD5;key&#x5199;&#x5165;&#x662F;&#x5426;&#x5E73;&#x5747;"><a name="&#x6D4B;&#x8BD5;redis&#x96C6;&#x7FA4;&#x7B97;&#x6CD5;key&#x5199;&#x5165;&#x662F;&#x5426;&#x5E73;&#x5747;" class="plugin-anchor" href="#&#x6D4B;&#x8BD5;redis&#x96C6;&#x7FA4;&#x7B97;&#x6CD5;key&#x5199;&#x5165;&#x662F;&#x5426;&#x5E73;&#x5747;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;redis&#x96C6;&#x7FA4;&#x7B97;&#x6CD5;key&#x5199;&#x5165;&#x662F;&#x5426;&#x5E73;&#x5747;</h1>
+<pre><code># author: www.yuchaoit.cn
+
+for i in {1..1000}
+do
+    redis-cli -c -h 10.0.0.51 -p 6380 set k_${i} v_{$i} &amp;&amp; echo &quot;${i} is done.&quot;
+done
+</code></pre><p>&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x7684;key</p>
+<pre><code>[root@db-51 ~]#redis-cli -c -h 10.0.0.53 -p 6380 dbsize
+(integer) 336
+[root@db-51 ~]#redis-cli -c -h 10.0.0.52 -p 6380 dbsize
+(integer) 327
+[root@db-51 ~]#redis-cli -c -h 10.0.0.51 -p 6380 dbsize
+(integer) 341
+</code></pre><h2 id="&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x5065;&#x5EB7;"><a name="&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x5065;&#x5EB7;" class="plugin-anchor" href="#&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x5065;&#x5EB7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x5065;&#x5EB7;</h2>
+<pre><code>[root@db-51 ~]#redis-cli --cluster info 10.0.0.51:6380
+10.0.0.51:6380 (2f0744ab...) -&gt; 341 keys | 5461 slots | 1 slaves.
+10.0.0.53:6380 (d1034fd5...) -&gt; 336 keys | 5462 slots | 1 slaves.
+10.0.0.52:6380 (1dfbaf03...) -&gt; 327 keys | 5461 slots | 1 slaves.
+[OK] 1004 keys in 3 masters.
+0.06 keys per slot on average.
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; www.bikongge.com 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4F5C;&#x8005;&#xFF1A;&#x733F;&#x6765;&#x6559;&#x80B2;
+2024-05-11 17:46:40
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07-reids分片技术cluster篇","level":"1.9.7","depth":2,"next":{"title":"08-redis自动化安装","level":"1.9.8","depth":2,"path":"08-缓存redis/08-redis自动化安装.md","ref":"08-缓存redis/08-redis自动化安装.md","articles":[]},"previous":{"title":"06-redis高可用哨兵篇","level":"1.9.6","depth":2,"path":"08-缓存redis/06-redis高可用哨兵篇.md","ref":"08-缓存redis/06-redis高可用哨兵篇.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","theme-comscore","theme-api","hide-element","-highlight","advanced-emoji","-lunr","-search","search-pro","page-toc-button","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.bikongge.com 2024","modify_label":"作者：猿来教育"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./icon/book.ico","theme-comscore":{},"page-toc-button":{},"theme-api":{"languages":[{"lang":"python","name":"python","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"light"},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://s1.ax1x.com/2022/10/25/xRowNj.jpg"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08-缓存redis/07-reids分片技术cluster篇.md","mtime":"2024-05-11T09:46:40.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T07:32:03.155Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

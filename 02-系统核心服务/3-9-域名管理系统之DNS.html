@@ -1,0 +1,3584 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3-9-域名管理系统之DNS · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../03-网站集群架构/0.html" />
+    
+    
+    <link rel="prev" href="3-8文件共享服务之NFS.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-linux核心基础/0.html">
+            
+                <a href="../01-linux核心基础/0.html">
+            
+                    
+                    01-linux 核心基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                <a href="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                    
+                    01_Linux云计算运维工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                <a href="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                    
+                    02_运维基础重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-linux核心基础/03_计算机基础.html">
+            
+                <a href="../01-linux核心基础/03_计算机基础.html">
+            
+                    
+                    03_计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-linux核心基础/04_操作系统基础.html">
+            
+                <a href="../01-linux核心基础/04_操作系统基础.html">
+            
+                    
+                    04_操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                <a href="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                    
+                    05_Linux系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                <a href="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                    
+                    06_vmware安装Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-linux核心基础/07_Linux快速入门.html">
+            
+                <a href="../01-linux核心基础/07_Linux快速入门.html">
+            
+                    
+                    07_Linux快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                <a href="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                    
+                    08_linux文件管理篇一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                <a href="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                    
+                    09_linux文件管理篇二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-linux核心基础/10_linux用户管理.html">
+            
+                <a href="../01-linux核心基础/10_linux用户管理.html">
+            
+                    
+                    10_linux用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-linux核心基础/11_远程连接linux.html">
+            
+                <a href="../01-linux核心基础/11_远程连接linux.html">
+            
+                    
+                    11_远程连接linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-linux核心基础/12_linux权限管理.html">
+            
+                <a href="../01-linux核心基础/12_linux权限管理.html">
+            
+                    
+                    12_linux权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                <a href="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                    
+                    13_linux基础服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                <a href="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                    
+                    14_linux进程与资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                <a href="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                    
+                    15_YUM与开源项目（Web运维）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-linux核心基础/16_计算机网络.html">
+            
+                <a href="../01-linux核心基础/16_计算机网络.html">
+            
+                    
+                    16_计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                <a href="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                    
+                    17_如果让你来设计网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                <a href="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                    
+                    18_OSI模型与TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                <a href="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                    
+                    19_Vmware网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-linux核心基础/20_centos网络配置.html">
+            
+                <a href="../01-linux核心基础/20_centos网络配置.html">
+            
+                    
+                    20_centos网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    02-系统核心服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3-0-Linux重要命令.html">
+            
+                <a href="3-0-Linux重要命令.html">
+            
+                    
+                    3-0-Linux重要命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="3-1-软件包管理.html">
+            
+                <a href="3-1-软件包管理.html">
+            
+                    
+                    3-1-软件包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3-10-黄金web架构之LAMP.html">
+            
+                <a href="3-10-黄金web架构之LAMP.html">
+            
+                    
+                    3-10-黄金web架构之LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="3-11-磁盘管理.html">
+            
+                <a href="3-11-磁盘管理.html">
+            
+                    
+                    3-11-磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="3-12-磁盘管理二.html">
+            
+                <a href="3-12-磁盘管理二.html">
+            
+                    
+                    3-12-磁盘管理二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="3-13-Raid磁盘冗余阵列.html">
+            
+                <a href="3-13-Raid磁盘冗余阵列.html">
+            
+                    
+                    3-13-Raid磁盘冗余阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="3-14-lvm逻辑卷管理.html">
+            
+                <a href="3-14-lvm逻辑卷管理.html">
+            
+                    
+                    3-14-lvm逻辑卷管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="3-15-通配符和特殊符号.html">
+            
+                <a href="3-15-通配符和特殊符号.html">
+            
+                    
+                    3-15-通配符和特殊符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="3-16-正则表达式和三剑客.html">
+            
+                <a href="3-16-正则表达式和三剑客.html">
+            
+                    
+                    3-16-正则表达式和三剑客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="3-17-sed精讲.html">
+            
+                <a href="3-17-sed精讲.html">
+            
+                    
+                    3-17-sed精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="3-18-1-awk进阶.html">
+            
+                <a href="3-18-1-awk进阶.html">
+            
+                    
+                    3-18-1-awk进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="3-18-awk精讲.html">
+            
+                <a href="3-18-awk精讲.html">
+            
+                    
+                    3-18-awk精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="3-19-正则练习题.html">
+            
+                <a href="3-19-正则练习题.html">
+            
+                    
+                    3-19-正则练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="3-2-yum精讲.html">
+            
+                <a href="3-2-yum精讲.html">
+            
+                    
+                    3-2-yum精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="3-20-sed练习题.html">
+            
+                <a href="3-20-sed练习题.html">
+            
+                    
+                    3-20-sed练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="3-21-awk练习题.html">
+            
+                <a href="3-21-awk练习题.html">
+            
+                    
+                    3-21-awk练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="3-22-什么是Shell.html">
+            
+                <a href="3-22-什么是Shell.html">
+            
+                    
+                    3-22-什么是Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="3-23-Shell快速入门.html">
+            
+                <a href="3-23-Shell快速入门.html">
+            
+                    
+                    3-23-Shell快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="3-3-SSH远程安全登录.html">
+            
+                <a href="3-3-SSH远程安全登录.html">
+            
+                    
+                    3-3-SSH远程安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="3-4-Rsync数据同步服务.html">
+            
+                <a href="3-4-Rsync数据同步服务.html">
+            
+                    
+                    3-4-Rsync数据同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="3-5-Inotify实时数据同步.html">
+            
+                <a href="3-5-Inotify实时数据同步.html">
+            
+                    
+                    3-5-Inotify实时数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="3-6-文件共享服务之FTP.html">
+            
+                <a href="3-6-文件共享服务之FTP.html">
+            
+                    
+                    3-6-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="3-7-文件共享服务之Samba.html">
+            
+                <a href="3-7-文件共享服务之Samba.html">
+            
+                    
+                    3-7-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="3-8文件共享服务之NFS.html">
+            
+                <a href="3-8文件共享服务之NFS.html">
+            
+                    
+                    3-8文件共享服务之NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.25" data-path="3-9-域名管理系统之DNS.html">
+            
+                <a href="3-9-域名管理系统之DNS.html">
+            
+                    
+                    3-9-域名管理系统之DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-网站集群架构/0.html">
+            
+                <a href="../03-网站集群架构/0.html">
+            
+                    
+                    03-网站集群架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                <a href="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                    
+                    00-淘宝网的十年架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-网站集群架构/01-综合架构开篇.html">
+            
+                <a href="../03-网站集群架构/01-综合架构开篇.html">
+            
+                    
+                    01-综合架构开篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                <a href="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                    
+                    02-综合架构环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                <a href="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                    
+                    03-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                <a href="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                    
+                    04-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-网站集群架构/05-备份工具rsync.html">
+            
+                <a href="../03-网站集群架构/05-备份工具rsync.html">
+            
+                    
+                    05-备份工具rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-网站集群架构/06-备份任务实战.html">
+            
+                <a href="../03-网站集群架构/06-备份任务实战.html">
+            
+                    
+                    06-备份任务实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                <a href="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                    
+                    07-共享存储服务NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-网站集群架构/08-实时同步数据.html">
+            
+                <a href="../03-网站集群架构/08-实时同步数据.html">
+            
+                    
+                    08-实时同步数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03-网站集群架构/09-SSH安全登录.html">
+            
+                <a href="../03-网站集群架构/09-SSH安全登录.html">
+            
+                    
+                    09-SSH安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03-网站集群架构/10--SSH进阶.html">
+            
+                <a href="../03-网站集群架构/10--SSH进阶.html">
+            
+                    
+                    10--SSH进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                <a href="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                    
+                    11-运维自动化Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                <a href="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                    
+                    12-Ansible-playbook剧本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                <a href="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                    
+                    13-Ansible-playbook剧本进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../03-网站集群架构/14-ansible-role角色.html">
+            
+                <a href="../03-网站集群架构/14-ansible-role角色.html">
+            
+                    
+                    14-ansible-role角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                <a href="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                    
+                    20-用户访问网站原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                <a href="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                    
+                    21-静态资源加速cdn篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../03-网站集群架构/22-web通信协议篇.html">
+            
+                <a href="../03-网站集群架构/22-web通信协议篇.html">
+            
+                    
+                    22-web通信协议篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                <a href="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                    
+                    23-1-nginx虚拟主机实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../03-网站集群架构/23-nginx基础篇.html">
+            
+                <a href="../03-网站集群架构/23-nginx基础篇.html">
+            
+                    
+                    23-nginx基础篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../03-网站集群架构/24-nginx高级篇.html">
+            
+                <a href="../03-网站集群架构/24-nginx高级篇.html">
+            
+                    
+                    24-nginx高级篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                <a href="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                    
+                    25-LNMP黄金架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../03-网站集群架构/26-网站集群拆分.html">
+            
+                <a href="../03-网站集群架构/26-网站集群拆分.html">
+            
+                    
+                    26-网站集群拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                <a href="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                    
+                    27-1-负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                <a href="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                    
+                    27-高性能负载均衡集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../03-网站集群架构/28-HTTPS.html">
+            
+                <a href="../03-网站集群架构/28-HTTPS.html">
+            
+                    
+                    28-HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                <a href="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                    
+                    29-keepalived高可用性负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../03-网站集群架构/30-部署Python网站.html">
+            
+                <a href="../03-网站集群架构/30-部署Python网站.html">
+            
+                    
+                    30-部署Python网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../03-网站集群架构/31-jumpserver实战.html">
+            
+                <a href="../03-网站集群架构/31-jumpserver实战.html">
+            
+                    
+                    31-jumpserver实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                <a href="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                    
+                    32-期中综合架构验收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-shell编程/0.html">
+            
+                <a href="../04-shell编程/0.html">
+            
+                    
+                    04-shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-shell编程/01-shell基础概述.html">
+            
+                <a href="../04-shell编程/01-shell基础概述.html">
+            
+                    
+                    01-Shell基础概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-shell编程/02-shell变量.html">
+            
+                <a href="../04-shell编程/02-shell变量.html">
+            
+                    
+                    02-Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../04-shell编程/03-条件判断.html">
+            
+                <a href="../04-shell编程/03-条件判断.html">
+            
+                    
+                    03-条件判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../04-shell编程/04-流程控制之if.html">
+            
+                <a href="../04-shell编程/04-流程控制之if.html">
+            
+                    
+                    04-流程控制之if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../04-shell编程/05-流程控制之case.html">
+            
+                <a href="../04-shell编程/05-流程控制之case.html">
+            
+                    
+                    05-流程控制之case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                <a href="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                    
+                    06-流程控制之for循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../04-shell编程/07-流程控制之while循环.html">
+            
+                <a href="../04-shell编程/07-流程控制之while循环.html">
+            
+                    
+                    07-流程控制之while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../04-shell编程/08-循环控制.html">
+            
+                <a href="../04-shell编程/08-循环控制.html">
+            
+                    
+                    08-循环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../04-shell编程/09-shell函数.html">
+            
+                <a href="../04-shell编程/09-shell函数.html">
+            
+                    
+                    09-Shell函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../04-shell编程/10-shell数组.html">
+            
+                <a href="../04-shell编程/10-shell数组.html">
+            
+                    
+                    10-Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../04-shell编程/脚本练习题库.html">
+            
+                <a href="../04-shell编程/脚本练习题库.html">
+            
+                    
+                    脚本练习题库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-监控系统/00.html">
+            
+                <a href="../05-监控系统/00.html">
+            
+                    
+                    05-监控系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-监控系统/00-监控系统.html">
+            
+                <a href="../05-监控系统/00-监控系统.html">
+            
+                    
+                    00-监控系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-监控系统/01-监控体系理论.html">
+            
+                <a href="../05-监控系统/01-监控体系理论.html">
+            
+                    
+                    01-监控体系理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-监控系统/02-zabbix安装部署.html">
+            
+                <a href="../05-监控系统/02-zabbix安装部署.html">
+            
+                    
+                    02-zabbix安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                <a href="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                    
+                    03-zabbix如何监控服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-监控系统/04-1-微信报警.html">
+            
+                <a href="../05-监控系统/04-1-微信报警.html">
+            
+                    
+                    04-1-微信报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-监控系统/04-2-钉钉报警.html">
+            
+                <a href="../05-监控系统/04-2-钉钉报警.html">
+            
+                    
+                    04-2-钉钉报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-监控系统/04-自定义监控项.html">
+            
+                <a href="../05-监控系统/04-自定义监控项.html">
+            
+                    
+                    04-自定义监控项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-监控系统/05-自定义监控模板.html">
+            
+                <a href="../05-监控系统/05-自定义监控模板.html">
+            
+                    
+                    05-自定义监控模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-监控系统/06-1-nginx监控.html">
+            
+                <a href="../05-监控系统/06-1-nginx监控.html">
+            
+                    
+                    06-1-nginx监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-监控系统/06-2-php监控.html">
+            
+                <a href="../05-监控系统/06-2-php监控.html">
+            
+                    
+                    06-2-php监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../05-监控系统/06-3-mysql监控.html">
+            
+                <a href="../05-监控系统/06-3-mysql监控.html">
+            
+                    
+                    06-3-mysql监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../05-监控系统/06-4-redis监控.html">
+            
+                <a href="../05-监控系统/06-4-redis监控.html">
+            
+                    
+                    06-4-redis监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../05-监控系统/06-5-tomcat监控.html">
+            
+                <a href="../05-监控系统/06-5-tomcat监控.html">
+            
+                    
+                    06-5-tomcat监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                <a href="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                    
+                    06-6-模拟登录之web监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                <a href="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                    
+                    06-zabbix监控核心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                <a href="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                    
+                    07-1-zabbix-agent修改主动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                <a href="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                    
+                    07-2-zabbix自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                <a href="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                    
+                    07-3-zabbix自动注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../05-监控系统/07-zabbix工作模式.html">
+            
+                <a href="../05-监控系统/07-zabbix工作模式.html">
+            
+                    
+                    07-zabbix工作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                <a href="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                    
+                    08-zabbix分布式proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../06-敏捷开发流水线/00.html">
+            
+                <a href="../06-敏捷开发流水线/00.html">
+            
+                    
+                    06-敏捷开发流水线
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                <a href="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                    
+                    00-版本控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-敏捷开发流水线/01-git工具.html">
+            
+                <a href="../06-敏捷开发流水线/01-git工具.html">
+            
+                    
+                    01-git工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                <a href="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                    
+                    02-git与gitee码云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                <a href="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                    
+                    03-gitlab私有仓库搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-敏捷开发流水线/04-jenkins.html">
+            
+                <a href="../06-敏捷开发流水线/04-jenkins.html">
+            
+                    
+                    04-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                <a href="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                    
+                    05-jenkins结合远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                <a href="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                    
+                    06-自动化发布静态页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                <a href="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                    
+                    07-SonarQube代码质量扫描工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                <a href="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                    
+                    08-jenkins发布Java项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                <a href="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                    
+                    09-jenkins流水线pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../07-数据库运维/00.html">
+            
+                <a href="../07-数据库运维/00.html">
+            
+                    
+                    07-数据库运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                <a href="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                    
+                    02-1-数据库基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../07-数据库运维/02-10-主从复制高级.html">
+            
+                <a href="../07-数据库运维/02-10-主从复制高级.html">
+            
+                    
+                    02-10-主从复制高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                <a href="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                    
+                    02-11-高可用集群MHA方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                <a href="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                    
+                    02-2-mysql基础实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                <a href="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                    
+                    02-3-mysql运维核心基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../07-数据库运维/02-4-SQL语句一.html">
+            
+                <a href="../07-数据库运维/02-4-SQL语句一.html">
+            
+                    
+                    02-4-SQL语句一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../07-数据库运维/02-5-SQL语句二.html">
+            
+                <a href="../07-数据库运维/02-5-SQL语句二.html">
+            
+                    
+                    02-5-SQL语句二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                <a href="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                    
+                    02-6-mysql备份方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                <a href="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                    
+                    02-7-mysql备份实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                <a href="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                    
+                    02-8-xtrabackup备份工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../07-数据库运维/02-9-主从复制架构.html">
+            
+                <a href="../07-数据库运维/02-9-主从复制架构.html">
+            
+                    
+                    02-9-主从复制架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../07-数据库运维/02-DBA之路.html">
+            
+                <a href="../07-数据库运维/02-DBA之路.html">
+            
+                    
+                    02-DBA之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../08-缓存redis/00.html">
+            
+                <a href="../08-缓存redis/00.html">
+            
+                    
+                    08-缓存 redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                <a href="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                    
+                    01-redis部署与数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../08-缓存redis/02-redis数据类型篇.html">
+            
+                <a href="../08-缓存redis/02-redis数据类型篇.html">
+            
+                    
+                    02-redis数据类型篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                <a href="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                    
+                    03-redis数据持久化篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../08-缓存redis/04-redis安全篇.html">
+            
+                <a href="../08-缓存redis/04-redis安全篇.html">
+            
+                    
+                    04-redis安全篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../08-缓存redis/05-redis主从复制篇.html">
+            
+                <a href="../08-缓存redis/05-redis主从复制篇.html">
+            
+                    
+                    05-redis主从复制篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                <a href="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                    
+                    06-redis高可用哨兵篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                <a href="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                    
+                    07-reids分片技术cluster篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../08-缓存redis/08-redis自动化安装.html">
+            
+                <a href="../08-缓存redis/08-redis自动化安装.html">
+            
+                    
+                    08-redis自动化安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../08-缓存redis/09-redis实战技巧.html">
+            
+                <a href="../08-缓存redis/09-redis实战技巧.html">
+            
+                    
+                    09-redis实战技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../09-java运维/00.html">
+            
+                <a href="../09-java运维/00.html">
+            
+                    
+                    09-java 运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09-java运维/01-Tomcat.html">
+            
+                <a href="../09-java运维/01-Tomcat.html">
+            
+                    
+                    01-Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10-云原生容器编排/00.html">
+            
+                <a href="../10-云原生容器编排/00.html">
+            
+                    
+                    10-云原生容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10-云原生容器编排/docker-all/00.html">
+            
+                <a href="../10-云原生容器编排/docker-all/00.html">
+            
+                    
+                    docker-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                <a href="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                    
+                    01_docker技术详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                <a href="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                    
+                    02_docker安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                <a href="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                    
+                    03_docker存储与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                <a href="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                    
+                    04_dockerfile构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                <a href="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                    
+                    05-企业级私有仓库Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                <a href="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                    
+                    06-docker网络模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.7" data-path="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                <a href="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                    
+                    07-docker容器单机编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.8" data-path="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                <a href="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                    
+                    08-docker容器跨主机通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.9" data-path="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                <a href="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                    
+                    09-docker综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.10" data-path="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                <a href="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                    
+                    10-容器化部署案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.11" data-path="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                <a href="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                    
+                    11-容器监控方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10-云原生容器编排/iptables/00.html">
+            
+                <a href="../10-云原生容器编排/iptables/00.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                <a href="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                    
+                    00-iptables防火墙安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                <a href="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                    
+                    01-iptables命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10-云原生容器编排/kvm-all/00.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/00.html">
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                    
+                    01-kvm虚拟化实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                    
+                    02-kvm进阶实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10-云原生容器编排/k8s-all/00.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00.html">
+            
+                    
+                    k8s-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" data-path="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                    
+                    00_k8s容器编排系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.2" data-path="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                    
+                    01_kubeadm安装k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.3" data-path="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                    
+                    02_k8s资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.4" data-path="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                    
+                    03_pod详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.5" data-path="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                    
+                    04_pod控制器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.6" data-path="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                    
+                    05-k8s网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.7" data-path="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                    
+                    06-k8s数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.8" data-path="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                    
+                    07-k8s配置文件管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.9" data-path="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                    
+                    08-dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.10" data-path="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                    
+                    09-prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11-mongodb/0.html">
+            
+                <a href="../11-mongodb/0.html">
+            
+                    
+                    11-mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11-mongodb/01-mongodb安装.html">
+            
+                <a href="../11-mongodb/01-mongodb安装.html">
+            
+                    
+                    01-mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11-mongodb/02-mongodb增删改查.html">
+            
+                <a href="../11-mongodb/02-mongodb增删改查.html">
+            
+                    
+                    02-mongodb增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                <a href="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                    
+                    03-mongodb基于角色的访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../11-mongodb/04-副本集replicaSet.html">
+            
+                <a href="../11-mongodb/04-副本集replicaSet.html">
+            
+                    
+                    04-副本集replicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../11-mongodb/05-mongodb备份恢复.html">
+            
+                <a href="../11-mongodb/05-mongodb备份恢复.html">
+            
+                    
+                    05-mongodb备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12-zookeeper/0.html">
+            
+                <a href="../12-zookeeper/0.html">
+            
+                    
+                    12-zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12-zookeeper/01-zookeeper.html">
+            
+                <a href="../12-zookeeper/01-zookeeper.html">
+            
+                    
+                    01-zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12-zookeeper/02-zk实践操作.html">
+            
+                <a href="../12-zookeeper/02-zk实践操作.html">
+            
+                    
+                    02-zk实践操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                <a href="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                    
+                    03-python-API开发zk客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13-kafka/0.html">
+            
+                <a href="../13-kafka/0.html">
+            
+                    
+                    13-kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13-kafka/01-kafka基础.html">
+            
+                <a href="../13-kafka/01-kafka基础.html">
+            
+                    
+                    01-kafka基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13-kafka/02-kafka集群.html">
+            
+                <a href="../13-kafka/02-kafka集群.html">
+            
+                    
+                    02-kafka集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14-ELK/0.html">
+            
+                <a href="../14-ELK/0.html">
+            
+                    
+                    14-ELK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14-ELK/01-elasticSearch.html">
+            
+                <a href="../14-ELK/01-elasticSearch.html">
+            
+                    
+                    01-elasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14-ELK/02-ES集群.html">
+            
+                <a href="../14-ELK/02-ES集群.html">
+            
+                    
+                    02-ES集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14-ELK/03-ES进阶.html">
+            
+                <a href="../14-ELK/03-ES进阶.html">
+            
+                    
+                    03-ES进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14-ELK/04-ES备份恢复.html">
+            
+                <a href="../14-ELK/04-ES备份恢复.html">
+            
+                    
+                    04-ES备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14-ELK/05-EBLK日志收集方案.html">
+            
+                <a href="../14-ELK/05-EBLK日志收集方案.html">
+            
+                    
+                    05-EBLK日志收集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                <a href="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                    
+                    06-ELK收集主流应用日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14-ELK/07-filebeat实战.html">
+            
+                <a href="../14-ELK/07-filebeat实战.html">
+            
+                    
+                    07-filebeat实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15-阿里云/0.html">
+            
+                <a href="../15-阿里云/0.html">
+            
+                    
+                    15-阿里云
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15-阿里云/01-阿里云实战.html">
+            
+                <a href="../15-阿里云/01-阿里云实战.html">
+            
+                    
+                    01-阿里云实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                <a href="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                    
+                    02-阿里云数据库RDS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                <a href="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                    
+                    03-阿里云负载均衡SLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15-阿里云/04-阿里云NAS.html">
+            
+                <a href="../15-阿里云/04-阿里云NAS.html">
+            
+                    
+                    04-阿里云NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15-阿里云/05-阿里云Redis.html">
+            
+                <a href="../15-阿里云/05-阿里云Redis.html">
+            
+                    
+                    05-阿里云Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15-阿里云/06-ACK.html">
+            
+                <a href="../15-阿里云/06-ACK.html">
+            
+                    
+                    06-ACK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                <a href="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                    
+                    07-阿里云ACK实践部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                <a href="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                    
+                    08-阿里云ACK部署mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3-9-域名管理系统之DNS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3-9-&#x57DF;&#x540D;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E4B;dns"><a name="3-9-&#x57DF;&#x540D;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E4B;dns" class="plugin-anchor" href="#3-9-&#x57DF;&#x540D;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E4B;dns"><i class="fa fa-link" aria-hidden="true"></i></a>3-9-&#x57DF;&#x540D;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E4B;DNS</h1>
+<h1 id="&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><a name="&#x57FA;&#x7840;&#x77E5;&#x8BC6;" class="plugin-anchor" href="#&#x57FA;&#x7840;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x7840;&#x77E5;&#x8BC6;</h1>
+<p>&#x6211;&#x76F8;&#x4FE1;&#x6709;&#x90E8;&#x5206;&#x540C;&#x5B66;&#x80AF;&#x5B9A;&#x78B0;&#x5230;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x90A3;&#x5C31;&#x662F;QQ&#x660E;&#x660E;&#x4E0A;&#x7684;&#x53BB;&#xFF0C;&#x800C;&#x7F51;&#x9875;&#x6253;&#x4E0D;&#x5F00;&#xFF0C;&#x901A;&#x5E38;&#x8FD9;&#x4E2A;&#x60C5;&#x51B5;&#x4F60;&#x53BB;&#x641C;&#x7D22;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF0C;&#x5927;&#x5BB6;&#x5C31;&#x4F1A;&#x544A;&#x8BC9;&#x4F60;&#x6539;DNS&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x4EBA;&#x529E;&#x7406;&#x5BBD;&#x5E26;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x4E9B;&#x4EBA;&#x4F1A;&#x63D0;&#x5230;&#x8FD9;&#x4E2A;&#x5BBD;&#x5E26;&#x6709;DNS&#x52AB;&#x6301;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x8981;&#x7528;&#x8FD9;&#x5BB6;&#x7684;&#x5BBD;&#x5E26;&#xFF0C;&#x5305;&#x62EC;&#x4E70;&#x8DEF;&#x7531;&#x5668;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x6709;&#x4EBA;&#x4F1A;&#x63D0;&#x5230;DNS&#x52AB;&#x6301;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;DNS&#x52AB;&#x6301;&#x4F60;&#x77E5;&#x9053;&#x662F;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5417;&#xFF1F;&#x4ECA;&#x5929;&#x8FD9;&#x4E2A;&#x6587;&#x7AE0;&#x6211;&#x4EEC;&#x5C31;&#x6765;&#x8BE6;&#x7EC6;&#x89E3;&#x8BFB;&#x4E00;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;DNS&#xFF0C;DNS&#x52AB;&#x6301;&#x662F;&#x4EC0;&#x4E48;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x4ECA;&#x5929;&#x6211;&#x4EEC;&#x5C31;&#x6765;&#x5B66;&#x4E60;DNS&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x8FD8;&#x5F97;&#x56DE;&#x987E;&#x4E0B;&#x4EC0;&#x4E48;&#x662F;IP&#x3002;</p>
+<p><img src="../2024-linux/image-20220218204554523.png" alt="image-20220218204554523" style="zoom:33%;"></p>
+<h2 id="ip&#x5730;&#x5740;"><a name="ip&#x5730;&#x5740;" class="plugin-anchor" href="#ip&#x5730;&#x5740;"><i class="fa fa-link" aria-hidden="true"></i></a>IP&#x5730;&#x5740;</h2>
+<p>&#x5728;&#x7F51;&#x7EDC;&#x4E0D;&#x53D1;&#x8FBE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7535;&#x8111;&#x6570;&#x636E;&#x662F;&#x72EC;&#x7ACB;&#x4E0D;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x4E24;&#x53F0;&#x673A;&#x5668;&#x4F20;&#x8F93;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x7EBF;&#x4F20;&#x8F93;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218201836461.png" alt="image-20220218201836461" style="zoom:33%;"></p>
+<p>&#x5982;&#x679C;&#x662F;&#x4E09;&#x53F0;&#xFF0C;&#x6216;&#x8005;&#x66F4;&#x591A;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x8981;&#x600E;&#x4E48;&#x63D2;&#x7F51;&#x7EBF;&#xFF1F;</p>
+<p><img src="../2024-linux/image-20220218201904761.png" alt="image-20220218201904761" style="zoom:23%;"></p>
+<p>&#x90A3;&#x73B0;&#x5728;&#x6EE1;&#x4E16;&#x754C;&#x7684;N&#x53F0;&#x7535;&#x8111;&#xFF0C;&#x600E;&#x4E48;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x5462;&#xFF0C;&#x4F60;&#x600E;&#x4E48;&#x770B;&#x5230;&#x6DD8;&#x5B9D;&#x7F51;&#x7684;&#x5546;&#x54C1;&#x5462;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x673A;&#x5668;&#x90FD;&#x80FD;&#x591F;&#x63A5;&#x5165;&#x4E92;&#x8054;&#x7F51;&#xFF0C;&#x901A;&#x8FC7;&#x4E92;&#x8054;&#x7F51;&#x4E92;&#x76F8;&#x8F6C;&#x53D1;&#x6570;&#x636E;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218202010121.png" alt="image-20220218202010121" style="zoom:25%;"></p>
+<p>&#x90A3;&#x8FD9;&#x91CC;&#x5C31;&#x8981;&#x660E;&#x786E;&#xFF0C;&#x6BCF;&#x53F0;&#x673A;&#x5668;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5426;&#x5219;&#x6570;&#x636E;&#x53D1;&#x7ED9;&#x522B;&#x4EBA;&#x53EF;&#x548B;&#x529E;&#xFF0C;&#x4E3A;&#x4E86;&#x51C6;&#x786E;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x8981;&#x7ED9;&#x6BCF;&#x53F0;&#x7535;&#x8111;&#x6DFB;&#x52A0;&#x95E8;&#x724C;&#x53F7;&#x4E0E;&#x5730;&#x5740;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x56E0;&#x6B64;IP&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x662F;&#x7528;&#x4E8E;&#x6807;&#x8BB0;&#x673A;&#x5668;&#x5728;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x4FE1;&#x606F;&#xFF0C;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x53D1;&#x9519;&#x7ED9;&#x522B;&#x7684;&#x4EBA;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x5411;192.168.1.100&#x673A;&#x5668;&#x53D1;&#x6570;&#x636E;&#xFF0C;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x53D1;&#x9001;&#x5230;192.168.1.105&#x4E0A;</p>
+<h2 id="&#x516C;&#x7F51;ip&#x4E0E;&#x5C40;&#x57DF;&#x7F51;ip"><a name="&#x516C;&#x7F51;ip&#x4E0E;&#x5C40;&#x57DF;&#x7F51;ip" class="plugin-anchor" href="#&#x516C;&#x7F51;ip&#x4E0E;&#x5C40;&#x57DF;&#x7F51;ip"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516C;&#x7F51;ip&#x4E0E;&#x5C40;&#x57DF;&#x7F51;ip</h2>
+<p>IP&#x5730;&#x5740;&#x597D;&#x6BD4;&#x5BC4;&#x5FEB;&#x9012;&#xFF0C;&#x9700;&#x8981;&#x660E;&#x786E;&#x7701;&#x3001;&#x5E02;&#x3001;&#x53BF;&#x3001;&#x5C0F;&#x533A;&#x3001;&#x95E8;&#x724C;&#x53F7;&#x7B49;&#x3002;</p>
+<h3 id="&#x5C40;&#x57DF;&#x7F51;"><a name="&#x5C40;&#x57DF;&#x7F51;" class="plugin-anchor" href="#&#x5C40;&#x57DF;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>&#x5C40;&#x57DF;&#x7F51;</strong></h3>
+<p>&#x5C40;&#x57DF;&#x7F51;&#x7684;ip&#x597D;&#x6BD4;&#x662F;&#x67D0;&#x4E00;&#x4E2A;&#x5C0F;&#x533A;&#x7684;&#x95E8;&#x724C;&#x53F7;&#xFF0C;&#x7528;&#x4E8E;&#x67D0;&#x4E00;&#x4E2A;&#x7FA4;&#x4F53;&#x5185;&#x90E8;&#x4EA4;&#x4E92;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x7684;ip&#x5730;&#x5740;&#xFF0C;&#x79BB;&#x5F00;&#x8FD9;&#x4E2A;&#x7FA4;&#x4F53;&#xFF0C;&#x4E5F;&#x5C31;&#x5931;&#x6548;&#x4E86;&#x3002;</p>
+<hr>
+<p><img src="../2024-linux/image-20220218202805254.png" alt="image-20220218202805254"></p>
+<h3 id="&#x516C;&#x7F51;"><a name="&#x516C;&#x7F51;" class="plugin-anchor" href="#&#x516C;&#x7F51;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516C;&#x7F51;</h3>
+<ul>
+<li>&#x516C;&#x7F51;ip&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;123.206.16.61&#x3001;123.206.16.62</li>
+<li>&#x5C40;&#x57DF;&#x7F51;ip&#xFF0C;&#x4F8B;&#x5982;192.168.10.11&#xFF0C;&#x4F8B;&#x5982;192.168.5.44</li>
+</ul>
+<p><img src="../2024-linux/image-20220218203146211.png" alt="image-20220218203146211" style="zoom:23%;"></p>
+<ul>
+<li>&#x5982;&#x679C;&#x5927;&#x697C;A&#x516C;&#x53F8;&#x5185;&#x90E8;&#x5458;&#x5DE5;&#x8981;&#x53D1;&#x9001;&#x6570;&#x636E;&#x8D44;&#x6599;&#xFF0C;192.168.10.12&#x53EA;&#x9700;&#x53D1;&#x7ED9;192.168.10.11&#x5373;&#x53EF;</li>
+<li>&#x5982;&#x679C;&#x5927;&#x697C;A&#x516C;&#x53F8;&#x67D0;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#xFF0C;&#x8981;&#x7ED9;&#x5927;&#x697C;B&#x516C;&#x53F8;&#x7684;&#x4E00;&#x4E2A;&#x673A;&#x5668;&#x53D1;&#x6570;&#x636E;&#xFF0C;&#x5C31;&#x5F97;</li>
+</ul>
+<p><img src="../2024-linux/image-20220218203356096.png" alt="image-20220218203356096" style="zoom:25%;"></p>
+<h1 id="&#x4EC0;&#x4E48;&#x662F;dns"><a name="&#x4EC0;&#x4E48;&#x662F;dns" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x662F;dns"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F;DNS</h1>
+<h2 id="&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x7684;&#x539F;&#x7406;"><a name="&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x7684;&#x539F;&#x7406;" class="plugin-anchor" href="#&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x7684;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x7684;&#x539F;&#x7406;</h2>
+<p>&#x5927;&#x5BB6;&#x65E5;&#x5E38;&#x4E0A;&#x7F51;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6253;&#x5F00;&#x7684;&#x7F51;&#x9875;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x4F60;&#x4ECE;&#x5BF9;&#x65B9;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x83B7;&#x53D6;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x4F60;&#x73B0;&#x5728;&#x6B63;&#x5728;&#x770B;&#x7684;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x5C31;&#x5B58;&#x50A8;&#x5728;&#x5728;&#x4E00;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x4F60;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x4E86;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x518D;&#x628A;&#x4ED6;&#x4EEC;&#x663E;&#x793A;&#x5230;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;</p>
+<p>&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x7684;&#x672C;&#x8D28;&#xFF0C;&#x5C31;&#x662F;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5C06;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x53D8;&#x6210;&#x4F60;&#x6240;&#x80FD;&#x770B;&#x5230;&#x7684;&#x56FE;&#x50CF;&#x3002;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x662F;.html&#x7ED3;&#x5C3E;&#x7684;&#xFF0C;&#x4E0D;&#x76F8;&#x4FE1;&#x7684;&#x8BDD;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x7535;&#x8111;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x968F;&#x4FBF;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x7F51;&#x5740;&#xFF0C;&#x53F3;&#x952E;&#x7A7A;&#x767D;&#x5904;&#xFF0C;&#x7F51;&#x9875;&#x53E6;&#x5B58;&#x4E3A;&#xFF0C;&#x7136;&#x540E;&#x4F60;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x4F60;&#x5B58;&#x50A8;&#x4E0B;&#x6765;&#x4E86;&#x4E00;&#x4E2A;.html&#x7ED3;&#x5C3E;&#x7684;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4F60;&#x5C31;&#x7B97;&#x65AD;&#x7F51;&#xFF0C;&#x53CC;&#x51FB;&#x8FD9;&#x4E2A;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x4F60;&#x4F9D;&#x65E7;&#x53EF;&#x4EE5;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6D4F;&#x89C8;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;html&#x6587;&#x4EF6;&#x88AB;&#x4F60;&#x4FDD;&#x5B58;&#x5230;&#x7535;&#x8111;&#x4E0A;&#x4E86;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x7684;&#x539F;&#x7406;&#x5C31;&#x662F;&#xFF0C;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x627E;&#x5230;&#x4E86;&#x5BF9;&#x65B9;&#x7684;&#x7535;&#x8111;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x5BF9;&#x65B9;&#x7684;&#x7535;&#x8111;&#x91CC;&#x62F7;&#x8D1D;&#x51FA;&#x6765;html&#x7F51;&#x9875;&#x6587;&#x4EF6;&#x5230;&#x4F60;&#x7684;&#x7535;&#x8111;&#x4E0A;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x6210;&#x4E86;&#x6587;&#x5B57;&#x548C;&#x56FE;&#x7247;&#x663E;&#x793A;&#x5230;&#x663E;&#x793A;&#x5668;&#x6216;&#x624B;&#x673A;&#x4E0A;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218203901457.png" alt="image-20220218203901457"></p>
+<p>&#x95EE;&#x9898;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x600E;&#x4E48;&#x8BBF;&#x95EE;&#x7684;&#x8FD9;&#x4E9B;&#x7F51;&#x7AD9;&#xFF1F;</p>
+<ul>
+<li>&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x8BE5;&#x673A;&#x5668;&#x7684;IP&#x5730;&#x5740;&#xFF1F;</li>
+<li>&#x8BBF;&#x95EE;<code>&#x57DF;&#x540D;</code></li>
+</ul>
+<h2 id="&#x57DF;&#x540D;&#x4E0E;ip&#x7684;&#x5173;&#x7CFB;"><a name="&#x57DF;&#x540D;&#x4E0E;ip&#x7684;&#x5173;&#x7CFB;" class="plugin-anchor" href="#&#x57DF;&#x540D;&#x4E0E;ip&#x7684;&#x5173;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57DF;&#x540D;&#x4E0E;IP&#x7684;&#x5173;&#x7CFB;</h2>
+<p>&#x65E2;&#x7136;&#x4F60;&#x8981;&#x6D4F;&#x89C8;&#x7F51;&#x9875;&#x9700;&#x8981;&#x5728;&#x6574;&#x4E2A;&#x4E92;&#x8054;&#x7F51;&#x4E0A;&#x627E;&#x5230;&#x5BF9;&#x65B9;&#x7684;&#x7535;&#x8111;&#xFF0C;&#x90A3;&#x4F60;&#x5C31;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5BF9;&#x65B9;&#x7684;IP&#x624D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;</p>
+<p>&#x6BD4;&#x5982;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8F93;&#x5165;&#x8FD9;&#x4E2A;IP&#x5730;&#x5740;<code>123.206.16.61</code>&#x4F60;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x770B;&#x6253;&#x5F00;&#x7684;&#x662F;&#x4E0D;&#x662F;&#x8D85;&#x54E5;&#x7684;&#x7F51;&#x7AD9;&#x3002;</p>
+<p>&#x662F;&#x4E0D;&#x662F;&#x5F88;&#x6709;&#x610F;&#x601D;&#xFF0C;&#x4F60;&#x9760;&#x7740;IP&#x5730;&#x5740;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x3002;</p>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x8F93;&#x5165;<a href="https://yuchaoit.cn/&#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x8D85;&#x54E5;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x539F;&#x7406;&#x5462;&#xFF1F;" target="_blank">https://yuchaoit.cn/&#x4E5F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x8D85;&#x54E5;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x8FD9;&#x662F;&#x4EC0;&#x4E48;&#x539F;&#x7406;&#x5462;&#xFF1F;</a></p>
+<h2 id="&#x57DF;&#x540D;&#x8BDE;&#x751F;&#x4E86;"><a name="&#x57DF;&#x540D;&#x8BDE;&#x751F;&#x4E86;" class="plugin-anchor" href="#&#x57DF;&#x540D;&#x8BDE;&#x751F;&#x4E86;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57DF;&#x540D;&#x8BDE;&#x751F;&#x4E86;</h2>
+<p>&#x5728;&#x65E9;&#x671F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0A;&#x7F51;&#x5C31;&#x662F;&#x8FD9;&#x4E48;&#x9EBB;&#x70E6;&#xFF0C;&#x4F60;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x5BF9;&#x65B9;&#x7684;&#x7F51;&#x7AD9;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x8981;&#x77E5;&#x9053;&#x5BF9;&#x65B9;&#x7684;IP&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x91CC;&#x8F93;&#x5165;IP&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E86;&#xFF0C;&#x4F46;&#x662F;IP&#x5730;&#x5740;&#x662F;4&#x7EC4;&#x6570;&#x5B57;&#xFF0C;&#x8BB0;IP&#x5730;&#x5740;&#x7684;&#x96BE;&#x5EA6;&#x4E0D;&#x4E9A;&#x4E8E;&#x80CC;&#x4E00;&#x4E2A;&#x964C;&#x751F;&#x4EBA;&#x7684;&#x624B;&#x673A;&#x53F7;&#xFF0C;&#x4E8E;&#x662F;&#x4E4E;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E32;&#x82F1;&#x6587;&#x5B57;&#x6BCD;&#x6765;&#x4EE3;&#x66FF;IP&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x7F51;&#x7AD9;&#x57DF;&#x540D;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218204258808.png" alt="image-20220218204258808" style="zoom:33%;"></p>
+<p>&#x57DF;&#x540D;&#xFF0C;&#x8BF4;&#x767D;&#x4E86;&#x5C31;&#x662F;&#x7F51;&#x7AD9;&#x540D;&#xFF0C;&#x4E13;&#x4E1A;&#x7684;&#x8BF4;&#x6CD5;&#x662F;&#x7535;&#x8111;&#x8BB0;&#x5F55;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x88AB;&#x7FFB;&#x8BD1;&#x6210;&#x4E86;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x4EBA;&#x7C7B;&#x65B9;&#x4FBF;&#x8BB0;&#x5F55;&#x7684;&#x8BED;&#x8A00;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x7F51;&#x6C11;&#x6765;&#x8BF4;&#xFF0C;&#x57DF;&#x540D;&#x5C31;&#x662F;&#x8BBF;&#x95EE;&#x7F51;&#x7AD9;&#x7684;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x3002;&#x4F46;&#x5BF9;&#x4E8E;&#x4F01;&#x4E1A;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x95E8;&#x9762;&#xFF0C;&#x5176;&#x5730;&#x4F4D;&#x7B49;&#x540C;&#x4E8E;&#x5546;&#x6807;&#x3002;</p>
+<p>&#x5C24;&#x5176;&#x662F;&#x7EBF;&#x4E0A;&#x751F;&#x610F;&#x7684;&#x9700;&#x6C42;&#x8D8A;&#x6765;&#x8D8A;&#x6765;&#x5927;&#x7684;&#x75AB;&#x60C5;&#x540E;&#x65F6;&#x4EE3;&#xFF0C;&#x57DF;&#x540D;&#x7684;&#x91CD;&#x8981;&#x6027;&#x76F4;&#x63A5;&#x6346;&#x7ED1;&#x4E86;&#x7F51;&#x7AD9;&#x7684;&#x91CD;&#x8981;&#x6027;&#x3002;</p>
+<p>&#x7F8E;&#x56FE;&#x79C0;&#x79C0;&#x7684;&#x8463;&#x4E8B;&#x957F;&#x8521;&#x6587;&#x80DC;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x57DF;&#x540D;&#x6295;&#x8D44;&#x83B7;&#x5F97;&#x4E86;&#x521B;&#x4E1A;&#x7684;&#x7B2C;&#x4E00;&#x6876;&#x91D1;&#xFF0C;<a href="http://qiyi.com(&#x7231;&#x5947;&#x827A;)&#x3001;http://tudou.com(&#x571F;&#x8C46;)&#x3001;http://baofeng.com(&#x66B4;&#x98CE;&#x5F71;&#x97F3;)&#x7B49;&#x57DF;&#x540D;&#x90FD;&#x662F;&#x51FA;&#x81EA;&#x4ED6;&#x624B;&#x8F6C;&#x5356;&#x3002;" target="_blank">http://qiyi.com(&#x7231;&#x5947;&#x827A;)&#x3001;http://tudou.com(&#x571F;&#x8C46;)&#x3001;http://baofeng.com(&#x66B4;&#x98CE;&#x5F71;&#x97F3;)&#x7B49;&#x57DF;&#x540D;&#x90FD;&#x662F;&#x51FA;&#x81EA;&#x4ED6;&#x624B;&#x8F6C;&#x5356;&#x3002;</a></p>
+<p><img src="../2024-linux/image-20220218204904432.png" alt="image-20220218204904432" style="zoom:25%;"></p>
+<h2 id="&#x57DF;&#x540D;&#x7684;&#x91CD;&#x8981;&#x6027;"><a name="&#x57DF;&#x540D;&#x7684;&#x91CD;&#x8981;&#x6027;" class="plugin-anchor" href="#&#x57DF;&#x540D;&#x7684;&#x91CD;&#x8981;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57DF;&#x540D;&#x7684;&#x91CD;&#x8981;&#x6027;</h2>
+<p>&#x57DF;&#x540D;&#x51B3;&#x5B9A;&#x4E86;&#x7528;&#x6237;&#x641C;&#x7D22;&#x7684;&#x7CBE;&#x51C6;&#x6027;&#xFF0C;&#x6BD4;&#x5982;www.taobao.com&#x3001;www.jd.com&#x662F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x8BB0;&#x5FC6;&#x7684;&#xFF0C;&#x7528;&#x6237;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#x641C;&#x7D22;&#xFF0C;&#x5C31;&#x83B7;&#x5F97;&#x4E86;&#x66F4;&#x7CBE;&#x51C6;&#x7684;&#x8BBF;&#x95EE;&#x7387;&#xFF0C;&#x76F4;&#x63A5;&#x63D0;&#x9AD8;&#x4F01;&#x4E1A;&#x4EA7;&#x54C1;&#x552E;&#x5356;&#x6210;&#x529F;&#x51E0;&#x7387;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x4EAC;&#x4E1C;&#x4E00;&#x5F00;&#x59CB;&#x53EB;&#x505A;360buy.com&#xFF0C;&#x540E;&#x6765;&#x6539;&#x4E3A;&#x4E86;jd.com&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x90FD;&#x662F;&#x4ECE;&#x4F01;&#x4E1A;&#x89D2;&#x5EA6;&#xFF0C;&#x6765;&#x4F53;&#x73B0;&#x4E00;&#x4E2A;&#x57DF;&#x540D;&#x7684;&#x91CD;&#x8981;&#x6027;&#x3002;</p>
+<p>&#x4ECE;&#x5C0F;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x57DF;&#x540D;&#x80FD;&#x591F;&#x8BA9;&#x7528;&#x6237;&#x8F7B;&#x677E;&#x3001;&#x7CBE;&#x51C6;&#x7684;&#x8BBF;&#x95EE;&#x5230;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x8D85;&#x54E5;&#x7684;&#x7F51;&#x7AD9;&#x57DF;&#x540D;&#x5C31;&#x662F;<code>https://yuchaoit.cn/</code>&#xFF0C;&#x5BF9;&#x5E94;&#x7684;ip&#x5730;&#x5740;&#x662F;<code>123.206.16.61</code>&#xFF0C;ip&#x5F88;&#x96BE;&#x8BB0;&#xFF0C;&#x57DF;&#x540D;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x5F88;&#x597D;&#x8BB0;&#x3002;</p>
+<h2 id="&#x57DF;&#x540D;&#x600E;&#x4E48;&#x548C;ip&#x5BF9;&#x5E94;&#x7684;"><a name="&#x57DF;&#x540D;&#x600E;&#x4E48;&#x548C;ip&#x5BF9;&#x5E94;&#x7684;" class="plugin-anchor" href="#&#x57DF;&#x540D;&#x600E;&#x4E48;&#x548C;ip&#x5BF9;&#x5E94;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57DF;&#x540D;&#x600E;&#x4E48;&#x548C;IP&#x5BF9;&#x5E94;&#x7684;</h2>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x5C31;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x4F60;&#x8F93;&#x5165;&#x7684;&#x662F;&#x57DF;&#x540D;&#xFF0C;&#x4F60;&#x7684;&#x7535;&#x8111;&#x8BE5;&#x600E;&#x4E48;&#x5C06;&#x4ED6;&#x53D8;&#x6210;IP&#x5730;&#x5740;&#x5462;&#xFF1F;&#x5C31;&#x6BD4;&#x5982;&#x4F60;&#x8F93;&#x5165;&#x662F;<code>https://yuchaoit.cn/</code>&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x4F60;&#x7684;&#x7535;&#x8111;&#x77E5;&#x9053;&#x5BF9;&#x65B9;&#x7684;IP&#x662F;<code>123.206.16.61</code>&#x5462;&#xFF1F;</p>
+<h3 id="hosts&#x6587;&#x4EF6;"><a name="hosts&#x6587;&#x4EF6;" class="plugin-anchor" href="#hosts&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>hosts&#x6587;&#x4EF6;</h3>
+<p>&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x5C31;&#x662F;hosts&#x6587;&#x4EF6;&#xFF0C;hosts&#x6587;&#x4EF6;&#x5C31;&#x5728;&#x4F60;&#x7684;<code>C:\windows\system32\drivers\etc</code>&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;linux&#x5C31;&#x662F;<code>/etc/hosts</code>&#x3002;</p>
+<p>&#x4ED6;&#x76F8;&#x5F53;&#x4E8E;&#x7535;&#x8111;&#x7684;&#x7535;&#x8BDD;&#x672C;&#xFF0C;&#x4ED6;&#x8BB0;&#x5F55;&#x7740;&#x6BCF;&#x4E00;&#x4E2A;&#x57DF;&#x540D;&#x5BF9;&#x5E94;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x5F53;&#x4F60;&#x8F93;&#x5165;&#x57DF;&#x540D;&#x800C;&#x4E0D;&#x662F;IP&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ED6;&#x5C31;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x7535;&#x8BDD;&#x672C;&#x91CC;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x4ED6;&#x8F6C;&#x5316;&#x6210;IP&#x5730;&#x5740;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218210708473.png" alt="image-20220218210708473"></p>
+<h3 id="&#x6765;&#x73A9;&#x4E00;&#x73A9;hosts&#x6587;&#x4EF6;"><a name="&#x6765;&#x73A9;&#x4E00;&#x73A9;hosts&#x6587;&#x4EF6;" class="plugin-anchor" href="#&#x6765;&#x73A9;&#x4E00;&#x73A9;hosts&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6765;&#x73A9;&#x4E00;&#x73A9;hosts&#x6587;&#x4EF6;</h3>
+<p>&#x6BD4;&#x5982;chaoge666.cn&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x662F;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218211526906.png" alt="image-20220218211526906" style="zoom:33%;"></p>
+<p>192.168.0.123&#x8FD9;&#x662F;&#x4F60;&#x672C;&#x5730;&#x4E00;&#x4E2A;linux&#x673A;&#x5668;&#xFF0C;&#x662F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218211554589.png" alt="image-20220218211554589" style="zoom:33%;"></p>
+<p>&#x5982;&#x4F55;&#x5C06;&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x548C;&#x8FD9;&#x4E2A;IP&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#xFF0C;&#x505A;&#x4E00;&#x4E2A;&#x89E3;&#x6790;&#x5173;&#x7CFB;&#xFF1F;</p>
+<p>&#x4FEE;&#x6539;hosts&#x6587;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x6839;&#x636E;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x7CFB;&#x7EDF;&#x5E73;&#x53F0;&#x4FEE;&#x6539;&#x3002;</p>
+<pre><code>192.168.0.123  chaoge666.cn
+</code></pre><p><img src="../2024-linux/image-20220218211704802.png" alt="image-20220218211704802" style="zoom:50%;"></p>
+<p>ping&#x68C0;&#x6D4B;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218211725151.png" alt="image-20220218211725151"></p>
+<p>&#x5173;&#x4E8E;&#x57DF;&#x540D;&#x548C;IP&#x89E3;&#x6790;&#x5173;&#x7CFB;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218211940955.png" alt="image-20220218211940955" style="zoom:33%;"></p>
+<h3 id="dns&#x89E3;&#x6790;&#x670D;&#x52A1;&#x5668;"><a name="dns&#x89E3;&#x6790;&#x670D;&#x52A1;&#x5668;" class="plugin-anchor" href="#dns&#x89E3;&#x6790;&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>DNS&#x89E3;&#x6790;&#x670D;&#x52A1;&#x5668;</h3>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x4E5F;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x5C31;&#x662F;Hosts&#x6587;&#x4EF6;&#x662F;&#x6709;&#x9650;&#x7684;&#xFF0C;&#x5C31;&#x548C;&#x4F60;&#x4E0D;&#x53EF;&#x80FD;&#x62E5;&#x6709;&#x8FD9;&#x4E2A;&#x4E16;&#x754C;&#x4E0A;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x65E2;&#x7136;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x4E0D;&#x53EF;&#x80FD;&#x62E5;&#x6709;&#x5168;&#x4E16;&#x754C;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x6536;&#x96C6;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x4EA4;&#x7ED9;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x6765;&#x5E72;&#x8FD9;&#x4E2A;&#x6D3B;&#x7684;&#x4EBA;&#xFF0C;&#x7136;&#x540E;&#x5927;&#x5BB6;&#x60F3;&#x8981;&#x95EE;&#x7535;&#x8BDD;&#x7684;&#x65F6;&#x5019;&#x53BB;&#x4ED6;&#x90A3;&#x67E5;&#x4E00;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;DNS&#x670D;&#x52A1;&#x5668;&#x6709;&#x7740;&#x76F8;&#x5F53;&#x5168;&#x7684;&#x57DF;&#x540D;&#x548C;IP&#xFF0C;&#x5F53;&#x4F60;&#x8F93;&#x5165;&#x4E00;&#x4E32;&#x7F51;&#x7AD9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E32;&#x7F51;&#x7AD9;&#x5E76;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#xFF0C;&#x800C;&#x662F;&#x5148;&#x5C06;&#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x53D1;&#x9001;&#x7ED9;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;DNS&#x670D;&#x52A1;&#x5668;&#x5E2E;&#x4F60;&#x628A;&#x8FD9;&#x4E32;&#x7F51;&#x7AD9;&#x53D8;&#x6210;&#x4E86;IP&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x7ED9;&#x4F60;&#x7684;&#x7535;&#x8111;&#xFF0C;&#x4F60;&#x518D;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;IP&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x89E3;&#x51B3;&#x4E86;IP&#x96BE;&#x8BB0;&#xFF0C;&#x800C;&#x57DF;&#x540D;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x7684;&#x95EE;&#x9898;&#x4E86;&#x3002;</p>
+<p><img src="../2024-linux/image-20220218212154087.png" alt="image-20220218212154087"></p>
+<h3 id="dns&#x52AB;&#x6301;"><a name="dns&#x52AB;&#x6301;" class="plugin-anchor" href="#dns&#x52AB;&#x6301;"><i class="fa fa-link" aria-hidden="true"></i></a>DNS&#x52AB;&#x6301;</h3>
+<p><img src="../2024-linux/image-20220218212413252.png" alt="image-20220218212413252" style="zoom:35%;"></p>
+<p>&#x6B63;&#x786E;&#x7684;DNS&#x4F1A;&#x5C06;&#x57DF;&#x540D;&#x3001;&#x6B63;&#x786E;&#x7684;&#x89E3;&#x6790;&#x5230;&#x6B63;&#x786E;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x5982;www.yuchaoit.cn&#x89E3;&#x6790;&#x5230;123.206.16.61&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;DNS&#x6709;&#x4E86;&#x95EE;&#x9898;&#xFF0C;&#x5C06;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4EBA;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x8BA9;&#x4F60;&#x76F4;&#x63A5;&#x6253;&#x5F00;&#x770B;&#x5230;&#x7684;&#x4E0D;&#x662F;&#x8D85;&#x54E5;&#x7684;&#x5B66;&#x4E60;&#x7F51;&#x5740;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x6FB3;&#x95E8;xx&#xFF0C;xx&#x7F8E;&#x5973;&#xFF0C;&#x5728;&#x7EBF;&#x53D1;&#x724C;&#xFF0C;&#xFF0C;&#x8FD9;&#x3002;&#x3002;&#x3002;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x5F97;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3001;&#x6216;&#x8005;&#x6211;&#x4EEC;&#x672C;&#x5730;&#x7684;&#x7535;&#x8111;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x89E3;&#x6790;&#x901F;&#x5EA6;&#x5F88;&#x5FEB;&#x7684;&#x3001;&#x7EFF;&#x8272;&#x7684;&#x3001;&#x5B89;&#x5168;&#x7684;DNS&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<h2 id="&#x516C;&#x5171;dns&#x670D;&#x52A1;&#x5668;"><a name="&#x516C;&#x5171;dns&#x670D;&#x52A1;&#x5668;" class="plugin-anchor" href="#&#x516C;&#x5171;dns&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516C;&#x5171;DNS&#x670D;&#x52A1;&#x5668;</h2>
+<p>&#x817E;&#x8BAF;&#x3001;119.29.29.29&#x3001;<a href="https://www.dnspod.cn/Products/Public.DNS" target="_blank">https://www.dnspod.cn/Products/Public.DNS</a></p>
+<p>&#x963F;&#x91CC;&#x4E91;&#x3001;IPv4 DNS &#x5730;&#x5740;&#xFF1A;223.5.5.5 / 223.6.6.6&#x3001;<a href="https://alidns.com/" target="_blank">https://alidns.com/</a></p>
+<p>&#x767E;&#x5EA6;&#x3001;IPv4 DNS &#x5730;&#x5740;&#xFF1A;180.76.76.76 &#x3001;<a href="https://dudns.baidu.com/support/localdns/Address/index.html" target="_blank">https://dudns.baidu.com/support/localdns/Address/index.html</a></p>
+<p>114&#x3001;IPv4 DNS &#x5730;&#x5740;&#xFF1A;114.114.114.114 / 114.114.115.115&#x3001;<a href="https://www.114dns.com/" target="_blank">https://www.114dns.com/</a></p>
+<h2 id="&#x79C1;&#x6709;dns&#x670D;&#x52A1;&#x5668;"><a name="&#x79C1;&#x6709;dns&#x670D;&#x52A1;&#x5668;" class="plugin-anchor" href="#&#x79C1;&#x6709;dns&#x670D;&#x52A1;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79C1;&#x6709;DNS&#x670D;&#x52A1;&#x5668;</h2>
+<p>&#x6211;&#x4EEC;&#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x522B;&#x4EBA;&#x642D;&#x5EFA;&#x597D;&#x7684;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4F60;&#x7528;&#x7684;IP&#x3001;&#x57DF;&#x540D;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x4E92;&#x8054;&#x4E2D;&#x6CE8;&#x518C;&#x8FC7;&#x7684;&#xFF0C;&#x662F;&#x4EA4;&#x4E86;&#x94B1;&#x7684;&#x3002;</p>
+<p>&#x90A3;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#xFF0C;&#x6216;&#x8005;&#x6211;&#x4EEC;&#x4E2A;&#x4EBA;&#x7684;&#x670D;&#x52A1;&#x5668;&#x73AF;&#x5883;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x7528;&#x5230;&#x5927;&#x91CF;&#x7684;&#x57DF;&#x540D;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<p>&#x4E0D;&#x80FD;&#x5168;&#x90E8;&#x53BB;&#x4E70;&#x5427;&#xFF0C;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;DNS&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;&#x4E0D;&#x5C31;&#x5B8C;&#x4E8B;&#x4E86;&#xFF1F;</p>
+<h3 id="dns&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;"><a name="dns&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;" class="plugin-anchor" href="#dns&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>DNS&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;</h3>
+<p>&#x76F8;&#x8F83;&#x4E8E;&#x7531;&#x6570;&#x5B57;&#x6784;&#x6210;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x57DF;&#x540D;&#x66F4;&#x5BB9;&#x6613;&#x88AB;&#x7406;&#x89E3;&#x548C;&#x8BB0;&#x5FC6;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x66F4;&#x4E60;&#x60EF;&#x901A;&#x8FC7;&#x57DF;&#x540D; &#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8BBF;&#x95EE;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x7F51;&#x7EDC;&#x4E2D;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x4E4B;&#x95F4;&#x53EA;&#x80FD;&#x57FA;&#x4E8E; IP &#x5730;&#x5740;&#x6765;&#x76F8;&#x4E92;&#x8BC6;&#x522B;&#x5BF9;&#x65B9;&#x7684; &#x8EAB;&#x4EFD;&#xFF0C;&#x800C;&#x4E14;&#x8981;&#x60F3;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x4E2D;&#x4F20;&#x8F93;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x5FC5;&#x987B;&#x57FA;&#x4E8E;&#x5916;&#x7F51;&#x7684; IP &#x5730;&#x5740;&#x6765;&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x964D;&#x4F4E;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#x7684;&#x95E8;&#x69DB;&#xFF0C;DNS(Domain Name System&#xFF0C;&#x57DF;&#x540D;&#x7CFB;&#x7EDF;)&#x6280;&#x672F;&#x5E94;&#x8FD0; &#x800C;&#x751F;&#x3002;</p>
+<blockquote>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x9879;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x548C;&#x89E3;&#x6790;&#x57DF;&#x540D;&#x4E0E; IP &#x5730;&#x5740;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x662F;&#x80FD;&#x591F;&#x63A5;&#x53D7;&#x7528; &#x6237;&#x8F93;&#x5165;&#x7684;&#x57DF;&#x540D;&#x6216; IP &#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x52A8;&#x67E5;&#x627E;&#x4E0E;&#x4E4B;&#x5339;&#x914D;(&#x6216;&#x8005;&#x8BF4;&#x5177;&#x6709;&#x6620;&#x5C04;&#x5173;&#x7CFB;)&#x7684; IP &#x5730;&#x5740;&#x6216;&#x57DF;&#x540D;&#xFF0C; &#x5373;&#x5C06;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x4E3A; IP &#x5730;&#x5740;(&#x6B63;&#x5411;&#x89E3;&#x6790;)&#xFF0C;&#x6216;&#x5C06; IP &#x5730;&#x5740;&#x89E3;&#x6790;&#x4E3A;&#x57DF;&#x540D;(&#x53CD;&#x5411;&#x89E3;&#x6790;)&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x6211;&#x4EEC; &#x53EA;&#x9700;&#x8981;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;&#x57DF;&#x540D;&#x5C31;&#x80FD;&#x6253;&#x5F00;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x7F51;&#x7AD9;&#x4E86;&#x3002;</p>
+<p>DNS &#x57DF;&#x540D;&#x89E3;&#x6790;&#x6280;&#x672F;&#x7684;&#x6B63;&#x5411;&#x89E3;&#x6790;&#x4E5F;&#x662F; &#x6211;&#x4EEC;&#x6700;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x5DE5;&#x4F5C;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x9274;&#x4E8E;&#x4E92;&#x8054;&#x7F51;&#x4E2D;&#x7684;&#x57DF;&#x540D;&#x548C; IP &#x5730;&#x5740;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x592A;&#x8FC7;&#x5E9E;&#x5927;&#xFF0C;DNS &#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;&#x91C7;&#x7528;&#x4E86;&#x7C7B;&#x4F3C;&#x76EE;&#x5F55;&#x6811;&#x7684;&#x5C42;&#x6B21;&#x7ED3;&#x6784;&#x6765;&#x8BB0;&#x5F55;&#x57DF;&#x540D;&#x4E0E; IP &#x5730;&#x5740;&#x4E4B;&#x95F4;&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;&#xFF0C;&#x4ECE;&#x800C;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x57DF;&#x540D;&#x540E;&#x7F00;&#x4E00;&#x822C;&#x5206;&#x4E3A;&#x56FD;&#x9645;&#x57DF;&#x540D;&#x548C;&#x56FD;&#x5185;&#x57DF;&#x540D;&#xFF0C;&#x56FD;&#x9645;&#x57DF;&#x540D;&#x662F;&#x7528;&#x6237;&#x53EF;&#x6CE8;&#x518C;&#x7684;&#x901A;&#x7528;&#x9876;&#x7EA7;&#x57DF;&#x540D;&#x7684;&#x4FD7;&#x79F0;&#x3002; </p>
+<p>&#x5B83;&#x7684;&#x540E;&#x7F00;&#x4E3A;.com&#x3001;.top&#x3001;.net&#x6216;.org,. vip&#x3002; &#x56FD;&#x5185;&#x57DF;&#x540D;&#x4E3A;&#x540E;&#x7F00;&#x4E3A;.cn&#x7684;&#x57DF;&#x540D;&#xFF1B;&#x4E8C;&#x8005;&#x6CE8;&#x518C;&#x673A;&#x6784;&#x4E0D;&#x540C;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x4E2D;&#x57FA;&#x672C;&#x6CA1;&#x6709;&#x533A;&#x522B;&#x3002;</p>
+<p>&#x539F;&#x5219;&#x4E0A;&#x6765;&#x8BB2;&#xFF0C;&#x57DF;&#x540D;&#x540E;&#x7F00;&#x90FD;&#x6709;&#x4E25;&#x683C;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x4F46;&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x65F6;&#x53EF;&#x4EE5;&#x4E0D;&#x5FC5;&#x4E25;&#x683C;&#x9075;&#x5B88;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x57DF;&#x540D;&#x540E;&#x7F00;&#x6709;.com(&#x5546;&#x4E1A;&#x7EC4;&#x7EC7;)&#x3001;.org(&#x975E;&#x8425;&#x5229;&#x7EC4; &#x7EC7;)&#x3001;.gov(&#x653F;&#x5E9C;&#x90E8;&#x95E8;)&#x3001;.net(&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x5546;)&#x3001;.edu(&#x6559;&#x7814;&#x673A;&#x6784;)&#x3001;.pub(&#x516C;&#x5171;&#x5927;&#x4F17;)&#x3001;.cn(&#x4E2D;&#x56FD; &#x56FD;&#x5BB6;&#x9876;&#x7EA7;&#x57DF;&#x540D;)&#x7B49;&#x3002;</p>
+<p><img src="../2024-linux/image-20220219115347747.png" alt="image-20220219115347747"></p>
+<h1 id="&#x4EFB;&#x52A1;&#x80CC;&#x666F;"><a name="&#x4EFB;&#x52A1;&#x80CC;&#x666F;" class="plugin-anchor" href="#&#x4EFB;&#x52A1;&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EFB;&#x52A1;&#x80CC;&#x666F;</h1>
+<p>&#x516C;&#x53F8;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x7535;&#x5546;&#x7F51;&#x7AD9;&#xFF0C;&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x662F;192.168.0.110&#x5DF2;&#x7ECF;&#x90E8;&#x7F72;&#x597D;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x5E0C;&#x671B;&#x901A;&#x8FC7;&#x57DF;&#x540D;<code>pdd.yuchaoit.cn</code>&#x6765;&#x8BBF;&#x95EE;&#x8BE5;&#x7F51;&#x7AD9;&#xFF0C;&#x4FBF;&#x4E8E;&#x66F4;&#x597D;&#x7684;&#x8BBF;&#x95EE;&#x4F53;&#x9A8C;&#x3002;</p>
+<p>&#x8FD0;&#x7EF4;&#x90E8;&#x95E8;&#x9700;&#x8981;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4FBF;&#x4E8E;&#x5F00;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x56E2;&#x961F;&#x4F7F;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x5185;&#x7F51;&#x7684;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x505A;&#x597D;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x3002;</p>
+<blockquote>
+<p>&#x53EF;&#x4EE5;&#x6539;hosts&#x5417;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x80FD;&#xFF1F;</p>
+</blockquote>
+<h1 id="&#x4EFB;&#x52A1;&#x9700;&#x6C42;"><a name="&#x4EFB;&#x52A1;&#x9700;&#x6C42;" class="plugin-anchor" href="#&#x4EFB;&#x52A1;&#x9700;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EFB;&#x52A1;&#x9700;&#x6C42;</h1>
+<p>&#x9700;&#x8981;&#x5728;&#x5185;&#x7F51;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x5F00;&#x53D1;&#x3001;&#x6D4B;&#x8BD5;&#x90E8;&#x95E8;&#x540C;&#x4E8B;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x8BE5;&#x7F51;&#x7AD9;&#x3002;</p>
+<pre><code>192.168.0.110 pdd.yuchaoit.cn
+</code></pre><h1 id="&#x4EFB;&#x52A1;&#x62C6;&#x89E3;"><a name="&#x4EFB;&#x52A1;&#x62C6;&#x89E3;" class="plugin-anchor" href="#&#x4EFB;&#x52A1;&#x62C6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EFB;&#x52A1;&#x62C6;&#x89E3;</h1>
+<p>1.&#x4FEE;&#x6539;hosts&#x6587;&#x4EF6;&#xFF08;&#x4E0D;&#x5408;&#x9002;&#xFF0C;&#x6B64;&#x65B9;&#x5F0F;&#x53EA;&#x9002;&#x5408;&#x81EA;&#x5DF1;&#x672C;&#x673A;&#x8C03;&#x8BD5;&#xFF09;</p>
+<p>2.&#x90E8;&#x7F72;DNS&#x670D;&#x52A1;&#x5668;&#xFF08;&#x6B63;&#x89E3;&#xFF09;</p>
+<h1 id="&#x5B66;&#x4E60;&#x76EE;&#x6807;"><a name="&#x5B66;&#x4E60;&#x76EE;&#x6807;" class="plugin-anchor" href="#&#x5B66;&#x4E60;&#x76EE;&#x6807;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B66;&#x4E60;&#x76EE;&#x6807;</h1>
+<p>1.DNS&#x670D;&#x52A1;&#x4F5C;&#x7528;</p>
+<p>2.&#x57DF;&#x540D;&#x6784;&#x6210;</p>
+<p>3.DNS&#x670D;&#x52A1;&#x90E8;&#x7F72;</p>
+<p>4.&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5B9E;&#x8DF5;</p>
+<h1 id="dns&#x7ED3;&#x6784;"><a name="dns&#x7ED3;&#x6784;" class="plugin-anchor" href="#dns&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>DNS&#x7ED3;&#x6784;</h1>
+<p><strong>DNS&#xFF08;domain name system &#xFF09; &#x57DF;&#x540D;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;</strong></p>
+<ul>
+<li>&#x57DF;&#x540D;&#xFF1A;</li>
+</ul>
+<p>&#x7531;&#x7279;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x7EC4;&#x6210;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x4E92;&#x8054;&#x7F51;&#x4E2D;==&#x67D0;&#x4E00;&#x53F0;&#x8BA1;&#x7B97;&#x673A;&#x6216;&#x8005;&#x8BA1;&#x7B97;&#x673A;&#x7EC4;&#x7684;&#x540D;&#x79F0;==&#xFF0C;&#x80FD;&#x591F;&#x4F7F;&#x4EBA;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x8BBF;&#x95EE;&#x4E92;&#x8054;&#x7F51;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x8BB0;&#x4F4F;&#x80FD;&#x591F;&#x88AB;&#x673A;&#x5668;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#x7684;IP&#x5730;&#x5740;&#x3002;</p>
+<h2 id="1&#x3001;dns&#x7684;&#x4F5C;&#x7528;"><a name="1&#x3001;dns&#x7684;&#x4F5C;&#x7528;" class="plugin-anchor" href="#1&#x3001;dns&#x7684;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;DNS&#x7684;&#x4F5C;&#x7528;</h2>
+<ul>
+<li><p>&#x57DF;&#x540D;&#x7684;==&#x6B63;&#x5411;&#x89E3;&#x6790;==</p>
+<p>&#x5C06;&#x4E3B;&#x673A;&#x57DF;&#x540D;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;IP &#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x4FBF;&#x7F51;&#x7EDC;&#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x901A;&#x8FC7;&#x4E3B;&#x673A;&#x57DF;&#x540D;&#x8BBF;&#x95EE;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E3B;&#x673A;</p>
+<p><strong>&#x57DF;&#x540D;&#x2014;&#x2014;&gt;IP</strong>        A&#x8BB0;&#x5F55;</p>
+</li>
+<li><p>&#x57DF;&#x540D;&#x7684;==&#x53CD;&#x5411;&#x89E3;&#x6790;==</p>
+<p>&#x5C06;&#x4E3B;&#x673A;&#x7684;IP&#x5730;&#x5740;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x4EE5;&#x4FBF;&#x7F51;&#x7EDC;&#xFF08;&#x670D;&#x52A1;&#xFF09;&#x7A0B;&#x5E8F;&#x80FD;&#x591F;&#x901A;&#x8FC7;IP&#x5730;&#x5740;&#x67E5;&#x8BE2;&#x5230;&#x4E3B;&#x673A;&#x7684;&#x57DF;&#x540D;</p>
+<p><strong>IP&#x2014;&#x2014;&gt;&#x57DF;&#x540D;</strong>        PTR&#x8BB0;&#x5F55;</p>
+</li>
+</ul>
+<h2 id="2&#x3001;dns&#x6811;&#x5F62;&#x7ED3;&#x6784;"><a name="2&#x3001;dns&#x6811;&#x5F62;&#x7ED3;&#x6784;" class="plugin-anchor" href="#2&#x3001;dns&#x6811;&#x5F62;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;DNS&#x6811;&#x5F62;&#x7ED3;&#x6784;</h2>
+<p><img src="../2024-linux/image-20220219133551231.png" alt="image-20220219133551231" style="zoom:50%;"></p>
+<h3 id="&#x6839;&#x57DF;-"><a name="&#x6839;&#x57DF;-" class="plugin-anchor" href="#&#x6839;&#x57DF;-"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6839;&#x57DF; <code>.</code></h3>
+<ul>
+<li>&#x5728;&#x6574;&#x4E2A; DNS &#x7CFB;&#x7EDF;&#x7684;&#x6700;&#x4E0A;&#x65B9;&#x4E00;&#x5B9A;&#x662F; . (&#x5C0F;&#x6570;&#x70B9;) &#x8FD9;&#x4E2A; DNS &#x670D;&#x52A1;&#x5668; (&#x79F0;&#x4E3A; root)&#xFF0C;&#x4E5F;&#x53EB;&#x201D;&#x6839;&#x57DF;&#x201C;&#x3002;</li>
+<li>&#x6839;&#x57DF; &#xFF08;13&#x53F0; &#x5168;&#x4E16;&#x754C;&#x53EA;&#x6709;13&#x53F0;&#x3002;1&#x4E2A;&#x4E3A;&#x4E3B;&#x6839;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x653E;&#x7F6E;&#x5728;&#x7F8E;&#x56FD;&#x3002;&#x5176;&#x4F59;12&#x4E2A;&#x5747;&#x4E3A;&#x8F85;&#x6839;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5176;&#x4E2D;9&#x4E2A;&#x653E;&#x7F6E;&#x5728;&#x7F8E;&#x56FD;&#xFF0C;&#x6B27;&#x6D32;2&#x4E2A;&#xFF0C;&#x4F4D;&#x4E8E;&#x82F1;&#x56FD;&#x548C;&#x745E;&#x5178;&#xFF0C;&#x4E9A;&#x6D32;1&#x4E2A;&#xFF0C;&#x4F4D;&#x4E8E;&#x65E5;&#x672C;&#x3002;&#xFF09;</li>
+</ul>
+<h3 id="&#x9876;&#x7EA7;&#x57DF;&#x540D;&#xFF08;&#x4E00;&#x7EA7;&#x57DF;&#x540D;&#xFF09;"><a name="&#x9876;&#x7EA7;&#x57DF;&#x540D;&#xFF08;&#x4E00;&#x7EA7;&#x57DF;&#x540D;&#xFF09;" class="plugin-anchor" href="#&#x9876;&#x7EA7;&#x57DF;&#x540D;&#xFF08;&#x4E00;&#x7EA7;&#x57DF;&#x540D;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9876;&#x7EA7;&#x57DF;&#x540D;&#xFF08;&#x4E00;&#x7EA7;&#x57DF;&#x540D;&#xFF09;</h3>
+<p>&#x9876;&#x7EA7;&#x57DF;&#x540D;&#x662F;&#x57DF;&#x540D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5373;&#x662F;&#x57DF;&#x540D;&#x6700;&#x540E;&#x4E00;&#x70B9;&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x4F8B;&#x5982;&#x5728;<a href="http://yuchaoit.cn&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x4E2D;&#xFF0C;&#x9876;&#x7EA7;&#x57DF;&#x662F;.cn&#xFF08;&#x6216;.COM&#xFF09;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x89C6;&#x4E3A;&#x76F8;&#x540C;&#x3002;" target="_blank">http://yuchaoit.cn&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x4E2D;&#xFF0C;&#x9876;&#x7EA7;&#x57DF;&#x662F;.cn&#xFF08;&#x6216;.COM&#xFF09;&#xFF0C;&#x5927;&#x5C0F;&#x5199;&#x89C6;&#x4E3A;&#x76F8;&#x540C;&#x3002;</a></p>
+<h3 id="&#x4E8C;&#x7EA7;&#x57DF;&#x540D;"><a name="&#x4E8C;&#x7EA7;&#x57DF;&#x540D;" class="plugin-anchor" href="#&#x4E8C;&#x7EA7;&#x57DF;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x7EA7;&#x57DF;&#x540D;</h3>
+<p>&#x4E8C;&#x7EA7;&#x57DF;&#x540D;&#x662F;&#x57DF;&#x540D;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#x5728;<a href="http://yuchaoit.cn&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x4E2D;&#xFF0C;&#x4E8C;&#x7EA7;&#x57DF;&#x540D;&#x662F;yuchaoit&#x3002;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;" target="_blank">http://yuchaoit.cn&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x4E2D;&#xFF0C;&#x4E8C;&#x7EA7;&#x57DF;&#x540D;&#x662F;yuchaoit&#x3002;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</a></p>
+<h2 id="3&#x3001;&#x57DF;&#x540D;&#x673A;&#x6784;"><a name="3&#x3001;&#x57DF;&#x540D;&#x673A;&#x6784;" class="plugin-anchor" href="#3&#x3001;&#x57DF;&#x540D;&#x673A;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x57DF;&#x540D;&#x673A;&#x6784;</h2>
+<p>&#x6536;&#x8D39;&#x3001;&#x65B0;&#x7F51;<a href="https://www.xinnet.com/&#x3001;&#x4E07;&#x7F51;https://www.hichina.com/" target="_blank">https://www.xinnet.com/&#x3001;&#x4E07;&#x7F51;https://www.hichina.com/</a></p>
+<p>&#x514D;&#x8D39;&#x57DF;&#x540D;&#x3001;tk&#x57DF;&#x540D;&#x7B49;&#x3002;</p>
+<h2 id="4&#x3001;dns&#x5DE5;&#x4F5C;&#x539F;&#x7406;"><a name="4&#x3001;dns&#x5DE5;&#x4F5C;&#x539F;&#x7406;" class="plugin-anchor" href="#4&#x3001;dns&#x5DE5;&#x4F5C;&#x539F;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;DNS&#x5DE5;&#x4F5C;&#x539F;&#x7406;</h2>
+<p><img src="../2024-linux/image-20220219140035446.png" alt="image-20220219140035446" style="zoom:33%;"></p>
+<hr>
+<p><img src="../2024-linux/image-20220219140603334.png" alt="image-20220219140603334" style="zoom:33%;"></p>
+<blockquote>
+<p>DNS&#x57DF;&#x540D;&#x89E3;&#x6790;&#x548C;&#x624B;&#x673A;&#x53F7;&#x67E5;&#x8BE2;&#x7406;&#x89E3;&#x3002;</p>
+</blockquote>
+<p><img src="../2024-linux/image-20220219141035940.png" alt="image-20220219141035940" style="zoom:33%;"></p>
+<p>1&#x3001;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165;www.baidu.com&#x57DF;&#x540D;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5148;&#x68C0;&#x67E5;&#x81EA;&#x5DF1;&#x672C;&#x5730;&#x7684;hosts&#x6587;&#x4EF6;&#x662F;&#x5426;&#x6709;&#x8FD9;&#x4E2A;&#x7F51;&#x5740;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x5C31;&#x5148;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;IP&#x5730;&#x5740;&#x6620;&#x5C04;&#xFF0C;&#x5B8C;&#x6210;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x3002;</p>
+<p>2&#x3001;&#x5982;&#x679C;hosts&#x91CC;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x7684;&#x6620;&#x5C04;&#xFF0C;&#x5219;&#x67E5;&#x627E;&#x672C;&#x5730;DNS&#x89E3;&#x6790;&#x5668;&#x7F13;&#x5B58;&#xFF0C;&#x662F;&#x5426;&#x6709;&#x8FD9;&#x4E2A;&#x7F51;&#x5740;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x5B8C;&#x6210;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x3002;</p>
+<p>3&#x3001;&#x5982;&#x679C;hosts&#x4E0E;&#x672C;&#x5730;DNS&#x89E3;&#x6790;&#x5668;&#x7F13;&#x5B58;&#x90FD;&#x6CA1;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x7F51;&#x5740;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#xFF0C;&#x9996;&#x5148;&#x4F1A;&#x627E;TCP/ip&#x53C2;&#x6570;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684;&#x9996;&#x9009;DNS&#x670D;&#x52A1;&#x5668;&#xFF08;&#x5E38;&#x89C1;8.8.8.8&#xFF1B;114.114.114.114&#xFF09;&#x5728;&#x6B64;&#x6211;&#x4EEC;&#x53EB;&#x5B83;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6B64;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x67E5;&#x8BE2;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x5305;&#x542B;&#x5728;&#x672C;&#x5730;&#x914D;&#x7F6E;&#x533A;&#x57DF;&#x8D44;&#x6E90;&#x4E2D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x89E3;&#x6790;&#x7ED3;&#x679C;&#x7ED9;&#x5BA2;&#x6237;&#x673A;&#xFF0C;&#x5B8C;&#x6210;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x6B64;&#x89E3;&#x6790;&#x5177;&#x6709;&#x6743;&#x5A01;&#x6027;&#x3002;</p>
+<p>4&#x3001;&#x5982;&#x679C;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#x672C;&#x5730;&#x533A;&#x57DF;&#x6587;&#x4EF6;&#x4E0E;&#x7F13;&#x5B58;&#x89E3;&#x6790;&#x90FD;&#x5931;&#x6548;&#xFF0C;&#x5219;&#x6839;&#x636E;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BBE;&#x7F6E;&#xFF08;&#x662F;&#x5426;&#x8BBE;&#x7F6E;&#x8F6C;&#x53D1;&#x5668;&#xFF09;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x5982;&#x679C;&#x672A;&#x7528;&#x8F6C;&#x53D1;&#x6A21;&#x5F0F;&#xFF0C;&#x672C;&#x5730;DNS&#x5C31;&#x628A;&#x8BF7;&#x6C42;&#x53D1;&#x81F3;13&#x53F0;&#x6839;DNS&#xFF0C;&#x6839;DNS&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#x4F1A;&#x5224;&#x65AD;&#x8FD9;&#x4E2A;&#x57DF;&#x540D;(.com)&#x662F;&#x8C01;&#x6765;&#x6388;&#x6743;&#x7BA1;&#x7406;&#xFF0C;&#x5E76;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8D1F;&#x8D23;&#x8BE5;&#x9876;&#x7EA7;&#x57DF;&#x540D;&#x670D;&#x52A1;&#x5668;&#x7684;&#x4E00;&#x4E2A;IP&#x3002;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;IP&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x5C06;&#x4F1A;&#x8054;&#x7CFB;&#x8D1F;&#x8D23;.com&#x57DF;&#x7684;&#x8FD9;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x3002;&#x8FD9;&#x53F0;&#x8D1F;&#x8D23;.com&#x57DF;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x81EA;&#x5DF1;&#x65E0;&#x6CD5;&#x89E3;&#x6790;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x627E;&#x4E00;&#x4E2A;&#x7BA1;&#x7406;.com&#x57DF;&#x7684;&#x4E0B;&#x4E00;&#x7EA7;DNS&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;(baidu.com)&#x7ED9;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#x3002;&#x5F53;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x627E;baidu.com&#x57DF;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x91CD;&#x590D;&#x4E0A;&#x9762;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x76F4;&#x81F3;&#x627E;&#x5230;www.baidu.com&#x4E3B;&#x673A;&#x3002;</p>
+<p>5&#x3001;&#x5982;&#x679C;&#x7528;&#x7684;&#x662F;&#x8F6C;&#x53D1;&#x6A21;&#x5F0F;&#xFF0C;&#x6B64;DNS&#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x628A;&#x8BF7;&#x6C42;&#x8F6C;&#x53D1;&#x81F3;&#x4E0A;&#x4E00;&#x7EA7;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531;&#x4E0A;&#x4E00;&#x7EA7;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x4E0A;&#x4E00;&#x7EA7;&#x670D;&#x52A1;&#x5668;&#x5982;&#x679C;&#x4E0D;&#x80FD;&#x89E3;&#x6790;&#xFF0C;&#x6216;&#x627E;&#x6839;DNS&#x6216;&#x628A;&#x8F6C;&#x8BF7;&#x6C42;&#x8F6C;&#x81F3;&#x4E0A;&#x4E0A;&#x7EA7;&#xFF0C;&#x4EE5;&#x6B64;&#x5FAA;&#x73AF;&#x3002;&#x4E0D;&#x7BA1;&#x662F;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#x7528;&#x662F;&#x662F;&#x8F6C;&#x53D1;&#xFF0C;&#x8FD8;&#x662F;&#x6839;&#x63D0;&#x793A;&#xFF0C;&#x6700;&#x540E;&#x90FD;&#x662F;&#x628A;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x672C;&#x5730;DNS&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7531;&#x6B64;DNS&#x670D;&#x52A1;&#x5668;&#x518D;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x673A;&#x3002;</p>
+<h1 id="dns&#x90E8;&#x7F72;&#xFF08;&#x91CD;&#x8981;&#xFF09;"><a name="dns&#x90E8;&#x7F72;&#xFF08;&#x91CD;&#x8981;&#xFF09;" class="plugin-anchor" href="#dns&#x90E8;&#x7F72;&#xFF08;&#x91CD;&#x8981;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>DNS&#x90E8;&#x7F72;&#xFF08;&#x91CD;&#x8981;&#xFF09;</h1>
+<ul>
+<li><p>DNS &#x7684;==&#x57DF;&#x540D;&#x89E3;&#x6790;==&#x90FD;&#x662F; <strong>==udp/53==</strong> &#xFF1B;&#x4E3B;&#x4ECE;&#x4E4B;&#x95F4;&#x7684;==&#x6570;&#x636E;&#x4F20;&#x8F93;==&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;<strong>==tcp/53==</strong>&#xFF1B;</p>
+</li>
+<li><p>DNS&#x8F6F;&#x4EF6;&#xFF1A;</p>
+<p>==Bind==&#x662F;&#x4E00;&#x6B3E;&#x5F00;&#x653E;&#x6E90;&#x7801;&#x7684;DNS&#x670D;&#x52A1;&#x5668;&#x8F6F;&#x4EF6;&#xFF0C;Bind&#x7531;&#x7F8E;&#x56FD;&#x52A0;&#x5DDE;&#x5927;&#x5B66;Berkeley&#xFF08;&#x4F2F;&#x514B;&#x5229;&#xFF09;&#x5206;&#x6821;&#x5F00;&#x53D1;&#x548C;&#x7EF4;&#x62A4;&#x7684;&#xFF0C;&#x5168;&#x540D;&#x4E3A;Berkeley Internet Name Domain&#x5B83;&#x662F;&#x76EE;&#x524D;&#x4E16;&#x754C;&#x4E0A;&#x4F7F;&#x7528;&#x6700;&#x4E3A;&#x5E7F;&#x6CDB;&#x7684;DNS&#x670D;&#x52A1;&#x5668;&#x8F6F;&#x4EF6;&#xFF0C;&#x652F;&#x6301;&#x5404;&#x79CD;unix&#x5E73;&#x53F0;&#x548C;windows&#x5E73;&#x53F0;&#x3002;</p>
+<p>BIND&#x73B0;&#x5728;&#x7531;&#x4E92;&#x8054;&#x7F51;&#x7CFB;&#x7EDF;&#x534F;&#x4F1A;&#xFF08;Internet Systems Consortium&#xFF09;&#x8D1F;&#x8D23;&#x5F00;&#x53D1;&#x4E0E;&#x7EF4;&#x62A4;&#x3002;</p>
+</li>
+</ul>
+<h2 id="bind&#x642D;&#x5EFA;"><a name="bind&#x642D;&#x5EFA;" class="plugin-anchor" href="#bind&#x642D;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>bind&#x642D;&#x5EFA;</h2>
+<p>&#x76EE;&#x6807;&#xFF0C;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x4E86;&#x6211;&#x4EEC;&#x90E8;&#x7F72;&#x7684;DNS&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x6790;www.yuchao666.cn&#x3002;</p>
+<p>&#x670D;&#x52A1;&#x5668;&#x51C6;&#x5907;</p>
+<table>
+<thead>
+<tr>
+<th>IP</th>
+<th>hostname</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.0.104</td>
+<td>dns-server</td>
+<td>DNS&#x670D;&#x52A1;  &#x57DF;&#x540D;&#x89E3;&#x6790;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td>192.168.0.105</td>
+<td>web-server</td>
+<td>web&#x670D;&#x52A1;   &#x63D0;&#x4F9B;web&#x4E1A;&#x52A1;&#x8BBF;&#x95EE;</td>
+</tr>
+<tr>
+<td>192.168.0.106</td>
+<td>client</td>
+<td>&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;web&#x670D;&#x52A1;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6839;&#x636E;&#x4EE5;&#x4E0A;&#x8981;&#x6C42;&#xFF0C;&#x914D;&#x7F6E;&#x597D;&#x673A;&#x5668;</p>
+<p><img src="../2024-linux/image-20220219145159578.png" alt="image-20220219145159578"></p>
+<h2 id="&#x90E8;&#x7F72;dns-server"><a name="&#x90E8;&#x7F72;dns-server" class="plugin-anchor" href="#&#x90E8;&#x7F72;dns-server"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;dns-server</h2>
+<p>&#x5B89;&#x88C5;bind&#x5957;&#x4EF6;</p>
+<pre><code>yum install bind bind-utils -y
+
+&#x89E3;&#x91CA;
+bind-utils&#xFF1A;bind&#x5BA2;&#x6237;&#x7AEF;&#x7A0B;&#x5E8F;&#x96C6;&#xFF0C;&#x4F8B;&#x5982;dig, host, nslookup&#x7B49;&#xFF1B;
+
+bind&#xFF1A;&#x63D0;&#x4F9B;&#x7684;dns server&#x7A0B;&#x5E8F;&#x3001;&#x4EE5;&#x53CA;&#x51E0;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#xFF1B;
+
+bind-libs&#xFF1A;&#x88AB;bind&#x548C;bind-utils&#x5305;&#x4E2D;&#x7684;&#x7A0B;&#x5E8F;&#x5171;&#x540C;&#x7528;&#x5230;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#xFF1B;
+</code></pre><pre><code>1.&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;
+[root@dns-server ~]# systemctl stop firewalld
+[root@dns-server ~]#
+[root@dns-server ~]# iptables -F
+[root@dns-server ~]#
+[root@dns-server ~]# getenforce
+Disabled
+
+2.&#x914D;&#x7F6E;yum&#x6E90;&#xFF0C;&#x7528;&#x4E8E;&#x5B89;&#x88C5;bind&#x8F6F;&#x4EF6;&#x3002;
+[root@dns-server ~]# ls /etc/yum.repos.d/
+
+3.&#x5B89;&#x88C5;bind
+[root@dns-server ~]# yum install bind -y
+
+4.&#x67E5;&#x770B;&#x8F6F;&#x4EF6;
+[root@dns-server ~]# rpm -qi bind
+
+
+5.&#x67E5;&#x770B;dns&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+[root@dns-server ~]# rpm -ql bind
+
+# &#x65E5;&#x5FD7;&#x8F6E;&#x8F6C;&#x6587;&#x4EF6;
+/etc/logrotate.d/named
+# &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+/etc/named
+# &#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+/etc/named.conf
+# zone&#x6587;&#x4EF6;,&#x5B9A;&#x4E49;&#x57DF;
+/etc/named.rfc1912.zones
+# &#x670D;&#x52A1;&#x7BA1;&#x7406;&#x811A;&#x672C;
+/usr/lib/systemd/system/named.service
+# &#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;
+/usr/sbin/named
+# &#x68C0;&#x6D4B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+/usr/sbin/named-checkconf
+# &#x68C0;&#x6D4B;&#x57DF;&#x6587;&#x4EF6;
+/usr/sbin/named-checkzone
+# &#x6839;&#x57DF;&#x670D;&#x52A1;&#x5668;
+/var/named/named.ca
+# &#x6B63;&#x5411;&#x89E3;&#x6790;&#x533A;&#x57DF;&#x6587;&#x4EF6;&#x6A21;&#x677F;
+/var/named/named.localhost
+# &#x53CD;&#x5411;&#x89E3;&#x6790;&#x533A;&#x57DF;&#x6587;&#x4EF6;&#x6A21;&#x677F;
+/var/named/named.loopback
+# dns&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;
+/var/named/slaves
+# &#x8FDB;&#x7A0B;pid
+/var/rum/named
+</code></pre><h2 id="&#x90E8;&#x7F72;&#x6B63;&#x5411;&#x89E3;&#x6790;"><a name="&#x90E8;&#x7F72;&#x6B63;&#x5411;&#x89E3;&#x6790;" class="plugin-anchor" href="#&#x90E8;&#x7F72;&#x6B63;&#x5411;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;&#x6B63;&#x5411;&#x89E3;&#x6790;</h2>
+<pre><code>1.&#x5907;&#x4EFD;&#x539F;&#x6709;&#x6587;&#x4EF6;
+[root@dns-server ~]# cp /etc/named.conf /etc/named.conf.bak
+[root@dns-server ~]#
+[root@dns-server ~]#
+[root@dns-server ~]# cp /etc/named.rfc1912.zones /etc/named.rfc1912.zones.bak
+
+2.&#x4FEE;&#x6539;&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+
+# &#x5B9A;&#x4E49;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x3001;&#x76D1;&#x542C;&#x65B9;&#x5F0F;&#x3001;&#x5141;&#x8BB8;&#x67E5;&#x8BE2;&#x6765;&#x6E90;
+
+options {
+        // &#x5B9A;&#x4E49;&#x76D1;&#x542C;&#x65B9;&#x5F0F;  any&#x4EE3;&#x8868;&#x5168;&#x7F51;&#x76D1;&#x542C;
+        // &#x76D1;&#x542C;&#x7684;&#x5730;&#x5740;&#x548C;&#x7AEF;&#x53E3;&#xFF0C;localhost&#x8868;&#x793A;&#x76D1;&#x542C;&#x5728;&#x672C;&#x673A;&#x6240;&#x6709;&#x5730;&#x5740;&#x4E0A;&#xFF1B;
+        listen-on port 53 { 127.0.0.1;any; };
+        listen-on-v6 port 53 { ::1; };
+        // &#x533A;&#x57DF;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x76EE;&#x5F55;
+        directory       &quot;/var/named&quot;;
+        // dns&#x89E3;&#x6790;&#x8FC7;&#x5185;&#x5BB9;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6;
+        dump-file       &quot;/var/named/data/cache_dump.db&quot;;
+        // &#x9759;&#x6001;&#x89E3;&#x6790;&#x6587;&#x4EF6;&#xFF08;&#x51E0;&#x4E4E;&#x4E0D;&#x7528;&#xFF09;
+        statistics-file &quot;/var/named/data/named_stats.txt&quot;;
+        // &#x5185;&#x5B58;&#x7684;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;
+        memstatistics-file &quot;/var/named/data/named_mem_stats.txt&quot;;
+        recursing-file  &quot;/var/named/data/named.recursing&quot;;
+        secroots-file   &quot;/var/named/data/named.secroots&quot;;
+        // &#x5141;&#x8BB8;&#x8C01;&#x5411;&#x672C;&#x53F0;DNS&#x53D1;&#x8D77;&#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#xFF08;localhost|ip|any&#xFF09;&#xFF1B;
+        allow-query     { localhost;any; };
+        ..
+        ...
+        ...
+        &#x7701;&#x7565;
+
+ // &#x63A7;&#x5236;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x7EA7;&#x522B;&#xFF0C;&#x8DEF;&#x5F84;
+ logging {
+        channel default_debug {
+                file &quot;data/named.run&quot;;
+                severity dynamic;
+        };
+};
+
+// &#x533A;&#x57DF;&#x8BBE;&#x7F6E;&#xFF0C;&#x8FD9;&#x662F;&#x6839;&#x57DF;&#x3002;
+zone &quot;.&quot; IN {
+        type hint;
+        file &quot;named.ca&quot;;
+};
+
+
+ 59 include &quot;/etc/named.rfc1912.zones&quot;;  // &#x8FD9;&#x91CC;include&#x8868;&#x793A;&#xFF0C;&#x8F7D;&#x5165;&#x4E00;&#x4E2A;&#x5B50;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+ 60 include &quot;/etc/named.root.key&quot;;
+
+
+
+&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x89E3;&#x6790;
+&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#xFF1A;&#xFF1A;
+
+options {} &#xFF1A;&#x5168;&#x5C40;&#x9009;&#x9879;&#xFF08;&#x76D1;&#x542C;&#x7AEF;&#x53E3;&#x3001;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&#x3001;&#x7F13;&#x5B58;&#x4F4D;&#x7F6E;&#x3001;&#x6743;&#x9650;&#x7B49;&#xFF09;
+logging {} &#xFF1A;&#x670D;&#x52A1;&#x65E5;&#x5FD7;&#x9009;&#x9879;
+zone . {} &#xFF1A;&#x81EA;&#x5B9A;&#x4E49;&#x533A;&#x57DF;&#x914D;&#x7F6E;
+include &#xFF1A;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x7684;&#x6587;&#x4EF6;
+
+
+&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6CE8;&#x610F;&#x4E8B;&#x9879;
+
+&#x8BED;&#x6CD5;&#x975E;&#x5E38;&#x4E25;&#x683C;&#xFF1B;
+&#x6587;&#x4EF6;&#x6743;&#x9650;&#x5C5E;&#x4E3B; root &#xFF0C;&#x5C5E;&#x7EC4; named &#xFF0C;&#x6587;&#x4EF6;&#x6743;&#x9650; 640&#xFF1B;
+
+[root@dns-server ~]# ll /etc/named.conf
+-rw-r----- 1 root named 1812 Feb 19 17:10 /etc/named.conf
+</code></pre><p><img src="../2024-linux/image-20220219170535947.png" alt="image-20220219170535947" style="zoom:33%;"></p>
+<blockquote>
+<p><code>named.rfc1912.zones</code>&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x89E3;&#x6790;</p>
+</blockquote>
+<pre><code>zone &quot;ZONE_NAME&quot; IN {
+    type {master|slave|hint|forward};
+    file &quot;ZONE_NAME.zone&quot;;
+};
+zone &quot;ZONE_NAME&#x201C;&#xFF1A;&#x5B9A;&#x4E49;&#x89E3;&#x6790;&#x5E93;&#x540D;&#x5B57;&#xFF0C;&#x901A;&#x5E38;&#x548C;&#x89E3;&#x6790;&#x5E93;&#x6587;&#x4EF6;&#x524D;&#x7F00;&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#x3002;
+type&#xFF1A;
+    master&#x6307;&#x7684;&#x662F;&#x4E3B;dns&#x89E3;&#x6790;
+    slave&#x6307;&#x7684;&#x662F;&#x4ECE;dns&#x89E3;&#x6790;
+    hint&#x6307;&#x7684;&#x662F;&#x6839;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF08;&#x6839;&#x63D0;&#x793A;&#x57DF;&#xFF09;
+    forward&#x6307;&#x7684;&#x662F;&#x8F6C;&#x53D1;&#xFF0C;&#x8F6C;&#x53D1;&#x4E0D;&#x4F7F;&#x7528;file
+file &#xFF1A;&#x5B9A;&#x4E49;&#x533A;&#x57DF;&#x89E3;&#x6790;&#x5E93;&#x6587;&#x4EF6;&#x540D;&#x5B57;&#xFF08;&#x4F4D;&#x7F6E;&#x9ED8;&#x8BA4;&#x5728;/var/named&#x4E0B;&#x9762;&#xFF09;,file&#x7684;&#x524D;&#x7F00;&#x901A;&#x5E38;&#x548C;zone&#x7684;&#x540D;&#x5B57;&#x901A;&#x5E38;&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x4E00;&#x4E2A;.zone&#x7684;&#x540E;&#x7F00;&#x3002;
+</code></pre><p>&#x7EE7;&#x7EED;&#x770B;&#x914D;&#x7F6E;&#x6D41;&#x7A0B;</p>
+<pre><code>3.&#x4FEE;&#x6539;&#x5B50;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x533A;&#x57DF;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+
+&#x914D;&#x7F6E;&#x89E3;&#x6790;
+zone &quot;example.com&quot; IN { 
+    type master|slave; 
+    #&#x81EA;&#x5B9A;&#x4E49;&#x533A;&#x57DF;&#x7C7B;&#x578B; 
+    file /path/to/zonefile; 
+    #&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x548C;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84; 
+    allow-update {ip|none}; 
+    #&#x5141;&#x8BB8;&#x54EA;&#x4E2A;ip&#x53EF;&#x4EE5;&#x4F7F;&#x7528;nsupdate&#x52A8;&#x6001;&#x66F4;&#x65B0; &#x533A;&#x57DF;&#x6587;&#x4EF6; 
+};
+
+&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF0C;&#x6CE8;&#x610F;&#x683C;&#x5F0F;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x6DFB;&#x52A0;&#x4F60;&#x7684;&#x57DF;&#x540D;&#x4E86;&#x3002; &#x4E00;&#x5B9A;&#x4E0D;&#x8981;&#x843D;&#x4E0B;&#x5206;&#x53F7;
+[root@dns-server ~]# tail -5  /etc/named.rfc1912.zones
+zone &quot;yuchaoit.cn&quot; IN {
+        type master;
+        file &quot;yuchaoit.cn.zone&quot;;
+        allow-update { none; };
+};
+
+
+4.&#x521B;&#x5EFA;zone&#x533A;&#x57DF;&#x6587;&#x4EF6; yuchaoit.cn.zone&#xFF0C;&#x5148;&#x53BB;&#x590D;&#x5236;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#xFF0C;&#x533A;&#x57DF;&#x6587;&#x4EF6;&#x653E;&#x5728;&#x4E86;/var/named
+[root@dns-server ~]# cp -p /var/named/named.localhost /var/named/yuchaoit.cn.zone
+
+
+5.&#x4FEE;&#x6539;&#x533A;&#x57DF;&#x6587;&#x4EF6;
+&#x8BA9;&#x8FD9;&#x4E2A;&#x57DF;&#x540D;&#x548C;&#x4F60;&#x8981;&#x7684;IP&#x5730;&#x5740;&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#xFF0C;&#x4EE5;&#x53CA;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x4E09;&#x7EA7;&#x57DF;&#x540D;www.yuchaoit.cn&#x3002;
+[root@dns-server ~]# cat  /var/named/yuchaoit.cn.zone
+$TTL 1D
+@    IN SOA    @ rname.invalid. (
+                    0    ; serial
+                    1D    ; refresh
+                    1H    ; retry
+                    1W    ; expire
+                    3H )    ; minimum
+    NS    @
+    A    192.168.0.105
+    AAAA    ::1
+
+www A 192.168.0.105
+
+
+6.&#x4FEE;&#x6539;&#x5B8C;&#x4E86;&#x540E;&#xFF0C;&#x52A1;&#x5FC5;&#x4FEE;&#x6539;zone&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;
+[root@dns-server ~]# chmod 640 yuchaoit.cn.zone
+[root@dns-server ~]# ll /var/named/
+total 20
+drwxrwx--- 2 named named    6 Nov 25 00:38 data
+drwxrwx--- 2 named named    6 Nov 25 00:38 dynamic
+-rw-r----- 1 root  named 2253 Apr  5  2018 named.ca
+-rw-r----- 1 root  named  152 Dec 15  2009 named.empty
+-rw-r----- 1 root  named  152 Jun 21  2007 named.localhost
+-rw-r----- 1 root  named  168 Dec 15  2009 named.loopback
+drwxrwx--- 2 named named    6 Nov 25 00:38 slaves
+-rw-r----- 1 root  named  173 Feb 19 17:58 yuchaoit.cn.zone
+
+
+7.&#x68C0;&#x67E5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BED;&#x6CD5;&#xFF0C;&#x4E0D;&#x8981;&#x6709;&#x4EFB;&#x4F55;&#x9519;&#x8BEF;
+[root@dns-server ~]# named-checkconf /etc/named.conf
+[root@dns-server ~]# named-checkconf /etc/named.rfc1912.zones
+[root@dns-server ~]#
+
+
+8.&#x542F;&#x52A8;named&#x57DF;&#x540D;&#x89E3;&#x6790;&#x670D;&#x52A1;&#xFF0C;&#x6CE8;&#x610F;&#x540D;&#x5B57;&#x662F;&#x8FD9;&#x4E2A;&#x3002;
+[root@dns-server ~]# netstat -tnlp|grep named
+[root@dns-server ~]#
+[root@dns-server ~]# systemctl start named
+[root@dns-server ~]# netstat -tnlp|grep named
+tcp        0      0 10.96.0.177:53          0.0.0.0:*               LISTEN      8051/named
+tcp        0      0 192.168.0.104:53        0.0.0.0:*               LISTEN      8051/named
+tcp        0      0 127.0.0.1:53            0.0.0.0:*               LISTEN      8051/named
+tcp        0      0 127.0.0.1:953           0.0.0.0:*               LISTEN      8051/named
+tcp6       0      0 ::1:53                  :::*                    LISTEN      8051/named
+tcp6       0      0 ::1:953                 :::*                    LISTEN      8051/named
+[root@dns-server ~]#
+</code></pre><p>&#x5173;&#x4E8E;zone&#x6587;&#x4EF6;&#x8BED;&#x6CD5;&#x89E3;&#x6790;</p>
+<p>time to live&#xFF08;TTL&#xFF09;&#xFF0C;ttl&#x503C;&#x4E3B;&#x8981;&#x662F;&#x63A7;&#x5236;&#x57DF;&#x540D;&#x6307;&#x5411;&#x7684;ip&#x5730;&#x5740;&#x5728;dns<a href="https://www.ucloud.cn/site/product/uhost.html?ytag=uclub" target="_blank">&#x670D;&#x52A1;&#x5668;</a>&#x4E0A;&#x7684;&#x7F13;&#x5B58;&#x65F6;&#x95F4;</p>
+<p>@ &#x6307;&#x7684;&#x5C31;&#x662F;yuchaoit.cn</p>
+<pre><code>$TTL 1D                      //&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;TTL&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;1&#x5929;,&#x4E0B;&#x9762;&#x6570;&#x636E;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x6B64;&#x503C;.
+@                            [TTL]    IN   SOA  &#x4E3B;DNS&#x670D;&#x52A1;&#x5668;FQDN &#x7BA1;&#x7406;&#x5458;&#x90AE;&#x7BB1;  (
+
+
+                                        0       ; &#x5E8F;&#x5217;&#x53F7;
+                                        1D      ; &#x66F4;&#x65B0;&#x95F4;&#x9694;
+                                        1H      ; &#x66F4;&#x65B0;&#x5931;&#x8D25;&#x540E;&#x91CD;&#x8BD5;&#x95F4;&#x9694;
+                                        1W      ; &#x8FC7;&#x671F;&#x65F6;&#x957F;
+                                        3H )    ; &#x5426;&#x5B9A;&#x8BB0;&#x5F55;&#x4FDD;&#x5B58;&#x65F6;&#x957F;
+
+&#x8D44;&#x6E90;&#x7C7B;&#x578B;&#xFF1A;A&#xFF08;IPv4&#xFF09;, AAAA&#xFF08;IPv6&#xFF09;&#xFF1A;&#x5B9A;&#x4E49;FQDN&#x7684;IP
+          NS &#xFF1A;   &#x5B9A;&#x4E49;DNS&#x670D;&#x52A1;&#x5668;&#x7684;FQDN
+          SOA :   &#x8D77;&#x59CB;&#x6388;&#x6743;&#xFF08;&#x6BCF;&#x4E2A;zone&#x9996;&#x5148;&#x8981;&#x5B9A;&#x4E49;&#x6B64;&#x503C;&#xFF09;
+          MX&#xFF1A;    &#x5B9A;&#x4E49;&#x90AE;&#x4EF6;&#x8BB0;&#x5F55;&#xFF0C;&#x6709;&#x4F18;&#x5148;&#x7EA7;&#x6982;&#x5FF5;&#xFF08;0-99&#xFF09;&#xFF0C;&#x503C;&#x8D8A;&#x5C0F;&#x4F18;&#x5148;&#x7EA7;&#x8D8A;&#x9AD8;&#x3002;
+          CNAME:  &#x5B9A;&#x4E49;&#x522B;&#x540D;
+          PTR&#xFF1A;   &#x53CD;&#x5411;&#x8BB0;&#x5F55;
+</code></pre><h2 id="&#x5BA2;&#x6237;&#x7AEF;&#x8BBE;&#x7F6E;dns&#x5730;&#x5740;&#xFF08;&#x91CD;&#x8981;&#xFF09;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x8BBE;&#x7F6E;dns&#x5730;&#x5740;&#xFF08;&#x91CD;&#x8981;&#xFF09;" class="plugin-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x8BBE;&#x7F6E;dns&#x5730;&#x5740;&#xFF08;&#x91CD;&#x8981;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x8BBE;&#x7F6E;DNS&#x5730;&#x5740;&#xFF08;&#x91CD;&#x8981;&#xFF09;</h2>
+<pre><code>1.&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x90E8;&#x7F72;&#x7684;dns&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#xFF0C;&#x5199;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;192.168.0.104&#x662F;&#x8D85;&#x54E5;&#x90E8;&#x7F72;&#x7684;dns&#x670D;&#x52A1;&#x5668;IP&#x3002;
+
+[root@web-server ~]# cat  /etc/resolv.conf
+# Generated by NetworkManager
+nameserver 192.168.0.104
+
+
+2.&#x68C0;&#x67E5;&#x89E3;&#x6790;&#x5173;&#x7CFB;
+[root@web-server ~]# nslookup www.yuchaoit.cn
+Server:        192.168.0.104
+Address:    192.168.0.104#53
+
+Name:    www.yuchaoit.cn
+Address: 192.168.0.105
+
+3.&#x4FEE;&#x6539;dns&#x670D;&#x52A1;&#x5668;&#x5730;&#x5740;&#x8BD5;&#x8BD5;&#xFF0C;&#x770B;&#x770B;&#x89E3;&#x6790;&#x5173;&#x7CFB;
+</code></pre><p><img src="../2024-linux/image-20220219182650222.png" alt="image-20220219182650222"></p>
+<hr>
+<p><img src="../2024-linux/image-20220219183241955.png" alt="image-20220219183241955"></p>
+<blockquote>
+<p>&#x8BD5;&#x8BD5;&#x6539;&#x6389;dns&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6539;&#x4E3A;&#x516C;&#x7F51;&#x7684;114.114.114.114</p>
+</blockquote>
+<pre><code>[root@web-server ~]# cat  /etc/resolv.conf
+# Generated by NetworkManager
+#nameserver 192.168.0.104
+nameserver 114.114.114.114
+</code></pre><p><img src="../2024-linux/image-20220219183512258.png" alt="image-20220219183512258"></p>
+<h2 id="&#x90E8;&#x7F72;&#x53CD;&#x5411;&#x89E3;&#x6790;"><a name="&#x90E8;&#x7F72;&#x53CD;&#x5411;&#x89E3;&#x6790;" class="plugin-anchor" href="#&#x90E8;&#x7F72;&#x53CD;&#x5411;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;&#x53CD;&#x5411;&#x89E3;&#x6790;</h2>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.bikongge.com 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4F5C;&#x8005;&#xFF1A;&#x733F;&#x6765;&#x6559;&#x80B2;
+2024-05-11 17:46:34
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3-9-域名管理系统之DNS","level":"1.3.25","depth":2,"next":{"title":"03-网站集群架构","level":"1.4","depth":1,"path":"03-网站集群架构/0.md","ref":"03-网站集群架构/0.md","articles":[{"title":"00-淘宝网的十年架构","level":"1.4.1","depth":2,"path":"03-网站集群架构/00-淘宝网的十年架构.md","ref":"03-网站集群架构/00-淘宝网的十年架构.md","articles":[]},{"title":"01-综合架构开篇","level":"1.4.2","depth":2,"path":"03-网站集群架构/01-综合架构开篇.md","ref":"03-网站集群架构/01-综合架构开篇.md","articles":[]},{"title":"02-综合架构环境准备","level":"1.4.3","depth":2,"path":"03-网站集群架构/02-综合架构环境准备.md","ref":"03-网站集群架构/02-综合架构环境准备.md","articles":[]},{"title":"03-文件共享服务之FTP","level":"1.4.4","depth":2,"path":"03-网站集群架构/03-文件共享服务之FTP.md","ref":"03-网站集群架构/03-文件共享服务之FTP.md","articles":[]},{"title":"04-文件共享服务之Samba","level":"1.4.5","depth":2,"path":"03-网站集群架构/04-文件共享服务之Samba.md","ref":"03-网站集群架构/04-文件共享服务之Samba.md","articles":[]},{"title":"05-备份工具rsync","level":"1.4.6","depth":2,"path":"03-网站集群架构/05-备份工具rsync.md","ref":"03-网站集群架构/05-备份工具rsync.md","articles":[]},{"title":"06-备份任务实战","level":"1.4.7","depth":2,"path":"03-网站集群架构/06-备份任务实战.md","ref":"03-网站集群架构/06-备份任务实战.md","articles":[]},{"title":"07-共享存储服务NFS","level":"1.4.8","depth":2,"path":"03-网站集群架构/07-共享存储服务NFS.md","ref":"03-网站集群架构/07-共享存储服务NFS.md","articles":[]},{"title":"08-实时同步数据","level":"1.4.9","depth":2,"path":"03-网站集群架构/08-实时同步数据.md","ref":"03-网站集群架构/08-实时同步数据.md","articles":[]},{"title":"09-SSH安全登录","level":"1.4.10","depth":2,"path":"03-网站集群架构/09-SSH安全登录.md","ref":"03-网站集群架构/09-SSH安全登录.md","articles":[]},{"title":"10--SSH进阶","level":"1.4.11","depth":2,"path":"03-网站集群架构/10--SSH进阶.md","ref":"03-网站集群架构/10--SSH进阶.md","articles":[]},{"title":"11-运维自动化Ansible","level":"1.4.12","depth":2,"path":"03-网站集群架构/11-运维自动化Ansible.md","ref":"03-网站集群架构/11-运维自动化Ansible.md","articles":[]},{"title":"12-Ansible-playbook剧本","level":"1.4.13","depth":2,"path":"03-网站集群架构/12-Ansible-playbook剧本.md","ref":"03-网站集群架构/12-Ansible-playbook剧本.md","articles":[]},{"title":"13-Ansible-playbook剧本进阶","level":"1.4.14","depth":2,"path":"03-网站集群架构/13-Ansible-playbook剧本进阶.md","ref":"03-网站集群架构/13-Ansible-playbook剧本进阶.md","articles":[]},{"title":"14-ansible-role角色","level":"1.4.15","depth":2,"path":"03-网站集群架构/14-ansible-role角色.md","ref":"03-网站集群架构/14-ansible-role角色.md","articles":[]},{"title":"20-用户访问网站原理","level":"1.4.16","depth":2,"path":"03-网站集群架构/20-用户访问网站原理.md","ref":"03-网站集群架构/20-用户访问网站原理.md","articles":[]},{"title":"21-静态资源加速cdn篇","level":"1.4.17","depth":2,"path":"03-网站集群架构/21-静态资源加速cdn篇.md","ref":"03-网站集群架构/21-静态资源加速cdn篇.md","articles":[]},{"title":"22-web通信协议篇","level":"1.4.18","depth":2,"path":"03-网站集群架构/22-web通信协议篇.md","ref":"03-网站集群架构/22-web通信协议篇.md","articles":[]},{"title":"23-1-nginx虚拟主机实战","level":"1.4.19","depth":2,"path":"03-网站集群架构/23-1-nginx虚拟主机实战.md","ref":"03-网站集群架构/23-1-nginx虚拟主机实战.md","articles":[]},{"title":"23-nginx基础篇","level":"1.4.20","depth":2,"path":"03-网站集群架构/23-nginx基础篇.md","ref":"03-网站集群架构/23-nginx基础篇.md","articles":[]},{"title":"24-nginx高级篇","level":"1.4.21","depth":2,"path":"03-网站集群架构/24-nginx高级篇.md","ref":"03-网站集群架构/24-nginx高级篇.md","articles":[]},{"title":"25-LNMP黄金架构","level":"1.4.22","depth":2,"path":"03-网站集群架构/25-LNMP黄金架构.md","ref":"03-网站集群架构/25-LNMP黄金架构.md","articles":[]},{"title":"26-网站集群拆分","level":"1.4.23","depth":2,"path":"03-网站集群架构/26-网站集群拆分.md","ref":"03-网站集群架构/26-网站集群拆分.md","articles":[]},{"title":"27-1-负载均衡策略","level":"1.4.24","depth":2,"path":"03-网站集群架构/27-1-负载均衡策略.md","ref":"03-网站集群架构/27-1-负载均衡策略.md","articles":[]},{"title":"27-高性能负载均衡集群","level":"1.4.25","depth":2,"path":"03-网站集群架构/27-高性能负载均衡集群.md","ref":"03-网站集群架构/27-高性能负载均衡集群.md","articles":[]},{"title":"28-HTTPS","level":"1.4.26","depth":2,"path":"03-网站集群架构/28-HTTPS.md","ref":"03-网站集群架构/28-HTTPS.md","articles":[]},{"title":"29-keepalived高可用性负载均衡","level":"1.4.27","depth":2,"path":"03-网站集群架构/29-keepalived高可用性负载均衡.md","ref":"03-网站集群架构/29-keepalived高可用性负载均衡.md","articles":[]},{"title":"30-部署Python网站","level":"1.4.28","depth":2,"path":"03-网站集群架构/30-部署Python网站.md","ref":"03-网站集群架构/30-部署Python网站.md","articles":[]},{"title":"31-jumpserver实战","level":"1.4.29","depth":2,"path":"03-网站集群架构/31-jumpserver实战.md","ref":"03-网站集群架构/31-jumpserver实战.md","articles":[]},{"title":"32-期中综合架构验收","level":"1.4.30","depth":2,"path":"03-网站集群架构/32-期中综合架构验收.md","ref":"03-网站集群架构/32-期中综合架构验收.md","articles":[]}]},"previous":{"title":"3-8文件共享服务之NFS","level":"1.3.24","depth":2,"path":"02-系统核心服务/3-8文件共享服务之NFS.md","ref":"02-系统核心服务/3-8文件共享服务之NFS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","theme-comscore","theme-api","hide-element","-highlight","advanced-emoji","-lunr","-search","search-pro","page-toc-button","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.bikongge.com 2024","modify_label":"作者：猿来教育"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./icon/book.ico","theme-comscore":{},"page-toc-button":{},"theme-api":{"languages":[{"lang":"python","name":"python","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"light"},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://s1.ax1x.com/2022/10/25/xRowNj.jpg"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-系统核心服务/3-9-域名管理系统之DNS.md","mtime":"2024-05-11T09:46:34.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T07:32:03.155Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

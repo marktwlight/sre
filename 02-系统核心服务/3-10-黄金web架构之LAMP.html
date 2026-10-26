@@ -1,0 +1,3913 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3-10-黄金web架构之LAMP · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3-11-磁盘管理.html" />
+    
+    
+    <link rel="prev" href="3-1-软件包管理.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-linux核心基础/0.html">
+            
+                <a href="../01-linux核心基础/0.html">
+            
+                    
+                    01-linux 核心基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                <a href="../01-linux核心基础/01_Linux云计算运维工程师.html">
+            
+                    
+                    01_Linux云计算运维工程师
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                <a href="../01-linux核心基础/02_运维基础重要概念.html">
+            
+                    
+                    02_运维基础重要概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-linux核心基础/03_计算机基础.html">
+            
+                <a href="../01-linux核心基础/03_计算机基础.html">
+            
+                    
+                    03_计算机基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-linux核心基础/04_操作系统基础.html">
+            
+                <a href="../01-linux核心基础/04_操作系统基础.html">
+            
+                    
+                    04_操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                <a href="../01-linux核心基础/05_Linux系统搭建.html">
+            
+                    
+                    05_Linux系统搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                <a href="../01-linux核心基础/06_vmware安装Linux.html">
+            
+                    
+                    06_vmware安装Linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01-linux核心基础/07_Linux快速入门.html">
+            
+                <a href="../01-linux核心基础/07_Linux快速入门.html">
+            
+                    
+                    07_Linux快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                <a href="../01-linux核心基础/08_linux文件管理篇一.html">
+            
+                    
+                    08_linux文件管理篇一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                <a href="../01-linux核心基础/09_linux文件管理篇二.html">
+            
+                    
+                    09_linux文件管理篇二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../01-linux核心基础/10_linux用户管理.html">
+            
+                <a href="../01-linux核心基础/10_linux用户管理.html">
+            
+                    
+                    10_linux用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../01-linux核心基础/11_远程连接linux.html">
+            
+                <a href="../01-linux核心基础/11_远程连接linux.html">
+            
+                    
+                    11_远程连接linux
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../01-linux核心基础/12_linux权限管理.html">
+            
+                <a href="../01-linux核心基础/12_linux权限管理.html">
+            
+                    
+                    12_linux权限管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                <a href="../01-linux核心基础/13_linux基础服务管理.html">
+            
+                    
+                    13_linux基础服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                <a href="../01-linux核心基础/14_linux进程与资源管理.html">
+            
+                    
+                    14_linux进程与资源管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                <a href="../01-linux核心基础/15_YUM与开源项目（Web运维）.html">
+            
+                    
+                    15_YUM与开源项目（Web运维）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../01-linux核心基础/16_计算机网络.html">
+            
+                <a href="../01-linux核心基础/16_计算机网络.html">
+            
+                    
+                    16_计算机网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                <a href="../01-linux核心基础/17_如果让你来设计网络.html">
+            
+                    
+                    17_如果让你来设计网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                <a href="../01-linux核心基础/18_OSI模型与TCP协议.html">
+            
+                    
+                    18_OSI模型与TCP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                <a href="../01-linux核心基础/19_Vmware网络配置.html">
+            
+                    
+                    19_Vmware网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../01-linux核心基础/20_centos网络配置.html">
+            
+                <a href="../01-linux核心基础/20_centos网络配置.html">
+            
+                    
+                    20_centos网络配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="00.html">
+            
+                <a href="00.html">
+            
+                    
+                    02-系统核心服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3-0-Linux重要命令.html">
+            
+                <a href="3-0-Linux重要命令.html">
+            
+                    
+                    3-0-Linux重要命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="3-1-软件包管理.html">
+            
+                <a href="3-1-软件包管理.html">
+            
+                    
+                    3-1-软件包管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="3-10-黄金web架构之LAMP.html">
+            
+                <a href="3-10-黄金web架构之LAMP.html">
+            
+                    
+                    3-10-黄金web架构之LAMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="3-11-磁盘管理.html">
+            
+                <a href="3-11-磁盘管理.html">
+            
+                    
+                    3-11-磁盘管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="3-12-磁盘管理二.html">
+            
+                <a href="3-12-磁盘管理二.html">
+            
+                    
+                    3-12-磁盘管理二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="3-13-Raid磁盘冗余阵列.html">
+            
+                <a href="3-13-Raid磁盘冗余阵列.html">
+            
+                    
+                    3-13-Raid磁盘冗余阵列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="3-14-lvm逻辑卷管理.html">
+            
+                <a href="3-14-lvm逻辑卷管理.html">
+            
+                    
+                    3-14-lvm逻辑卷管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="3-15-通配符和特殊符号.html">
+            
+                <a href="3-15-通配符和特殊符号.html">
+            
+                    
+                    3-15-通配符和特殊符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="3-16-正则表达式和三剑客.html">
+            
+                <a href="3-16-正则表达式和三剑客.html">
+            
+                    
+                    3-16-正则表达式和三剑客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="3-17-sed精讲.html">
+            
+                <a href="3-17-sed精讲.html">
+            
+                    
+                    3-17-sed精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="3-18-1-awk进阶.html">
+            
+                <a href="3-18-1-awk进阶.html">
+            
+                    
+                    3-18-1-awk进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="3-18-awk精讲.html">
+            
+                <a href="3-18-awk精讲.html">
+            
+                    
+                    3-18-awk精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="3-19-正则练习题.html">
+            
+                <a href="3-19-正则练习题.html">
+            
+                    
+                    3-19-正则练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="3-2-yum精讲.html">
+            
+                <a href="3-2-yum精讲.html">
+            
+                    
+                    3-2-yum精讲
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="3-20-sed练习题.html">
+            
+                <a href="3-20-sed练习题.html">
+            
+                    
+                    3-20-sed练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="3-21-awk练习题.html">
+            
+                <a href="3-21-awk练习题.html">
+            
+                    
+                    3-21-awk练习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="3-22-什么是Shell.html">
+            
+                <a href="3-22-什么是Shell.html">
+            
+                    
+                    3-22-什么是Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="3-23-Shell快速入门.html">
+            
+                <a href="3-23-Shell快速入门.html">
+            
+                    
+                    3-23-Shell快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="3-3-SSH远程安全登录.html">
+            
+                <a href="3-3-SSH远程安全登录.html">
+            
+                    
+                    3-3-SSH远程安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="3-4-Rsync数据同步服务.html">
+            
+                <a href="3-4-Rsync数据同步服务.html">
+            
+                    
+                    3-4-Rsync数据同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="3-5-Inotify实时数据同步.html">
+            
+                <a href="3-5-Inotify实时数据同步.html">
+            
+                    
+                    3-5-Inotify实时数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="3-6-文件共享服务之FTP.html">
+            
+                <a href="3-6-文件共享服务之FTP.html">
+            
+                    
+                    3-6-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="3-7-文件共享服务之Samba.html">
+            
+                <a href="3-7-文件共享服务之Samba.html">
+            
+                    
+                    3-7-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="3-8文件共享服务之NFS.html">
+            
+                <a href="3-8文件共享服务之NFS.html">
+            
+                    
+                    3-8文件共享服务之NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="3-9-域名管理系统之DNS.html">
+            
+                <a href="3-9-域名管理系统之DNS.html">
+            
+                    
+                    3-9-域名管理系统之DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../03-网站集群架构/0.html">
+            
+                <a href="../03-网站集群架构/0.html">
+            
+                    
+                    03-网站集群架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                <a href="../03-网站集群架构/00-淘宝网的十年架构.html">
+            
+                    
+                    00-淘宝网的十年架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03-网站集群架构/01-综合架构开篇.html">
+            
+                <a href="../03-网站集群架构/01-综合架构开篇.html">
+            
+                    
+                    01-综合架构开篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                <a href="../03-网站集群架构/02-综合架构环境准备.html">
+            
+                    
+                    02-综合架构环境准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                <a href="../03-网站集群架构/03-文件共享服务之FTP.html">
+            
+                    
+                    03-文件共享服务之FTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                <a href="../03-网站集群架构/04-文件共享服务之Samba.html">
+            
+                    
+                    04-文件共享服务之Samba
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../03-网站集群架构/05-备份工具rsync.html">
+            
+                <a href="../03-网站集群架构/05-备份工具rsync.html">
+            
+                    
+                    05-备份工具rsync
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../03-网站集群架构/06-备份任务实战.html">
+            
+                <a href="../03-网站集群架构/06-备份任务实战.html">
+            
+                    
+                    06-备份任务实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                <a href="../03-网站集群架构/07-共享存储服务NFS.html">
+            
+                    
+                    07-共享存储服务NFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../03-网站集群架构/08-实时同步数据.html">
+            
+                <a href="../03-网站集群架构/08-实时同步数据.html">
+            
+                    
+                    08-实时同步数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../03-网站集群架构/09-SSH安全登录.html">
+            
+                <a href="../03-网站集群架构/09-SSH安全登录.html">
+            
+                    
+                    09-SSH安全登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../03-网站集群架构/10--SSH进阶.html">
+            
+                <a href="../03-网站集群架构/10--SSH进阶.html">
+            
+                    
+                    10--SSH进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                <a href="../03-网站集群架构/11-运维自动化Ansible.html">
+            
+                    
+                    11-运维自动化Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                <a href="../03-网站集群架构/12-Ansible-playbook剧本.html">
+            
+                    
+                    12-Ansible-playbook剧本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                <a href="../03-网站集群架构/13-Ansible-playbook剧本进阶.html">
+            
+                    
+                    13-Ansible-playbook剧本进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../03-网站集群架构/14-ansible-role角色.html">
+            
+                <a href="../03-网站集群架构/14-ansible-role角色.html">
+            
+                    
+                    14-ansible-role角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                <a href="../03-网站集群架构/20-用户访问网站原理.html">
+            
+                    
+                    20-用户访问网站原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                <a href="../03-网站集群架构/21-静态资源加速cdn篇.html">
+            
+                    
+                    21-静态资源加速cdn篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../03-网站集群架构/22-web通信协议篇.html">
+            
+                <a href="../03-网站集群架构/22-web通信协议篇.html">
+            
+                    
+                    22-web通信协议篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                <a href="../03-网站集群架构/23-1-nginx虚拟主机实战.html">
+            
+                    
+                    23-1-nginx虚拟主机实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../03-网站集群架构/23-nginx基础篇.html">
+            
+                <a href="../03-网站集群架构/23-nginx基础篇.html">
+            
+                    
+                    23-nginx基础篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../03-网站集群架构/24-nginx高级篇.html">
+            
+                <a href="../03-网站集群架构/24-nginx高级篇.html">
+            
+                    
+                    24-nginx高级篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                <a href="../03-网站集群架构/25-LNMP黄金架构.html">
+            
+                    
+                    25-LNMP黄金架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../03-网站集群架构/26-网站集群拆分.html">
+            
+                <a href="../03-网站集群架构/26-网站集群拆分.html">
+            
+                    
+                    26-网站集群拆分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                <a href="../03-网站集群架构/27-1-负载均衡策略.html">
+            
+                    
+                    27-1-负载均衡策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                <a href="../03-网站集群架构/27-高性能负载均衡集群.html">
+            
+                    
+                    27-高性能负载均衡集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../03-网站集群架构/28-HTTPS.html">
+            
+                <a href="../03-网站集群架构/28-HTTPS.html">
+            
+                    
+                    28-HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                <a href="../03-网站集群架构/29-keepalived高可用性负载均衡.html">
+            
+                    
+                    29-keepalived高可用性负载均衡
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../03-网站集群架构/30-部署Python网站.html">
+            
+                <a href="../03-网站集群架构/30-部署Python网站.html">
+            
+                    
+                    30-部署Python网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../03-网站集群架构/31-jumpserver实战.html">
+            
+                <a href="../03-网站集群架构/31-jumpserver实战.html">
+            
+                    
+                    31-jumpserver实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                <a href="../03-网站集群架构/32-期中综合架构验收.html">
+            
+                    
+                    32-期中综合架构验收
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../04-shell编程/0.html">
+            
+                <a href="../04-shell编程/0.html">
+            
+                    
+                    04-shell编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04-shell编程/01-shell基础概述.html">
+            
+                <a href="../04-shell编程/01-shell基础概述.html">
+            
+                    
+                    01-Shell基础概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04-shell编程/02-shell变量.html">
+            
+                <a href="../04-shell编程/02-shell变量.html">
+            
+                    
+                    02-Shell变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../04-shell编程/03-条件判断.html">
+            
+                <a href="../04-shell编程/03-条件判断.html">
+            
+                    
+                    03-条件判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../04-shell编程/04-流程控制之if.html">
+            
+                <a href="../04-shell编程/04-流程控制之if.html">
+            
+                    
+                    04-流程控制之if
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../04-shell编程/05-流程控制之case.html">
+            
+                <a href="../04-shell编程/05-流程控制之case.html">
+            
+                    
+                    05-流程控制之case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                <a href="../04-shell编程/06-流程控制之for循环结构.html">
+            
+                    
+                    06-流程控制之for循环结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../04-shell编程/07-流程控制之while循环.html">
+            
+                <a href="../04-shell编程/07-流程控制之while循环.html">
+            
+                    
+                    07-流程控制之while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../04-shell编程/08-循环控制.html">
+            
+                <a href="../04-shell编程/08-循环控制.html">
+            
+                    
+                    08-循环控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../04-shell编程/09-shell函数.html">
+            
+                <a href="../04-shell编程/09-shell函数.html">
+            
+                    
+                    09-Shell函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../04-shell编程/10-shell数组.html">
+            
+                <a href="../04-shell编程/10-shell数组.html">
+            
+                    
+                    10-Shell数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../04-shell编程/脚本练习题库.html">
+            
+                <a href="../04-shell编程/脚本练习题库.html">
+            
+                    
+                    脚本练习题库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../05-监控系统/00.html">
+            
+                <a href="../05-监控系统/00.html">
+            
+                    
+                    05-监控系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05-监控系统/00-监控系统.html">
+            
+                <a href="../05-监控系统/00-监控系统.html">
+            
+                    
+                    00-监控系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05-监控系统/01-监控体系理论.html">
+            
+                <a href="../05-监控系统/01-监控体系理论.html">
+            
+                    
+                    01-监控体系理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05-监控系统/02-zabbix安装部署.html">
+            
+                <a href="../05-监控系统/02-zabbix安装部署.html">
+            
+                    
+                    02-zabbix安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                <a href="../05-监控系统/03-zabbix如何监控服务器.html">
+            
+                    
+                    03-zabbix如何监控服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-监控系统/04-1-微信报警.html">
+            
+                <a href="../05-监控系统/04-1-微信报警.html">
+            
+                    
+                    04-1-微信报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05-监控系统/04-2-钉钉报警.html">
+            
+                <a href="../05-监控系统/04-2-钉钉报警.html">
+            
+                    
+                    04-2-钉钉报警
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05-监控系统/04-自定义监控项.html">
+            
+                <a href="../05-监控系统/04-自定义监控项.html">
+            
+                    
+                    04-自定义监控项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05-监控系统/05-自定义监控模板.html">
+            
+                <a href="../05-监控系统/05-自定义监控模板.html">
+            
+                    
+                    05-自定义监控模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05-监控系统/06-1-nginx监控.html">
+            
+                <a href="../05-监控系统/06-1-nginx监控.html">
+            
+                    
+                    06-1-nginx监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../05-监控系统/06-2-php监控.html">
+            
+                <a href="../05-监控系统/06-2-php监控.html">
+            
+                    
+                    06-2-php监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../05-监控系统/06-3-mysql监控.html">
+            
+                <a href="../05-监控系统/06-3-mysql监控.html">
+            
+                    
+                    06-3-mysql监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../05-监控系统/06-4-redis监控.html">
+            
+                <a href="../05-监控系统/06-4-redis监控.html">
+            
+                    
+                    06-4-redis监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../05-监控系统/06-5-tomcat监控.html">
+            
+                <a href="../05-监控系统/06-5-tomcat监控.html">
+            
+                    
+                    06-5-tomcat监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                <a href="../05-监控系统/06-6-模拟登录之web监控.html">
+            
+                    
+                    06-6-模拟登录之web监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                <a href="../05-监控系统/06-zabbix监控核心服务.html">
+            
+                    
+                    06-zabbix监控核心服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                <a href="../05-监控系统/07-1-zabbix-agent修改主动模式.html">
+            
+                    
+                    07-1-zabbix-agent修改主动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                <a href="../05-监控系统/07-2-zabbix自动发现.html">
+            
+                    
+                    07-2-zabbix自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                <a href="../05-监控系统/07-3-zabbix自动注册.html">
+            
+                    
+                    07-3-zabbix自动注册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../05-监控系统/07-zabbix工作模式.html">
+            
+                <a href="../05-监控系统/07-zabbix工作模式.html">
+            
+                    
+                    07-zabbix工作模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                <a href="../05-监控系统/08-zabbix分布式proxy.html">
+            
+                    
+                    08-zabbix分布式proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../06-敏捷开发流水线/00.html">
+            
+                <a href="../06-敏捷开发流水线/00.html">
+            
+                    
+                    06-敏捷开发流水线
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                <a href="../06-敏捷开发流水线/00-版本控制系统.html">
+            
+                    
+                    00-版本控制系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06-敏捷开发流水线/01-git工具.html">
+            
+                <a href="../06-敏捷开发流水线/01-git工具.html">
+            
+                    
+                    01-git工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                <a href="../06-敏捷开发流水线/02-git与gitee码云.html">
+            
+                    
+                    02-git与gitee码云
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                <a href="../06-敏捷开发流水线/03-gitlab私有仓库搭建.html">
+            
+                    
+                    03-gitlab私有仓库搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../06-敏捷开发流水线/04-jenkins.html">
+            
+                <a href="../06-敏捷开发流水线/04-jenkins.html">
+            
+                    
+                    04-jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                <a href="../06-敏捷开发流水线/05-jenkins结合远程仓库.html">
+            
+                    
+                    05-jenkins结合远程仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                <a href="../06-敏捷开发流水线/06-自动化发布静态页面.html">
+            
+                    
+                    06-自动化发布静态页面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                <a href="../06-敏捷开发流水线/07-SonarQube代码质量扫描工具.html">
+            
+                    
+                    07-SonarQube代码质量扫描工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                <a href="../06-敏捷开发流水线/08-jenkins发布Java项目.html">
+            
+                    
+                    08-jenkins发布Java项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                <a href="../06-敏捷开发流水线/09-jenkins流水线pipeline.html">
+            
+                    
+                    09-jenkins流水线pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../07-数据库运维/00.html">
+            
+                <a href="../07-数据库运维/00.html">
+            
+                    
+                    07-数据库运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                <a href="../07-数据库运维/02-1-数据库基础知识.html">
+            
+                    
+                    02-1-数据库基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../07-数据库运维/02-10-主从复制高级.html">
+            
+                <a href="../07-数据库运维/02-10-主从复制高级.html">
+            
+                    
+                    02-10-主从复制高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                <a href="../07-数据库运维/02-11-高可用集群MHA方案.html">
+            
+                    
+                    02-11-高可用集群MHA方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                <a href="../07-数据库运维/02-2-mysql基础实践.html">
+            
+                    
+                    02-2-mysql基础实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                <a href="../07-数据库运维/02-3-mysql运维核心基础.html">
+            
+                    
+                    02-3-mysql运维核心基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../07-数据库运维/02-4-SQL语句一.html">
+            
+                <a href="../07-数据库运维/02-4-SQL语句一.html">
+            
+                    
+                    02-4-SQL语句一
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../07-数据库运维/02-5-SQL语句二.html">
+            
+                <a href="../07-数据库运维/02-5-SQL语句二.html">
+            
+                    
+                    02-5-SQL语句二
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                <a href="../07-数据库运维/02-6-mysql备份方案.html">
+            
+                    
+                    02-6-mysql备份方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                <a href="../07-数据库运维/02-7-mysql备份实战.html">
+            
+                    
+                    02-7-mysql备份实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                <a href="../07-数据库运维/02-8-xtrabackup备份工具.html">
+            
+                    
+                    02-8-xtrabackup备份工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../07-数据库运维/02-9-主从复制架构.html">
+            
+                <a href="../07-数据库运维/02-9-主从复制架构.html">
+            
+                    
+                    02-9-主从复制架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../07-数据库运维/02-DBA之路.html">
+            
+                <a href="../07-数据库运维/02-DBA之路.html">
+            
+                    
+                    02-DBA之路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../08-缓存redis/00.html">
+            
+                <a href="../08-缓存redis/00.html">
+            
+                    
+                    08-缓存 redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                <a href="../08-缓存redis/01-redis部署与数据类型.html">
+            
+                    
+                    01-redis部署与数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../08-缓存redis/02-redis数据类型篇.html">
+            
+                <a href="../08-缓存redis/02-redis数据类型篇.html">
+            
+                    
+                    02-redis数据类型篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                <a href="../08-缓存redis/03-redis数据持久化篇.html">
+            
+                    
+                    03-redis数据持久化篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../08-缓存redis/04-redis安全篇.html">
+            
+                <a href="../08-缓存redis/04-redis安全篇.html">
+            
+                    
+                    04-redis安全篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../08-缓存redis/05-redis主从复制篇.html">
+            
+                <a href="../08-缓存redis/05-redis主从复制篇.html">
+            
+                    
+                    05-redis主从复制篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                <a href="../08-缓存redis/06-redis高可用哨兵篇.html">
+            
+                    
+                    06-redis高可用哨兵篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                <a href="../08-缓存redis/07-reids分片技术cluster篇.html">
+            
+                    
+                    07-reids分片技术cluster篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../08-缓存redis/08-redis自动化安装.html">
+            
+                <a href="../08-缓存redis/08-redis自动化安装.html">
+            
+                    
+                    08-redis自动化安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../08-缓存redis/09-redis实战技巧.html">
+            
+                <a href="../08-缓存redis/09-redis实战技巧.html">
+            
+                    
+                    09-redis实战技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../09-java运维/00.html">
+            
+                <a href="../09-java运维/00.html">
+            
+                    
+                    09-java 运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09-java运维/01-Tomcat.html">
+            
+                <a href="../09-java运维/01-Tomcat.html">
+            
+                    
+                    01-Tomcat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10-云原生容器编排/00.html">
+            
+                <a href="../10-云原生容器编排/00.html">
+            
+                    
+                    10-云原生容器编排
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10-云原生容器编排/docker-all/00.html">
+            
+                <a href="../10-云原生容器编排/docker-all/00.html">
+            
+                    
+                    docker-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" data-path="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                <a href="../10-云原生容器编排/docker-all/01_docker技术详解.html">
+            
+                    
+                    01_docker技术详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" data-path="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                <a href="../10-云原生容器编排/docker-all/02_docker安装部署.html">
+            
+                    
+                    02_docker安装部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.3" data-path="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                <a href="../10-云原生容器编排/docker-all/03_docker存储与网络.html">
+            
+                    
+                    03_docker存储与网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.4" data-path="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                <a href="../10-云原生容器编排/docker-all/04_dockerfile构建镜像.html">
+            
+                    
+                    04_dockerfile构建镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.5" data-path="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                <a href="../10-云原生容器编排/docker-all/05-企业级私有仓库Harbor.html">
+            
+                    
+                    05-企业级私有仓库Harbor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.6" data-path="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                <a href="../10-云原生容器编排/docker-all/06-docker网络模式.html">
+            
+                    
+                    06-docker网络模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.7" data-path="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                <a href="../10-云原生容器编排/docker-all/07-docker容器单机编排.html">
+            
+                    
+                    07-docker容器单机编排
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.8" data-path="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                <a href="../10-云原生容器编排/docker-all/08-docker容器跨主机通信.html">
+            
+                    
+                    08-docker容器跨主机通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.9" data-path="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                <a href="../10-云原生容器编排/docker-all/09-docker综合应用.html">
+            
+                    
+                    09-docker综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.10" data-path="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                <a href="../10-云原生容器编排/docker-all/10-容器化部署案例.html">
+            
+                    
+                    10-容器化部署案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.11" data-path="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                <a href="../10-云原生容器编排/docker-all/11-容器监控方案.html">
+            
+                    
+                    11-容器监控方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10-云原生容器编排/iptables/00.html">
+            
+                <a href="../10-云原生容器编排/iptables/00.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                <a href="../10-云原生容器编排/iptables/00-iptables防火墙安全.html">
+            
+                    
+                    00-iptables防火墙安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                <a href="../10-云原生容器编排/iptables/01-iptables命令.html">
+            
+                    
+                    01-iptables命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10-云原生容器编排/kvm-all/00.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/00.html">
+            
+                    
+                    kvm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/01-kvm虚拟化实践.html">
+            
+                    
+                    01-kvm虚拟化实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                <a href="../10-云原生容器编排/kvm-all/02-kvm进阶实践.html">
+            
+                    
+                    02-kvm进阶实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10-云原生容器编排/k8s-all/00.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00.html">
+            
+                    
+                    k8s-all
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.4.1" data-path="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/00_k8s容器编排系统.html">
+            
+                    
+                    00_k8s容器编排系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.2" data-path="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/01_kubeadm安装k8s集群.html">
+            
+                    
+                    01_kubeadm安装k8s集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.3" data-path="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/02_k8s资源清单.html">
+            
+                    
+                    02_k8s资源清单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.4" data-path="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/03_pod详解.html">
+            
+                    
+                    03_pod详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.5" data-path="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/04_pod控制器详解.html">
+            
+                    
+                    04_pod控制器详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.6" data-path="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/05-k8s网络.html">
+            
+                    
+                    05-k8s网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.7" data-path="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/06-k8s数据持久化.html">
+            
+                    
+                    06-k8s数据持久化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.8" data-path="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/07-k8s配置文件管理.html">
+            
+                    
+                    07-k8s配置文件管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.9" data-path="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/08-dashboard.html">
+            
+                    
+                    08-dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4.10" data-path="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                <a href="../10-云原生容器编排/k8s-all/09-prometheus.html">
+            
+                    
+                    09-prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11-mongodb/0.html">
+            
+                <a href="../11-mongodb/0.html">
+            
+                    
+                    11-mongodb
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11-mongodb/01-mongodb安装.html">
+            
+                <a href="../11-mongodb/01-mongodb安装.html">
+            
+                    
+                    01-mongodb安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11-mongodb/02-mongodb增删改查.html">
+            
+                <a href="../11-mongodb/02-mongodb增删改查.html">
+            
+                    
+                    02-mongodb增删改查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                <a href="../11-mongodb/03-mongodb基于角色的访问控制.html">
+            
+                    
+                    03-mongodb基于角色的访问控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../11-mongodb/04-副本集replicaSet.html">
+            
+                <a href="../11-mongodb/04-副本集replicaSet.html">
+            
+                    
+                    04-副本集replicaSet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../11-mongodb/05-mongodb备份恢复.html">
+            
+                <a href="../11-mongodb/05-mongodb备份恢复.html">
+            
+                    
+                    05-mongodb备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12-zookeeper/0.html">
+            
+                <a href="../12-zookeeper/0.html">
+            
+                    
+                    12-zookeeper
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12-zookeeper/01-zookeeper.html">
+            
+                <a href="../12-zookeeper/01-zookeeper.html">
+            
+                    
+                    01-zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12-zookeeper/02-zk实践操作.html">
+            
+                <a href="../12-zookeeper/02-zk实践操作.html">
+            
+                    
+                    02-zk实践操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                <a href="../12-zookeeper/03-python-API开发zk客户端.html">
+            
+                    
+                    03-python-API开发zk客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../13-kafka/0.html">
+            
+                <a href="../13-kafka/0.html">
+            
+                    
+                    13-kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13-kafka/01-kafka基础.html">
+            
+                <a href="../13-kafka/01-kafka基础.html">
+            
+                    
+                    01-kafka基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13-kafka/02-kafka集群.html">
+            
+                <a href="../13-kafka/02-kafka集群.html">
+            
+                    
+                    02-kafka集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../14-ELK/0.html">
+            
+                <a href="../14-ELK/0.html">
+            
+                    
+                    14-ELK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14-ELK/01-elasticSearch.html">
+            
+                <a href="../14-ELK/01-elasticSearch.html">
+            
+                    
+                    01-elasticSearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14-ELK/02-ES集群.html">
+            
+                <a href="../14-ELK/02-ES集群.html">
+            
+                    
+                    02-ES集群
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14-ELK/03-ES进阶.html">
+            
+                <a href="../14-ELK/03-ES进阶.html">
+            
+                    
+                    03-ES进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14-ELK/04-ES备份恢复.html">
+            
+                <a href="../14-ELK/04-ES备份恢复.html">
+            
+                    
+                    04-ES备份恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14-ELK/05-EBLK日志收集方案.html">
+            
+                <a href="../14-ELK/05-EBLK日志收集方案.html">
+            
+                    
+                    05-EBLK日志收集方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                <a href="../14-ELK/06-ELK收集主流应用日志.html">
+            
+                    
+                    06-ELK收集主流应用日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../14-ELK/07-filebeat实战.html">
+            
+                <a href="../14-ELK/07-filebeat实战.html">
+            
+                    
+                    07-filebeat实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../15-阿里云/0.html">
+            
+                <a href="../15-阿里云/0.html">
+            
+                    
+                    15-阿里云
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15-阿里云/01-阿里云实战.html">
+            
+                <a href="../15-阿里云/01-阿里云实战.html">
+            
+                    
+                    01-阿里云实战
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                <a href="../15-阿里云/02-阿里云数据库RDS.html">
+            
+                    
+                    02-阿里云数据库RDS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                <a href="../15-阿里云/03-阿里云负载均衡SLB.html">
+            
+                    
+                    03-阿里云负载均衡SLB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15-阿里云/04-阿里云NAS.html">
+            
+                <a href="../15-阿里云/04-阿里云NAS.html">
+            
+                    
+                    04-阿里云NAS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15-阿里云/05-阿里云Redis.html">
+            
+                <a href="../15-阿里云/05-阿里云Redis.html">
+            
+                    
+                    05-阿里云Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15-阿里云/06-ACK.html">
+            
+                <a href="../15-阿里云/06-ACK.html">
+            
+                    
+                    06-ACK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                <a href="../15-阿里云/07-阿里云ACK实践部署.html">
+            
+                    
+                    07-阿里云ACK实践部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                <a href="../15-阿里云/08-阿里云ACK部署mysql.html">
+            
+                    
+                    08-阿里云ACK部署mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3-10-黄金web架构之LAMP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3-10-&#x9EC4;&#x91D1;web&#x67B6;&#x6784;&#x4E4B;lamp"><a name="3-10-&#x9EC4;&#x91D1;web&#x67B6;&#x6784;&#x4E4B;lamp" class="plugin-anchor" href="#3-10-&#x9EC4;&#x91D1;web&#x67B6;&#x6784;&#x4E4B;lamp"><i class="fa fa-link" aria-hidden="true"></i></a>3-10-&#x9EC4;&#x91D1;web&#x67B6;&#x6784;&#x4E4B;LAMP</h1>
+<h2 id="&#x4EFB;&#x52A1;&#x9700;&#x6C42;"><a name="&#x4EFB;&#x52A1;&#x9700;&#x6C42;" class="plugin-anchor" href="#&#x4EFB;&#x52A1;&#x9700;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EFB;&#x52A1;&#x9700;&#x6C42;</h2>
+<p>&#x4E00;&#x4E2A;&#x521D;&#x521B;&#x5C0F;&#x516C;&#x53F8;&#xFF0C;&#x4E1A;&#x52A1;&#x4E0D;&#x65AD;&#x5728;&#x589E;&#x957F;&#xFF0C;&#x7528;&#x6237;&#x6CE8;&#x518C;&#x6570;&#x91CF;&#x4E5F;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#xFF0C;&#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x5F00;&#x53D1;&#x8981;&#x4F18;&#x5316;&#x7F51;&#x7AD9;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x8FD0;&#x7EF4;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#xFF08;&#x9884;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#xFF09;&#xFF0C;&#x63D0;&#x4F9B;&#x7ED9;&#x5F00;&#x53D1;&#x8FD0;&#x884C;&#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;&#x3002;</p>
+<blockquote>
+<p>&#x5E76;&#x4E14;&#x8981;&#x6C42;&#x662F;&#xFF0C;&#x4FDD;&#x8BC1;&#x548C;&#x7EBF;&#x4E0A;&#x73AF;&#x5883;&#xFF0C;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#xFF08;&#x56E0;&#x6B64;&#x5C31;&#x6CA1;&#x6CD5;&#x4F7F;&#x7528;yum&#x5B89;&#x88C5;&#xFF0C;&#x800C;&#x662F;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#xFF09;</p>
+</blockquote>
+<p><img src="../2024-linux/image-20220225170014592.png" alt="image-20220225170014592" style="zoom:23%;"></p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;lamp"><a name="&#x4EC0;&#x4E48;&#x662F;lamp" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x662F;lamp"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F;LAMP</h2>
+<p>LAMP&#x662F;&#x516C;&#x8BA4;&#x7684;&#x6700;&#x5E38;&#x89C1;&#x3001;&#x6700;&#x53E4;&#x8001;&#x7684;&#x9EC4;&#x91D1;Web&#x6280;&#x672F;&#x6808;&#x3001;</p>
+<p>&#x5176;&#x5B9E;&#x5C31;&#x662F;</p>
+<pre><code>Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;
+Apache/Nginx    web&#x670D;&#x52A1;&#x5668; 
+Mysql/Mariadb
+Perl/Php/Python
+</code></pre><h3 id="linux"><a name="linux" class="plugin-anchor" href="#linux"><i class="fa fa-link" aria-hidden="true"></i></a>linux</h3>
+<p><img src="../2024-linux/image-20200118163840299.png" alt="image-20200118163840299" style="zoom:20%;"></p>
+<p>&#x4F5C;&#x4E3A;&#x8FD0;&#x7EF4;&#x4EBA;&#x5458;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4E00;&#x624B;&#x4F7F;&#x7528;windows&#x3001;&#x4E00;&#x624B;&#x4F7F;&#x7528;Linux&#xFF0C;&#x6BD5;&#x7ADF;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x7EF4;&#x5DE5;&#x4F5C;&#xFF0C;&#x51E0;&#x4E4E;&#x90FD;&#x662F;Linux&#x73AF;&#x5883;&#x4E86;&#x3002;</p>
+<p>Linux&#x7CFB;&#x7EDF;&#x4E3B;&#x8981;&#x662F;&#x4EE5;&#x5F00;&#x53D1;&#x8005;&#x4E3A;&#x4E2D;&#x5FC3;&#xFF0C;Windows&#x4E3B;&#x8981;&#x4EE5;&#x6D88;&#x8D39;&#x8005;&#x4E3A;&#x4E2D;&#x5FC3;&#x8FD9;&#x662F;&#x672C;&#x8D28;&#x7684;&#x533A;&#x522B;&#x3002;</p>
+<p>Linux&#x7684;&#x7279;&#x70B9;&#x662F;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x5F00;&#x53D1;&#x4EFB;&#x52A1;&#x76F8;&#x5173;&#x5DE5;&#x5177;&#xFF0C;&#x90FD;&#x6709;&#x5F88;&#x5B8C;&#x5584;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x4ECE;&#x5E95;&#x5C42;&#x7684;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;make&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#xFF0C;&#x5230;bash&#x811A;&#x672C;&#xFF0C;git&#x4EE3;&#x7801;&#x7BA1;&#x7406;&#xFF0C;vim&#x7F16;&#x8F91;&#x5668;&#xFF0C;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x7B49;&#x7B49;&#x90FD;&#x5F88;&#x9F50;&#x5168;&#x3002;</p>
+<p>&#x7136;&#x800C;Windows/Mac&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5F88;&#x5C11;&#x80FD;&#x5B8C;&#x5584;&#x8FD9;&#x4E9B;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x7684;&#xFF0C;Linux&#x5219;&#x662F;&#x9ED8;&#x8BA4;&#x9884;&#x88C5;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x3002;</p>
+<h3 id="apache"><a name="apache" class="plugin-anchor" href="#apache"><i class="fa fa-link" aria-hidden="true"></i></a>apache</h3>
+<p>Apache Web Server&#x867D;&#x7136;&#x79F0;&#x4E4B;&#x4E3A;<code>web&#x670D;&#x52A1;&#x5668;</code>&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x662F;&#x610F;&#x5473;&#x7740;&#x4ED6;&#x662F;&#x4E00;&#x4E2A;<code>&#x7269;&#x7406;&#x670D;&#x52A1;&#x5668;</code>&#xFF0C;&#x5B83;&#x53EA;&#x662F;&#x7535;&#x8111;&#x8F6F;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x800C;&#x5DF2;&#xFF0C;Web&#x670D;&#x52A1;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x5C06;HTTP&#x8BF7;&#x6C42;&#x4ECE;&#x524D;&#x7AEF;&#x8F6C;&#x53D1;&#x5230;&#x540E;&#x7AEF;&#x5E94;&#x7528;&#x4E0A;&#x3002;</p>
+<p><img src="../2024-linux/image-20200118161748267.png" alt="image-20200118161748267" style="zoom:33%;"></p>
+<h3 id="php"><a name="php" class="plugin-anchor" href="#php"><i class="fa fa-link" aria-hidden="true"></i></a>php</h3>
+<p><img src="../2024-linux/image-20220225172755429.png" alt="image-20220225172755429" style="zoom:23%;"></p>
+<p>PHP&#x662F;&#x4E00;&#x95E8;&#x670D;&#x52A1;&#x7AEF;&#x811A;&#x672C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;web&#x5F00;&#x53D1;&#xFF0C;&#x5E38;&#x7528;PHP&#x811A;&#x672C;&#x5D4C;&#x5165;HTML&#x6E90;&#x7801;&#x4E2D;&#x6267;&#x884C;&#x3002;</p>
+<p>PHP&#x662F;&#x5168;&#x7403;&#x77E5;&#x540D;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E4B;&#x4E00;&#xFF0C;&#x7A0B;&#x5E8F;&#x5458;&#x53EF;&#x4EE5;&#x514D;&#x8D39;&#x8BD5;&#x7528;&#xFF0C;PHP&#x652F;&#x6301;&#x591A;&#x79CD;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x9AD8;&#xFF0C;&#x652F;&#x6301;&#x591A;&#x79CD;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x56FD;&#x5185;&#x4F17;&#x591A;&#x7F51;&#x7AD9;&#xFF0C;&#x767E;&#x5EA6;&#x3001;&#x96C5;&#x864E;&#x3001;&#x65B0;&#x6D6A;&#x90FD;&#x5728;&#x5927;&#x91CF;&#x4F7F;&#x7528;PHP&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#xFF0C;&#x77E5;&#x540D;&#x7684;&#x8BBA;&#x575B;&#x8F6F;&#x4EF6;Discuz&#x4E5F;&#x662F;&#x7531;PHP&#x5F00;&#x53D1;&#x4E14;&#x5360;&#x636E;&#x4E86;80%&#x7684;&#x8BBA;&#x575B;&#x8F6F;&#x4EF6;&#x5E02;&#x573A;&#x3002;</p>
+<p><img src="../2024-linux/image-20220225172844345.png" alt="image-20220225172844345" style="zoom:25%;"></p>
+<h3 id="mysql"><a name="mysql" class="plugin-anchor" href="#mysql"><i class="fa fa-link" aria-hidden="true"></i></a>mysql</h3>
+<p><img src="../2024-linux/image-20220225172904822.png" alt="image-20220225172904822" style="zoom:33%;"></p>
+<p>Mysql&#x662F;&#x4E00;&#x6B3E;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x589E;&#x52A0;&#x3001;&#x5220;&#x9664;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x67E5;&#x8BE2;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>MySQL&#x662F;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x4E00;&#x6B3E;&#x8F6F;&#x4EF6;&#xFF0C;&#x88AB;&#x4E1A;&#x754C;&#x5E7F;&#x6CDB;&#x4F7F;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#x65B0;&#x6D6A;&#x3001;QQ&#x3001;&#x6DD8;&#x5B9D;&#x3001;&#x90FD;&#x5728;&#x5927;&#x91CF;&#x4F7F;&#x7528;MySQL&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<p>&#x817E;&#x8BAF;QQ&#x4F7F;&#x7528;Linux&#x4E0E;MySQL&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B58;&#x50A8;&#x6CE8;&#x518C;&#x7528;&#x6237;2.8&#x4EBF;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6D3B;&#x8DC3;&#x4EBA;&#x6570;9000&#x4E07;&#xFF0C;&#x51ED;&#x501F;&#x4E07;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x642D;&#x5EFA;&#x7684;&#x6570;&#x636E;&#x5E93;&#x96C6;&#x7FA4;&#xFF0C;&#x817E;&#x8BAF;QQ&#x540C;&#x65F6;&#x5728;&#x7EBF;&#x4EBA;&#x6570;&#x4E5F;&#x8FBE;&#x5230;&#x4E86;&#x5343;&#x4E07;&#xFF0C;&#x8FD9;&#x8BC1;&#x660E;&#x4E86;MySQL&#x6570;&#x636E;&#x5E93;&#x7684;&#x5927;&#x5BB9;&#x91CF;&#x3001;&#x5FEB;&#x901F;&#x54CD;&#x5E94;&#x7279;&#x70B9;&#x3002;</p>
+<p>MySQL&#x662F;&#x4E00;&#x6B3E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5C24;&#x5176;&#x9002;&#x5408;Web&#x5E94;&#x7528;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x7535;&#x5546;&#x9886;&#x57DF;&#xFF0C;MySQL&#x904D;&#x5E03;&#x5404;&#x79CD;&#x884C;&#x4E1A;&#x3001;&#x79FB;&#x52A8;&#x3001;&#x7231;&#x7ACB;&#x4FE1;&#x3001;&#x60E0;&#x666E;&#x3001;&#x94F6;&#x884C;&#x3001;&#x601D;&#x79D1;&#x3001;&#x6469;&#x6258;&#x841D;&#x62C9;&#x3001;&#x7B49;&#x7B49;&#x3002;</p>
+<h1 id="&#x90E8;&#x7F72;lamp&#x5B9E;&#x6218;"><a name="&#x90E8;&#x7F72;lamp&#x5B9E;&#x6218;" class="plugin-anchor" href="#&#x90E8;&#x7F72;lamp&#x5B9E;&#x6218;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;LAMP&#x5B9E;&#x6218;</h1>
+<h2 id="&#x4E00;&#x3001;&#x73AF;&#x5883;&#x51C6;&#x5907;"><a name="&#x4E00;&#x3001;&#x73AF;&#x5883;&#x51C6;&#x5907;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x73AF;&#x5883;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x73AF;&#x5883;&#x51C6;&#x5907;</h2>
+<h3 id="&#x8F6F;&#x4EF6;&#x51C6;&#x5907;"><a name="&#x8F6F;&#x4EF6;&#x51C6;&#x5907;" class="plugin-anchor" href="#&#x8F6F;&#x4EF6;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8F6F;&#x4EF6;&#x51C6;&#x5907;</h3>
+<pre><code>LAMP
+Apache&#x2014;&#x2014;&gt;httpd
+MySQL&#x2014;&#x2014;&gt;5.6.31
+PHP&#x2014;&#x2014;&gt;7.2.17
+
+apr-1.5.2.tar.bz2
+apr-util-1.5.4.tar.bz2
+httpd-2.4.37.tar.bz2
+mysql-5.6.43
+php-7.2.17.tar.xz
+
+wordpress-4.7.3-zh_CN.tar.gz
+</code></pre><h3 id="&#x670D;&#x52A1;&#x5668;&#x51C6;&#x5907;"><a name="&#x670D;&#x52A1;&#x5668;&#x51C6;&#x5907;" class="plugin-anchor" href="#&#x670D;&#x52A1;&#x5668;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x670D;&#x52A1;&#x5668;&#x51C6;&#x5907;</h3>
+<p>&#x6700;&#x597D;&#x90FD;&#x662F;&#x65B0;&#x673A;&#x5668;</p>
+<pre><code>192.168.0.241 lamp-241        &#x90E8;&#x7F72;lamp&#x670D;&#x52A1;&#x5668;
+192.168.0.242 client-242  &#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x7684;&#x5BA2;&#x6237;&#x7AEF;
+</code></pre><p>&#x505C;&#x6B62;&#x539F;&#x6709;&#x7684;lamp&#x670D;&#x52A1;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x65B0;&#x673A;&#x5668;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x6267;&#x884C;&#x3002;</p>
+<pre><code>[root@lamp-241 ~]# netstat -tnlp|grep httpd
+[root@lamp-241 ~]# netstat -tnlp|grep httpd
+[root@lamp-241 ~]# netstat -tnlp|grep mysql
+</code></pre><p>&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</p>
+<pre><code>[root@lamp-241 ~]# iptables -F
+[root@lamp-241 ~]#
+[root@lamp-241 ~]# systemctl stop firewalld
+[root@lamp-241 ~]# systemctl disable firewalld
+
+[root@lamp-241 ~]# setenforce 0
+</code></pre><p>&#x505A;&#x597D;&#x57DF;&#x540D;&#x89E3;&#x6790;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x81EA;&#x5DF1;&#x642D;&#x5EFA;&#x7684;bind&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;/etc/hosts</p>
+<pre><code>&#x5982;&#x679C;&#x662F;hosts&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x53EA;&#x5BF9;&#x673A;&#x5668;&#x672C;&#x673A;&#x751F;&#x6548;
+[root@lamp-241 ~]#
+[root@lamp-241 ~]# ping yuchao-lamp.cc
+PING yuchao-lamp.cc (192.168.0.241) 56(84) bytes of data.
+64 bytes from yuchao-lamp.cc (192.168.0.241): icmp_seq=1 ttl=64 time=0.012 ms
+64 bytes from yuchao-lamp.cc (192.168.0.241): icmp_seq=2 ttl=64 time=0.021 ms
+</code></pre><p>&#x57FA;&#x7840;&#x8F6F;&#x4EF6;&#x5E93;&#x5B89;&#x88C5;&#xFF08;&#x8FD9;&#x5C31;&#x597D;&#x6BD4;&#x4E00;&#x4E2A;&#x623F;&#x5B50;&#x8981;&#x88C5;&#x4FEE;&#xFF0C;&#x4F60;&#x8981;&#x53BB;&#x51C6;&#x5907;&#x6C34;&#x6CE5;&#x3001;&#x6C99;&#x5B50;&#xFF0C;&#x6728;&#x6750;&#x7B49;&#x7B49;..&#xFF09;</p>
+<pre><code>linux&#x5F88;&#x591A;&#x8F6F;&#x4EF6;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x4F9D;&#x8D56;&#x4E8E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x672C;&#x8EAB;&#x7684;&#x4E00;&#x4E9B;&#x8F6F;&#x4EF6;&#x652F;&#x6301;
+yum groupinstall &quot;Development tools&quot; -y
+
+&#x684C;&#x9762;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x5305;&#xFF08;&#x56FE;&#x5F62;&#x5316;&#x76F8;&#x5173;&#x5305;&#xFF09;
+yum groupinstall &quot;Desktop Platform Development&quot; -y 
+
+&#x5E95;&#x5C42;&#x7F16;&#x8BD1;&#x5E93;&#x7684;&#x5B89;&#x88C5;
+yum install cmake pcre-devel ncurses-devel openssl-devel libcurl-devel -y
+</code></pre><p>&#x7F16;&#x8BD1;&#x73AF;&#x5883;&#x8BF4;&#x660E;</p>
+<pre><code>Linux
+Apache(2.4)
+MySQL(5.6.31)
+PHP(7.2.17)
+</code></pre><blockquote>
+<p>&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x987A;&#x5E8F;&#xFF0C;&#x7531;&#x4E8E;&#x8F6F;&#x4EF6;&#x4E4B;&#x95F4;&#x5B58;&#x5728;&#x4F9D;&#x8D56;&#x6027;&#xFF0C;&#x4F1A;&#x6709;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x3002;</p>
+</blockquote>
+<p><strong>&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<ol>
+<li>apache&#x5FC5;&#x987B;&#x8981;&#x5148;&#x4E8E;php&#x5B89;&#x88C5;</li>
+<li>apache&#x548C;mysql&#x4E4B;&#x95F4;&#x5E76;&#x6CA1;&#x6709;&#x76F4;&#x63A5;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x7684;&#x4F9D;&#x8D56;,&#x6240;&#x4EE5;&#x8C01;&#x5148;&#x8C01;&#x540E;&#x6CA1;&#x6240;&#x8C13;&#x3002;</li>
+<li>&#x5728;php-5.3&#x7248;&#x672C;&#x524D;&#xFF0C;mysql&#x5FC5;&#x987B;&#x5148;&#x4E8E;php&#x7684;&#x7F16;&#x8BD1;;&#x56E0;&#x4E3A;php&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;mysql&#x7684;&#x63A5;&#x53E3;&#x624D;&#x80FD;&#x7F16;&#x8BD1;&#x51FA;&#x8BE5;&#x529F;&#x80FD;&#xFF1B;</li>
+<li>&#x5728;php-5.3&#x7248;&#x672C;&#x6216;&#x8005;&#x4E4B;&#x540E;&#xFF0C;php&#x5DF2;&#x7ECF;&#x96C6;&#x6210;&#x4E86;&#x4E00;&#x5957;&#x8FDE;&#x63A5;mysql&#x6570;&#x636E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4E0D;&#x4F9D;&#x8D56;mysql&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;mysql&#x548C;php&#x7684;&#x7F16;&#x8BD1;&#x987A;&#x5E8F;&#x4E5F;&#x5C31;&#x65E0;&#x6240;&#x8C13;&#x4E86;&#x3002;</li>
+</ol>
+<h2 id="&#x4E8C;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;mysql"><a name="&#x4E8C;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;mysql" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;mysql"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;mysql</h2>
+<h3 id="1&#x3001;&#x5B89;&#x88C5;&#x9700;&#x6C42;"><a name="1&#x3001;&#x5B89;&#x88C5;&#x9700;&#x6C42;" class="plugin-anchor" href="#1&#x3001;&#x5B89;&#x88C5;&#x9700;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x5B89;&#x88C5;&#x9700;&#x6C42;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x8F6F;&#x4EF6;&#x7248;&#x672C;</th>
+<th>&#x5B89;&#x88C5;&#x76EE;&#x5F55;</th>
+<th>&#x6570;&#x636E;&#x76EE;&#x5F55;</th>
+<th>&#x7AEF;&#x53E3;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mysql-5.6.31</td>
+<td>/usr/local/mysql</td>
+<td>/usr/local/mysql/data</td>
+<td>3306</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2&#x3001;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;"><a name="2&#x3001;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;" class="plugin-anchor" href="#2&#x3001;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</h3>
+<h4 id="&#x3220;-&#x521B;&#x5EFA;mysql&#x7528;&#x6237;"><a name="&#x3220;-&#x521B;&#x5EFA;mysql&#x7528;&#x6237;" class="plugin-anchor" href="#&#x3220;-&#x521B;&#x5EFA;mysql&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3220; &#x521B;&#x5EFA;mysql&#x7528;&#x6237;</h4>
+<pre><code>[root@lamp-241 ~]# useradd -r -s /sbin/nologin mysql
+</code></pre><h4 id="&#x3221;-&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;"><a name="&#x3221;-&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;" class="plugin-anchor" href="#&#x3221;-&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3221; &#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;==&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;==</h4>
+<p>&#x6E90;&#x7801;&#x641C;&#x7D22;&#x5730;&#x5740;&#xFF0C;<a href="https://repo.huaweicloud.com/mysql/Downloads/MySQL-5.6/" target="_blank">https://repo.huaweicloud.com/mysql/Downloads/MySQL-5.6/</a></p>
+<pre><code>[root@lamp-241 ~]# cd /usr/local/
+[root@lamp-241 local]# ls
+bin  etc  games  include  lib  lib64  libexec  sbin  share  src
+[root@lamp-241 local]#
+[root@lamp-241 local]#
+[root@lamp-241 local]# mkdir source-code
+[root@lamp-241 local]# cd source-code/
+[root@lamp-241 source-code]# yum install wget -y
+
+&#x4E0B;&#x8F7D;&#x6E90;&#x7801;
+[root@lamp-241 source-code]# wget -c https://repo.huaweicloud.com/mysql/Downloads/MySQL-5.6/mysql-5.6.50.tar.gz
+
+&#x89E3;&#x538B;&#x7F29;
+[root@lamp-241 source-code]# ll -h
+total 31M
+-rw-r--r--. 1 root root 31M Sep 23  2020 mysql-5.6.50.tar.gz
+
+[root@lamp-241 source-code]# tar -zxf mysql-5.6.50.tar.gz
+
+&#x67E5;&#x770B;&#x89E3;&#x538B;&#x6587;&#x4EF6;&#x5939;&#x5927;&#x5C0F;
+[root@lamp-241 source-code]# du -sh *
+282M    mysql-5.6.50
+31M    mysql-5.6.50.tar.gz
+</code></pre><h4 id="&#x3222;-&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x53C2;&#x6570;"><a name="&#x3222;-&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x53C2;&#x6570;" class="plugin-anchor" href="#&#x3222;-&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3222; &#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#x7F16;&#x8BD1;&#x53C2;&#x6570;</h4>
+<p>&#x4FEE;&#x6539;&#x7F16;&#x8BD1;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x5B89;&#x88C5;&#x5230;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</p>
+<pre><code>[root@lamp-241 source-code]# cd mysql-5.6.50
+[root@lamp-241 mysql-5.6.50]# ls
+BUILD           cmd-line-utils   Docs                 INSTALL      LICENSE     mysys_ssl  regex             sql-bench   support-files  vio
+client          config.h.cmake   Doxyfile-perfschema  libmysql     man         packaging  scripts           sql-common  tests          win
+cmake           configure.cmake  extra                libmysqld    mysql-test  plugin     source_downloads  storage     unittest       zlib
+CMakeLists.txt  dbug             include              libservices  mysys       README     sql               strings     VERSION
+[root@lamp-241 mysql-5.6.50]#
+
+# &#x521B;&#x5EFA;&#x7F16;&#x8BD1;&#x811A;&#x672C;&#xFF0C;&#x8BBE;&#x7F6E;&#x7F16;&#x8BD1;&#x53C2;&#x6570;
+[root@lamp-241 mysql-5.6.50]# cat cmake.sh
+cmake . \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql/ \
+-DMYSQL_DATADIR=/usr/local/mysql/data \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DMYSQL_TCP_PORT=3306 \
+-DDEFAULT_CHARSET=utf8mb4 \
+-DDEFAULT_COLLATION=utf8mb4_general_ci \
+-DWITH_EXTRA_CHARSETS=all \
+-DMYSQL_USER=mysql
+[root@lamp-241 mysql-5.6.50]#
+
+&#x6DFB;&#x52A0;&#x6267;&#x884C;&#x6743;&#x9650;
+[root@lamp-241 mysql-5.6.50]# chmod +x cmake.sh
+[root@lamp-241 mysql-5.6.50]# ll cmake.sh
+-rwxr-xr-x. 1 root root 295 Feb 26 17:12 cmake.sh
+
+
+&#x6267;&#x884C;&#x8BE5;&#x811A;&#x672C;
+./cmake.sh
+</code></pre><p>&#x5173;&#x4E8E;&#x7F16;&#x8BD1;&#x4F20;&#x8F93;&#x7684;&#x89E3;&#x91CA;</p>
+<pre><code>&#x9996;&#x5148;&#x6267;&#x884C;cmake&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x5B89;&#x88C5;mysql&#x7684;&#x4E00;&#x4E9B;&#x53C2;&#x6570;
+&#x540E;&#x9762;&#x5C31;&#x662F;cmake&#x547D;&#x4EE4;&#x7684;&#x5404;&#x79CD;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;&#x8C03;&#x6574;&#x7AEF;&#x53E3;&#xFF0C;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x5B89;&#x88C5;&#x7528;&#x6237;&#x7B49;
+
+
+cmake . \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql/ \            &#x5B89;&#x88C5;&#x8DEF;&#x5F84;
+-DMYSQL_DATADIR=/usr/local/mysql/data \                &#x6570;&#x636E;&#x76EE;&#x5F55;
+-DENABLED_LOCAL_INFILE=1 \                                    &#x5F00;&#x542F;&#x52A0;&#x8F7D;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x529F;&#x80FD;&#xFF1B;1&#x5F00;&#x542F;&#xFF0C;0&#x5173;&#x95ED;
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \                        &#x5C06;InnoDB&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x9759;&#x6001;&#x7F16;&#x8BD1;&#x5230;&#x670D;&#x52A1;&#x5668;
+-DMYSQL_TCP_PORT=3306 \                                        &#x7AEF;&#x53E3;
+-DDEFAULT_CHARSET=utf8mb4 \                                &#x5B57;&#x7B26;&#x96C6;
+-DDEFAULT_COLLATION=utf8_general_ci \                    &#x5B57;&#x7B26;&#x6821;&#x9A8C;&#x89C4;&#x5219;
+-DWITH_EXTRA_CHARSETS=all \                                &#x6269;&#x5C55;&#x5B57;&#x7B26;&#x96C6;
+-DMYSQL_USER=mysql                                            &#x7528;&#x6237;&#x8EAB;&#x4EFD;mysql
+</code></pre><p><img src="../2024-linux/image-20220226173554749.png" alt="image-20220226173554749"></p>
+<h4 id="&#x3223;-&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;"><a name="&#x3223;-&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x3223;-&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3223; &#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;</h4>
+<pre><code>&#x76EE;&#x524D;mysql&#x8FD8;&#x662F;&#x6CA1;&#x6709;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x5B89;&#x88C5;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;
+[root@lamp-241 mysql-5.6.50]# ls /usr/local/mysql
+ls: cannot access /usr/local/mysql: No such file or directory
+
+
+&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#xFF0C;&#x4EE5;&#x53CA;&#x5B89;&#x88C5;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;
+&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4F1A;&#x8F83;&#x4E45;&#xFF0C;&#x7B49;&#x5F85;&#x5373;&#x53EF;&#xFF0C;&#x522B;&#x51FA;&#x95EE;&#x9898;&#x5C31;&#x884C;&#x3002;
+
+[root@lamp-241 mysql-5.6.50]# make &amp;&amp; make install
+</code></pre><p><img src="../2024-linux/image-20220226175034271.png" alt="image-20220226175034271"></p>
+<h4 id="&#x3224;-&#x5B89;&#x88C5;mysql&#x540E;&#x7EED;&#x914D;&#x7F6E;"><a name="&#x3224;-&#x5B89;&#x88C5;mysql&#x540E;&#x7EED;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x3224;-&#x5B89;&#x88C5;mysql&#x540E;&#x7EED;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3224; &#x5B89;&#x88C5;mysql&#x540E;&#x7EED;&#x914D;&#x7F6E;</h4>
+<p>&#x4FEE;&#x6539;mysql&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x5C5E;&#x4E3B;&#xFF0C;&#x5C5E;&#x7EC4;</p>
+<pre><code>chown -R mysql.mysql /usr/local/mysql/
+
+
+[root@lamp-241 mysql-5.6.50]# chown -R mysql.mysql /usr/local/mysql/
+[root@lamp-241 mysql-5.6.50]# ll /usr/local/mysql/
+total 224
+drwxr-xr-x.  2 mysql mysql   4096 Feb 26 17:48 bin
+drwxr-xr-x.  3 mysql mysql     18 Feb 26 17:48 data
+drwxr-xr-x.  2 mysql mysql     55 Feb 26 17:48 docs
+drwxr-xr-x.  3 mysql mysql   4096 Feb 26 17:48 include
+drwxr-xr-x.  3 mysql mysql   4096 Feb 26 17:48 lib
+-rw-r--r--.  1 mysql mysql 198041 Sep 23  2020 LICENSE
+drwxr-xr-x.  4 mysql mysql     30 Feb 26 17:48 man
+drwxr-xr-x. 10 mysql mysql   4096 Feb 26 17:48 mysql-test
+-rw-r--r--.  1 mysql mysql    587 Sep 23  2020 README
+drwxr-xr-x.  2 mysql mysql     30 Feb 26 17:48 scripts
+drwxr-xr-x. 28 mysql mysql   4096 Feb 26 17:48 share
+drwxr-xr-x.  4 mysql mysql   4096 Feb 26 17:48 sql-bench
+drwxr-xr-x.  2 mysql mysql    136 Feb 26 17:48 support-files
+</code></pre><p>&#x521D;&#x59CB;&#x5316;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x751F;&#x6210;&#x53EF;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code>1.&#x79FB;&#x9664;&#x9ED8;&#x8BA4;&#x7684;mysql&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6539;&#x540D;&#x5373;&#x53EF;
+[root@lamp-241 mysql-5.6.50]# mv /etc/my.cnf /etc/my.cnf.ori
+[root@lamp-241 mysql-5.6.50]#
+[root@lamp-241 mysql-5.6.50]# ls /etc/my.cnf
+ls: cannot access /etc/my.cnf: No such file or directory
+
+2.&#x786E;&#x4FDD;&#x6CA1;&#x6709;mysql&#x8FDB;&#x7A0B;
+[root@lamp-241 mysql-5.6.50]#
+[root@lamp-241 mysql-5.6.50]# ps -ef|grep mysql
+root      38296   9072  0 17:52 pts/1    00:00:00 grep --color=auto mysql
+
+3.&#x8FDB;&#x5165;mysql&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#xFF0C;&#x5F00;&#x59CB;&#x521D;&#x59CB;&#x5316;
+
+[root@lamp-241 mysql-5.6.50]# cd /usr/local/mysql/
+[root@lamp-241 mysql]#
+[root@lamp-241 mysql]# ./scripts/mysql_install_db --user=mysql
+
+&#x770B;&#x5230;&#x4E24;&#x4E2A;ok&#x540E;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x6B63;&#x786E;
+
+
+4.&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x5E93;&#x76EE;&#x5F55;&#x91CC;&#x662F;&#x5426;&#x6709;&#x6587;&#x4EF6;
+[root@lamp-241 mysql]# [root@lamp-241 mysql]# ll /usr/local/mysql/data
+total 110600
+-rw-rw----. 1 mysql mysql 12582912 Feb 26 17:53 ibdata1
+-rw-rw----. 1 mysql mysql 50331648 Feb 26 17:53 ib_logfile0
+-rw-rw----. 1 mysql mysql 50331648 Feb 26 17:53 ib_logfile1
+drwx------. 2 mysql mysql     4096 Feb 26 17:53 mysql
+drwx------. 2 mysql mysql     4096 Feb 26 17:53 performance_schema
+drwxr-xr-x. 2 mysql mysql       20 Feb 26 17:48 test
+</code></pre><p><img src="../2024-linux/image-20220226175435367.png" alt="image-20220226175435367"></p>
+<p>&#x5236;&#x4F5C;&#x542F;&#x52A8;mysql&#x811A;&#x672C;&#xFF0C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x597D;&#x4E86;&#x6A21;&#x677F;</p>
+<pre><code>&#x62F7;&#x8D1D;&#x811A;&#x672C;&#xFF0C;&#x653E;&#x5165;linux&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x76EE;&#x5F55;
+[root@lamp-241 mysql]# cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysql
+
+
+&#x542F;&#x52A8;&#x3001;&#x68C0;&#x67E5;mysql&#x670D;&#x52A1;
+[root@lamp-241 mysql]#
+[root@lamp-241 mysql]# service mysql status
+ ERROR! MySQL is not running
+[root@lamp-241 mysql]# service mysql start
+Starting MySQL.Logging to &apos;/usr/local/mysql/data/lamp-241.err&apos;.
+ SUCCESS!
+[root@lamp-241 mysql]# service mysql status
+ SUCCESS! MySQL running (38476)
+</code></pre><p>&#x8BBE;&#x7F6E;mysql&#x9ED8;&#x8BA4;&#x5BC6;&#x7801;</p>
+<pre><code>[root@lamp-241 mysql]# /usr/local/mysql/bin/mysqladmin -uroot password &apos;yuchao666&apos;
+Warning: Using a password on the command line interface can be insecure.
+</code></pre><p>&#x6D4B;&#x8BD5;mysql&#x767B;&#x5F55;</p>
+<pre><code>&#x786E;&#x4FDD;&#x670D;&#x52A1;&#x8FD0;&#x884C;&#x4E86;
+[root@lamp-241 mysql]# ps -ef|grep mysql
+root      38380      1  0 17:58 pts/1    00:00:00 /bin/sh /usr/local/mysql/bin/mysqld_safe --datadir=/usr/local/mysql/data --pid-file=/usr/local/mysql/data/lamp-241.pid
+mysql     38476  38380  0 17:58 pts/1    00:00:00 /usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data --plugin-dir=/usr/local/mysql/lib/plugin --user=mysql --log-error=lamp-241.err --pid-file=/usr/local/mysql/data/lamp-241.pid
+root      38514   9072  0 18:00 pts/1    00:00:00 grep --color=auto mysql
+
+
+&#x7AEF;&#x53E3;
+[root@lamp-241 mysql]# netstat -tnlp|grep mysql
+tcp6       0      0 :::3306                 :::*                    LISTEN      38476/mysqld
+
+
+&#x4F7F;&#x7528;mysql&#x767B;&#x5F55;&#x547D;&#x4EE4;
+[root@lamp-241 mysql]# mysql -uroot -pyuchao666
+-bash: mysql: command not found
+
+&#x9700;&#x8981;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;
+[root@lamp-241 mysql]# tail -1 /etc/profile
+export PATH=/usr/local/mysql/bin/:$PATH
+
+&#x68C0;&#x67E5;PATH&#x53D8;&#x91CF;
+[root@lamp-241 mysql]# source /etc/profile
+[root@lamp-241 mysql]#
+[root@lamp-241 mysql]# echo $PATH
+/usr/local/mysql/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+
+
+&#x6267;&#x884C;&#x547D;&#x4EE4;&#x767B;&#x5F55;
+[root@lamp-241 mysql]# mysql -uroot -pyuchao666
+Warning: Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.6.50 Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+mysql&gt;
+</code></pre><h2 id="&#x4E09;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;apache"><a name="&#x4E09;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;apache" class="plugin-anchor" href="#&#x4E09;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;apache"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;Apache</h2>
+<h3 id="1-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;apr"><a name="1-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;apr" class="plugin-anchor" href="#1-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;apr"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;apr</h3>
+<p>apr(apache portable run-time libraries&#xFF0C;Apache&#x53EF;&#x79FB;&#x690D;&#x8FD0;&#x884C;&#x5E93;)&#x7684;&#x76EE;&#x7684;&#x5982;&#x5176;&#x540D;&#x79F0;&#x4E00;&#x6837;&#xFF0C;&#x4E3B;&#x8981;&#x4E3A;&#x4E0A;&#x5C42;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x8DE8;&#x8D8A;&#x591A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x7684;&#x5E95;&#x5C42;&#x652F;&#x6301;&#x63A5;&#x53E3;&#x5E93;&#x3002;</p>
+<pre><code>&#x4E0B;&#x8F7D;&#x5730;&#x5740;
+http://archive.apache.org/dist/apr/
+
+&#x6587;&#x4EF6;&#x5730;&#x5740;
+[root@lamp-241 source-code]# wget -c http://archive.apache.org/dist/apr/apr-1.5.2.tar.bz2
+
+&#x89E3;&#x538B;&#x7F29;&#xFF0C;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#x5373;&#x53EF;
+[root@lamp-241 source-code]# tar -xf apr-1.5.2.tar.bz2
+[root@lamp-241 source-code]# ls
+apr-1.5.2  apr-1.5.2.tar.bz2  mysql-5.6.50  mysql-5.6.50.tar.gz
+
+[root@lamp-241 source-code]# cd apr-1.5.2
+
+&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x4F1A;&#x5B89;&#x88C5;&#x5230;&#x9ED8;&#x8BA4;&#x8DEF;&#x5F84;
+&#x5E76;&#x4E14;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;
+&#x4FEE;&#x6539;&#x6B64;&#x884C;
+[root@lamp-241 apr-1.5.2]# vim configure
+29605     RM=&apos;$RM -f&apos;
+
+&#x518D;&#x6B21;&#x6267;&#x884C;&#x914D;&#x7F6E;&#x811A;&#x672C;
+[root@lamp-241 apr-1.5.2]# ./configure
+
+&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;
+[root@lamp-241 apr-1.5.2]# make &amp;&amp; make install
+</code></pre><p>&#x5B89;&#x88C5;apr-util&#x8F6F;&#x4EF6;</p>
+<p>&#x5B8C;&#x6574;&#x7684;APR(Apache portable Run-time libraries&#xFF0C;Apache&#x53EF;&#x79FB;&#x690D;&#x8FD0;&#x884C;&#x5E93;)&#x5B9E;&#x9645;&#x4E0A;&#x5305;&#x542B;&#x4E86;&#x4E09;&#x4E2A;&#x5F00;&#x53D1;&#x5305;&#xFF1A;apr&#x3001;apr-util&#x4EE5;&#x53CA;apr-iconv&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x5305;&#x5206;&#x522B;&#x72EC;&#x7ACB;&#x5F00;&#x53D1;&#xFF0C;&#x5E76;&#x62E5;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p>apr-util&#x8BE5;&#x76EE;&#x5F55;&#x4E2D;&#x4E5F;&#x662F;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x5F00;&#x53D1;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x4E0E;apr&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x76F8;&#x6BD4;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0E;apache&#x7684;&#x5173;&#x7CFB;&#x66F4;&#x52A0;&#x5BC6;&#x5207;&#x4E00;&#x4E9B;&#x3002;&#x6BD4;&#x5982;&#x5B58;&#x50A8;&#x6BB5;&#x548C;&#x5B58;&#x50A8;&#x6BB5;&#x7EC4;&#xFF0C;&#x52A0;&#x5BC6;&#x7B49;&#x7B49;</p>
+<pre><code>[root@lamp-241 source-code]# pwd
+/usr/local/source-code
+[root@lamp-241 source-code]# ls
+apr-1.5.2  apr-1.5.2.tar.bz2  mysql-5.6.50  mysql-5.6.50.tar.gz
+[root@lamp-241 source-code]#
+[root@lamp-241 source-code]#
+[root@lamp-241 source-code]# wget -c https://archive.apache.org/dist/apr/apr-util-1.5.4.tar.bz2
+
+
+&#x89E3;&#x538B;&#x7F29;
+[root@lamp-241 source-code]# tar -xf apr-util-1.5.4.tar.bz2
+[root@lamp-241 source-code]# ls
+apr-1.5.2  apr-1.5.2.tar.bz2  apr-util-1.5.4  apr-util-1.5.4.tar.bz2  mysql-5.6.50  mysql-5.6.50.tar.gz
+
+
+&#x5F00;&#x59CB;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;apr-utils &#xFF0C;&#x4E14;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x7684;apr&#x547D;&#x4EE4;&#x8DEF;&#x5F84;
+[root@lamp-241 source-code]# cd apr-util-1.5.4
+[root@lamp-241 apr-util-1.5.4]#
+[root@lamp-241 apr-util-1.5.4]# ./configure --with-apr=/usr/local/apr/bin/apr-1-config
+
+&#x7F16;&#x8BD1;&#x4E14;&#x5B89;&#x88C5;
+[root@lamp-241 apr-util-1.5.4]# make &amp;&amp; make install
+</code></pre><p><img src="../2024-linux/image-20220226190226258.png" alt="image-20220226190226258"></p>
+<pre><code>[root@lamp-241 apr-util-1.5.4]# ls /usr/local/apr/lib
+apr.exp      libapr-1.la    libapr-1.so.0.5.2  libaprutil-1.so        libexpat.a   libexpat.so.0
+aprutil.exp  libapr-1.so    libaprutil-1.a     libaprutil-1.so.0      libexpat.la  libexpat.so.0.5.0
+libapr-1.a   libapr-1.so.0  libaprutil-1.la    libaprutil-1.so.0.5.4  libexpat.so  pkgconfig
+
+
+&#x8FD9;&#x4E9B;.so&#x5C31;&#x597D;&#x6BD4;windows&#x4E0B;&#x7684;.dll
+</code></pre><h4 id="ldconfig&#x547D;&#x4EE4;"><a name="ldconfig&#x547D;&#x4EE4;" class="plugin-anchor" href="#ldconfig&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>ldconfig&#x547D;&#x4EE4;</h4>
+<p><strong>&#x601D;&#x8003;&#xFF1A;</strong></p>
+<p> <strong>==&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x662F;&#x6709;&#x53EF;&#x80FD;&#x88AB;&#x5176;&#x5B83;&#x8F6F;&#x4EF6;&#x6240;&#x8C03;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x5B83;&#x8F6F;&#x4EF6;&#x80FD;&#x5426;&#x627E;&#x5230;&#x4F60;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x5462;&#xFF1F;==</strong></p>
+<ul>
+<li>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5E93;&#x6587;&#x4EF6;&#x5B89;&#x88C5;&#x5230;/lib,/lib64,/usr/lib/,/usr/lib64&#x7B49;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x627E;&#x5F97;&#x5230;&#xFF1B; &#x4F46;&#x662F;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;A&#x628A;&#x5E93;&#x6587;&#x4EF6;&#x5B89;&#x88C5;&#x5230;/usr/local/A/lib&#x4E0B;&#xFF0C;&#x5C31;&#x8981;&#x628A;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x52A0;&#x5165;&#x5230;ldconfig&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x7684;&#x8DEF;&#x5F84;&#x5217;&#x8868;&#x91CC;&#x9762;&#x53BB;&#xFF0C;&#x522B;&#x4EBA;&#x624D;&#x80FD;&#x627E;&#x5230;&#x3002;</li>
+<li>ldconfig&#x662F;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x7BA1;&#x7406;&#x547D;&#x4EE4;&#xFF1B;&#x4E3B;&#x8981;&#x7528;&#x9014;&#x662F;&#x5728;&#x9ED8;&#x8BA4;&#x641C;&#x7D22;&#x76EE;&#x5F55;&#xFF08;/lib,/lib64,/usr/lib/,/usr/lib64&#xFF09;&#x4EE5;&#x53CA;&#x52A8;&#x6001;&#x5E93;&#x914D;&#x7F6E;&#x6587;&#x4EF6;/etc/ld.so.conf&#x4E2D;&#x6240;&#x5217;&#x7684;&#x76EE;&#x5F55;&#x4E2D;&#x641C;&#x7D22;&#x51FA;&#x53EF;&#x5171;&#x4EAB;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x3002;</li>
+</ul>
+<p><strong>&#x95EE;&#x9898;&#xFF1A;</strong>&#x600E;&#x6837;&#x5C06;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x52A0;&#x5165;&#x5230;ldconfig&#x547D;&#x4EE4;&#x7684;&#x641C;&#x7D22;&#x5217;&#x8868;&#x91CC;&#xFF1F;</p>
+<pre><code>&#x65B9;&#x6CD5;1&#xFF1A;&#x5728;/etc/ld.so.conf&#x8FD9;&#x4E2A;&#x4E3B;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x52A0;&#x4E0A;&#x4E00;&#x884C;&#xFF0C;&#x5199;&#x4E0A;&#x8BA9;&#x522B;&#x4EBA;&#x8981;&#x67E5;&#x627E;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;
+[root@lamp-241 apr-util-1.5.4]# echo &quot;/usr/local/apr/lib/&quot; &gt;&gt; /etc/ld.so.conf
+[root@lamp-241 apr-util-1.5.4]#
+[root@lamp-241 apr-util-1.5.4]# cat /etc/ld.so.conf
+include ld.so.conf.d/*.conf
+/usr/local/apr/lib/
+
+
+
+
+&#x65B9;&#x6CD5;2&#xFF1A;&#x5728;/etc/ld.so.conf.d/&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;*.conf&#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x91CC;&#x9762;&#x52A0;&#x5165;&#x8BE5;&#x8DEF;&#x5F84;&#x5373;&#x53EF;    
+
+# echo /usr/local/apr/lib/ &gt; /etc/ld.so.conf.d/lamp.conf
+# ldconfig      &#x4E0A;&#x9762;&#x52A0;&#x5165;&#x8DEF;&#x5F84;&#x540E;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;&#x6B64;&#x547D;&#x4EE4;&#x8BA9;&#x5176;&#x751F;&#x6548;
+</code></pre><h3 id="2-&#x7F16;&#x8BD1;&#x5B89;&#x88C5;httpd"><a name="2-&#x7F16;&#x8BD1;&#x5B89;&#x88C5;httpd" class="plugin-anchor" href="#2-&#x7F16;&#x8BD1;&#x5B89;&#x88C5;httpd"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7F16;&#x8BD1;&#x5B89;&#x88C5;httpd</h3>
+<table>
+<thead>
+<tr>
+<th>&#x7248;&#x672C;</th>
+<th>&#x5B89;&#x88C5;&#x8DEF;&#x5F84;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>httpd-2.4.37</td>
+<td>/usr/local/</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x3220;-&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;&#xFF0C;&#x7B2C;&#x4E00;&#x66F2;"><a name="&#x3220;-&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;&#xFF0C;&#x7B2C;&#x4E00;&#x66F2;" class="plugin-anchor" href="#&#x3220;-&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;&#xFF0C;&#x7B2C;&#x4E00;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3220; &#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;&#xFF0C;&#x7B2C;&#x4E00;&#x66F2;</h4>
+<pre><code>&#x94FE;&#x63A5;
+https://archive.apache.org/dist/httpd/
+
+httpd&#x6E90;&#x7801;&#x4E0B;&#x8F7D;
+[root@lamp-241 source-code]# ls
+apr-1.5.2  apr-1.5.2.tar.bz2  apr-util-1.5.4  apr-util-1.5.4.tar.bz2  mysql-5.6.50  mysql-5.6.50.tar.gz
+[root@lamp-241 source-code]#
+[root@lamp-241 source-code]#
+[root@lamp-241 source-code]# pwd
+/usr/local/source-code
+[root@lamp-241 source-code]#
+[root@lamp-241 source-code]# wget -c https://archive.apache.org/dist/httpd/httpd-2.4.37.tar.bz2
+
+
+&#x89E3;&#x538B;&#x7F29;httpd
+[root@lamp-241 source-code]# tar -xf httpd-2.4.37.tar.bz2
+[root@lamp-241 source-code]# cd httpd-2.4.37
+[root@lamp-241 httpd-2.4.37]# ls
+ABOUT_APACHE     build           config.layout  httpd.dsp       LAYOUT        Makefile.win   README.cmake      test
+acinclude.m4     BuildAll.dsp    configure      httpd.mak       libhttpd.dep  modules        README.platforms  VERSIONING
+Apache-apr2.dsw  BuildBin.dsp    configure.in   httpd.spec      libhttpd.dsp  NOTICE         ROADMAP
+Apache.dsw       buildconf       docs           include         libhttpd.mak  NWGNUmakefile  server
+apache_probes.d  CHANGES         emacs-style    INSTALL         LICENSE       os             srclib
+ap.d             CMakeLists.txt  httpd.dep      InstallBin.dsp  Makefile.in   README         support
+[root@lamp-241 httpd-2.4.37]#
+</code></pre><h4 id="&#x3221;-&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x66F2;"><a name="&#x3221;-&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x66F2;" class="plugin-anchor" href="#&#x3221;-&#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3221; &#x6839;&#x636E;&#x9700;&#x6C42;&#x914D;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E8C;&#x66F2;</h4>
+<pre><code>&#x4F9D;&#x65E7;&#x662F;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x7684;&#x7F16;&#x8BD1;&#x4E09;&#x90E8;&#x66F2;
+1.&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x6210;&#x811A;&#x672C;
+[root@lamp-241 httpd-2.4.37]# cat apache-configure.sh
+./configure \
+--enable-modules=all \
+--enable-mods-shared=all \
+--enable-so \
+--enable-rewrite \
+--with-pcre \
+--enable-ssl \
+--with-mpm=prefork \
+--with-apr=/usr/local/apr/bin/apr-1-config \
+--with-apr-util=/usr/local/apr/bin/apu-1-config
+
+
+&#x6DFB;&#x52A0;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF0C;&#x6267;&#x884C;&#x8BE5;&#x811A;&#x672C;
+[root@lamp-241 httpd-2.4.37]# chmod +x apache-configure.sh
+[root@lamp-241 httpd-2.4.37]# ./apache-configure.sh
+
+&#x5982;&#x679C;&#x4F60;&#x524D;&#x9762;&#x90FD;&#x548C;&#x8D85;&#x54E5;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x90A3;&#x5C31;&#x4E0D;&#x4F1A;&#x51FA;&#x95EE;&#x9898;&#x3002;
+</code></pre><p><strong>&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BF4;&#x660E;&#xFF1A;</strong></p>
+<p>apache&#x9ED8;&#x8BA4;&#x5565;&#x529F;&#x80FD;&#x90FD;&#x6CA1;&#x6709;&#xFF0C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x6A21;&#x5757;&#x7684;&#x8FDB;&#x884C;&#x6DFB;&#x52A0;&#xFF01;</p>
+<pre><code># ./configure 
+--enable-modules=all                  &#x52A0;&#x8F7D;&#x6240;&#x6709;&#x652F;&#x6301;&#x6A21;&#x5757;
+--enable-mods-shared=all               &#x5171;&#x4EAB;&#x65B9;&#x5F0F;&#x52A0;&#x8F7D;&#x5927;&#x90E8;&#x5206;&#x5E38;&#x7528;&#x7684;&#x6A21;&#x5757;
+--enable-so                           &#x542F;&#x52A8;&#x52A8;&#x6001;&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x529F;&#x80FD;
+--enable-rewrite                      &#x542F;&#x7528;url&#x5730;&#x5740;&#x91CD;&#x5199;&#x529F;&#x80FD;
+--enable-ssl                             &#x7F16;&#x8BD1;ssl&#x6A21;&#x5757;&#xFF0C;&#x652F;&#x6301;https
+--with-pcre                             &#x652F;&#x6301;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;
+--with-apr=/usr/local/apr/bin/apr-1-config     &#x6307;&#x5B9A;&#x4F9D;&#x8D56;&#x8F6F;&#x4EF6;apr&#x8DEF;&#x5F84;
+--with-apr-util=/usr/local/apr/bin/apu-1-config
+--with-mpm=prefork    &#x63D2;&#x5165;&#x5F0F;&#x5E76;&#x884C;&#x5904;&#x7406;&#x6A21;&#x5757;&#xFF0C;&#x79F0;&#x4E3A;&#x591A;&#x8DEF;&#x5904;&#x7406;&#x6A21;&#x5757;&#xFF0C;Prefork &#x662F;&#x7C7B;UNIX&#x5E73;&#x53F0;&#x4E0A;&#x9ED8;&#x8BA4;&#x7684;MPM
+
+&#xFF08;1&#xFF09;prefork
+    &#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x54CD;&#x5E94;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;
+&#xFF08;2&#xFF09;worker
+    &#x591A;&#x8FDB;&#x7A0B;&#x591A;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#xFF0C;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x8BF7;&#x6C42; 
+&#xFF08;3&#xFF09;event(&#x6700;&#x4F18;)
+    &#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6A21;&#x578B;&#xFF0C;&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8FDB;&#x7A0B;&#x54CD;&#x5E94;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;
+</code></pre><p>&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x7F3A;&#x5C11;&#x4E00;&#x4E9B;&#x4F9D;&#x8D56;&#x5E93;</p>
+<pre><code>yum -y install pcre-devel
+yum -y install openssl-devel
+
+&#x8FD9;&#x4E9B;&#x5E93;&#x5C31;&#x662F;&#x548C;&#x4F60;&#x4E0A;&#x9762;&#x7ED9;httpd&#x7F16;&#x8BD1;&#x6DFB;&#x52A0;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x662F;&#x5BF9;&#x5E94;&#x8D77;&#x6765;&#x7684;&#x4E86;&#x3002;
+</code></pre><h4 id="&#x3222;-&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#xFF0C;&#x7B2C;&#x4E09;&#x66F2;"><a name="&#x3222;-&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#xFF0C;&#x7B2C;&#x4E09;&#x66F2;" class="plugin-anchor" href="#&#x3222;-&#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#xFF0C;&#x7B2C;&#x4E09;&#x66F2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3222; &#x7F16;&#x8BD1;&#x5E76;&#x5B89;&#x88C5;&#xFF0C;&#x7B2C;&#x4E09;&#x66F2;</h4>
+<pre><code>[root@lamp-241 httpd-2.4.37]# pwd
+/usr/local/source-code/httpd-2.4.37
+[root@lamp-241 httpd-2.4.37]# make &amp;&amp; make install
+
+
+&#x67E5;&#x770B;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x4E86;httpd
+[root@lamp-241 httpd-2.4.37]# ls /usr/local/apache2/
+bin  build  cgi-bin  conf  error  htdocs  icons  include  logs  man  manual  modules
+
+&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#xFF0C;&#x548C;&#x8D85;&#x54E5;&#x7684;&#x4E00;&#x6837;&#xFF0C;&#x4F60;&#x5C31;&#x662F;&#x88C5;&#x597D;apache&#x4E86;&#x3002;
+</code></pre><h2 id="&#x56DB;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;php"><a name="&#x56DB;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;php" class="plugin-anchor" href="#&#x56DB;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;php"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;php</h2>
+<h3 id="1&#x3001;&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;"><a name="1&#x3001;&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;" class="plugin-anchor" href="#1&#x3001;&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x89E3;&#x538B;&#x8F6F;&#x4EF6;&#x5E76;&#x8FDB;&#x5165;&#x89E3;&#x538B;&#x76EE;&#x5F55;</h3>
+<pre><code>[root@lamp-241 source-code]# wget -c https://museum.php.net/php7/php-7.2.17.tar.xz
+
+[root@lamp-241 source-code]# ls
+apr-1.5.2  apr-1.5.2.tar.bz2  apr-util-1.5.4  apr-util-1.5.4.tar.bz2  httpd-2.4.37  httpd-2.4.37.tar.bz2  mysql-5.6.50  mysql-5.6.50.tar.gz  php-7.2.17.tar.xz
+[root@lamp-241 source-code]#
+
+&#x89E3;&#x538B;&#x7F29;
+[root@lamp-241 source-code]# cd php-7.2.17
+
+
+[root@lamp-241 php-7.2.17]# vim configure_php.sh[root@lamp-241 php-7.2.17]# [root@lamp-241 php-7.2.17]# cat configure_php.sh
+./configure \
+--with-apxs2=/usr/local/apache2/bin/apxs \
+--with-mysqli \
+--with-pdo-mysql \
+--with-zlib \
+--with-curl \
+--enable-zip \
+--with-gd \
+--with-freetype-dir \
+--with-jpeg-dir \
+--with-png-dir \
+--enable-sockets \
+--with-xmlrpc \
+--enable-soap \
+--enable-opcache \
+--enable-mbstring \
+--enable-mbregex \
+--enable-pcntl \
+--enable-shmop \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-calendar \
+--enable-bcmath
+</code></pre><p>&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x89E3;&#x91CA;</p>
+<p><strong>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x4F60;&#x5C31;&#x8981;&#x6CE8;&#x610F;&#x5230;&#xFF0C;&#x8F6F;&#x4EF6;&#x7684;&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#xFF0C;&#x662F;&#x4E00;&#x73AF;&#x8282;&#x4E00;&#x73AF;&#x7684;&#xFF0C;php&#x7F16;&#x8BD1;&#x53C2;&#x6570;&#x5F00;&#x901A;&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x662F;&#x9700;&#x8981;&#x4F60;&#x63D0;&#x524D;&#x88C5;&#x597D;apache&#x7684;&#xFF0C;&#x660E;&#x767D;&#x8D85;&#x54E5;&#x524D;&#x9762;&#x8BB2;&#x7684;&#x4E86;&#x5417;&#xFF1F;</strong></p>
+<pre><code class="lang-bash">--with-apxs2=/usr/local/apache2/bin/apxs
+&#x6307;&#x5B9A;apxs&#x8DEF;&#x5F84;,apxs&#x662F;&#x4E00;&#x4E2A;&#x4E3A;Apache HTTP&#x670D;&#x52A1;&#x5668;&#x7F16;&#x8BD1;&#x548C;&#x5B89;&#x88C5;&#x6269;&#x5C55;&#x6A21;&#x5757;&#x7684;&#x5DE5;&#x5177;
+--with-mysql        php7&#x4E2D;&#x5DF2;&#x88AB;&#x5E9F;&#x5F03;
+--with-mysqli    
+--with-pdo-mysql
+&#x4EE5;&#x4E0A;&#x4E09;&#x4E2A;&#x662F;php&#x7684;&#x6269;&#x5C55;&#xFF0C;&#x7528;&#x4E8E;&#x8FDE;&#x63A5;mysql&#x6570;&#x636E;&#x5E93;&#x7684;
+--with-iconv-dir
+--with-freetype-dir
+--with-jpeg-dir
+--with-png-dir
+--with-gd
+--with-zlib
+--with-libxml-dir
+&#x8FD9;&#x4E9B;&#x90FD;&#x662F;&#x5728;&#x542F;&#x7528;&#x5BF9;&#x67D0;&#x79CD;&#x6587;&#x4EF6;&#x7684;&#x652F;&#x6301;
+--with-curl &#x548C; --with-curlwrappers
+&#x7528;&#x4E8E;&#x652F;&#x6301; curl &#x51FD;&#x6570;&#xFF0C;&#x6B64;&#x51FD;&#x6570;&#x5141;&#x8BB8;&#x4F60;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x534F;&#x8BAE;&#x8FDE;&#x63A5;&#x548C;&#x6C9F;&#x901A;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;
+--with-openssl,--with-mhash,--with-mcrypt
+&#x8FD9;&#x90FD;&#x662F;&#x548C;&#x52A0;&#x5BC6;&#x6709;&#x5173;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x542F;&#x7528;&#x5B83;&#x4EEC;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;php&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x7684;&#x652F;&#x6301;&#x5404;&#x79CD;&#x52A0;&#x5BC6;&#x3002;
+--enable-bcmath                            &#x9AD8;&#x7CBE;&#x5EA6;&#x6570;&#x5B66;&#x8FD0;&#x7B97;&#x7EC4;&#x4EF6;&#x3002;
+--enable-shmop&#x548C; --enable-sysvsem        
+&#x4F7F;&#x5F97;&#x4F60;&#x7684;PHP&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x76F8;&#x5173;&#x7684;IPC&#x51FD;&#x6570;.IPC&#x662F;&#x4E00;&#x4E2A;Unix&#x6807;&#x51C6;&#x901A;&#x8BAF;&#x673A;&#x5236;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4F7F;&#x5F97;&#x5728;&#x540C;&#x4E00;&#x53F0;&#x4E3B;&#x673A;&#x4E0D;&#x540C;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x901A;&#x8BAF;&#x7684;&#x65B9;&#x6CD5;&#x3002;
+--enable-inline-optimization        &#x6808;&#x5806;&#x6307;&#x9488;&#x548C;&#x4F18;&#x5316;&#x7EBF;&#x7A0B;&#x3002;
+--enable-pcntl                            &#x591A;&#x7EBF;&#x7A0B;&#x4F18;&#x5316;&#x3002;
+
+with-apxs2        &#x8C03;&#x7528;apache&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x652F;&#x6301;PHP
+gd                  &#x753B;&#x56FE;&#x5E93;
+libiconv         &#x5B57;&#x7B26;&#x53D8;&#x6362;&#x8F6C;&#x6362;
+libmcrypt         &#x5B57;&#x7B26;&#x52A0;&#x5BC6;
+mcrypt              &#x5B57;&#x7B26;&#x52A0;&#x5BC6;
+mhash               &#x54C8;&#x5E0C;&#x8FD0;&#x7B97;
+</code></pre>
+<p>&#x5982;&#x679C;&#x53EF;&#x80FD;&#x62A5;&#x9519;&#xFF0C;&#x7F3A;&#x5C11;&#x4E00;&#x4E9B;&#x5E93;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x5982;&#x4E0B;&#x4F9D;&#x8D56;</p>
+<p>&#x6BD4;&#x5982;&#x4F60;&#x5728;&#x88C5;&#x673A;&#x65F6;&#x5019;&#xFF0C;&#x9009;&#x62E9;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x7684;&#x4E0D;&#x540C;</p>
+<pre><code>yum install libxml2-devel -y
+yum install libjpeg-devel -y
+yum install libpng-devel -y
+yum install freetype-devel -y
+yum -y install libcurl-devel
+</code></pre><h3 id="2&#x3001;configure&#x914D;&#x7F6E;php&#x7F16;&#x8BD1;"><a name="2&#x3001;configure&#x914D;&#x7F6E;php&#x7F16;&#x8BD1;" class="plugin-anchor" href="#2&#x3001;configure&#x914D;&#x7F6E;php&#x7F16;&#x8BD1;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;configure&#x914D;&#x7F6E;php&#x7F16;&#x8BD1;</h3>
+<pre><code>&#x6267;&#x884C;&#x8BE5;&#x811A;&#x672C;
+[root@lamp-241 php-7.2.17]# chmod +x configure_php.sh
+[root@lamp-241 php-7.2.17]#
+[root@lamp-241 php-7.2.17]# ./configure_php.sh
+</code></pre><h3 id="3&#x3001;&#x7F16;&#x8BD1;&#x4E14;&#x5B89;&#x88C5;"><a name="3&#x3001;&#x7F16;&#x8BD1;&#x4E14;&#x5B89;&#x88C5;" class="plugin-anchor" href="#3&#x3001;&#x7F16;&#x8BD1;&#x4E14;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x7F16;&#x8BD1;&#x4E14;&#x5B89;&#x88C5;</h3>
+<pre><code>[root@lamp-241 php-7.2.17]# make &amp;&amp; make install
+</code></pre><p><img src="../2024-linux/image-20220227131902735.png" alt="image-20220227131902735"></p>
+<h2 id="&#x4E94;&#x3001;&#x7ED3;&#x5408;php&#x548C;apache&#x914D;&#x7F6E;"><a name="&#x4E94;&#x3001;&#x7ED3;&#x5408;php&#x548C;apache&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x4E94;&#x3001;&#x7ED3;&#x5408;php&#x548C;apache&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x7ED3;&#x5408;php&#x548C;apache&#x914D;&#x7F6E;</h2>
+<h3 id="1&#x3001;&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x652F;&#x6301;php"><a name="1&#x3001;&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x652F;&#x6301;php" class="plugin-anchor" href="#1&#x3001;&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x652F;&#x6301;php"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x652F;&#x6301;php</h3>
+<pre><code>1.&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x627E;&#x5230;&#x4F60;&#x7684;&#x5B89;&#x88C5;&#x8DEF;&#x5F84;
+&#x914D;&#x7F6E;&#x8BED;&#x8A00;&#x652F;&#x6301;
+159 LoadModule negotiation_module modules/mod_negotiation.so &#x53BB;&#x6389;&#x8FD9;&#x4E00;&#x884C;&#x7684;&#x6CE8;&#x91CA;
+482 Include conf/extra/httpd-languages.conf &#x6253;&#x5F00;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x6269;&#x5C55;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C31;&#x751F;&#x6548;&#x4E86;
+
+&#x8BA9;apache&#x652F;&#x6301;php&#x8BED;&#x8A00;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5F53;&#x6709;&#x7528;&#x6237;&#x8BBF;&#x95EE;php&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;apache&#x81EA;&#x52A8;&#x8F6C;&#x53D1;&#x7ED9;php&#x7A0B;&#x5E8F;&#x53BB;&#x89E3;&#x6790;&#x3002;
+166 LoadModule php7_module        modules/libphp7.so   &#x627E;&#x5230;&#x8FD9;&#x4E00;&#x884C;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E0B;&#x9762;&#x6DFB;&#x52A0;&#x8BED;&#x53E5;
+
+&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x610F;&#x601D;&#x662F;&#x4EE5;.php&#x7ED3;&#x5C3E;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x8BA4;&#x4E3A;&#x662F;php&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;&#xFF0C;&#x6CE8;&#x610F;&#x4E24;&#x53E5;&#x8BDD;&#x7684;.php&#x524D;&#x9762;&#x90FD;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x7684;
+&#x4E5F;&#x5C31;&#x662F;&#x957F;&#x8FD9;&#x6837;
+166 LoadModule php7_module        modules/libphp7.so
+167 AddHandler php7-script .php
+168 AddType text/html .php
+
+
+&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x7F51;&#x7AD9;&#x9996;&#x9875;&#xFF0C;&#x6DFB;&#x52A0;&#x4E3A;php&#x7684;&#x6587;&#x4EF6;
+263 #
+264 # DirectoryIndex: sets the file that Apache will serve if a directory
+265 # is requested.
+266 #
+267 &lt;IfModule dir_module&gt;
+268     DirectoryIndex index.php index.html
+269 &lt;/IfModule&gt;
+270
+
+&#x5173;&#x4E8E;&#x7F51;&#x7AD9;&#x9ED8;&#x8BA4;&#x7684;&#x9996;&#x9875;html&#x6587;&#x4EF6;&#xFF0C;&#x5B58;&#x653E;&#x7684;&#x76EE;&#x5F55;&#x8DEF;&#x5F84;&#xFF0C;&#x7531;&#x4EE5;&#x4E0B;&#x53C2;&#x6570;&#x63A7;&#x5236;
+230 # DocumentRoot: The directory out of which you will serve your
+231 # documents. By default, all requests are taken from this directory, but
+232 # symbolic links and aliases may be used to point to other locations.
+233 #
+234 DocumentRoot &quot;/usr/local/apache2/htdocs&quot;
+235 &lt;Directory &quot;/usr/local/apache2/htdocs&quot;&gt;
+
+
+
+2.&#x4FEE;&#x6539;apache&#x7684;&#x5B50;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4F18;&#x5148;&#x652F;&#x6301;&#x4E2D;&#x6587;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x5982;&#x4E0B;&#x4E24;&#x6B65;&#x64CD;&#x4F5C;
+[root@lamp-241 php-7.2.17]# vim /usr/local/apache2/conf/extra/httpd-languages.conf
+ 19 DefaultLanguage zh-CN
+
+ 75 # Just list the languages in decreasing order of preference. We have
+ 76 # more or less alphabetized them here. You probably want to change this.
+ 77 #
+ 78 LanguagePriority zh-CN en ca cs da de el eo es et fr he hr it ja ko ltz nl nn no pl pt pt-BR ru sv tr zh-CN zh-TW
+
+
+ 3.&#x4FEE;&#x6539;apache&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7F51;&#x7AD9;&#x7684;&#x57DF;&#x540D;&#x914D;&#x7F6E;
+ 210 ServerName yuchao-lamp.cc
+</code></pre><h3 id="2&#x3001;&#x6D4B;&#x8BD5;apache&#x662F;&#x5426;&#x652F;&#x6301;php"><a name="2&#x3001;&#x6D4B;&#x8BD5;apache&#x662F;&#x5426;&#x652F;&#x6301;php" class="plugin-anchor" href="#2&#x3001;&#x6D4B;&#x8BD5;apache&#x662F;&#x5426;&#x652F;&#x6301;php"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x6D4B;&#x8BD5;apache&#x662F;&#x5426;&#x652F;&#x6301;php</h3>
+<pre><code>&#x8FDB;&#x5165;apache&#x7F51;&#x9875;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;php&#x6587;&#x4EF6;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6267;&#x884C;
+[root@lamp-241 htdocs]# pwd
+/usr/local/apache2/htdocs
+
+[root@lamp-241 htdocs]# cat index.php
+&lt;?php
+    phpinfo();
+?&gt;
+</code></pre><h3 id="3&#x3001;&#x542F;&#x52A8;apache"><a name="3&#x3001;&#x542F;&#x52A8;apache" class="plugin-anchor" href="#3&#x3001;&#x542F;&#x52A8;apache"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x542F;&#x52A8;apache</h3>
+<p>&#x62F7;&#x8D1D;apache&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#x5373;&#x53EF;&#xFF0C;&#x5C31;&#x662F;&#x542F;&#x52A8;apache&#x7684;&#x547D;&#x4EE4;</p>
+<pre><code>[root@lamp-241 htdocs]# cp /usr/local/apache2/bin/apachectl /etc/init.d/apache
+[root@lamp-241 htdocs]# netstat -tnlp|grep 80
+[root@lamp-241 htdocs]#
+[root@lamp-241 htdocs]# service apache start
+
+[root@lamp-241 htdocs]# netstat -tnlp|grep 80
+tcp6       0      0 :::80                   :::*                    LISTEN      100853/httpd
+</code></pre><h3 id="4&#x3001;&#x6D4B;&#x8BD5;lamp&#x67B6;&#x6784;"><a name="4&#x3001;&#x6D4B;&#x8BD5;lamp&#x67B6;&#x6784;" class="plugin-anchor" href="#4&#x3001;&#x6D4B;&#x8BD5;lamp&#x67B6;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;&#x6D4B;&#x8BD5;LAMP&#x67B6;&#x6784;</h3>
+<p>&#x8BBF;&#x95EE;&#x4F60;&#x7684;apache&#x670D;&#x52A1;&#x5668;&#x5373;&#x53EF;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;80&#x7AEF;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x770B;&#x5230;php&#x7684;&#x9875;&#x9762;&#xFF0C;&#x8868;&#x793A;&#x6B63;&#x5E38;&#x3002;</p>
+<p><img src="../2024-linux/image-20220227143627153.png" alt="image-20220227143627153"></p>
+<p>&#x770B;&#x5230;&#x8FD9;&#x5C31;&#x8868;&#x793A;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x90E8;&#x7F72;&#x597D;&#x4E86;&#x4E00;&#x4E2A;linux+apache+mysql+php&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x7ED9;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#xFF0C;&#x6D4B;&#x8BD5;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x4E86;&#x3002;</p>
+<h2 id="&#x516D;&#x3001;&#x90E8;&#x7F72;web&#x5E94;&#x7528;"><a name="&#x516D;&#x3001;&#x90E8;&#x7F72;web&#x5E94;&#x7528;" class="plugin-anchor" href="#&#x516D;&#x3001;&#x90E8;&#x7F72;web&#x5E94;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;&#x3001;&#x90E8;&#x7F72;web&#x5E94;&#x7528;</h2>
+<p>&#x6B64;&#x65F6;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;php&#x7684;&#x8F6F;&#x4EF6;&#x6E90;&#x7801;&#x5373;&#x53EF;&#xFF0C;&#x8D85;&#x54E5;&#x8FD9;&#x91CC;&#x4E0B;&#x8F7D;wordpress&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;php&#x5F00;&#x53D1;&#x7684;&#x5168;&#x7403;&#x77E5;&#x540D;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;&#x3002;</p>
+<p><a href="https://cn.wordpress.org/" target="_blank">https://cn.wordpress.org/</a></p>
+<p><a href="https://cn.wordpress.org/wordpress-4.7.3-zh_CN.tar.gz" target="_blank">https://cn.wordpress.org/wordpress-4.7.3-zh_CN.tar.gz</a></p>
+<pre><code>1.&#x4E0B;&#x8F7D;&#x6E90;&#x7801;
+[root@lamp-241 source-code]# wget -c https://cn.wordpress.org/wordpress-4.7.3-zh_CN.tar.gz
+
+2.&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#xFF0C;&#x4FDD;&#x5B58;wordpress&#x7684;&#x4EE3;&#x7801;
+&#x4EE5;&#x53CA;&#x89E3;&#x538B;&#x7F29;&#x6E90;&#x7801;&#xFF0C;&#x5168;&#x90E8;&#x62F7;&#x8D1D;&#x5230;&#x8BE5;&#x76EE;&#x5F55;&#x4E2D;
+[root@lamp-241 source-code]# mkdir -p /www/yuchao-blog
+[root@lamp-241 source-code]# tar -zxf wordpress-4.7.3-zh_CN.tar.gz
+[root@lamp-241 source-code]# cp -a wordpress/* /www/yuchao-blog/
+[root@lamp-241 source-code]#
+
+3.&#x66F4;&#x6539;wordpress&#x6E90;&#x7801;&#x5C5E;&#x4E3B;&#x5C5E;&#x7EC4;
+[root@lamp-241 source-code]# chown -R daemon.daemon /www/yuchao-blog/
+
+4.&#x51C6;&#x5907;&#x7F51;&#x7AD9;&#x4E0A;&#x7EBF;&#x53D1;&#x5E03;&#xFF08;&#x7ED9;apache&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x4E13;&#x95E8;&#x53D1;&#x5E03;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;wordpress&#xFF09;&#x865A;&#x62DF;&#x4E3B;&#x673A;
+[root@lamp-241 source-code]# vim /usr/local/apache2/conf/httpd.conf
+
+492 # Virtual hosts
+493 Include conf/extra/httpd-vhosts.conf
+
+
+5.&#x4FEE;&#x6539;&#x8BE5;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;&#x5173;&#x4E8E;wordpress&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;
+[root@lamp-241 extra]# ls -l /usr/local/apache2/conf/extra/httpd-vhosts.conf
+-rw-r--r--. 1 root root 1467 Feb 26 20:05 /usr/local/apache2/conf/extra/httpd-vhosts.conf
+
+
+&#x6CE8;&#x91CA;&#x6389;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#xFF0C;&#x7136;&#x540E;&#x6DFB;&#x52A0;&#x8D85;&#x54E5;&#x8FD9;&#x4E2A;&#x5373;&#x53EF;
+&#x6CE8;&#x610F;&#x4E24;&#x4E2A;&#x4E8B;
+&#x505A;&#x597D;yuchao-wordpress.cc&#x57DF;&#x540D;&#x89E3;&#x6790;
+
+
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;/www/yuchao-blog&quot;
+    ServerName yuchao-wordpress.cc
+    ErrorLog &quot;logs/blog-error_log&quot;
+    CustomLog &quot;logs/blog-access_log&quot; common
+&lt;/VirtualHost&gt;
+
+
+6.&#x5173;&#x4E8E;hosts&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#xFF0C;&#x505A;&#x597D;&#x57DF;&#x540D;&#x89E3;&#x6790;
+[root@lamp-241 extra]# vim /etc/hosts
+[root@lamp-241 extra]# cat  /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+192.168.0.241 yuchao-lamp.cc
+192.168.0.241 yuchao-wordpress.cc
+
+7.mysql&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;&#xFF0C;&#x5199;&#x535A;&#x5BA2;&#xFF0C;&#x6570;&#x636E;&#x5F80;&#x54EA;&#x5BF8;&#xFF1F;mysql&#x91CC;&#x9762;&#x5B58;&#x3002;&#x5BC6;&#x7801;yuchao666
+[root@lamp-241 extra]# mysql -uroot -pyuchao666
+Warning: Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 5
+Server version: 5.6.50 Source distribution
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+mysql&gt;
+
+&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x535A;&#x5BA2;&#x7684;&#x6570;&#x636E;&#x5E93;yuchao_blog
+mysql&gt; create database yuchao_blog default charset utf8;
+Query OK, 1 row affected (0.16 sec)
+
+
+8.&#x91CD;&#x542F;apache&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x6709;&#x62A5;&#x9519;
+[root@lamp-241 man]# mkdir -p /www/blog
+[root@lamp-241 man]# service apache restart
+[root@lamp-241 man]# netstat -tnlp|grep 80
+tcp6       0      0 :::80                   :::*                    LISTEN      100853/httpd
+</code></pre><h2 id="&#x4E03;&#x3001;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;wordpress"><a name="&#x4E03;&#x3001;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;wordpress" class="plugin-anchor" href="#&#x4E03;&#x3001;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;wordpress"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;&#x3001;&#x6D4B;&#x8BD5;&#x8BBF;&#x95EE;wordpress</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x505A;&#x597D;hosts&#x89E3;&#x6790;</p>
+<pre><code>&#x279C;  ~ tail -1  /etc/hosts
+192.168.0.241 yuchao-wordpress.cc
+</code></pre><p><img src="../2024-linux/image-20220227155200255.png" alt="image-20220227155200255"></p>
+<p>&#x53D1;&#x73B0;&#x63D0;&#x793A;Forbidden&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x4E86;&#xFF0C;&#x8FD9;&#x79CD;&#x662F;403&#x9519;&#x8BEF;&#xFF0C;&#x6743;&#x9650;&#x4E0D;&#x8DB3;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x8981;&#x77E5;&#x9053;&#xFF0C;&#x8FD9;&#x662F;apache&#x7ED9;&#x4E0E;&#x4F60;&#x7684;&#x54CD;&#x5E94;&#xFF0C;&#x4F60;&#x53EA;&#x8981;&#x53BB;&#x627E;apache&#x7684;&#x914D;&#x7F6E;&#x5C31;&#x884C;&#x3002;</p>
+<pre><code>&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#xFF0C;&#x6DFB;&#x52A0;&#x53EF;&#x8BBF;&#x95EE;&#x6743;&#x9650;
+&#x4FEE;&#x6539;&#x8FD9;&#x91CC;Require all denied        &#x9ED8;&#x8BA4;&#x62D2;&#x7EDD;&#x6240;&#x6709;&#xFF0C;&#x6539;&#x4E3A;Require all granted
+
+212 #
+213 # Deny access to the entirety of your server&apos;s filesystem. You must
+214 # explicitly permit access to web content directories in other
+215 # &lt;Directory&gt; blocks below.
+216 #
+217 &lt;Directory /&gt;
+218     AllowOverride none
+219     Require all granted
+220 &lt;/Directory&gt;
+</code></pre><h3 id="1&#x3001;&#x6B63;&#x786E;&#x7ED3;&#x679C;"><a name="1&#x3001;&#x6B63;&#x786E;&#x7ED3;&#x679C;" class="plugin-anchor" href="#1&#x3001;&#x6B63;&#x786E;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x6B63;&#x786E;&#x7ED3;&#x679C;</h3>
+<p><img src="../2024-linux/image-20220227160033138.png" alt="image-20220227160033138"></p>
+<hr>
+<p><img src="../2024-linux/image-20220227161059602.png" alt="image-20220227161059602"></p>
+<hr>
+<p><img src="../2024-linux/image-20220227161157170.png" alt="image-20220227161157170"></p>
+<h3 id="2&#x3001;&#x5199;&#x4E0B;&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;"><a name="2&#x3001;&#x5199;&#x4E0B;&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;" class="plugin-anchor" href="#2&#x3001;&#x5199;&#x4E0B;&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x5199;&#x4E0B;&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;</h3>
+<p><img src="../2024-linux/image-20220227161338195.png" alt="image-20220227161338195"></p>
+<h1 id="&#x5B9E;&#x6218;&#x603B;&#x7ED3;"><a name="&#x5B9E;&#x6218;&#x603B;&#x7ED3;" class="plugin-anchor" href="#&#x5B9E;&#x6218;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x6218;&#x603B;&#x7ED3;</h1>
+<h2 id="1&#x5173;&#x4E8E;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x7684;&#x8BB0;&#x5F55;"><a name="1&#x5173;&#x4E8E;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x7684;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#1&#x5173;&#x4E8E;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x7684;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.&#x5173;&#x4E8E;&#x6E90;&#x7801;&#x7F16;&#x8BD1;&#x7684;&#x8BB0;&#x5F55;</h2>
+<p>1.&#x7CFB;&#x7EDF;&#x73AF;&#x5883;&#x7684;&#x51C6;&#x5907;&#xFF0C;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x5E93;</p>
+<pre><code># &#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x6765;&#x786E;&#x8BA4;&#x4F60;&#x60F3;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x8F6F;&#x4EF6;&#x5B89;&#x88C5;&#x5728;&#x54EA;&#x91CC;&#xFF0C;&#x52A0;&#x4E0A;&#x54EA;&#x4E9B;&#x529F;&#x80FD;&#x548C;&#x53BB;&#x6389;&#x54EA;&#x4E9B;&#x529F;&#x80FD;
+./configure &#x6216;&#x8005; cmake
+# &#x5982;&#x679C;&#x8FD9;&#x4E00;&#x6B65;&#x62A5;&#x9519;&#xFF0C;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x7F3A;&#x5C11;&#x4F9D;&#x8D56;&#x5305;&#xFF0C;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;
+
+1&gt;    &#x4F7F;&#x7528;yum&#x53BB;&#x5B89;&#x88C5;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;rhel/centos&#x505A;&#x4E3A;&#x4E00;&#x4E2A;&#x6210;&#x719F;&#x7684;linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x5E95;&#x5C42;&#x4F9D;&#x8D56;&#x5305;&#x90FD;&#x81EA;&#x5E26;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5B89;&#x88C5;&#x4E0B;&#x9762;&#x8FD9;&#x4E24;&#x4E2A;&#x7EC4;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x6709;&#x4F60;&#x6240;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#x5305;&#x3002;
+# yum groupinstall &quot;Development tools&quot; -y
+# yum groupinstall &quot;Desktop Platform Development&quot; -y 
+
+2&gt;    &#x5982;&#x679C;&#x7F3A;&#x5C11;&#x4F9D;&#x8D56;&#x5305;&#x5728;rhel/centos&#x7684;yum&#x6E90;&#x91CC;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x5219;&#x4E0A;&#x7F51;&#x4E0B;&#x8F7D;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x5148;&#x7F16;&#x8BD1;&#x7B2C;&#x4E09;&#x65B9;&#x8F6F;&#x4EF6;&#xFF0C;&#x518D;&#x7F16;&#x8BD1;&#x672C;&#x8F6F;&#x4EF6;
+</code></pre><p>&#x5173;&#x4E8E;./configure&#x7684;&#x53C2;&#x6570;&#x89E3;&#x91CA;</p>
+<pre><code>./configure --help &#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;&#x7F16;&#x8BD1;&#x53C2;&#x6570;
+&#x7B2C;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x53C2;&#x6570;
+--prefix=    &#x6B64;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x76EE;&#x5F55;(&#x4E00;&#x822C;&#x5B89;&#x88C5;&#x5230;/usr/local/&#x6216;&#x8005;/usr/local/&#x8F6F;&#x4EF6;&#x540D;&#x4E0B;)
+&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;&#x65B0;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x6CE8;&#x610F;&#x540E;&#x7EED;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x4FEE;&#x6539;
+
+&#x7B2C;&#x4E8C;&#x7C7B;&#x91CD;&#x8981;&#x53C2;&#x6570;:
+--enable-xxx    &#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF08;&#x9ED8;&#x8BA4;&#x662F;&#x5173;&#x95ED;&#x7684;&#xFF09;
+--disable-xxx    &#x5173;&#x95ED;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF08;&#x9ED8;&#x8BA4;&#x662F;&#x6253;&#x5F00;&#x7684;&#xFF09;
+
+&#x7B2C;&#x4E09;&#x7C7B;&#x53C2;&#x6570;:
+--with-xxx=DIR/file    &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x6216;&#x6587;&#x4EF6;&#xFF0C;&#x8C03;&#x7528;&#x6B64;&#x76EE;&#x5F55;&#x6216;&#x6587;&#x4EF6;&#x7684;&#x529F;&#x80FD;
+</code></pre><p>2.&#x7F16;&#x8BD1;&#x9636;&#x6BB5;</p>
+<pre><code>make   
+&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x6839;&#x636E;&#x4F60;&#x4E0A;&#x4E00;&#x6B65;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x6587;&#x4EF6;&#xFF08;Makefile&#xFF09;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x8F6F;&#x4EF6;&#x7ED9;&#x505A;&#x51FA;&#x6765;&#xFF08;&#x8FD9;&#x4E00;&#x6B65;&#x4E00;&#x822C;&#x5F88;&#x5C11;&#x51FA;&#x9519;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x9519;&#xFF0C;&#x95EE;&#x9898;&#x90FD;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x3002;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E9B;&#x517C;&#x5BB9;&#x6027;&#x7684;&#x95EE;&#x9898;&#x7B49;&#x7B49;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x4E0A;&#x7F51;&#x67E5;&#x8BE2;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;,&#x5982;&#x679C;&#x67E5;&#x4E0D;&#x5230;&#xFF0C;&#x53EA;&#x80FD;&#x6362;&#x4E2A;&#x73AF;&#x5883;&#x6216;&#x8005;&#x6362;&#x4E2A;&#x8F6F;&#x4EF6;&#x7248;&#x672C;&#x6216;&#x8005;&#x6362;&#x4E9B;&#x7F16;&#x8BD1;&#x53C2;&#x6570;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF09;
+</code></pre><p>3.&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x9636;&#x6BB5;</p>
+<pre><code>make install  
+&#x628A;&#x505A;&#x597D;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x5B89;&#x88C5;&#x5230;&#x4F60;&#x7B2C;&#x4E00;&#x6B65;&#x6240;&#x6307;&#x5B9A;&#x7684;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x91CC;&#xFF08;&#x8FD9;&#x4E00;&#x6B65;&#x51E0;&#x4E4E;&#x4E0D;&#x4F1A;&#x51FA;&#x9519;&#x7684;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;
+</code></pre><h2 id="2&#x5173;&#x4E8E;&#x90E8;&#x7F72;&#x6D41;&#x7A0B;"><a name="2&#x5173;&#x4E8E;&#x90E8;&#x7F72;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#2&#x5173;&#x4E8E;&#x90E8;&#x7F72;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.&#x5173;&#x4E8E;&#x90E8;&#x7F72;&#x6D41;&#x7A0B;</h2>
+<p>&#x6240;&#x6709;&#x90E8;&#x7F72;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x9075;&#x5FAA;&#x4E00;&#x4E2A;&#x7B80;&#x7B54;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;</p>
+<p>1.&#x786E;&#x8BA4;&#x90E8;&#x7F72;&#x7684;&#x76EE;&#x6807;&#xFF0C;&#x4E1A;&#x52A1;&#x9700;&#x6C42;</p>
+<p>2.&#x4E0B;&#x8F7D;&#x8F6F;&#x4EF6;</p>
+<p>3.&#x7F16;&#x8F91;&#x8F6F;&#x4EF6;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>4.&#x8FD0;&#x884C;&#x8F6F;&#x4EF6;</p>
+<p>5.&#x6D4B;&#x8BD5;&#x8F6F;&#x4EF6;</p>
+<p>6.&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x3002;</p>
+<h1 id="&#x8BFE;&#x540E;&#x4F5C;&#x4E1A;"><a name="&#x8BFE;&#x540E;&#x4F5C;&#x4E1A;" class="plugin-anchor" href="#&#x8BFE;&#x540E;&#x4F5C;&#x4E1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BFE;&#x540E;&#x4F5C;&#x4E1A;</h1>
+<p>1.&#x5B8C;&#x6210;LAMP&#x7F16;&#x8BD1;&#x642D;&#x5EFA;&#xFF0C;&#x90E8;&#x7F72;wordpress&#x3001;&#x53D1;&#x8868;&#x535A;&#x5BA2;&#x3002;</p>
+<p>2.&#x7406;&#x89E3;web&#x670D;&#x52A1;&#x5668;&#x6982;&#x5FF5;</p>
+<p>3.&#x7406;&#x89E3;linux+apache+mysql+php&#x7684;&#x5DE5;&#x4F5C;&#x6D41;&#x7A0B;&#xFF08;&#x7ED8;&#x56FE;&#xFF09;</p>
+<p>4.&#x7406;&#x89E3;&#x5982;&#x4F55;&#x4FEE;&#x6539;apache&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x521B;&#x5EFA;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#xFF0C;&#x4FEE;&#x6539;&#x7F51;&#x9875;&#x9ED8;&#x8BA4;&#x6839;&#x76EE;&#x5F55;&#xFF08;&#x9ED8;&#x8BA4;&#x662F;/var/www/html&#xFF09;</p>
+<p>5.&#x540C;&#x6837;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x518D;&#x90E8;&#x7F72;&#x597D;&#x4E8E;&#x8D85;&#x8001;&#x5E08;&#x63D0;&#x4F9B;&#x597D;&#x7684;&#x5982;&#x4E0B;&#x6E90;&#x7801;&#xFF08;&#x91CD;&#x70B9;&#xFF09;</p>
+<pre><code>iWebShop5.8.zip
+
+&#x8981;&#x6C42;&#x8BBF;&#x95EE;
+yuchao-webshop.cc &#x5373;&#x53EF;&#x770B;&#x5230;&#x8BE5;&#x7535;&#x5546;&#x7F51;&#x5740;&#xFF08;&#x57FA;&#x4E8E;&#x57DF;&#x540D;&#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;&#xFF09;
+</code></pre><p><img src="../2024-linux/image-20220227173753001.png" alt="image-20220227173753001"></p>
+<hr>
+<p>&#x5B8C;&#x6210;&#x90E8;&#x7F72;&#x7ED3;&#x679C;</p>
+<p><img src="../2024-linux/image-20220227174756214.png" alt="image-20220227174756214"></p>
+<hr>
+<p><img src="../2024-linux/image-20220227174907010.png" alt="image-20220227174907010"></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; www.bikongge.com 2024 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4F5C;&#x8005;&#xFF1A;&#x733F;&#x6765;&#x6559;&#x80B2;
+2024-05-11 17:46:32
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3-10-黄金web架构之LAMP","level":"1.3.3","depth":2,"next":{"title":"3-11-磁盘管理","level":"1.3.4","depth":2,"path":"02-系统核心服务/3-11-磁盘管理.md","ref":"02-系统核心服务/3-11-磁盘管理.md","articles":[]},"previous":{"title":"3-1-软件包管理","level":"1.3.2","depth":2,"path":"02-系统核心服务/3-1-软件包管理.md","ref":"02-系统核心服务/3-1-软件包管理.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchors","theme-comscore","theme-api","hide-element","-highlight","advanced-emoji","-lunr","-search","search-pro","page-toc-button","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","custom-favicon","pageview-count","tbfed-pagefooter","popup","-sharing","sharing-plus"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy www.bikongge.com 2024","modify_label":"作者：猿来教育"},"chapter-fold":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"./icon/book.ico","theme-comscore":{},"page-toc-button":{},"theme-api":{"languages":[{"lang":"python","name":"python","default":true},{"lang":"python","name":"python"}],"split":true,"theme":"light"},"back-to-top-button":{},"pageview-count":{},"custom-favicon":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://s1.ax1x.com/2022/10/25/xRowNj.jpg"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-系统核心服务/3-10-黄金web架构之LAMP.md","mtime":"2024-05-11T09:46:32.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-17T07:32:03.155Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
