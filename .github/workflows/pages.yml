@@ -1,0 +1,66 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lightweight site files
+        uses: actions/checkout@v6
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/2024-linux/
+            /.github/
+
+      - name: Prepare site
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          image_base = "https://raw.githubusercontent.com/marktwlight/sre/main/2024-linux/"
+          banner = (
+              '<div style="position:relative;z-index:9999;padding:8px 16px;'
+              'background:#fff3cd;color:#664d03;text-align:center;font-size:14px">'
+              '学习用途的离线镜像，与原网站无官方关联。</div>'
+          )
+          for path in Path('.').rglob('*.html'):
+              text = path.read_text(encoding='utf-8', errors='replace')
+              text = re.sub(r'(?:(?:\.\./)+|/sre/)?2024-linux/', image_base, text)
+              text = re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + banner, text, count=1, flags=re.I)
+              path.write_text(text, encoding='utf-8')
+          Path('.nojekyll').touch()
+          PY
+          rm -rf .git .github 2024-linux
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
